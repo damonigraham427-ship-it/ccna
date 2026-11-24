@@ -1,0 +1,1894 @@
+{
+ "questions": [
+  {
+   "question": "Which version of Simple Network Management Protocol (SNMP) supports the Inform SNMP message?",
+   "choices": [
+    "SNMP version v2",
+    "SNMP version 1",
+    "SNMP version 2c",
+    "SNMP version 3"
+   ],
+   "answer": 2,
+   "explanation": "The introduction of SNMP version 2c added the Inform and Get-bulk messages for SNMP.",
+   "source": "CCNA 100-105 · Ch. 7, Q1",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which protocol and port number does SNMP use for polling from the NMS?",
+   "choices": [
+    "UDP/161",
+    "TCP/162",
+    "UDP/514",
+    "UDP/162"
+   ],
+   "answer": 0,
+   "explanation": "SNMP uses UDP port 161 for communication from an SNMP network management station to a network device for information requests.",
+   "source": "CCNA 100-105 · Ch. 7, Q2",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which version of SNMP offers authentication and encryption?",
+   "choices": [
+    "SNMP version 2c",
+    "SNMP version 2e",
+    "SNMP version 3",
+    "SNMP version 1"
+   ],
+   "answer": 2,
+   "explanation": "SNMP version 3 introduced message integrity, authentication, and encryption to the SNMP suite.",
+   "source": "CCNA 100-105 · Ch. 7, Q3",
+   "topic": "7.1b SNMPv3",
+   "topic_n": 3
+  },
+  {
+   "question": "What is the database of variables that SNMP uses to allow for collection of data called?",
+   "choices": [
+    "Management information base",
+    "Object identifiers",
+    "SNMP agent",
+    "SNMP community"
+   ],
+   "answer": 0,
+   "explanation": "The management information base, or MIB, is a database of variables in which SNMP allows retrieval of information. The attributes in the MIB are the description, variable type, and read-write status.",
+   "source": "CCNA 100-105 · Ch. 7, Q4",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "What is the component that an SNMP agent sends information to?",
+   "choices": [
+    "Syslog",
+    "Management Information Base",
+    "Network management station",
+    "Object identifier"
+   ],
+   "answer": 2,
+   "explanation": "The network management station (NMS) is a server to which SNMP is polled back or in which SNMP information is trapped. The NMS can escalate problems via email, text message, or even visual indicators. Examples of NMS systems are Tivoli Netcool and OpenNMS.",
+   "source": "CCNA 100-105 · Ch. 7, Q5",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "What type of SNMP message is sent to a network management station when an interface goes down?",
+   "choices": [
+    "Set-request message",
+    "Trap message",
+    "Get-request message",
+    "Get-response message"
+   ],
+   "answer": 1,
+   "explanation": "Trap messages are sent from the network device to the SNMP network management station when an event has triggered over a set threshold on the device. An example of an event to be trapped is an interface going down or a restriction by port security.",
+   "source": "CCNA 100-105 · Ch. 7, Q6",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which of the following is a hierarchical set of variables that make up the management information base?",
+   "choices": [
+    "The SNMP community",
+    "SNMP messages",
+    "Object IDs",
+    "The SNMP agent"
+   ],
+   "answer": 2,
+   "explanation": "Object IDs are the variables that make up the management information base. Each object has a unique ID in a hierarchical format in the form of a tree. As an example, 1.3.6.1.4.9.2.1.58.0 is the object that holds the router CPU utilization variable.",
+   "source": "CCNA 100-105 · Ch. 7, Q7",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "What is the difference between trap messages and inform messages for SNMP?",
+   "choices": [
+    "Inform messages always use acknowledgment.",
+    "Trap messages are always encrypted.",
+    "Trap messages always use acknowledgment.",
+    "Inform messages do not use acknowledgment."
+   ],
+   "answer": 0,
+   "explanation": "Inform messages differ from trap messages with respect to acknowledgment. Trap messages employ a best effort delivery utilizing UDP. Inform messages employ acknowledgment; while they use the User Datagram Protocol (UDP), they rely on the Application layer for acknowledgment.",
+   "source": "CCNA 100-105 · Ch. 7, Q8",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which security method does SNMP version 2c employ?",
+   "choices": [
+    "Community strings",
+    "Message integrity",
+    "User authentication",
+    "Encryption"
+   ],
+   "answer": 0,
+   "explanation": "SNMP version 2c is identical to SNMP version 1 with respect to security. Both transmit information in clear text and use the security of community strings to authenticate users for access to information.",
+   "source": "CCNA 100-105 · Ch. 7, Q9",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will configure the SNMP agent with a read-only community of “snmpreadonly”?",
+   "choices": [
+    "Switch(config)#snmp-server community snmpreadonly read-only",
+    "Switch(config)#snmp-server snmpreadonly ro",
+    "Switch(config)#ip snmp-server community snmpreadonly ro",
+    "Switch(config)#snmp-agent community snmpreadonly ro"
+   ],
+   "answer": 0,
+   "explanation": "The command snmp-server community snmpreadonly ro will configure the SNMP agent with a community of “snmpreadonly” and set it to read only.",
+   "source": "CCNA 100-105 · Ch. 7, Q10",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which of the following can be used in conjunction with an SNMP agent configuration for added security?",
+   "choices": [
+    "SHA-256",
+    "Access control lists",
+    "SNMP callback security",
+    "Encrypted communities"
+   ],
+   "answer": 1,
+   "explanation": "Standard access control lists can be used in conjunction with the SNMP agent configuration. First a standard ACL is created containing the NMS IP. Then, when the snmp-server command is used, it becomes the last argument. For example, a standard ACL of 2 would be added as follows: snmp-server community snmpreadonly read-only 2 .",
+   "source": "CCNA 100-105 · Ch. 7, Q11",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will allow you to configure contact information for SNMP for Sybex Publishing?",
+   "choices": [
+    "Switch(config)#snmp-agent location main-idf4-ru23",
+    "Switch(config)#snmp-server contact Sybex Publishing",
+    "Switch(config)#snmp contact Sybex Publishing",
+    "Switch(config)#snmp-server contact-info Sybex Publishing"
+   ],
+   "answer": 1,
+   "explanation": "The command snmp-server contact Sybex Publishing will configure the contact information for the device. This information is polled into the network management station along with the snmp-server location . It is used in case of an outage so that the responsible person can be notified.",
+   "source": "CCNA 100-105 · Ch. 7, Q12",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command(s) will configure SNMPv2c to trap messages to a network management station in the event of component failure?",
+   "choices": [
+    "Switch(config)#snmp-server 192.168.1.5 version 2c C0mmun1ty Switch(config)#snmp-server enable traps",
+    "Switch(config)#snmp-server host 192.168.1.5 version 2c Switch(config)#snmp-server enable traps",
+    "Switch(config)#snmp contact trap 192.168.1.5 version 2c",
+    "Switch(config)#snmp-server host 192.168.1.5 version 2c C0mmun1ty Switch(config)#snmp-server enable traps"
+   ],
+   "answer": 3,
+   "explanation": "The command snmp-server host 192.168.1.5 version 2c C0mmun1ty will configure the SNMP agent to send traps to the host 192.168.1.5. The version 2c C0mmun1ty sets the SNMP version to 2c and the community to “ C0mmun1ty ”.",
+   "source": "CCNA 100-105 · Ch. 7, Q13",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will allow you to verify the configured ACL applied to the SNMP agent?",
+   "choices": [
+    "Switch#show snmp acl",
+    "Switch#show snmp community",
+    "Switch#show snmp",
+    "Switch#show ip interface"
+   ],
+   "answer": 1,
+   "explanation": "The command show snmp community will display all of the configured SNMP community strings along with the applied access control list.",
+   "source": "CCNA 100-105 · Ch. 7, Q14",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which protocol and port number does SNMP use for trap and inform messages to the NMS?",
+   "choices": [
+    "TCP/162",
+    "UDP/514",
+    "UDP/161",
+    "UDP/162"
+   ],
+   "answer": 3,
+   "explanation": "SNMP uses UDP port 162 for communication from an SNMP agent to the network management station for trap and inform messages.",
+   "source": "CCNA 100-105 · Ch. 7, Q15",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will allow you to verify the network management station that is configured to receive trap notifications?",
+   "choices": [
+    "Switch#show snmp community",
+    "Switch#show snmp notifications",
+    "Switch#show snmp",
+    "Switch#show snmp host"
+   ],
+   "answer": 3,
+   "explanation": "The command show snmp host will display the host that is configured to receive notifications of trap or inform messages from the router or switch.",
+   "source": "CCNA 100-105 · Ch. 7, Q16",
+   "topic": "7.1a SNMPv2",
+   "topic_n": 2
+  },
+  {
+   "question": "When you configure SNMPv3 for a restricted OID, what is the first step?",
+   "choices": [
+    "Configuring a group",
+    "Configuring a user",
+    "Configuring a community",
+    "Configuring a view"
+   ],
+   "answer": 3,
+   "explanation": "When you begin to configure SNMPv3 for a restricted OID, the first step is configuring a view. The view allows or restricts what the user will have access to.",
+   "source": "CCNA 100-105 · Ch. 7, Q17",
+   "topic": "7.1b SNMPv3",
+   "topic_n": 3
+  },
+  {
+   "question": "When you configure an SNMPv3 group, which parameter will configure authentication and encryption of data?",
+   "choices": [
+    "priv",
+    "auth",
+    "enc",
+    "noauth"
+   ],
+   "answer": 0,
+   "explanation": "When you’re configuring the SNMPv3 group, the priv parameter will configure privacy, which defines authentication and encryption. An example of the command is snmp-server group1 v3 priv read view1 access read .",
+   "source": "CCNA 100-105 · Ch. 7, Q18",
+   "topic": "7.1b SNMPv3",
+   "topic_n": 3
+  },
+  {
+   "question": "Which command will configure an SNMP view named INT-VIEW, which will include the ifIndex OID?",
+   "choices": [
+    "Switch(config)#snmp-server v3 view INT-VIEW ifIndex include",
+    "Switch(config)#snmp-server view INT-VIEW ifIndex include",
+    "Switch(config)#snmp-server INT-VIEW ifIndex",
+    "Switch(config)#snmp-server view INT-VIEW ifIndex"
+   ],
+   "answer": 1,
+   "explanation": "The command snmp-server view INT-VIEW ifIndex include will configure an SNMPv3 view named INT-VIEW. The two parameters ifIndex include will include the ifIndex OID. This can also be expressed as the numerical OID four, but if it is expressed in word form, it is case sensitive.",
+   "source": "CCNA 100-105 · Ch. 7, Q19",
+   "topic": "7.1b SNMPv3",
+   "topic_n": 3
+  },
+  {
+   "question": "Which command will allow you to verify a user’s authentication and encryption settings for SNMPv3?",
+   "choices": [
+    "Switch#show user priv",
+    "Switch#show user auth",
+    "Switch#show snmp user auth",
+    "Switch#show snmp user"
+   ],
+   "answer": 3,
+   "explanation": "The command show snmp user will display all SNMPv3 users. In the output you will find the group name, the authentication protocol, and the encryption protocol.",
+   "source": "CCNA 100-105 · Ch. 7, Q20",
+   "topic": "7.1b SNMPv3",
+   "topic_n": 3
+  },
+  {
+   "question": "Which command will allow you to verify the view associated with a group?",
+   "choices": [
+    "Switch#show group view",
+    "Switch#show snmp group-view",
+    "Switch#show snmp group view",
+    "Switch#show snmp group"
+   ],
+   "answer": 3,
+   "explanation": "The command show snmp group will display all SNMPv3 groups. In the output, you will find the group name and the defined read view, write view, and notify view.",
+   "source": "CCNA 100-105 · Ch. 7, Q21",
+   "topic": "7.1b SNMPv3",
+   "topic_n": 3
+  },
+  {
+   "question": "Which protocol and port number does syslog use?",
+   "choices": [
+    "TCP/162",
+    "UDP/514",
+    "UDP/161",
+    "UDP/162"
+   ],
+   "answer": 1,
+   "explanation": "The router or switch sends syslog messages to the syslog server on port 514 with UDP.",
+   "source": "CCNA 100-105 · Ch. 7, Q22",
+   "topic": "7.1c Syslog",
+   "topic_n": 4
+  },
+  {
+   "question": "Which command will configure all event logs to be sent to a syslog server?",
+   "choices": [
+    "Router(config)#logging 192.168.1.6",
+    "Router(config)#logging host 192.168.1.6",
+    "Router(config)#logging server 192.168.1.6",
+    "Router(config)#syslog server 192.168.1.6"
+   ],
+   "answer": 1,
+   "explanation": "The command logging host 192.168.1.6 will configure all logs to be sent to the syslog server 192.168.1.6.",
+   "source": "CCNA 100-105 · Ch. 7, Q23",
+   "topic": "7.1c Syslog",
+   "topic_n": 4
+  },
+  {
+   "question": "Which command will allow you to verify the syslog server set for logging and the logging level set?",
+   "choices": [
+    "Router#show logging",
+    "Router#show ip logging",
+    "Router#show syslog",
+    "Router#show log-server"
+   ],
+   "answer": 0,
+   "explanation": "The command show logging will display the configured syslog server and the current severity level, for logs to be sent to the syslog server.",
+   "source": "CCNA 100-105 · Ch. 7, Q24",
+   "topic": "7.1c Syslog",
+   "topic_n": 4
+  },
+  {
+   "question": "Which command will configure the severity level of syslog events that will be sent to the syslog server for debugging?",
+   "choices": [
+    "Router(config)#log-level debugging",
+    "Router(config)#logging debugging",
+    "Router(config)#syslog debugging",
+    "Router(config)#logging trap debugging"
+   ],
+   "answer": 3,
+   "explanation": "The command logging trap debugging will configure syslog events to be sent to the syslog server for the severity levels of debugging(7) through emergency(0).",
+   "source": "CCNA 100-105 · Ch. 7, Q25",
+   "topic": "7.1c Syslog",
+   "topic_n": 4
+  },
+  {
+   "question": "What is a service-level agreement (SLA) for network connectivity?",
+   "choices": [
+    "It is a quality of service agreement between the ISP and the customer.",
+    "It is an agreement of bandwidth between the ISP and the customer.",
+    "It is an agreement of uptime between the ISP and the customer.",
+    "All of the above"
+   ],
+   "answer": 3,
+   "explanation": "A service-level agreement (SLA) is a contracted agreement between the Internet service provider (ISP) and the customer. This agreement defines the level of service. SLAs are based on uptime, quality of service, bandwidth, and any other stipulations the customer might deem necessary. Uptime is usually the most important when shopping for a provider.",
+   "source": "CCNA 100-105 · Ch. 7, Q26",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "Which feature in Cisco routers can a network administrator use to check the provider’s SLA?",
+   "choices": [
+    "IP SLA",
+    "SNMP",
+    "ACLs and policy-based routing",
+    "Syslog"
+   ],
+   "answer": 0,
+   "explanation": "The IP service-level agreement (IP SLA) feature in a Cisco router provides the network administrator with statistics on the performance, uptime, and monitoring of the provider’s network connections.",
+   "source": "CCNA 100-105 · Ch. 7, Q27",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "On which device(s) can you configure the Cisco IP SLA feature to allow for statistics’ collection?",
+   "choices": [
+    "Routers and switches",
+    "Routers only",
+    "Router, switches, and all other Cisco devices",
+    "Switches only"
+   ],
+   "answer": 1,
+   "explanation": "Only Cisco routers contain the IP SLA feature; therefore, it can only be configured on Cisco routers for statistic collection. Switches with the LAN Base feature set can be used as responders, but they will lack the ability for the statistic collection.",
+   "source": "CCNA 100-105 · Ch. 7, Q28",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "Which type of IP SLA check does not require an SLA responder?",
+   "choices": [
+    "MPLS probe",
+    "VoIP jitter probe",
+    "UDP jitter probe",
+    "ICMP echo probe"
+   ],
+   "answer": 3,
+   "explanation": "The IP SLA responder in not required for ICMP echo testing. However, having an IP SLA responder allows for collection of more statistics.",
+   "source": "CCNA 100-105 · Ch. 7, Q29",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "What is the term used for the IP SLA router that sends packets and collects and compiles statistics on the packets?",
+   "choices": [
+    "IP SLA sender",
+    "IP SLA collector",
+    "IP SLA responder",
+    "IP SLA source"
+   ],
+   "answer": 3,
+   "explanation": "The term used for the IP SLA router that sends packets and collects and compiles statistics on the packet is IP SLA source . The IP SLA source sends these packets to the IP SLA responder.",
+   "source": "CCNA 100-105 · Ch. 7, Q30",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "Which command(s) will configure an IP SLA for ICMP echo probe?",
+   "choices": [
+    "Router(config)#ip sla 1 Router(config-ip-sla)#icmp-echo 192.168.1.2",
+    "Router(config)#ip sla 1 Router(config-ip-sla)#icmp 192.168.1.2",
+    "Router(config)#ip sla 1 icmp-echo 192.168.1.2",
+    "Router(config)#ip sla icmp-echo 192.168.1.2"
+   ],
+   "answer": 0,
+   "explanation": "When you’re configuring an IP SLA for ICMP echo, the first statement, ip sla 1 , will configure the IP SLA operation. This command will present an IP SLA sub-configuration prompt, where you will enter icmp-echo 192.168.1.2 . This command configures the ICMP echo probe to a destination of 192.168.1.2.",
+   "source": "CCNA 100-105 · Ch. 7, Q31",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "What is the default timer (frequency) for an IP SLA ICMP echo probe?",
+   "choices": [
+    "5 minutes",
+    "120 seconds",
+    "60 minutes",
+    "60 seconds"
+   ],
+   "answer": 3,
+   "explanation": "The default timer for an IP SLA ICMP echo probe is 60 seconds. This can be overridden with the frequency {time in seconds} command.",
+   "source": "CCNA 100-105 · Ch. 7, Q32",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "Which command will configure an IP SLA schedule for a probe?",
+   "choices": [
+    "Router(config-ip-sla)#ip sla schedule life forever start-time now",
+    "Router(config)#ip sla 1 schedule forever start-time now",
+    "Router(config)#ip sla 1 schedule life forever start-time now",
+    "Router(config)#ip sla 1 schedule life start-now"
+   ],
+   "answer": 2,
+   "explanation": "The command ip sla 1 schedule life forever start-time now will configure the IP SLA operation of 1 to run forever and start immediately. Using this command, you could create a schedule to start the probe during business hours and run it for a finite period of time. This command must be configured in global config mode.",
+   "source": "CCNA 100-105 · Ch. 7, Q33",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "Which command will allow you to view the statistics of an IP SLA ICMP echo probe for all configured buckets?",
+   "choices": [
+    "Router#show ip sla",
+    "Router#show ip sla history 1",
+    "Router#show ip sla statistics 1",
+    "Router#show sla summary"
+   ],
+   "answer": 1,
+   "explanation": "The command show ip sla history 1 will display the historical statistics collected from the ICMP echo probe for IP SLA operation 1. The command will allow you to see all of the buckets that were collected. The command ip sla statistics 1 will only show the last collected bucket’s statistical summary.",
+   "source": "CCNA 100-105 · Ch. 7, Q34",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "You have running on your router an IP SLA ICMP echo probe that checks the ISP connection. When you view the historical statistics, you notice that several of the tests in the probe have a result of 4 in the Sense column. What happened during those tests?",
+   "choices": [
+    "The test for the probe exceeded a set threshold.",
+    "The test for the probe did not receive a response.",
+    "The test for the probe was out of sequence.",
+    "The test for the probe ran successfully."
+   ],
+   "answer": 1,
+   "explanation": "The Sense column of the statistics is the result code for the test. There are 10 different response codes, but only a few should be remembered. A result code of 1 means the test was OK, a result of 3 means the test was over the threshold, and a result code of 4 means the operation timed out and a response was not received.",
+   "source": "CCNA 100-105 · Ch. 7, Q35",
+   "topic": "7.2 Troubleshoot network connectivity issues using ICMP echo-based IP SLA",
+   "topic_n": 5
+  },
+  {
+   "question": "Which command will allow you to verify the size of storage for flash as well as how much free space is available?",
+   "choices": [
+    "Switch#show storage",
+    "Switch#show file free",
+    "Switch#show file storage",
+    "Switch#show file systems"
+   ],
+   "answer": 3,
+   "explanation": "The command show file systems will display all of the file storage types connected to the switch or router. In this output, the size in bits and the free space in bits will be displayed.",
+   "source": "CCNA 100-105 · Ch. 7, Q36",
+   "topic": "7.5c File system management",
+   "topic_n": 17
+  },
+  {
+   "question": "Where is the startup-config stored?",
+   "choices": [
+    "NVRAM",
+    "RAM",
+    "System",
+    "Flash"
+   ],
+   "answer": 0,
+   "explanation": "The start-configuration for the router or switch is stored in non- volatile random-access memory (NVRAM). This memory is similar to flash memory in that it retains data well after the power is removed from the device.",
+   "source": "CCNA 100-105 · Ch. 7, Q37",
+   "topic": "7.3 Configure and verify device management",
+   "topic_n": 6
+  },
+  {
+   "question": "If power is lost, which command will retain the configuration for bootup?",
+   "choices": [
+    "Router#save running-config",
+    "Router#cp running-config startup-config",
+    "Router#write running-config startup-config",
+    "Router#copy running-config startup-config"
+   ],
+   "answer": 3,
+   "explanation": "The command copy running-config startup-config will copy the running-config in RAM to the startup-config in NVRAM.",
+   "source": "CCNA 100-105 · Ch. 7, Q38",
+   "topic": "7.3a Backup and restore device configuration",
+   "topic_n": 7
+  },
+  {
+   "question": "You need to decommission a router. You want to clear only the configuration off the router. Which command will achieve this?",
+   "choices": [
+    "Router#clear startup-config",
+    "Router#erase startup-config",
+    "Router#format startup-config",
+    "Router#format flash:"
+   ],
+   "answer": 1,
+   "explanation": "The command erase startup-config will erase the startup-config from NVRAM. The only copy left after that command is configured is in RAM. Once the power is removed, the RAM will be erased as well.",
+   "source": "CCNA 100-105 · Ch. 7, Q39",
+   "topic": "7.3 Configure and verify device management",
+   "topic_n": 6
+  },
+  {
+   "question": "Which command will allow you to verify the IOS images you have on the flash file system?",
+   "choices": [
+    "Router#show flash: filesystem",
+    "Router#dir /flash",
+    "Router#dir flash:",
+    "Router#show boot"
+   ],
+   "answer": 2,
+   "explanation": "The command dir flash: will display all of the IOS images stored in the flash filesystem. The command show flash: will work also, but read-write attributes will be omitted.",
+   "source": "CCNA 100-105 · Ch. 7, Q40",
+   "topic": "7.5c File system management",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command will back up the startup-config for a device to a server?",
+   "choices": [
+    "Switch#copy startup-config tftp:",
+    "Switch#archive startup-config tftp:",
+    "Switch#copy startup-config server:",
+    "Switch#backup startup-config tftp://192.168.1.2"
+   ],
+   "answer": 0,
+   "explanation": "The command copy startup-config tftp: will ask for the Trivial File Transfer Protocol (TFTP) server address, source filename, and destination filename. It will then proceed to copy the file over the network to the TFTP server.",
+   "source": "CCNA 100-105 · Ch. 7, Q41",
+   "topic": "7.3a Backup and restore device configuration",
+   "topic_n": 7
+  },
+  {
+   "question": "Which command will restore configuration to the running-config for a device from a server?",
+   "choices": [
+    "Switch#copy server: running-config",
+    "Switch#copy tftp: running-config",
+    "Switch#restore tftp://192.168.1.2 running-config",
+    "Switch#archive tftp: running-config"
+   ],
+   "answer": 1,
+   "explanation": "The command copy tftp: running-config will ask for the TFTP server address, source filename, and destination filename. It will then proceed to copy the file over the network from the TFTP server.",
+   "source": "CCNA 100-105 · Ch. 7, Q42",
+   "topic": "7.3a Backup and restore device configuration",
+   "topic_n": 7
+  },
+  {
+   "question": "You have been given the task of mapping a network. You have several routers and switches that are interconnected. Which Cisco tool will help you map the network?",
+   "choices": [
+    "CDP",
+    "Running-config",
+    "EIGRP neighbor table",
+    "OSPF neighbor table"
+   ],
+   "answer": 0,
+   "explanation": "All Cisco devices by default participate in the Cisco Discovery Protocol (CDP). By using CDP, you can begin mapping the network one node at a time, discovering all the nodes attached.",
+   "source": "CCNA 100-105 · Ch. 7, Q43",
+   "topic": "7.3b Using Cisco Discovery Protocol or LLDP for device discovery",
+   "topic_n": 8
+  },
+  {
+   "question": "You are contracted to fix a networking issue. The technical staff has given you the network logins for all the routers and switches. You discover that the problem is not on the router you are connected to but on a neighboring router. How can you obtain the management IP address of the neighboring router?",
+   "choices": [
+    "RouterA#show ip protocols",
+    "RouterA#show cdp neighbors detail",
+    "RouterA#show ip interface",
+    "RouterA#show ip route"
+   ],
+   "answer": 1,
+   "explanation": "The command show cdp neighbors detail will display the IP addresses of the routers and switches connected to the current router. The show ip route command will only show the data plane IP addresses and not the management plane IP addresses.",
+   "source": "CCNA 100-105 · Ch. 7, Q44",
+   "topic": "7.3b Using Cisco Discovery Protocol or LLDP for device discovery",
+   "topic_n": 8
+  },
+  {
+   "question": "You have neighboring equipment on the switch that is running LLDP. Which command(s) will allow you to see the neighboring equipment’s management IP addresses?",
+   "choices": [
+    "Switch(config)#enable lldp Switch(config)#exit Switch#show lldp neighbors detail",
+    "Switch#show lldp neighbors detail",
+    "Switch(config)#enable lldp Switch(config)#exit Switch#show lldp neighbors *",
+    "Switch(config)#lldp run Switch(config)#exit Switch#show lldp neighbors detail"
+   ],
+   "answer": 3,
+   "explanation": "By default, Cisco devices do not participate in Link Layer Discovery Protocol (LLDP). The first command that needs to be configured is lldp run , which starts the switch participating in LLDP. You then need to enter the command show lldp neighbors detail in the privileged exec mode prompt. This command will show all of the neighboring LLDP devices.",
+   "source": "CCNA 100-105 · Ch. 7, Q45",
+   "topic": "7.3b Using Cisco Discovery Protocol or LLDP for device discovery",
+   "topic_n": 8
+  },
+  {
+   "question": "What is the term used to describe Cisco’s current IOS image naming convention, which contains all the feature sets and is licensed upon feature use?",
+   "choices": [
+    "Fusion image",
+    "Unified image",
+    "Central image",
+    "Universal image"
+   ],
+   "answer": 3,
+   "explanation": "The term used to describe Cisco’s current IOS image naming convention, which contains all the feature sets, is universal image . The universal image contains all of the features sets available, and a feature set can be “turned on” by providing a license key.",
+   "source": "CCNA 100-105 · Ch. 7, Q46",
+   "topic": "7.3c Licensing",
+   "topic_n": 9
+  },
+  {
+   "question": "What allows you to download the current IOS from Cisco for your router or switch?",
+   "choices": [
+    "You need a current SMARTnet contract for the device.",
+    "Cisco provides upgrades for free; nothing is required.",
+    "One free upgrade is permitted per the life of the device.",
+    "An activation key is required, which is purchased from a retailer."
+   ],
+   "answer": 0,
+   "explanation": "A current SMARTnet contract is required to download the latest IOS for your Cisco router or switch. SMARTnet contracts provide configuration support, parts replacement, and software maintenance on Cisco devices.",
+   "source": "CCNA 100-105 · Ch. 7, Q47",
+   "topic": "7.3c Licensing",
+   "topic_n": 9
+  },
+  {
+   "question": "You have a new router and you have purchased the IP Base license along with it. You want to use the voice feature set on the router. What is required?",
+   "choices": [
+    "A current SMARTnet contract for the device is required.",
+    "An activation key is required, which is purchased from a retailer.",
+    "A new Cisco IOS with the feature set included is required.",
+    "Cisco provides one free feature set upgrade."
+   ],
+   "answer": 1,
+   "explanation": "An activation key is required to activate the features, which are already installed in the universal image. SMARTnet agreements only cover you for upgrades to the IP Base IOS. They do not provide upgrades of features sets called Technology Package Licenses.",
+   "source": "CCNA 100-105 · Ch. 7, Q48",
+   "topic": "7.3c Licensing",
+   "topic_n": 9
+  },
+  {
+   "question": "Which tool allows you to manage all of your Cisco device licensing needs through a single user interface?",
+   "choices": [
+    "Cisco Network Assistant",
+    "Cisco Prime Infrastructure",
+    "Cisco License Manager",
+    "Cisco SMARTnet"
+   ],
+   "answer": 2,
+   "explanation": "The Cisco License Manager (CLM) can be installed on Windows, Solaris, or Linux. It allows for discovery of Cisco devices and inventory of Cisco device licenses and connects to Cisco for access to current and new licenses purchased. The CLM allows for management of the software activation process through its user interface.",
+   "source": "CCNA 100-105 · Ch. 7, Q49",
+   "topic": "7.3c Licensing",
+   "topic_n": 9
+  },
+  {
+   "question": "Which command would you use to obtain a device’s product ID (PID) and unique device identifier (UDI) for the activation process?",
+   "choices": [
+    "Switch#show licensing",
+    "Switch#show license",
+    "Switch#show version",
+    "Switch#show license udi"
+   ],
+   "answer": 3,
+   "explanation": "The command show license udi will display the product ID (PID) and the unique device identifier (UDI). Both the PID and UDI are required when activating a license from Cisco’s license portal. The Cisco license portal will email or display the license key required to unlock the feature set purchased.",
+   "source": "CCNA 100-105 · Ch. 7, Q50",
+   "topic": "7.3c Licensing",
+   "topic_n": 9
+  },
+  {
+   "question": "Which command will show which features are activated, available, and in evaluation mode on a router or switch?",
+   "choices": [
+    "Switch#show license feature",
+    "Switch#show licensing",
+    "Switch#show features",
+    "Switch#show version"
+   ],
+   "answer": 0,
+   "explanation": "The command show license feature will display a matrix of all the features in the IOS, including the enforcement, evaluation, subscription, enabled, and right to use status.",
+   "source": "CCNA 100-105 · Ch. 7, Q51",
+   "topic": "7.3c Licensing",
+   "topic_n": 9
+  },
+  {
+   "question": "Which license will allow a Cisco router to enable a feature set for evaluation?",
+   "choices": [
+    "UDI license",
+    "Evaluation license",
+    "Enforcement license",
+    "Right-to-use license"
+   ],
+   "answer": 3,
+   "explanation": "A right-to-use license will allow a customer to evaluate a feature set for 60 days. After the 60-day period is expired, the feature set will remain active. However, after 60 days the customer is in violation of the license agreement if the feature set has not been purchased.",
+   "source": "CCNA 100-105 · Ch. 7, Q52",
+   "topic": "7.3c Licensing",
+   "topic_n": 9
+  },
+  {
+   "question": "You are connected to the console of a switch. As you are configuring the switch, console logging is disrupting your commands and making it hard to configure the switch properly. Which command will allow the console message to still appear but not disrupt what you are typing?",
+   "choices": [
+    "Switch(config-line)#logging synchronous",
+    "Switch#logging synchronous",
+    "Switch(config)#logging synchronous",
+    "Switch#no logging inline"
+   ],
+   "answer": 0,
+   "explanation": "The command logging synchronous will configure console logging messages to synchronize with what is being typed so they will not disrupt the user’s input.",
+   "source": "CCNA 100-105 · Ch. 7, Q53",
+   "topic": "7.3d Logging",
+   "topic_n": 10
+  },
+  {
+   "question": "Which command sets the time zone of a router for Pacific Standard Time?",
+   "choices": [
+    "Router(config)#timezone pacific",
+    "Router(config)#clock timezone pst -8",
+    "Router(config)#timezone pst -8",
+    "Router(config)#clock timezone pacific"
+   ],
+   "answer": 1,
+   "explanation": "The command clock timezone pst -8 will set the time zone to Pacific Standard Time with an offset of –8 from Coordinated Universal Time (UTC).",
+   "source": "CCNA 100-105 · Ch. 7, Q54",
+   "topic": "7.3e Timezone",
+   "topic_n": 11
+  },
+  {
+   "question": "Which command will send all warnings to the syslog server?",
+   "choices": [
+    "Switch(config)#logging trap 4",
+    "Switch(config)#logging trap 5",
+    "Switch(config)#logging server 5",
+    "Switch(config)#logging server 4"
+   ],
+   "answer": 0,
+   "explanation": "The command logging trap 4 will trap all messages with warnings to the syslog server.",
+   "source": "CCNA 100-105 · Ch. 7, Q55",
+   "topic": "7.3d Logging",
+   "topic_n": 10
+  },
+  {
+   "question": "Which command will send logging with time stamps rather than sequence numbers?",
+   "choices": [
+    "Switch(config)#service datetime timestamps",
+    "Switch(config)#logging timestamps log datetime",
+    "Switch(config)#logging timestamps datetime",
+    "Switch(config)#service timestamps log datetime"
+   ],
+   "answer": 3,
+   "explanation": "The command service timestamps log datetime will configure syslog messages to be logged with the date and time rather than the arbitrary sequence number.",
+   "source": "CCNA 100-105 · Ch. 7, Q56",
+   "topic": "7.3d Logging",
+   "topic_n": 10
+  },
+  {
+   "question": "Which command will configure Eastern Daylight Time?",
+   "choices": [
+    "Switch(config)#clock tz EDT -5",
+    "Switch(config)#clock summer-time EDT recurring",
+    "Switch(config)#clock timezone EST -5 daylight",
+    "Switch(config)#clock daylight-savings"
+   ],
+   "answer": 1,
+   "explanation": "The command clock summer-time EDT recurring will configure the switch for Eastern Daylight Time (EDT).",
+   "source": "CCNA 100-105 · Ch. 7, Q57",
+   "topic": "7.3e Timezone",
+   "topic_n": 11
+  },
+  {
+   "question": "Which command will limit console logging to the severity level of alerts?",
+   "choices": [
+    "Router(config-line)#logging level 0",
+    "Router(config)#logging console 7",
+    "Router(config)#logging console 0",
+    "Router(config-line)#logging level 7"
+   ],
+   "answer": 2,
+   "explanation": "The command logging console 0 will configure the logging to the console for the severity level of facility 0, which is alerts.",
+   "source": "CCNA 100-105 · Ch. 7, Q58",
+   "topic": "7.3d Logging",
+   "topic_n": 10
+  },
+  {
+   "question": "You are configuring NTP on your switch. You want to configure the switch so if any interface fails, NTP will still be available. Which type of interface should you use?",
+   "choices": [
+    "NTP interface",
+    "Switched Virtual Interface (SVI)",
+    "Loopback interface",
+    "Tunnel interface"
+   ],
+   "answer": 2,
+   "explanation": "You should configure a loopback interface on the switch with the IP address of the NTP server the NTP clients will use. Although a Switched Virtual Interface (SVI) would work, it is not active until at least one port is configured with the VLAN. Therefore, the SVI is still tied to a physical interface state.",
+   "source": "CCNA 100-105 · Ch. 7, Q59",
+   "topic": "7.3f Loopback",
+   "topic_n": 12
+  },
+  {
+   "question": "Which command will configure NTP to use the internal loopback interface?",
+   "choices": [
+    "Switch(config)#ntp master loopback 0",
+    "Switch(config)#ntp clock loopback 0",
+    "Switch(config)#ntp source loopback 0",
+    "Switch(config)#ntp loopback 0"
+   ],
+   "answer": 2,
+   "explanation": "The command ntp source loopback 0 will configure the NTP service to respond to clients from the source address of the loopback 0 interface.",
+   "source": "CCNA 100-105 · Ch. 7, Q60",
+   "topic": "7.3f Loopback",
+   "topic_n": 12
+  },
+  {
+   "question": "Which command will configure a loopback interface with an address of 192.168.1.2/24?",
+   "choices": [
+    "Router(config)#interface loopback 0 Router(config-if)#ip address 192.168.1.2/24",
+    "Router(config)#interface loopback Router(config-if)#ip address 192.168.1.2/24",
+    "Router(config)#interface loopback 0 Router(config-if)#ip address 192.168.1.2 255.255.255.0",
+    "Router(config)#interface loopback Router(config-if)#ip address 192.168.1.2 255.255.255.0"
+   ],
+   "answer": 2,
+   "explanation": "The command interface loopback 0 will configure and create a pseudo interface called loopback 0. The loopback number must be specified and the loopback should not overlap a loopback already configured. The command ip address 192.168.1.2 255.255.255.0 will configure the IP address on the loopback interface.",
+   "source": "CCNA 100-105 · Ch. 7, Q61",
+   "topic": "7.3f Loopback",
+   "topic_n": 12
+  },
+  {
+   "question": "Which command will configure logging stored in RAM to include only logs with a severity level of emergencies and alerts?",
+   "choices": [
+    "Switch(config)#logging 2",
+    "Switch(config)#logging 1",
+    "Switch(config)#logging buffered 1",
+    "Switch(config)#logging buffered 2"
+   ],
+   "answer": 2,
+   "explanation": "The command logging buffered 1 will configure the logs stored in RAM, which is buffered to a severity of 1. This command will include severity levels 1 and 0.",
+   "source": "CCNA 100-105 · Ch. 7, Q62",
+   "topic": "7.3d Logging",
+   "topic_n": 10
+  },
+  {
+   "question": "Which command will allow you to see the commands you previously entered?",
+   "choices": [
+    "Switch#show history",
+    "Switch#show log",
+    "Switch#show buffer",
+    "Switch#show commands"
+   ],
+   "answer": 0,
+   "explanation": "The command show history will show the last commands typed, which are kept in the buffer. The history normally includes the last 10 commands.",
+   "source": "CCNA 100-105 · Ch. 7, Q63",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will extend the history buffer to 30 for all users?",
+   "choices": [
+    "Switch(config-line)#history size 30",
+    "Switch#terminal history size 30",
+    "Switch(config)#history size 30",
+    "Switch#history size 30"
+   ],
+   "answer": 0,
+   "explanation": "The command history size 30 will extend the buffer to 30 commands for all users. This command must be configured on the line, such as the console or VTY.",
+   "source": "CCNA 100-105 · Ch. 7, Q64",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will extend the history buffer to 30 for only the current session?",
+   "choices": [
+    "Switch#history size 30",
+    "Switch(config)#history size 30",
+    "Switch#terminal history size 30",
+    "Switch(config-line)#history size 30"
+   ],
+   "answer": 2,
+   "explanation": "The command terminal history size 30 will extend the buffer to 30 commands for the current session. This command is configured in the privileged exec prompt and is only active until the user logs out.",
+   "source": "CCNA 100-105 · Ch. 7, Q65",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will set the name of a router to PGH-4-209?",
+   "choices": [
+    "Router#name PGH-4-209",
+    "Router(config)#name PGH-4-209",
+    "Router(config)#system-name PGH-4-209",
+    "Router(config)#hostname PGH-4-209"
+   ],
+   "answer": 3,
+   "explanation": "The command hostname PGH-4-209 will set the name of the router (before the prompt) to PGH-4-209. It is always advisable to create a name that is least specific to most specific from left to right. For example, PGH is the city, 4 is the building, and 209 is the room number where the equipment is located.",
+   "source": "CCNA 100-105 · Ch. 7, Q66",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "You need to jump to the beginning of a long command string you just entered. Which key combination will achieve this?",
+   "choices": [
+    "Ctrl+B",
+    "Ctrl+E",
+    "Ctrl+A",
+    "Ctrl+1"
+   ],
+   "answer": 2,
+   "explanation": "Pressing the key combination of Ctrl+A will take you to the beginning of a command string.",
+   "source": "CCNA 100-105 · Ch. 7, Q67",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "You need to jump to the end of a long command string you just edited but has not been committed yet. Which key combination will achieve this?",
+   "choices": [
+    "Ctrl+B",
+    "Ctrl+A",
+    "Ctrl+E",
+    "Ctrl+1"
+   ],
+   "answer": 2,
+   "explanation": "Pressing the key combination of Ctrl+E will take you to the end of a command string.",
+   "source": "CCNA 100-105 · Ch. 7, Q68",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will allow you to enter privileged exec mode from user exec mode?",
+   "choices": [
+    "Router>enable",
+    "Router>priv",
+    "Router>enter",
+    "Router>login"
+   ],
+   "answer": 0,
+   "explanation": "The command enable , sometimes shortened to en by seasoned Cisco admins, will allow you to enter into privileged exec mode. In privileged exec mode, you can change configuration.",
+   "source": "CCNA 100-105 · Ch. 7, Q69",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "You start up a brand-new router out of the box with no configuration on it. What will be displayed when it boots?",
+   "choices": [
+    "Global configuration mode",
+    "User exec mode",
+    "Setup mode",
+    "Privileged exec mode"
+   ],
+   "answer": 2,
+   "explanation": "When a router or switch boots and contains no startup-config, it will boot into setup mode. In setup mode, you can perform a basic setup of the management IP address and interface IP addresses. It is limited in its step-by-step configuration and can be useful in adding a quick IP address initially for management.",
+   "source": "CCNA 100-105 · Ch. 7, Q70",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which key combination will escape you out of configuration mode and bring you back to privileged exec mode?",
+   "choices": [
+    "Ctrl+F",
+    "Ctrl+D",
+    "Ctrl+Z",
+    "Ctrl+C"
+   ],
+   "answer": 2,
+   "explanation": "The key combination of Ctrl+Z will escape you back to privileged exec mode from configuration. If you are in a sub-configuration dialog, you would have to type exit several times to exit back to privileged exec mode. However, if you use Ctrl+Z, you will immediately exit back to privileged exec mode.",
+   "source": "CCNA 100-105 · Ch. 7, Q71",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will show the current time and date on the switch?",
+   "choices": [
+    "Switch#show clock",
+    "Switch#show ntp",
+    "Switch#show time",
+    "Switch#show date"
+   ],
+   "answer": 0,
+   "explanation": "The command show clock will display the local time of the switch along with the date.",
+   "source": "CCNA 100-105 · Ch. 7, Q72",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will allow you to create short notes about an interface that will remain with the configuration?",
+   "choices": [
+    "Router(config-if)#remark Connection to Switch1",
+    "Router(config-if)#!Connection to Switch1",
+    "Router(config-if)#description Connection to Switch1",
+    "Router(config-if)#note Connection to Switch1"
+   ],
+   "answer": 2,
+   "explanation": "The command description Connection to Switch1 will create a note that describes what the interface is for. The description command is useful in explaining what an interface connects to or providing service information in the case of an outage. Only one description can be used per interface.",
+   "source": "CCNA 100-105 · Ch. 7, Q73",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "You are in configuration mode and need to remain in configuration mode but want to see the running-config. Which command combination will allow you to do this?",
+   "choices": [
+    "Router(config-if)#!show running-config",
+    "Router(config-if)#[CTRL-Z]",
+    "Router(config-if)#show running-config",
+    "Router(config-if)#do show running-config"
+   ],
+   "answer": 3,
+   "explanation": "The command do show running-config will allow you to “do” a command outside of the configuration prompt. This command was first introduced in IOS version 12.3.",
+   "source": "CCNA 100-105 · Ch. 7, Q74",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "You want to filter the results of show running-config to see only SNMP configuration commands. Which command will allow you to do this?",
+   "choices": [
+    "Switch#show running-config filter snmp",
+    "Switch#show filter running-config snmp",
+    "Switch#show running-config snmp",
+    "Switch#show running-config | include snmp"
+   ],
+   "answer": 3,
+   "explanation": "The command show running-config | include snmp will show the running-config and only include lines that match snmp . Seasoned Cisco admins usually shorten this to show running-config | i snmp , since there are no other commands that start with the letter i after the pipe parameter.",
+   "source": "CCNA 100-105 · Ch. 7, Q75",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "You have a switch with several hundred interfaces. You only want to see the running-config for one interface, Gi3/45. Which command will allow you to see the running-config for only Gi3/45?",
+   "choices": [
+    "Switch#show running gi 3/45",
+    "Switch#show running-config | include 3/45",
+    "Switch#show running-config interface gi 3/45",
+    "Switch#show interface gi 3/45"
+   ],
+   "answer": 2,
+   "explanation": "The command show running-config interface gi 3/45 will show the running-configuration for only interface Gi3/45.",
+   "source": "CCNA 100-105 · Ch. 7, Q76",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will set the router’s internal clock to 2:24 December 1, 2016?",
+   "choices": [
+    "Router(config)#clock set 2:24:00 1 august 2016",
+    "Router#clock set 2:24:00 1 august 2016",
+    "Router#clock 2:24:00 1 august 2016",
+    "Router(config)#clock set 2:24:00 august 1 2016"
+   ],
+   "answer": 1,
+   "explanation": "The command clock set 2:24:00 1 august 2016 will set the clock to 2:24 a.m. (24-hour format) and August 1, 2016.",
+   "source": "CCNA 100-105 · Ch. 7, Q77",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "You are examining the output of the command show cdp neighbors detail . One of the devices has the capability of S and R. What does this mean?",
+   "choices": [
+    "The device has source routing bridge capability.",
+    "The device has router capability.",
+    "The device has switch and router capability.",
+    "The device has switch capability."
+   ],
+   "answer": 2,
+   "explanation": "The device has the capability of both a switch and a router. It is most likely a switch that is performing SVI routing or has routing enabled.",
+   "source": "CCNA 100-105 · Ch. 7, Q79",
+   "topic": "7.3b Using Cisco Discovery Protocol or LLDP for device discovery",
+   "topic_n": 8
+  },
+  {
+   "question": "Your network is connected in a star topology. You are assessing a network upgrade. Which command will help you determine the version of IOS on the switches and routers in your network, with the least amount of effort?",
+   "choices": [
+    "Switch#show version",
+    "Switch#show running-config",
+    "Switch#show lldp neighbors",
+    "Switch#show cdp neighbors detail"
+   ],
+   "answer": 3,
+   "explanation": "The command show cdp neighbors detail will display all connected switches along with their IP addresses, hostnames, and IOS version. If this command is used from the central switch, you can quickly assess which switches need to be upgraded.",
+   "source": "CCNA 100-105 · Ch. 7, Q80",
+   "topic": "7.3b Using Cisco Discovery Protocol or LLDP for device discovery",
+   "topic_n": 8
+  },
+  {
+   "question": "Which command will allow you to enter global configuration mode for editing RAM?",
+   "choices": [
+    "Switch#configure terminal",
+    "Switch#configure network",
+    "Switch#configure overwrite-network",
+    "Switch#configure memory"
+   ],
+   "answer": 0,
+   "explanation": "The command configure terminal allows you to enter global configuration mode. This command will enable editing of the RAM configuration, also known as the running-config. The command is usually shortened to conf t .",
+   "source": "CCNA 100-105 · Ch. 7, Q81",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will allow you to verify the configured exec timeout?",
+   "choices": [
+    "Router#show terminal",
+    "Router#show exec-timeout",
+    "Router#show version",
+    "Router#show timeout-exec"
+   ],
+   "answer": 0,
+   "explanation": "The command show terminal will allow you to verify the configured exec timeout. It will also display the current history size and the size of paging for output.",
+   "source": "CCNA 100-105 · Ch. 7, Q82",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which key sequence will cause a break during a network command such as ping or traceroute ?",
+   "choices": [
+    "Ctrl+4",
+    "Ctrl+Shift+1",
+    "Ctrl+C",
+    "Ctrl+Shift+6"
+   ],
+   "answer": 3,
+   "explanation": "The Ctrl+Shift+6 key sequence will cause a break during a network command such as ping or traceroute .",
+   "source": "CCNA 100-105 · Ch. 7, Q83",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will display the serial number of the switch?",
+   "choices": [
+    "Switch#show controller",
+    "Switch#show board",
+    "Switch#show serial",
+    "Switch#show version"
+   ],
+   "answer": 3,
+   "explanation": "The command show version will display the serial number of the switch or router. This is usually required when calling into support to open a support ticket.",
+   "source": "CCNA 100-105 · Ch. 7, Q84",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "You have a rather large configuration on a switch. You want to see the running-config, but only after port gi4/45. Which command will achieve this?",
+   "choices": [
+    "Switch#show running-config begin 4/45",
+    "Switch#show running-config | begin 4/45",
+    "Switch#show filter running-config 4/45",
+    "Switch#show running-config interface gi 4/45"
+   ],
+   "answer": 1,
+   "explanation": "The command show running-config | begin 4/45 will show the running-config and begin when the text 4/45 is found. It is important to note that after the | begin , everything is case sensitive.",
+   "source": "CCNA 100-105 · Ch. 7, Q85",
+   "topic": "7.4 Configure and verify initial device configuration",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will begin the upgrade of an IOS from a TFTP server?",
+   "choices": [
+    "Switch#copy tftp flash",
+    "Switch#copy tftp nvram",
+    "Switch#copy tftp ios",
+    "Switch#upgrade tftp flash"
+   ],
+   "answer": 0,
+   "explanation": "The command copy tftp flash will begin an interactive upgrade dialog. The dialog will ask for the IP address of the TFTP server, the source filename on the TFTP server, and the destination filename. It will then begin transferring the image.",
+   "source": "CCNA 100-105 · Ch. 7, Q86",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "Which command will allow you to verify the size of flash memory and how much space is still free?",
+   "choices": [
+    "Switch#show free",
+    "Switch#show version",
+    "Switch#dir flash:",
+    "Switch#show filesystem"
+   ],
+   "answer": 2,
+   "explanation": "The command dir flash: will display the current images on the flash memory. It will also display how big the flash memory is and how much space is still free in bytes.",
+   "source": "CCNA 100-105 · Ch. 7, Q87",
+   "topic": "7.5c File system management",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command will perform an MD5 hash against an image on flash memory so that you can verify its integrity?",
+   "choices": [
+    "Router#integrity md5 flash:/c2900-universalk9-mz.SPA.151- 4.M4.bin",
+    "Router#md5 flash:/c2900-universalk9-mz.SPA.151-4.M4.bin",
+    "Router#integrity /md5 flash:/c2900-universalk9-mz.SPA.151- 4.M4.bin eef3f723c164f2af84ccfcbd642d121d",
+    "Router#verify /md5 flash:/c2900-universalk9-mz.SPA.151- 4.M4.bin eef3f723c164f2af84ccfcbd642d121d"
+   ],
+   "answer": 3,
+   "explanation": "The command verify /md5 flash:/c2900-universalk9- mz.SPA.151-4.M4.bin eef3f723c164f2af84ccfcbd642d121d will verify the image specified for the MD5 hash included as the last parameter. The MD5 hash is always included with the image from Cisco’s download center and is unique for each image.",
+   "source": "CCNA 100-105 · Ch. 7, Q88",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "What is the default configuration register for a Cisco switch or router?",
+   "choices": [
+    "0x2100",
+    "0x2012",
+    "0x2102",
+    "0x2104"
+   ],
+   "answer": 2,
+   "explanation": "The default configuration register for a Cisco switch or router is 0x2102. The configuration register tells the router to boot up normally and check the NVRAM for the IOS image to boot.",
+   "source": "CCNA 100-105 · Ch. 7, Q89",
+   "topic": "7.5b Password recovery and configuration register",
+   "topic_n": 16
+  },
+  {
+   "question": "Which command needs to be configured to enable the SSH Copy Protocol (SCP)?",
+   "choices": [
+    "Switch(config)#ip scp server enable",
+    "Switch(config)#service scp-server",
+    "Switch(config)#service scp enable",
+    "Switch(config)#ip ssh server enable"
+   ],
+   "answer": 0,
+   "explanation": "The command ip scp server enable needs to be configured to enable the SSH Copy Protocol (SCP). This command is entered in the global configuration.",
+   "source": "CCNA 100-105 · Ch. 7, Q90",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "Which copy method will encrypt the IOS over the network during an upgrade?",
+   "choices": [
+    "FTP",
+    "TFTP",
+    "SCP",
+    "HTTP"
+   ],
+   "answer": 2,
+   "explanation": "The SSH Copy Protocol (SCP) will encrypt the IOS over the network during an upgrade from the client computer.",
+   "source": "CCNA 100-105 · Ch. 7, Q91",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "You have enabled the SCP server on a switch, but when you try to log in it returns “access denied.” Which command must you configure to allow access to the SCP server if your username was scpadmin and your password was Sybex ?",
+   "choices": [
+    "Switch(config)#username scpadmin privilege-level 15 password Sybex",
+    "Switch(config)#ip scp user scpadmin privilege-level 15 password Sybex",
+    "Switch(config)#username scpadmin password Sybex",
+    "Switch(config)#ip scp user scpadmin password Sybex"
+   ],
+   "answer": 0,
+   "explanation": "The command username scpadmin privilege-level 15 password sybex must be configured. This command will configure a user named scpadmin with a privilege level of 15 (enable access) and a password of Sybex .",
+   "source": "CCNA 100-105 · Ch. 7, Q92",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "Which command will allow you to view the contents of a file in the IOS File System (IFS)?",
+   "choices": [
+    "Switch#file flash:/info",
+    "Switch#type flash:/info",
+    "Switch#more flash:/info",
+    "Switch#cat flash:/info"
+   ],
+   "answer": 2,
+   "explanation": "The command more flash:/info will display the contents of the flash:/info file. This command is similar to the type command in the Windows OS.",
+   "source": "CCNA 100-105 · Ch. 7, Q93",
+   "topic": "7.5c File system management",
+   "topic_n": 17
+  },
+  {
+   "question": "After copying an IOS image named c2900-universalk9-mz.SPA.151- 4.M4.bin, you reboot the router only to find that it has booted to the old IOS image. What needs to be configured to boot the new image?",
+   "choices": [
+    "Router(config)#boot flash:/c2900-universalk9-mz.SPA.151- 4.M4.bin",
+    "Router(config)#boot system-image flash:/c2900-universalk9- mz.SPA.151- 4.M4.bin",
+    "Router(config)#boot system flash:/c2900-universalk9- mz.SPA.151-4.M4.bin",
+    "Router(config)#boot image flash:/c2900-universalk9- mz.SPA.151-4.M4.bin"
+   ],
+   "answer": 2,
+   "explanation": "The command boot system flash:/c2900-universalk9- mz.SPA.151-4.M4.bin will configure the system to boot from flash and load the image c2900-universalk9- mz.SPA.151-4.M4.bin .",
+   "source": "CCNA 100-105 · Ch. 7, Q94",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "Which command will change the configuration register to 0x2100?",
+   "choices": [
+    "Router#config-register 0x2100",
+    "Router#confreg 0x2100",
+    "Router(config)#config-register 0x2100",
+    "Router(config)#confreg 0x2100"
+   ],
+   "answer": 2,
+   "explanation": "The command config-register 0x2100 will configure the configuration register to 0x2100. This command must be entered in global configuration mode.",
+   "source": "CCNA 100-105 · Ch. 7, Q95",
+   "topic": "7.5b Password recovery and configuration register",
+   "topic_n": 16
+  },
+  {
+   "question": "Which command will help you verify what the configuration register is currently set to?",
+   "choices": [
+    "Switch#show running-config",
+    "Switch#show confreg",
+    "Switch#show version",
+    "Switch#show register"
+   ],
+   "answer": 2,
+   "explanation": "The command show version will display the current configuration register. If you have just set the configuration register, it will state on next reload which will appear next to the configured configuration register.",
+   "source": "CCNA 100-105 · Ch. 7, Q96",
+   "topic": "7.5b Password recovery and configuration register",
+   "topic_n": 16
+  },
+  {
+   "question": "What is the name of the system loaded on a router or switch when the primary IOS image fails to load?",
+   "choices": [
+    "NVRAM",
+    "BIOS",
+    "OpenBIOS",
+    "ROMMON"
+   ],
+   "answer": 3,
+   "explanation": "When a router or switch fails to load its primary IOS image, it is reverted to a basic system called ROMMON, which stands for ROM Monitor. The ROMMON has very limited functionality, and it’s mainly used for password recovery or diagnostics of the boot process.",
+   "source": "CCNA 100-105 · Ch. 7, Q97",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "During a normal boot process, how does the bootstrap process decide which IOS version to load if multiple versions are present on flash?",
+   "choices": [
+    "The bootstrap process checks flash for a file named version.txt .",
+    "The bootstrap process chooses the highest version.",
+    "The bootstrap process checks the configuration register.",
+    "The bootstrap process checks the startup-config in NVRAM."
+   ],
+   "answer": 3,
+   "explanation": "The bootstrap process checks the startup-config in NVRAM for the boot system command. Although the startup-config is not loaded into the IOS at this point, the router or switch uses the startup-config to decide the IOS to load. The bootstrap process checks the configuration register, but the IOS version to load is not determined from the configuration register.",
+   "source": "CCNA 100-105 · Ch. 7, Q98",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "You have just updated the IOS on a router and you have configured the command boot system flash:/c2900-universalk9-mz.SPA.151-4.M4.bin . The command completes successfully, and you cycle the power. However, the original image boots. What is wrong?",
+   "choices": [
+    "You are not licensed for the Universal feature set.",
+    "You have incorrectly typed the image name.",
+    "You have not saved the configuration.",
+    "The IOS image needs to be verified before it can be used."
+   ],
+   "answer": 2,
+   "explanation": "The command boot system flash:/c2900-universalk9- mz.SPA.151-4.M4.bin needs to be in the startup-config since it is used during the boot process. If you enter the command in global configuration mode, it is only resident in RAM (running-config) and needs to be saved before power cycling the router.",
+   "source": "CCNA 100-105 · Ch. 7, Q99",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "You need to make sure that the running-config is saved every night to the NVRAM. Which method will allow you to achieve this task?",
+   "choices": [
+    "Training of network administrators to save configuration",
+    "Configuring an archive process on the router",
+    "Configuration of a TCL script",
+    "Use of an external process such as Cisco Prime Infrastructure"
+   ],
+   "answer": 1,
+   "explanation": "Cisco routers and switches have a built-in archive process, which is not configured by default. You can specify a time period to process the archive and specify to write the running-config to NVRAM. An added benefit is the second archive copy, which is saved with a time and date stamp to flash or a remote server.",
+   "source": "CCNA 100-105 · Ch. 7, Q100",
+   "topic": "7.3a Backup and restore device configuration",
+   "topic_n": 7
+  },
+  {
+   "question": "Which command will allow you to boot a router from a TFTP server for the image of c2900-universalk9-mz.SPA.151-4.M4.bin on the TFTP server of 192.168.1.2?",
+   "choices": [
+    "Router(config)#boot tftp://192.168.1.2 c2900-universalk9- mz.SPA.151- 4.M4.bin",
+    "Router(config)#boot system tftp://192.168.1.2 c2900- universalk9- mz.SPA.151-4.M4.bin",
+    "Router#boot tftp://192.168.1.2",
+    "Router(config)#boot system c2900-universalk9-mz.SPA.151- 4.M4.bin 192.168.1.2"
+   ],
+   "answer": 3,
+   "explanation": "The command boot system c2900-universalk9-mz.SPA.151-4.M4 .bin 192.168.1.2 will configure the router for booting of the image named c2900-universalk9-mz.SPA.151-4.M4.bin from the 192.168.1.2 TFTP server. Under normal circumstances this should not be used in production environments since the router boot process is dependent upon the availability of the TFTP server.",
+   "source": "CCNA 100-105 · Ch. 7, Q101",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "During the bootstrap process, where is the IOS image decompressed to?",
+   "choices": [
+    "ROMMON",
+    "Flash",
+    "RAM",
+    "NVRAM"
+   ],
+   "answer": 2,
+   "explanation": "During the bootstrap process, the IOS is decompressed to RAM. This can be seen during the boot process as Loading \"flash:/c3560- advipservicesk9-mz.122-37 .SE1.bin\"...###### . Once the image is decompressed, it is executed by the CPU.",
+   "source": "CCNA 100-105 · Ch. 7, Q102",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "When a password recovery is performed on a router, what should the configuration register be set to?",
+   "choices": [
+    "0x2100",
+    "0x2102",
+    "0x2142",
+    "0x2182"
+   ],
+   "answer": 2,
+   "explanation": "When you’re performing a password recovery, the 6th bit of the configuration register should be set to a binary value of 1. The configuration register of 0x2142 will instruct the router to boot into the configured IOS and ignore loading the startup configuration.",
+   "source": "CCNA 100-105 · Ch. 7, Q103",
+   "topic": "7.5b Password recovery and configuration register",
+   "topic_n": 16
+  },
+  {
+   "question": "What command will allow you to verify the current running IOS version?",
+   "choices": [
+    "Router#show ios",
+    "Router#show running-config",
+    "Router#show version",
+    "Router#show bootvar"
+   ],
+   "answer": 2,
+   "explanation": "The command show version will display the current running IOS version. Although the command show running-config or show bootvar will display the IOS that should be loaded, only the command show version will display the current version that actually loaded.",
+   "source": "CCNA 100-105 · Ch. 7, Q104",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "You’re upgrading the flash memory on a 2900 router with a brand- new flash card. What needs to be done to restore the IOS?",
+   "choices": [
+    "Nothing needs to be done because the IOS is not storage on the flash memory card.",
+    "Format the flash card with the FAT operating system and copy the IOS image to the card.",
+    "The router will boot into the ROMMON, and from there you will need to TFTP download the IOS.",
+    "The new flash memory will have a mini-IOS installed. You will need to upgrade it from the mini-IOS."
+   ],
+   "answer": 2,
+   "explanation": "The IOS is stored on the flash card. Since the flash card is brand- new, nothing is on it. When the router boots, it will not find the IOS and will boot into ROMMON mode. From ROMMON mode, you will configure an IP address, subnet mask, gateway, TFTP server, and image and initiate a TFTP download to flash. Once the IOS is downloaded to flash memory, you can boot the router and verify operations.",
+   "source": "CCNA 100-105 · Ch. 7, Q105",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "Which command will allow you to back up the current IOS image to a TFTP server? Assume the image is named c3560-advipservicesk9- mz.122-37.SE1.bin .",
+   "choices": [
+    "Router#copy tftp flash:/c3560-advipservicesk9-mz.122- 37.SE1.bin",
+    "Router#backup flash:/c3560-advipservicesk9-mz.122-37.SE1.bin tftp",
+    "Router#copy flash:/c3560-advipservicesk9-mz.122-37.SE1.bin tftp",
+    "Router#archive flash:/c3560-advipservicesk9-mz.122-37.SE1.bin tftp"
+   ],
+   "answer": 2,
+   "explanation": "The command copy flash:/c3560-advipservicesk9-mz.122- 37.SE1.bin tftp will copy the file in flash named c3560-advipservicesk9- mz.122-37.SE1.bin to a TFTP server. This command will enter an interactive copy procedure. You will have to enter the TFTP server address and confirm the source image filename and destination image filename.",
+   "source": "CCNA 100-105 · Ch. 7, Q106",
+   "topic": "7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5 verify)",
+   "topic_n": 15
+  },
+  {
+   "question": "Which command will allow you to view all of the archives of running- config stored in flash?",
+   "choices": [
+    "Switch#show config",
+    "Switch#show flash",
+    "Switch#show archive",
+    "Switch#show running-config *"
+   ],
+   "answer": 2,
+   "explanation": "The command show archive will display all of the archived versions of the running-config, which were archived by the archive timer.",
+   "source": "CCNA 100-105 · Ch. 7, Q107",
+   "topic": "7.3a Backup and restore device configuration",
+   "topic_n": 7
+  },
+  {
+   "question": "Which command will roll back the third archive of the running- config?",
+   "choices": [
+    "Switch#rollback flash:myconfig-3",
+    "Switch#configure replace flash:myconfig-3",
+    "Switch#restore flash:myconfig-3",
+    "Switch#configure restore flash:myconfig-3"
+   ],
+   "answer": 1,
+   "explanation": "The command configure replace flash:myconfig-3 will replace the running-config with the third archive of the running-config, which is stored in flash.",
+   "source": "CCNA 100-105 · Ch. 7, Q108",
+   "topic": "7.3a Backup and restore device configuration",
+   "topic_n": 7
+  },
+  {
+   "question": "When configuring the archive process, which command will specify a time period of 24 hours?",
+   "choices": [
+    "Switch(config-archive)#time 1440",
+    "Switch(config-archive)#time 24",
+    "Switch(config-archive)#time-period 1440",
+    "Switch(config-archive)#time-period 24"
+   ],
+   "answer": 2,
+   "explanation": "The command time-period 1440 will specify that the archive command runs every 1440 minutes, or 24 hours. This command must be configured in the archive process configuration.",
+   "source": "CCNA 100-105 · Ch. 7, Q109",
+   "topic": "7.3a Backup and restore device configuration",
+   "topic_n": 7
+  },
+  {
+   "question": "Your router has a USB slot, and you need to back up the IOS to a flash drive. What format must the flash drive have in order to perform the backup?",
+   "choices": [
+    "FAT",
+    "EXT3",
+    "Cisco IFS",
+    "NTFS"
+   ],
+   "answer": 0,
+   "explanation": "Cisco routers and switches require any USB flash drive to be formatted in the FAT filesystem. Any other file system will not be recognized and mounted in the IOS on the router or switch.",
+   "source": "CCNA 100-105 · Ch. 7, Q110",
+   "topic": "7.5c File system management",
+   "topic_n": 17
+  },
+  {
+   "question": "You have connected to a switch via SSH and you want to see the logging messages. Which command should you use?",
+   "choices": [
+    "Switch#terminal logging",
+    "Switch(config-line)#terminal monitor",
+    "Switch#terminal monitor",
+    "Switch(config-line)#terminal logging"
+   ],
+   "answer": 2,
+   "explanation": "The command terminal monitor will configure the current connected method with the ability to monitor console messages. This command is entered in privileged exec mode and is valid only for the current session.",
+   "source": "CCNA 100-105 · Ch. 7, Q111",
+   "topic": "7.6b Terminal monitor",
+   "topic_n": 20
+  },
+  {
+   "question": "You have configured a switch so you can see all console logging in the current SSH session. You no longer wish to see the console logging. Which command will configure the SSH session back to the default?",
+   "choices": [
+    "Switch#no terminal logging",
+    "Switch#no terminal monitor",
+    "Switch(config-line)#no terminal logging",
+    "Switch#terminal no monitor"
+   ],
+   "answer": 3,
+   "explanation": "The command terminal no monitor when entered in privileged exec mode will turn off the monitoring of console messages.",
+   "source": "CCNA 100-105 · Ch. 7, Q112",
+   "topic": "7.6b Terminal monitor",
+   "topic_n": 20
+  },
+  {
+   "question": "Which command can you use to verify that a ping packet is exiting the interface you expect it to exit, which in this example is Gi0/1 with an IP address of 192.168.3.5?",
+   "choices": [
+    "Router#debug ip packet",
+    "Router#debug ip ping",
+    "Router#ping Gi 0/1 192.168.3.5",
+    "Router#ping 192.168.3.5 Gi 0/1"
+   ],
+   "answer": 0,
+   "explanation": "The command debug ip packet will turn on debugging for IP packets. The output will display the exit interface that the traffic is taking, to include the source and destination IP addresses. This command should be used with caution because it could create high CPU utilization on the router. It is recommended to be used with an ACL.",
+   "source": "CCNA 100-105 · Ch. 7, Q114",
+   "topic": "7.6 Use Cisco IOS tools to troubleshoot and resolve problems",
+   "topic_n": 18
+  },
+  {
+   "question": "You are troubleshooting an application and need to capture the packets for an interface on a switch. Which method should you use to capture the packets?",
+   "choices": [
+    "Netflow",
+    "SPAN",
+    "NIC teaming",
+    "IP snooping"
+   ],
+   "answer": 1,
+   "explanation": "Switch Port Analyzer (SPAN) should be used to mirror the port on the switch so that the network analyzer can capture the frames. When you use SPAN, you will see every frame on the switch port you are monitoring.",
+   "source": "CCNA 100-105 · Ch. 7, Q115",
+   "topic": "7.6d Local SPAN",
+   "topic_n": 22
+  },
+  {
+   "question": "Which tool can be used to analyze a packet capture?",
+   "choices": [
+    "Wireshark",
+    "SPAN",
+    "Netflow",
+    "RSPAN"
+   ],
+   "answer": 0,
+   "explanation": "Wireshark is a popular free packet capture utility. Once the packets are captured, they can be filtered and analyzed so that you can diagnose a networking problem.",
+   "source": "CCNA 100-105 · Ch. 7, Q117",
+   "topic": "7.6 Use Cisco IOS tools to troubleshoot and resolve problems",
+   "topic_n": 18
+  },
+  {
+   "question": "Which feature is available when using an extended ping?",
+   "choices": [
+    "Changing the timeout",
+    "Source interface or IP address",
+    "Larger repeat counts",
+    "Larger datagram size"
+   ],
+   "answer": 1,
+   "explanation": "An extended ping allows for the source interface or IP address to be specified. You can access the extended ping by entering the command ping without an IP address, then following the prompt till it asks if you want extended commands.",
+   "source": "CCNA 100-105 · Ch. 7, Q118",
+   "topic": "7.6a Ping and traceroute with extended option",
+   "topic_n": 19
+  },
+  {
+   "question": "Which command will configure the source interface of Gi 1/1 for a SPAN session on a switch?",
+   "choices": [
+    "Switch(config)#monitor session 1 source interface gi 1/11 both",
+    "Switch(config)#span session 1 source interface gi 1/11 both",
+    "Switch(config)#session span 1 source interface gi 1/11 both",
+    "Switch(config)#monitor session 1 gi 1/11 both"
+   ],
+   "answer": 0,
+   "explanation": "The command monitor session 1 source interface gi 1/11 both will create a monitor session 1 for SPAN, with the source interface in both directions. This session will capture and mirror frames for tx (transmit) and rx (receive) on the interface.",
+   "source": "CCNA 100-105 · Ch. 7, Q119",
+   "topic": "7.6d Local SPAN",
+   "topic_n": 22
+  },
+  {
+   "question": "Which command will allow you to see configured SPAN sessions on the switch?",
+   "choices": [
+    "Switch#show monitor session all",
+    "Switch#show monitor span session",
+    "Switch#show session",
+    "Switch#show span"
+   ],
+   "answer": 0,
+   "explanation": "The command show monitor session all will display all of the SPAN session configured on the switch. The output will display the source port and destination port of the SPAN session.",
+   "source": "CCNA 100-105 · Ch. 7, Q120",
+   "topic": "7.6d Local SPAN",
+   "topic_n": 22
+  },
+  {
+   "question": "Which command will configure a SPAN session for an entire VLAN as a source, assuming it’s VLAN 23?",
+   "choices": [
+    "Switch(config)#session span 1 source vlan 23",
+    "Switch(config)#monitor session 1 source interface vlan 23 both",
+    "Switch(config)#monitor session 1 source vlan 23",
+    "Switch(config)#monitor session 1 vlan 23 both"
+   ],
+   "answer": 2,
+   "explanation": "The command monitor session 1 source vlan 23 will configure the SPAN session of 1 with a source of VLAN 23. When you’re configuring a VLAN as the source of a SPAN session, the direction is irrelevant since the parameter of both is implied.",
+   "source": "CCNA 100-105 · Ch. 7, Q121",
+   "topic": "7.6d Local SPAN",
+   "topic_n": 22
+  },
+  {
+   "question": "You need to create a SPAN session for five Fast Ethernet ports. You want to watch both the tx (transmit) and rx (receive) on the ports. What is the sizing of the destination port you will require?",
+   "choices": [
+    "1 Gb/s",
+    "100 Mb/s",
+    "10 Gb/s",
+    "40 Gb/s"
+   ],
+   "answer": 0,
+   "explanation": "The sizing of the destination port should be equal to the amount of bandwidth that the source ports collectively can generate. When performing this calculation, you must take into account both the RX and TX. For example, five Fast Ethernet ports can transmit at 5 × 100 Mb/s = 500 Mb/s. They can also receive at 500 Mb/s since you are capturing both directions. The proper sizing of the destination port should be 1 Gb/s so that traffic is not lost out of the exit interface for the packet capture device.",
+   "source": "CCNA 100-105 · Ch. 7, Q122",
+   "topic": "7.6d Local SPAN",
+   "topic_n": 22
+  },
+  {
+   "question": "Which command will configure the removal of a SPAN session 1?",
+   "choices": [
+    "Switch(config)#no span session 1",
+    "Switch(config)#no monitor session 1",
+    "Switch(config)#clear monitor session 1",
+    "Switch(config)#no session span 1"
+   ],
+   "answer": 1,
+   "explanation": "The command no monitor session 1 will remove the currently configured monitor session of 1 from the configuration.",
+   "source": "CCNA 100-105 · Ch. 7, Q123",
+   "topic": "7.6d Local SPAN",
+   "topic_n": 22
+  },
+  {
+   "question": "Which command will configure the destination port for a SPAN session? Assume that you are working with session 1 and the destination port is Gi 1/14.",
+   "choices": [
+    "Switch(config)#monitor session 1 destination gi 1/14",
+    "Switch(config)#monitor session 1 destination interface gi 1/14",
+    "Switch(config)#monitor session 1 destination interface gi 1/14 both",
+    "Switch(config)#monitor span 1 destination gi 1/14"
+   ],
+   "answer": 1,
+   "explanation": "The command monitor session 1 destination interface gi 1/14 will configure the interface of Gi1/14 as the destination interface for the SPAN session. The direction can be omitted because it is specified on the source interface. The destination interface will receive a copy of the frames that are configured on the source interface.",
+   "source": "CCNA 100-105 · Ch. 7, Q124",
+   "topic": "7.6d Local SPAN",
+   "topic_n": 22
+  },
+  {
+   "question": "What needs to be configured, when you want to create a SPAN session over multiple switches?",
+   "choices": [
+    "SPAN",
+    "VPN-SPAN",
+    "VSPAN",
+    "RSPAN"
+   ],
+   "answer": 3,
+   "explanation": "Remote Switch Port Analyzer (RSPAN) should be configured. This will allow a source port on a remote switch to be monitored for a SPAN session on another remote switch. An alternative to RSPAN is Encapsulated RSPAN (ERSPAN), which employs the GRE protocol to create a tunnel.",
+   "source": "CCNA 100-105 · Ch. 7, Q126",
+   "topic": "7.6d Local SPAN",
+   "topic_n": 22
+  },
+  {
+   "question": "You want to perform a traceroute with more than three ICMP packets using an extended traceroute. Which attribute will you change to allow for multiple ICMP packets?",
+   "choices": [
+    "Packet type",
+    "Maximum Time to Live",
+    "Probe count",
+    "Numeric display"
+   ],
+   "answer": 2,
+   "explanation": "The probe count attribute must be changed to allow multiple packets to be sent to each hop. The default is three packets.",
+   "source": "CCNA 100-105 · Ch. 7, Q127",
+   "topic": "7.6a Ping and traceroute with extended option",
+   "topic_n": 19
+  },
+  {
+   "question": "You need to check the current CPU utilization on a router. Which command will achieve this?",
+   "choices": [
+    "Router#show cpu",
+    "Router#show environment cpu",
+    "Router#show cpu-stats",
+    "Router#show processes"
+   ],
+   "answer": 3,
+   "explanation": "The command show processes will display the utilization of the CPU. The first line of the output is broken down by 5 second utilization, 1 minute utilization, and 5 minute utilization.",
+   "source": "CCNA 100-105 · Ch. 7, Q129",
+   "topic": "7.6 Use Cisco IOS tools to troubleshoot and resolve problems",
+   "topic_n": 18
+  },
+  {
+   "question": "Which command will direct logging to the internal log space?",
+   "choices": [
+    "Router(config)#logging buffered",
+    "Router(config)#logging console",
+    "Router(config)#logging internal",
+    "Router(config)#logging ram"
+   ],
+   "answer": 0,
+   "explanation": "The command logging buffered will direct buffering of log messages to RAM. This command can be undone by using the no directive in front of logging buffered . The command must be entered in global configuration mode.",
+   "source": "CCNA 100-105 · Ch. 7, Q130",
+   "topic": "7.6c Log events",
+   "topic_n": 21
+  },
+  {
+   "question": "Which network plane is used for Spanning Tree Protocol (STP)?",
+   "choices": [
+    "Switch plane",
+    "Control plane",
+    "Data plane",
+    "Management plane"
+   ],
+   "answer": 1,
+   "explanation": "The control plane refers to any mechanism that controls the data plane. Spanning Tree Protocol (STP) is used to control the data plane by removing redundant links.",
+   "source": "CCNA 100-105 · Ch. 7, Q131",
+   "topic": "7.7b Separation of control plane and data plane",
+   "topic_n": 25
+  },
+  {
+   "question": "Which network plane is used by syslog for delivering messages from the router or switch?",
+   "choices": [
+    "Switch plane",
+    "Control plane",
+    "Management plane",
+    "Data plane"
+   ],
+   "answer": 2,
+   "explanation": "The management plane is any mechanism that helps in the management of a router or switch. Some of the common mechanisms are SSH and Telnet. However, any mechanism that the router uses for management is considered part of the management plane.",
+   "source": "CCNA 100-105 · Ch. 7, Q132",
+   "topic": "7.7b Separation of control plane and data plane",
+   "topic_n": 25
+  },
+  {
+   "question": "Which statement is correct about the software-defined network (SDN) controller?",
+   "choices": [
+    "The SDN controller complements the control plane of the SDN.",
+    "The SDN controller monitors data plane traffic.",
+    "The SDN controller configures the management plane of network devices.",
+    "The SDN controller replaces the control plane of the SDN."
+   ],
+   "answer": 3,
+   "explanation": "The software-defined network (SDN) controller replaces the control plane on SDN devices. The SDN devices in the network do not contain a control plane locally and instead are controlled by the SDN controller.",
+   "source": "CCNA 100-105 · Ch. 7, Q133",
+   "topic": "7.7a Function of a controller",
+   "topic_n": 24
+  },
+  {
+   "question": "Which is used for communication directly to the SDN devices in the network?",
+   "choices": [
+    "The core of the controller",
+    "The northbound interface (NBI)",
+    "Applications hosted on the controller",
+    "The southbound interface (SBI)"
+   ],
+   "answer": 3,
+   "explanation": "The southbound interface (SBI) directly communicates with the SDN devices. This control is done via several different types of SBI protocols, such as OpenFlow, OpFlex, CLI (Telnet/SSH).",
+   "source": "CCNA 100-105 · Ch. 7, Q134",
+   "topic": "7.7c Northbound and southbound APIs",
+   "topic_n": 26
+  },
+  {
+   "question": "What is an application program interface (API)?",
+   "choices": [
+    "An API allows for programs to be virtualized.",
+    "An API is a programming interface or standard allowing one program to communicate with another program.",
+    "An API is a program that allows for data transfer.",
+    "An API is a programming language for network programmability."
+   ],
+   "answer": 1,
+   "explanation": "An application program interface (API) is a method the programmer has created to allow other programs to communicate with their program. The inter-programmability is required when another program wants to share data with the API.",
+   "source": "CCNA 100-105 · Ch. 7, Q135",
+   "topic": "7.7c Northbound and southbound APIs",
+   "topic_n": 26
+  },
+  {
+   "question": "When a network packet is routed in a router, which network plane is facilitating the traffic?",
+   "choices": [
+    "Data plane",
+    "Management plane",
+    "Switch plane",
+    "Control plane"
+   ],
+   "answer": 0,
+   "explanation": "The data plane is responsible for switching and routing data. Any data that is destined for endpoints is switched or routed on the data plane. For example, when one computer pings another, the ping is switched and routed on the data plane.",
+   "source": "CCNA 100-105 · Ch. 7, Q136",
+   "topic": "7.7b Separation of control plane and data plane",
+   "topic_n": 25
+  },
+  {
+   "question": "When an application communicates with a software-defined network (SDN) controller, which mechanism does it use to communicate?",
+   "choices": [
+    "The core of the controller",
+    "Simple Network Management Protocol (SNMP)",
+    "The northbound interface (NBI)",
+    "The southbound interface (SBI)"
+   ],
+   "answer": 2,
+   "explanation": "The northbound interface (NBI) is responsible for allowing communication between applications and the core of the controller. Applications therefore directly communicate with the core through the northbound interface.",
+   "source": "CCNA 100-105 · Ch. 7, Q137",
+   "topic": "7.7c Northbound and southbound APIs",
+   "topic_n": 26
+  },
+  {
+   "question": "Which protocol is normally used with REST APIs?",
+   "choices": [
+    "SNTP",
+    "SOAP",
+    "SNMP",
+    "HTTP"
+   ],
+   "answer": 3,
+   "explanation": "Representational State Transfer (REST) APIs normally utilize HTTP for moving data. It performs this via a get URI and it receives a response in XML, JSON, or another date transfer language. Although you can encrypt the HTTP traffic with SSL (HTTPS), its core language is still HTTP.",
+   "source": "CCNA 100-105 · Ch. 7, Q138",
+   "topic": "7.7c Northbound and southbound APIs",
+   "topic_n": 26
+  },
+  {
+   "question": "Which platform is Cisco’s software-defined network controller offering for enterprise connectivity?",
+   "choices": [
+    "OpenStack",
+    "OpenSDN",
+    "OpenDaylight",
+    "APIC-EM"
+   ],
+   "answer": 3,
+   "explanation": "The Application Policy Infrastructure Controller (APIC) is Cisco’s SDN controller. This package is freely downloadable from the Cisco DevNet website as of the writing of this book. It comes with several built- in apps, such as a plug and play module and a path trace module. Many other apps can be built on top of the APIC to extend functionality of the controller.",
+   "source": "CCNA 100-105 · Ch. 7, Q139",
+   "topic": "7.7a Function of a controller",
+   "topic_n": 24
+  },
+  {
+   "question": "On which network plane would a routing protocol perform?",
+   "choices": [
+    "Routing plane",
+    "Data plane",
+    "Management plane",
+    "Control plane"
+   ],
+   "answer": 3,
+   "explanation": "Routing protocols such as OSPF and EIGRP would perform their function on the control plane, since they are controlling the routing of the data plane.",
+   "source": "CCNA 100-105 · Ch. 7, Q140",
+   "topic": "7.7b Separation of control plane and data plane",
+   "topic_n": 25
+  }
+ ]
+}

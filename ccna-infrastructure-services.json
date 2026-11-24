@@ -1,0 +1,1754 @@
+{
+ "questions": [
+  {
+   "question": "Which method provides a distributed database that is used to resolve FQDNs to an IP address?",
+   "choices": [
+    "Hosts files",
+    "Hostnames",
+    "ARP",
+    "DNS"
+   ],
+   "answer": 3,
+   "explanation": "Domain Name Services (DNS) is a distributed database of fully qualified domain names (FQDNs) to IP addresses.",
+   "source": "CCNA 100-105 · Ch. 5, Q1",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "What statement is correct about forward lookups?",
+   "choices": [
+    "Forward lookups resolve FQDNs to IP addresses.",
+    "Forward lookups resolve IP addresses to FQDNs.",
+    "A forward lookup forwards a request to another DNS server.",
+    "Forward lookups resolve IP addresses from the queried DNS server, without the help of other DNS servers."
+   ],
+   "answer": 0,
+   "explanation": "Forward lookups resolve fully qualified domain names (FQDNs) to an IP address.",
+   "source": "CCNA 100-105 · Ch. 5, Q2",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which protocol and port number does DNS use for direct queries?",
+   "choices": [
+    "UDP/55",
+    "TCP/53",
+    "UDP/53",
+    "UDP/68"
+   ],
+   "answer": 2,
+   "explanation": "Domain Name Services direct queries are performed over the UDP protocol to port 53. The queries do not require the TCP setup and teardown because the queries are simple request and reply messages, so UDP is used for direct queries.",
+   "source": "CCNA 100-105 · Ch. 5, Q3",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which statement describes FQDNs?",
+   "choices": [
+    "FQDNs are significant from right to left, starting with a period for the root.",
+    "FQDNs are always registered with a registrar.",
+    "FQDNs are significant from left to right, starting with a period for the root.",
+    "A DNS server always processes the entire FQDN."
+   ],
+   "answer": 0,
+   "explanation": "Fully qualified domain names are significant from right to left, starting with a period to signify the root. The period is normally not visible on the FQDN, but it is processed as the root lookup.",
+   "source": "CCNA 100-105 · Ch. 5, Q4",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which statement is correct about reverse lookups?",
+   "choices": [
+    "A reverse lookup is the resolution of an FQDN to an IP address.",
+    "A reverse lookup is when the DNS queried can answer the request without asking another DNS server.",
+    "A reverse lookup is when the request needs to be reversed to another DNS server.",
+    "A reverse lookup is the resolution of an IP address to FQDN."
+   ],
+   "answer": 3,
+   "explanation": "A reverse lookup is when the fully qualified domain name (FQDN) is resolved from an IP address. This is useful when you want to identify an IP address. From the IP address, you can derive the FQDN.",
+   "source": "CCNA 100-105 · Ch. 5, Q5",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which record type is used for an IPv4 address to FQDN for DNS queries?",
+   "choices": [
+    "The AAAA record",
+    "The A record",
+    "The CName record",
+    "The PTR record"
+   ],
+   "answer": 3,
+   "explanation": "The PTR, or pointer record, is used to look up IP addresses and return FQDNs that are mapped to them. This is helpful to identify an IP address, and in the case of SSH, it is used to positively identify the host you are connecting to.",
+   "source": "CCNA 100-105 · Ch. 5, Q6",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "What gets appended to hostname queries for DNS resolution?",
+   "choices": [
+    "The DNS domain name",
+    "The hostname PTR record",
+    "The DNS zone",
+    "The host header"
+   ],
+   "answer": 0,
+   "explanation": "The configured DNS domain name is appended to the hostname query. As an example, if you query a hostname of routera and the configured domain name is network.local, the DNS server will see a query for rotuera.network.local.",
+   "source": "CCNA 100-105 · Ch. 5, Q7",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which is the most secure method of name resolution for routers and switches?",
+   "choices": [
+    "DNS",
+    "Static hostname entries",
+    "PTR records",
+    "LLMNR"
+   ],
+   "answer": 1,
+   "explanation": "Static hostname entries are the most secure name resolution method for routers and switches. This is because the switch or router does not need to forward-query a server. However, static hostname entries are not scalable.",
+   "source": "CCNA 100-105 · Ch. 5, Q8",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which type of DNS record holds the IPv4 IP address for a hostname?",
+   "choices": [
+    "The A record",
+    "The AAAA record",
+    "The CName record",
+    "The PTR record"
+   ],
+   "answer": 0,
+   "explanation": "The A record is the DNS record that is queried when you want to resolve a hostname to an IP address.",
+   "source": "CCNA 100-105 · Ch. 5, Q9",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "What limits the amount of time that a DNS entry is available in DNS cache?",
+   "choices": [
+    "A record",
+    "Default of 5 minutes",
+    "SOA",
+    "TTL"
+   ],
+   "answer": 3,
+   "explanation": "The time to live, or TTL, limits the amount of time in which a DNS entry will be available in the DNS cache. The TTL can be defined by the DNS administrator on the entry, or it can be defined in the SOA record as the default TTL.",
+   "source": "CCNA 100-105 · Ch. 5, Q10",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which is an alternative to DNS lookup on routers?",
+   "choices": [
+    "LLMNR",
+    "Static ARP",
+    "Static hostname entries",
+    "Hosts table file"
+   ],
+   "answer": 2,
+   "explanation": "The alternative to DNS lookup on routers is configuring static hostname entries. This method unfortunately is not scalable.",
+   "source": "CCNA 100-105 · Ch. 5, Q11",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which record type is used for IPv6 hostname lookup for DNS queries?",
+   "choices": [
+    "The A record",
+    "The CName record",
+    "The AAAA record",
+    "The PTR record"
+   ],
+   "answer": 2,
+   "explanation": "The Quad-A (AAAA) record type is used for IPv6 hostname lookup on DNS servers.",
+   "source": "CCNA 100-105 · Ch. 5, Q12",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which protocol and port number is used for DNS domain zone transfers?",
+   "choices": [
+    "UDP/68",
+    "UDP/55",
+    "TCP/53",
+    "UDP/53"
+   ],
+   "answer": 2,
+   "explanation": "The protocol TCP and port number 53 are used for DNS domain zone transfers. UDP port 53 is used for iterative queries, since the message is short. However, zone transfers require the help of TCP because there is more information than there is in a query.",
+   "source": "CCNA 100-105 · Ch. 5, Q13",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "What is a reason to configure DNS on a router or switch?",
+   "choices": [
+    "ACLs can dynamically reverse hostnames to IPs.",
+    "Configuration allows ease of administration from the router or switch when connecting to other devices by FQDN.",
+    "Configuration allows access to the router or switch by the FQDN.",
+    "Configuration allows secure communications via HTTPS."
+   ],
+   "answer": 1,
+   "explanation": "Configuring DNS on a router or switch allows for ease of administration from the router or switch. It enables DNS resolution from the console. It does not enable DNS resolution from external sources unless you have configured the hostnames on the DNS server.",
+   "source": "CCNA 100-105 · Ch. 5, Q14",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "You are were trying to type the ping command into the router and mistype it and receive the output of Translating \"png\". . . domain server (255.255.255.255) , which halts you from continuing. Which command will stop this behavior?",
+   "choices": [
+    "RouterA(config)#no ip dns-lookup",
+    "RouterA#no ip dns",
+    "RouterA#no domain-lookup",
+    "RouterA(config)#no ip domain-lookup"
+   ],
+   "answer": 3,
+   "explanation": "By default, all routers and switches are set for ip domain-lookup. Because no IP address is set, the router or switch will try to broadcast the DNS query. If you configure no ip domain-lookup , the query will just fail, and you will not need to break out of it.",
+   "source": "CCNA 100-105 · Ch. 5, Q15",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will set the resolution of a host so that DNS does not need to be used for resolution?",
+   "choices": [
+    "RouterA(config)#hostname 10.1.2.3 routerb",
+    "RouterA(config)#ip host routerb 10.1.2.3",
+    "RouterA(config)#ip hostname routerb 10.1.2.3",
+    "RouterA(config)#hostname routerb 10.1.2.3"
+   ],
+   "answer": 1,
+   "explanation": "The command ip host routerb 10.1.2.3 will configure the local resolution of the host routerb to an IP address of 10.1.2.3.",
+   "source": "CCNA 100-105 · Ch. 5, Q16",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will configure the router or switch to use a specific DNS server for hostname lookups?",
+   "choices": [
+    "RouterA(config)#ip domain-server 172.16.1.5",
+    "RouterA(config)#ip dns-server 172.16.1.5",
+    "RouterA(config)#ip name-server 172.16.1.5",
+    "RouterA(config)#ip domain server 172.16.1.5"
+   ],
+   "answer": 2,
+   "explanation": "The command ip name-server 172.16.1.5 will configure the router or switch to query the DNS server of 172.16.1.5 for hostname lookups. You can specify multiple DNS servers by using a space as a delimiter between each name for fault tolerance.",
+   "source": "CCNA 100-105 · Ch. 5, Q17",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will configure the domain name to append to a DNS query?",
+   "choices": [
+    "RouterA(config)#ip domain sybex.com",
+    "RouterA(config)#ip domain-name sybex.com",
+    "RouterA(config)#ip dns-domain sybex.com",
+    "RouterA(config)#dns-domain sybex.com"
+   ],
+   "answer": 1,
+   "explanation": "The command ip domain-name sybex.com will set the appended domain name of sybex.com for DNS queries. This command will allow the proper FQDN to be resolved by DNS.",
+   "source": "CCNA 100-105 · Ch. 5, Q18",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "What is at the end of all FQDN addresses?",
+   "choices": [
+    "A period, which signifies root",
+    "The domain name",
+    "Top-level domain names",
+    "Generic top-level domain names"
+   ],
+   "answer": 0,
+   "explanation": "A period is always appended to all FQDNs. This is significant because it represents the root, where all DNS resolution begins. The root or period is not often visible, but it is part of the DNS recursion process.",
+   "source": "CCNA 100-105 · Ch. 5, Q19",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "When configuring the name server(s) for domain lookup, what is a best practice?",
+   "choices": [
+    "Always use a mixture of public and private DNS servers for fault tolerance.",
+    "Always use public DNS servers.",
+    "Always use TLD servers.",
+    "Always use private DNS servers."
+   ],
+   "answer": 3,
+   "explanation": "A best practice for security is to always use a trusted DNS server. This is normally a server under the control of the enterprise, so it is a private DNS server.",
+   "source": "CCNA 100-105 · Ch. 5, Q20",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will help verify the hostnames that are statically configured?",
+   "choices": [
+    "RouterA#show hosts",
+    "RouterA#show ip hosts",
+    "RouterA#show hostname",
+    "RouterA#show ip host-names"
+   ],
+   "answer": 0,
+   "explanation": "The command show hosts will allow you to verify the statically configured hosts.",
+   "source": "CCNA 100-105 · Ch. 5, Q21",
+   "topic": "5.1 Describe DNS lookup operation",
+   "topic_n": 1
+  },
+  {
+   "question": "Your DNS administrator has changed the DNS entry for RouterB. You clear the DNS cache and ping routerb.sybex.com again but still ping the original address. All other DNS addresses work fine. What is the problem?",
+   "choices": [
+    "The DNS administrator made an error.",
+    "The router is configured to the wrong DNS server.",
+    "The domain name of the router is incorrect.",
+    "RouterB has a host entry configured."
+   ],
+   "answer": 3,
+   "explanation": "If the cache is cleared after the change has been made to DNS and you still get the same IP address, the reason is most likely that there is a host entry configured. The command s how running-configuration will show you if there is an entry.",
+   "source": "CCNA 100-105 · Ch. 5, Q22",
+   "topic": "5.2 Troubleshoot client connectivity issues involving DNS",
+   "topic_n": 2
+  },
+  {
+   "question": "You have configured a router to point to the DNS server with the IP address 10.2.2.2 and configured the domain name of sybex.com. However, you cannot resolve the host routerb .sybex.com. Which Windows command will help you verify DNS name resolution?",
+   "choices": [
+    "C:\\>ping routerb.sybex.com",
+    "C:\\>dig routerb.sybex.com",
+    "C:\\>nslookup routerb.sybex.com",
+    "C:\\>tracert routerb.sybex.com"
+   ],
+   "answer": 2,
+   "explanation": "The command nslookup routerb.sybex.com will allow you to positively verify name resolution. Ping should not be used because the failure of ICMP echo will make the command fail, giving you a false result.",
+   "source": "CCNA 100-105 · Ch. 5, Q23",
+   "topic": "5.2 Troubleshoot client connectivity issues involving DNS",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will allow you to verify the DNS server you are using for name resolution?",
+   "choices": [
+    "RouterA#show running-configuration",
+    "RouterA#show hosts",
+    "RouterA#show dns",
+    "RouterA#show ip domain"
+   ],
+   "answer": 0,
+   "explanation": "The command to verify DNS server(s) configured for name lookup is show running-configuration . The line to look for in the output is ip name-server x.x.x.x.",
+   "source": "CCNA 100-105 · Ch. 5, Q24",
+   "topic": "5.2 Troubleshoot client connectivity issues involving DNS",
+   "topic_n": 2
+  },
+  {
+   "question": "You have configured the domain name of sybex.com and the DNS server 10.2.3.4 on a router. However, after you type ping routerb , the console promptly returns “% Unrecognized host or address or protocol not running.” What is wrong?",
+   "choices": [
+    "The domain server is wrong.",
+    "The hostname is wrong.",
+    "All of the above",
+    "The DNS server is wrong."
+   ],
+   "answer": 2,
+   "explanation": "Options A, B, and C will return the error ““% Unrecognized host or address or protocol not running.”",
+   "source": "CCNA 100-105 · Ch. 5, Q25",
+   "topic": "5.2 Troubleshoot client connectivity issues involving DNS",
+   "topic_n": 2
+  },
+  {
+   "question": "Your DNS administrator has changed the DNS entry for RouterB. You ping routerb.sybex .com again, but still ping the original address. All other DNS addresses work fine. What is the problem?",
+   "choices": [
+    "The router’s DNS cache needs to be cleared.",
+    "The router is configured to the wrong DNS server.",
+    "The domain name of the router is incorrect.",
+    "The DNS administrator made an error."
+   ],
+   "answer": 0,
+   "explanation": "DNS changes can be made on-the-fly. However, the results will not be seen immediately unless all cache is cleared and routers request the new address. The problem would be that this router had resolved routerb.sybex.com already and the entry still exists in the cache, which needs to be cleared.",
+   "source": "CCNA 100-105 · Ch. 5, Q26",
+   "topic": "5.2 Troubleshoot client connectivity issues involving DNS",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will remove the entry routerb.sybex.com out of the DNS cache or a switch without affecting the rest of the cache?",
+   "choices": [
+    "Router#clear host routerb.sybex.com",
+    "Router#clear host *",
+    "Router#clear host",
+    "Router(config)#clear host routerb.sybex.com"
+   ],
+   "answer": 0,
+   "explanation": "The command to clear only the host routerb.sybex.com from the DNS cache is clear host routerb.sybex.com . This will remove only that particular host from the cache.",
+   "source": "CCNA 100-105 · Ch. 5, Q28",
+   "topic": "5.2 Troubleshoot client connectivity issues involving DNS",
+   "topic_n": 2
+  },
+  {
+   "question": "Which statement is true about the Discover packet of DHCP?",
+   "choices": [
+    "The layer 3 source is a link-local address of the client.",
+    "The layer 2 destination is the MAC address of the DHCP server.",
+    "The layer 2 source is the MAC address of the client.",
+    "The layer 3 destination is a unicast to the DHCP server."
+   ],
+   "answer": 2,
+   "explanation": "The DHCP Discover packet is a broadcast to discover a DHCP server. The layer 3 packet and layer 2 frame are broadcasts. Since the client does not have an IP address yet, the layer 3 source address is all zeros. However, the layer 2 source MAC address is filled out in the frame.",
+   "source": "CCNA 100-105 · Ch. 5, Q31",
+   "topic": "5.3 Configure and verify DHCP on a router (excluding static reservations)",
+   "topic_n": 3
+  },
+  {
+   "question": "Which command will configure a router to use DHCP for IP address assignment?",
+   "choices": [
+    "RouterA(config-if)#ip address dhcp",
+    "RouterA(config)#ip address auto",
+    "RouterA(config)#ip address dhcp",
+    "RouterA(config-if)#ip address auto"
+   ],
+   "answer": 0,
+   "explanation": "The command ip address dhcp will configure the router to use DHCP for IP address assignment. This command needs to be issued on the interface in which you want the IP address to be configured, similar to static IP address assignment.",
+   "source": "CCNA 100-105 · Ch. 5, Q32",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which command will allow you to verify the IP address assigned to a router’s interface?",
+   "choices": [
+    "Router#show ip interface",
+    "Router#show ip dhcp bindings",
+    "Router#show ip lease",
+    "Router#show ip dhcp lease"
+   ],
+   "answer": 0,
+   "explanation": "The command show ip interface will display the IP addresses configured on the router’s interfaces. It will detail which are static and which have been allocated through DHCP.",
+   "source": "CCNA 100-105 · Ch. 5, Q33",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which port and protocol does the client use for DHCP messages?",
+   "choices": [
+    "UDP/68",
+    "TCP/67",
+    "UDP/67",
+    "TCP/68"
+   ],
+   "answer": 0,
+   "explanation": "The DHCP client uses the source port UDP/68 to await connections back from the server. It keeps this protocol and port open in an active state until DHCP is complete.",
+   "source": "CCNA 100-105 · Ch. 5, Q34",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which command will allow you to verify the active DHCP server that has assigned an IP address to the router?",
+   "choices": [
+    "Router#show ip dhcp lease",
+    "Router#show ip interface",
+    "Router#show dhcp lease",
+    "Router#show ip lease"
+   ],
+   "answer": 2,
+   "explanation": "The command show dhcp lease will help you verify the IP address configured on the router, the DHCP server that served the lease, and the lease time in seconds.",
+   "source": "CCNA 100-105 · Ch. 5, Q35",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which statement is true about the Offer packet of DHCP?",
+   "choices": [
+    "The layer 3 source is a link-local address of the client.",
+    "The layer 3 destination is a unicast to the DHCP client.",
+    "The layer 2 destination is the MAC address of the DHCP client.",
+    "The layer 2 source is the MAC address of the server."
+   ],
+   "answer": 3,
+   "explanation": "The DHCP Offer packet is a broadcast packet from the DHCP server to the DHCP client. The layer 3 packet and layer 2 frame are both broadcasts.",
+   "source": "CCNA 100-105 · Ch. 5, Q36",
+   "topic": "5.3 Configure and verify DHCP on a router (excluding static reservations)",
+   "topic_n": 3
+  },
+  {
+   "question": "Which command will configure a DHCP relay agent on an interface to the DHCP server of 10.10.1.101?",
+   "choices": [
+    "Router(config-if)#ip relay-agent 10.10.1.101",
+    "Router(config-if)#ip helper-address 10.10.1.101",
+    "Router(config)#ip dhcp server 10.10.1.101",
+    "Router(config-if)#ip dhcp server 10.10.1.101"
+   ],
+   "answer": 1,
+   "explanation": "The command ip helper-address 10.10.1.101 will configure the interface to become a DHCP relay agent. This command must be configured on the interface in which you want the DHCP relay agent to listen and respond.",
+   "source": "CCNA 100-105 · Ch. 5, Q37",
+   "topic": "5.3b Relay",
+   "topic_n": 5
+  },
+  {
+   "question": "Which DHCP field helps a DHCP server decide which scope to serve to the DHCP relay agent?",
+   "choices": [
+    "GIADDR",
+    "CHADDR",
+    "CIADDR",
+    "SIADDR"
+   ],
+   "answer": 0,
+   "explanation": "The Gateway Address (GIADDR) field is filled out by the DHCP relay agent before the DHCP packet is sent to the DHCP server. This field helps the DHCP server decide which scope to send an Offer message back for.",
+   "source": "CCNA 100-105 · Ch. 5, Q38",
+   "topic": "5.3b Relay",
+   "topic_n": 5
+  },
+  {
+   "question": "Which port and protocol does the server use to await connections for DHCP?",
+   "choices": [
+    "TCP/68",
+    "UDP/68",
+    "TCP/67",
+    "UDP/67"
+   ],
+   "answer": 3,
+   "explanation": "The DHCP server bind port of UDP/67 is used for awaiting connections from DHCP clients.",
+   "source": "CCNA 100-105 · Ch. 5, Q39",
+   "topic": "5.3a Server",
+   "topic_n": 4
+  },
+  {
+   "question": "Which Windows command will allow you to see the DHCP server that has configured the client computer with an IP address?",
+   "choices": [
+    "C:\\>ipstatus",
+    "C:\\>ipconfig /showclassid",
+    "C:\\>ipconfig",
+    "C:\\>ipconfig /all"
+   ],
+   "answer": 3,
+   "explanation": "The command ipconfig /all will display the generic information of IP, subnet mask, and gateway. It will also display the DHCP server that configured the client with an IP address.",
+   "source": "CCNA 100-105 · Ch. 5, Q41",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which message is sent from the DHCP client to the DHCP server to confirm the offer of an IP address?",
+   "choices": [
+    "Acknowledgment",
+    "Offer",
+    "Request",
+    "Discover"
+   ],
+   "answer": 0,
+   "explanation": "The DHCP acknowledgment message is sent from the DHCP client to the DHCP server to acknowledge that the IP address offered will be used by the client.",
+   "source": "CCNA 100-105 · Ch. 5, Q42",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "What form of communications does a DHCP client use to initially acquire an IP address?",
+   "choices": [
+    "Layer 3 multicast",
+    "Layer 3 802.1Q",
+    "Layer 3 unicast",
+    "Layer 3 broadcast"
+   ],
+   "answer": 3,
+   "explanation": "DHCP uses layer 3 broadcasts by sending packets to 255.255.255.255 for initial DHCP discovery.",
+   "source": "CCNA 100-105 · Ch. 5, Q43",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "At what point of the lease time will the client ask for a renewal of the IP address from the DHCP server?",
+   "choices": [
+    "One-half of the lease",
+    "One-quarter of the lease",
+    "Seven-eighths of the lease",
+    "End of the lease"
+   ],
+   "answer": 0,
+   "explanation": "DHCP clients request a renewal of the lease halfway through the lease time of the IP address.",
+   "source": "CCNA 100-105 · Ch. 5, Q44",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which statement is correct about the DHCP process?",
+   "choices": [
+    "The DHCP server is responsible for maintaining the life cycle of an IP address.",
+    "The DHCP client is responsible for maintaining the life cycle of an IP address.",
+    "DHCP uses multicasting between the client and server.",
+    "The DHCP lease is negotiated between client and server."
+   ],
+   "answer": 1,
+   "explanation": "After the initial Discover, Offer, Request, and Acknowledge, it is the client’s responsibility to maintain the lease of the IP address. This includes release and renewal.",
+   "source": "CCNA 100-105 · Ch. 5, Q45",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which transport protocol does DHCP use?",
+   "choices": [
+    "UDP",
+    "TCP",
+    "RARP",
+    "ICMP"
+   ],
+   "answer": 0,
+   "explanation": "DHCP uses UDP as a connectionless protocol for the Discover, Offer, Request, and Acknowledge packets.",
+   "source": "CCNA 100-105 · Ch. 5, Q46",
+   "topic": "5.3 Configure and verify DHCP on a router (excluding static reservations)",
+   "topic_n": 3
+  },
+  {
+   "question": "Which command will allow you to diagnose DHCP relay agent messages on a router or switch?",
+   "choices": [
+    "Router#debug ip dhcp server packet",
+    "Router#debug dhcp",
+    "Router#show ip dhcp detail",
+    "Router#debug ip dhcp"
+   ],
+   "answer": 0,
+   "explanation": "The command debug ip dhcp server packet will show the details of a DHCP relay agent conversation. It will detail conversation between the client and router and the router and the DHCP server.",
+   "source": "CCNA 100-105 · Ch. 5, Q47",
+   "topic": "5.3b Relay",
+   "topic_n": 5
+  },
+  {
+   "question": "What is DHCPv6 used for when a network is configured for Stateless Address Autoconfiguration (SLAAC)?",
+   "choices": [
+    "Stateless configuration of clients for IPv6 addressing",
+    "Configuration of clients with the IPv6 network IDs",
+    "Configuration of clients with IPv6 options",
+    "Stateful configuration of clients for IPv6 addressing"
+   ],
+   "answer": 2,
+   "explanation": "Stateless Address Autoconfiguration (SLAAC) allows for the client to learn the network ID and calculate a host ID that is unique. However, SLAAC is lacking the ability to configure options such as DNS time servers, etc. DHCPv6 allows for the configuration of these options when used in conjunction with SLAAC.",
+   "source": "CCNA 100-105 · Ch. 5, Q48",
+   "topic": "5.3 Configure and verify DHCP on a router (excluding static reservations)",
+   "topic_n": 3
+  },
+  {
+   "question": "The DHCP server in the network went down. What happens to clients that have obtained IP addresses from the DHCP server?",
+   "choices": [
+    "They lose their IP address after one-half of their lease has expired.",
+    "They lose their IP address after their entire lease has expired.",
+    "They lose their IP address immediately.",
+    "They lose their IP address after seven-eighths of their lease has expired."
+   ],
+   "answer": 1,
+   "explanation": "They will lose their IP after their entire lease has expired. Until the lease expires, they will have functioning IP addresses.",
+   "source": "CCNA 100-105 · Ch. 5, Q49",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which command will configure a router as a DHCPv6 relay agent for a stateful DHCPv6 server?",
+   "choices": [
+    "Router(config-if)#ip dhcp server 2001:db8:1:2::2",
+    "Router(config-if)#ipv6 dhcp relay destination 2001:db8:1:2::2",
+    "Router(config-if)#ipv6 helper-address 2001:db8:1:2::2",
+    "Router(config)#ip dhcp server 2001:db8:1:2::2"
+   ],
+   "answer": 1,
+   "explanation": "The command ipv6 dhcp relay destination 2001:db8:1:2::2 will configure the router interface to relay DHCP requests to 2001:db8:1:2::2. This command must be configured on the interface that is to listen for DHCPv6 requests.",
+   "source": "CCNA 100-105 · Ch. 5, Q50",
+   "topic": "5.3b Relay",
+   "topic_n": 5
+  },
+  {
+   "question": "You need to configure a lease duration of 4 hours for a DHCP pool. Which command will achieve this?",
+   "choices": [
+    "Router(dhcp-config)#lease-duration 0 4 0",
+    "Router(dhcp-config)#dhcp lease 0 4 0",
+    "Router(dhcp-config)#lease 4 0 0",
+    "Router(dhcp-config)#lease 0 4 0"
+   ],
+   "answer": 3,
+   "explanation": "The command lease 0 4 0 will configure the DHCP pool for a duration of 0 days, 4 hours, and 0 minutes.",
+   "source": "CCNA 100-105 · Ch. 5, Q51",
+   "topic": "5.3a Server",
+   "topic_n": 4
+  },
+  {
+   "question": "Which command will create an exclusion of 192.168.1.16 to 192.168.1.31 in the DHCP pool?",
+   "choices": [
+    "Router(dhcp-config)#exclusion 192.168.1.16 192.168.1.31",
+    "Router(config)#ip dhcp exclusion-address 192.168.1.16 192.168.1.31",
+    "Router(dhcp-config)#ip dhcp exclusion-address 192.168.1.16 192.168.1.31",
+    "Router(dhcp-config)#dhcp exclusion 192.168.1.16 192.168.1.31"
+   ],
+   "answer": 1,
+   "explanation": "The command ip dhcp exclusion-address 192.168.1.16 192.168.1.31 will configure an exclusion address range by specifying the low IP address and the high IP address. This command is configured from the global configuration prompt.",
+   "source": "CCNA 100-105 · Ch. 5, Q52",
+   "topic": "5.3a Server",
+   "topic_n": 4
+  },
+  {
+   "question": "When configuring a DHCP pool, which option(s) will configure the client to boot from a PXE server?",
+   "choices": [
+    "Router(dhcp-config)#option 60 ascii PXEClient Router(dhcp-config)#option 66 ip 10.1.1.5",
+    "Router(dhcp-config)#option 66 10.1.1.5",
+    "Router(dhcp-config)#option pxe 10.1.1.5",
+    "Router(dhcp-config)#option 66 ip 10.1.1.5 Router(dhcp-config)#bootfile boot\\x86\\wdsnbp.com"
+   ],
+   "answer": 3,
+   "explanation": "The command option 66 ip 10.1.1.5 sets the TFTP server to boot from. The command bootfile boot\\x86\\wdsnbp.com sets the bootfile on the TFTP server to boot\\x86\\wdsnbp.com . Some clients may need other options, such as option 60, which is the vendor class identifier.",
+   "source": "CCNA 100-105 · Ch. 5, Q53",
+   "topic": "5.3d TFTP, DNS, and gateway options",
+   "topic_n": 7
+  },
+  {
+   "question": "Which command will configure the default gateway option for a DHCP pool?",
+   "choices": [
+    "Router(dhcp-config)#default-gateway 10.1.1.1",
+    "Router(dhcp-config)#option gateway 10.1.1.1",
+    "Router(dhcp-config)#default-router 10.1.1.1",
+    "Router(dhcp-config)#gateway 10.1.1.1"
+   ],
+   "answer": 2,
+   "explanation": "The default gateway option is configured under the DHCP pool with the command default-router 10.1.1.1 . This will set the default gateway to 10.1.1.1 for the DHCP clients.",
+   "source": "CCNA 100-105 · Ch. 5, Q54",
+   "topic": "5.3d TFTP, DNS, and gateway options",
+   "topic_n": 7
+  },
+  {
+   "question": "Which option will configure the DNS servers for the DHCP clients?",
+   "choices": [
+    "Router(dhcp-config)#dns 10.1.1.5",
+    "Router(dhcp-config)#dns-server 10.1.1.5",
+    "Router(dhcp-config)#option 53 10.1.1.5",
+    "Router(dhcp-config)#option 55 ip 10.1.1.5"
+   ],
+   "answer": 1,
+   "explanation": "The DNS server is configured with the command dns-server 10.1.1.5 . This command is used in lieu of the option command so that multiple DNS servers can be configured on the same line.",
+   "source": "CCNA 100-105 · Ch. 5, Q55",
+   "topic": "5.3d TFTP, DNS, and gateway options",
+   "topic_n": 7
+  },
+  {
+   "question": "Which command will configure a DHCP pool to serve the IP addresses for 192.168.1.0/24?",
+   "choices": [
+    "Router(dhcp-config)#network 192.168.1.0",
+    "Router(dhcp-config)#dhcp-network 192.168.1.0 255.255.255.0",
+    "Router(dhcp-config)#dhcp-range 192.168.1.0",
+    "Router(dhcp-config)#network 192.168.1.0 255.255.255.0"
+   ],
+   "answer": 3,
+   "explanation": "The command network 192.168.1.0 255.255.255.0 will configure the network ID and subnet mask required for DHCP.",
+   "source": "CCNA 100-105 · Ch. 5, Q56",
+   "topic": "5.3a Server",
+   "topic_n": 4
+  },
+  {
+   "question": "Which statement is correct about stateful DHCPv6?",
+   "choices": [
+    "Stateful DHCPv6 supplies the network ID and host ID.",
+    "Stateful DHCPv6 communicates via broadcasts.",
+    "Stateful DHCPv6 supplies the network ID, host ID, and default router.",
+    "Stateful DHCPv6 works in conjunction with SLAAC."
+   ],
+   "answer": 0,
+   "explanation": "Stateful DHCPv6 supplies the network ID and host ID. The default router is discovered through the Neighbor Discovery Protocol.",
+   "source": "CCNA 100-105 · Ch. 5, Q57",
+   "topic": "5.3 Configure and verify DHCP on a router (excluding static reservations)",
+   "topic_n": 3
+  },
+  {
+   "question": "Which command will configure a router interface to obtain its IP address via a stateful DHCPv6?",
+   "choices": [
+    "RouterA(config)#ipv6 address stateless",
+    "RouterA(config-if)#ipv6 address dhcp",
+    "RouterA(config-if)#ipv6 address dhcpv6",
+    "RouterA(config)#ipv6 address dhcp gi 0/0"
+   ],
+   "answer": 1,
+   "explanation": "The command ipv6 address dhcp will configure the interface to obtain its IP address via stateful DHCPv6.",
+   "source": "CCNA 100-105 · Ch. 5, Q58",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which command will allow you to verify the IPv6 configuration for stateful DHCPv6?",
+   "choices": [
+    "RouterA#show ipv6 address",
+    "RouterA#show ipv6 dhcp bindings",
+    "RouterA#show ipv6 interface",
+    "RouterA#show ipv6 dhcp interface"
+   ],
+   "answer": 3,
+   "explanation": "The command show ipv6 dhcp interface will display which mode the client is in, the address, and the DHCP Unique Identifier (DUID) as well as the stateful DHCPv6 server address.",
+   "source": "CCNA 100-105 · Ch. 5, Q59",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "What happens if you delete a current lease on the DHCP server?",
+   "choices": [
+    "The server will offer the IP address to another node, at which time the original client will relinquish the IP address.",
+    "The server will offer the IP address to another node, which will cause a duplicate address.",
+    "The server will contact the client to immediately relinquish the IP address.",
+    "The client will immediately renew its lease for the current IP address."
+   ],
+   "answer": 1,
+   "explanation": "When the lease for a node is deleted on the DHCP server, the DHCP server is free to hand out the lease to another node. This happens independently from the client, as there is no communication from server to client about the lease. The client will retain the IP address until the renewal period, which will cause a duplication of IP addressing.",
+   "source": "CCNA 100-105 · Ch. 5, Q60",
+   "topic": "5.4 Troubleshoot client-and router-based DHCP connectivity issues",
+   "topic_n": 8
+  },
+  {
+   "question": "What happens at the client when the lease for an IP address reaches seven-eighths of the lease cycle?",
+   "choices": [
+    "Nothing. The DHCP client will retain the lease.",
+    "The DHCP client will renew its lease.",
+    "The DHCP client will relinquish the use of the IP address.",
+    "The DHCP client will perform a DHCP rebinding."
+   ],
+   "answer": 3,
+   "explanation": "At seven-eighths of the lease cycle, the DHCP client will perform a rebinding. The rebinding process means that the original DHCP server was down at the one-half mark of the lease, so now the client will try to rebind with any responding DHCP server.",
+   "source": "CCNA 100-105 · Ch. 5, Q61",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "Which command is used on a router to request a renewal lease on a DHCP interface?",
+   "choices": [
+    "Router#renew dhcp gi 0/0",
+    "Router#clear dhcp gi 0/0",
+    "Router(config)#renew dhcp gi 0/0",
+    "Router#clear interface gi 0/0"
+   ],
+   "answer": 0,
+   "explanation": "The command renew dhcp gi 0/0 will force the DHCP client to renew the current lease.",
+   "source": "CCNA 100-105 · Ch. 5, Q62",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "How are nodes and leased IPs tracked in the DHCP bindings table on a switch or router?",
+   "choices": [
+    "UUID address",
+    "GUID address",
+    "DHCP ID",
+    "MAC address"
+   ],
+   "answer": 3,
+   "explanation": "When the DHCP server issues an IP address to a client, it records the MAC address in the DHCP bindings table. This is recorded along with the lease expiration.",
+   "source": "CCNA 100-105 · Ch. 5, Q63",
+   "topic": "5.3a Server",
+   "topic_n": 4
+  },
+  {
+   "question": "During the DHCP rebinding, which message is sent from the client?",
+   "choices": [
+    "DHCP Offer",
+    "DHCP Discover",
+    "DHCP Ack",
+    "DHCP Request"
+   ],
+   "answer": 3,
+   "explanation": "During the DHCP rebinding process, a DHCP Request is sent. However, it is not sent to the originating server since rebinding occurs after the renewal period was missed. So the DHCP Request is broadcast to any listening DHCP server.",
+   "source": "CCNA 100-105 · Ch. 5, Q64",
+   "topic": "5.3c Client",
+   "topic_n": 6
+  },
+  {
+   "question": "You have configured a DHCP server on a router interface. You test a Windows client and receive the address 169.254.24.56. What can you conclude?",
+   "choices": [
+    "The DHCP server is not configured properly and the client has configured itself with a link-local address.",
+    "The client had a static IP address of 169.254.24.0/24 configured.",
+    "The DHCP server is configured for APIPA.",
+    "You have successfully configured the scope of 169.254.24.0/24."
+   ],
+   "answer": 0,
+   "explanation": "The DHCP server is not configured properly. When a Windows client configures itself with an IP address of 169.254. x.x , it is using APIPA, or Automatic Private IP Addressing (link-local addressing).",
+   "source": "CCNA 100-105 · Ch. 5, Q66",
+   "topic": "5.4 Troubleshoot client-and router-based DHCP connectivity issues",
+   "topic_n": 8
+  },
+  {
+   "question": "What mechanism is used by DHCP clients to avoid IP address conflicts with other DHCP clients?",
+   "choices": [
+    "GARP",
+    "ARP",
+    "RARP",
+    "Ping"
+   ],
+   "answer": 0,
+   "explanation": "DHCP clients use a protocol called Gratuitous Address Resolution Protocol (GARP). The GARP packet is a broadcast to the other clients in the network. If no response is heard, there are no conflicts.",
+   "source": "CCNA 100-105 · Ch. 5, Q67",
+   "topic": "5.4 Troubleshoot client-and router-based DHCP connectivity issues",
+   "topic_n": 8
+  },
+  {
+   "question": "What happens when a router or switch detects a duplicate IP address for a DHCP process?",
+   "choices": [
+    "The IP address is removed from the DHCP pool.",
+    "The IP address is still served to the client.",
+    "The DHCP server will halt.",
+    "The DHCP will serve the IP address in the future."
+   ],
+   "answer": 0,
+   "explanation": "When DHCP detects a duplicate IP address in the pool, it will remove the duplicate IP address from the DHCP pool and place it into the conflict table. It will require manual intervention to reserve the IP address.",
+   "source": "CCNA 100-105 · Ch. 5, Q68",
+   "topic": "5.4 Troubleshoot client-and router-based DHCP connectivity issues",
+   "topic_n": 8
+  },
+  {
+   "question": "Before you configure the DHCP pool and network, which option should you configure?",
+   "choices": [
+    "Lease duration",
+    "Exclusions",
+    "Options",
+    "Domain name"
+   ],
+   "answer": 1,
+   "explanation": "It is recommended that you create an exclusion for the router interface and any statically configured hosts in the network for the DHCP pool. This will prevent duplicate IP address conflicts.",
+   "source": "CCNA 100-105 · Ch. 5, Q69",
+   "topic": "5.3a Server",
+   "topic_n": 4
+  },
+  {
+   "question": "Which command will allow you to check if the router or switch handed out a duplicate IP address?",
+   "choices": [
+    "Router#show ip conflict",
+    "Router#show ip dhcp duplication",
+    "Router#show ip duplication",
+    "Router#show ip dhcp conflict"
+   ],
+   "answer": 3,
+   "explanation": "The command show ip dhcp conflict will display the IP address conflicts on the router or switch. The table will display how the conflict was discovered with GARP or Ping as well as the detection time.",
+   "source": "CCNA 100-105 · Ch. 5, Q70",
+   "topic": "5.4 Troubleshoot client-and router-based DHCP connectivity issues",
+   "topic_n": 8
+  },
+  {
+   "question": "Which command will allow you to see the current utilization of the DHCP pools configured?",
+   "choices": [
+    "Router#show dhcp status",
+    "Router#show ip dhcp",
+    "Router#show dhcp",
+    "Router#show ip dhcp pool"
+   ],
+   "answer": 3,
+   "explanation": "The command show ip dhcp pool will allow you to see the current utilization of the scopes configured on the router.",
+   "source": "CCNA 100-105 · Ch. 5, Q72",
+   "topic": "5.3a Server",
+   "topic_n": 4
+  },
+  {
+   "question": "How can an address be removed from the DHCP conflict table?",
+   "choices": [
+    "Router#remove ip conflict 192.168.1.6",
+    "Router(config)#clear ip dhcp conflict 192.168.1.6",
+    "Router#clear ip dhcp conflict 192.168.1.6",
+    "Router#clear ip conflict 192.168.1.6"
+   ],
+   "answer": 1,
+   "explanation": "The command to remove an IP address from the conflict table is clear ip dhcp conflict 192.168.1.6 . This command will remove a single IP address of 192.168.1.6 from the table and place it back in the DHCP pool. Alternatively, all of the conflicts can be cleared with an * in lieu of the IP address.",
+   "source": "CCNA 100-105 · Ch. 5, Q73",
+   "topic": "5.4 Troubleshoot client-and router-based DHCP connectivity issues",
+   "topic_n": 8
+  },
+  {
+   "question": "Which command will allow you to verify the current DHCP leases on a router or a switch?",
+   "choices": [
+    "Router#show ip interface",
+    "Router#show ip dhcp lease",
+    "Router#show ip lease",
+    "Router#show ip dhcp bindings"
+   ],
+   "answer": 3,
+   "explanation": "The command show ip dhcp bindings will allow you to verify all of the current DHCP leases served by the router or switch.",
+   "source": "CCNA 100-105 · Ch. 5, Q75",
+   "topic": "5.3a Server",
+   "topic_n": 4
+  },
+  {
+   "question": "Which protocol is an IEEE standard that is supported openly as a first hop redundancy protocol (FHRP)?",
+   "choices": [
+    "VRRP",
+    "HSRP",
+    "Proxy ARP",
+    "GLBP"
+   ],
+   "answer": 0,
+   "explanation": "Virtual Router Redundancy Protocol (VRRP) is an IEEE open standard that is supported freely on many router products.",
+   "source": "CCNA 100-105 · Ch. 5, Q76",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "In the MAC address 0000.0c07.ac0a, what is the well-known Hot standby Router Protocol (HSRP) ID?",
+   "choices": [
+    "07.ac",
+    "0000.0c",
+    "0a",
+    "c007"
+   ],
+   "answer": 0,
+   "explanation": "The well-known HSRP ID is 07.ac. Anytime you see the 07.ac in the second part of the MAC address along with the Cisco OUI, you can identify that HSRP is being employed.",
+   "source": "CCNA 100-105 · Ch. 5, Q77",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which protocol is a Cisco Proprietary protocol for load-balancing routers?",
+   "choices": [
+    "GLBP",
+    "HSRP",
+    "VRRP",
+    "Proxy ARP"
+   ],
+   "answer": 0,
+   "explanation": "Gateway Load Balancing Protocol (GLBP) is a Cisco Proprietary protocol that supports redundancy and per-subnet load balancing.",
+   "source": "CCNA 100-105 · Ch. 5, Q78",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "In the MAC address 0000.0c07.ac01, what is the HSRPv1 group number?",
+   "choices": [
+    "01",
+    "07.ac",
+    "c007",
+    "0000.0c"
+   ],
+   "answer": 0,
+   "explanation": "The HSRP group number in the MAC address 0000.0c07.ac05 is 01. After the Cisco OUI and well-known HSPR ID, the last two digits are the HSRP group identifier.",
+   "source": "CCNA 100-105 · Ch. 5, Q79",
+   "topic": "5.5c Version",
+   "topic_n": 12
+  },
+  {
+   "question": "What is the default priority of HSRP?",
+   "choices": [
+    "110",
+    "100",
+    "200",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "The default priority of HSRP is 100.",
+   "source": "CCNA 100-105 · Ch. 5, Q80",
+   "topic": "5.5a Priority",
+   "topic_n": 10
+  },
+  {
+   "question": "What is the maximum number of HSRPv1 groups that can be created?",
+   "choices": [
+    "256",
+    "16",
+    "255",
+    "8"
+   ],
+   "answer": 0,
+   "explanation": "You can create up to 256 HSRP groups on a router. This would include group 0 to 255 for a total of 256 groups.",
+   "source": "CCNA 100-105 · Ch. 5, Q81",
+   "topic": "5.5c Version",
+   "topic_n": 12
+  },
+  {
+   "question": "Which port and protocol are used by HSRP for communications?",
+   "choices": [
+    "UDP/1935",
+    "UDP/1985",
+    "UCP/3222",
+    "UDP/1895"
+   ],
+   "answer": 1,
+   "explanation": "HSRP routers communicate with each other on port 1985 using UDP.",
+   "source": "CCNA 100-105 · Ch. 5, Q82",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which statement is correct about HSRP?",
+   "choices": [
+    "HSRP allows for per-packet load balancing.",
+    "The virtual router sends hello packets to the HSRP group.",
+    "All routers in an HSRP group are active.",
+    "Only one router in an HSRP group can be active."
+   ],
+   "answer": 3,
+   "explanation": "Only one router can be active at a time in an HSRP group. All other routers are standby routers, until the active router fails.",
+   "source": "CCNA 100-105 · Ch. 5, Q83",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "What type of communication is used between HSRP members?",
+   "choices": [
+    "Layer 2 flooding",
+    "Unicast",
+    "Broadcast",
+    "Multicast"
+   ],
+   "answer": 3,
+   "explanation": "HSRP uses multicasting to communicate among HSRP group members. For HSRPv1, the address is 224.0.0.2, and for HSRPv2, the address is 224.0.0.102.",
+   "source": "CCNA 100-105 · Ch. 5, Q84",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "When a host sends an outgoing packet to an HSRP group, which router provides the destination address for the default gateway?",
+   "choices": [
+    "Active router",
+    "Monitor router",
+    "Virtual router",
+    "Standby router"
+   ],
+   "answer": 2,
+   "explanation": "The virtual router is responsible for host communications such as an ARP request for the host’s default gateway. Technically, this is served by the active router since it is hosting the virtual router. However, it is the virtual router’s IP address and MAC address that are used for outgoing packets.",
+   "source": "CCNA 100-105 · Ch. 5, Q85",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which timer must expire for a standby router in an HSRP group to become the active router?",
+   "choices": [
+    "Hold timer",
+    "Virtual timer",
+    "Hello timer",
+    "Standby timer"
+   ],
+   "answer": 0,
+   "explanation": "The hold timer must expire for the standby router to become an active router. The hold timer is three times the hello timer, so three hello packets must be missed before the standby becomes active.",
+   "source": "CCNA 100-105 · Ch. 5, Q86",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which port and protocol are used by Gateway Load Balancing Protocol (GLBP) for communications?",
+   "choices": [
+    "UDP/1895",
+    "UDP/1985",
+    "UDP/3222",
+    "UDP/1935"
+   ],
+   "answer": 2,
+   "explanation": "Gateway Load Balancing Protocol (GLBP) use the port number 3222 and the protocol UDP for router communications.",
+   "source": "CCNA 100-105 · Ch. 5, Q87",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which is a difference between HSRPv1 and HSRPv2?",
+   "choices": [
+    "HSRPv1 uses broadcasts, and HSRPv2 uses multicasts.",
+    "HSRPv2 does not use hello packets.",
+    "HSRPv2 uses milliseconds.",
+    "HSRPv1 supports IPv6."
+   ],
+   "answer": 2,
+   "explanation": "HSRP version 2 allows for timers to be configured in milliseconds in lieu of seconds. This allows for quicker failover between active and standby routers.",
+   "source": "CCNA 100-105 · Ch. 5, Q88",
+   "topic": "5.5c Version",
+   "topic_n": 12
+  },
+  {
+   "question": "Which statement is correct about Gateway Load Balancing Protocol (GLBP)?",
+   "choices": [
+    "The active virtual gateway will respond with a MAC address of an active virtual forwarder.",
+    "The virtual router is responsible for responding to tracking requests.",
+    "The active router is responsible for responding to clients with the virtual router’s MAC address.",
+    "The active virtual gateway will respond with a MAC address of the active router."
+   ],
+   "answer": 0,
+   "explanation": "The active virtual gateway (AVG) is responsible for responding to ARP requests from hosts. The AVG will reply with the MAC address of any one of the active virtual forwarders (AVFs).",
+   "source": "CCNA 100-105 · Ch. 5, Q89",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which router is elected to become the GLBP active virtual gateway?",
+   "choices": [
+    "The router with the lowest priority and lowest IP address",
+    "The router with the highest priority",
+    "The router with the lowest priority",
+    "The router with the highest priority and highest IP address"
+   ],
+   "answer": 3,
+   "explanation": "The router with the highest priority will become the AVG. However, if all routers have the same priority, then the router with the highest IP address configured becomes the tiebreaker.",
+   "source": "CCNA 100-105 · Ch. 5, Q90",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "How many active virtual forwarders are supported per the Gateway Load Balancing Protocol (GLBP) group?",
+   "choices": [
+    "1,024",
+    "4",
+    "16",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "Gateway Load Balancing Protocol (GLBP) supports up to four active virtual forwarders per GLBP group.",
+   "source": "CCNA 100-105 · Ch. 5, Q91",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which command will allow Router B to always become the active router for HSRP?",
+   "choices": [
+    "Router(config-if)#hsrp 1 priority 150",
+    "Router(config-if)#standby 1 priority 150",
+    "Router(config-if)#hsrp 1 priority 90",
+    "Router(config-if)#standby 1 priority 70"
+   ],
+   "answer": 1,
+   "explanation": "The command standby 1 priority 150 will set the HSRP group of 1 on this router to a priority of 150. As long as all other routers are set to the default of 100, this router will become the default router on the next election.",
+   "source": "CCNA 100-105 · Ch. 5, Q92",
+   "topic": "5.5a Priority",
+   "topic_n": 10
+  },
+  {
+   "question": "What is the maximum number of Hot Standby Router Protocol version 2 groups that can be created?",
+   "choices": [
+    "1,024",
+    "256",
+    "255",
+    "4,096"
+   ],
+   "answer": 3,
+   "explanation": "You can create up to 4,096 HSRP groups on a router. This would include group 0 to 4096 for a total of 4,096 groups.",
+   "source": "CCNA 100-105 · Ch. 5, Q93",
+   "topic": "5.5c Version",
+   "topic_n": 12
+  },
+  {
+   "question": "Your company is running a first hop redundancy protocol (FHRP). You notice that the MAC address of the default gateway is 0000.0c9f.f123. Which FHRP is being employed?",
+   "choices": [
+    "HSRPv2",
+    "GLBP",
+    "HSRPv1",
+    "VRRP"
+   ],
+   "answer": 0,
+   "explanation": "Hot Standby Router Protocol version 2 (HSRPv2) is being employed. It uses an OUI of 0000.0c and a well-known identifier of 9f.f, and the last three digits identify the HSRP group, which has been expanded from two digits in version 1.",
+   "source": "CCNA 100-105 · Ch. 5, Q94",
+   "topic": "5.5c Version",
+   "topic_n": 12
+  },
+  {
+   "question": "What is the definition of preemption for Hot Standby Router Protocol (HSRP)?",
+   "choices": [
+    "When a standby router comes online, it allows for a re-election of the active router.",
+    "It ignores the priorities of the routers and elects an active router by highest IP address.",
+    "It allows the protocol to effectively load-balance per packet.",
+    "It watches an upstream interface and fails over when the interface goes down."
+   ],
+   "answer": 0,
+   "explanation": "Preemption allows for the election process to happen for a newly added HSRP router. If preemption is not enabled, then the newly added HSRP router will become a standby router.",
+   "source": "CCNA 100-105 · Ch. 5, Q95",
+   "topic": "5.5b Preemption",
+   "topic_n": 11
+  },
+  {
+   "question": "Which is a method of configuring Hot Standby Router Protocol (HSRP) so that traffic is not directed to one router?",
+   "choices": [
+    "Configure version 2 for all HSRP groups.",
+    "Configure PPPoE on the router interfaces.",
+    "Configure all routers in the HSRP as active routers.",
+    "Configure an HSRP group per VLAN and alternate the priority above 100."
+   ],
+   "answer": 3,
+   "explanation": "Hot Standby Router Protocol (HSRP) allows for only one active router per HSRP group. However, you can configure multiple VLANs with HSRP groups. You can then alternate a higher-than-default priority to force an active router per VLAN. This will give you a rudimentary way of balancing traffic.",
+   "source": "CCNA 100-105 · Ch. 5, Q96",
+   "topic": "5.5a Priority",
+   "topic_n": 10
+  },
+  {
+   "question": "Which command will allow you to verify the state of the current router for HSRP?",
+   "choices": [
+    "RouterA#show hsrp",
+    "RouterA#show ip standby",
+    "RouterA#show standby",
+    "RouterA#show ip hsrp"
+   ],
+   "answer": 2,
+   "explanation": "The command show standby will allow you to verify the state of the current router for HSRP.",
+   "source": "CCNA 100-105 · Ch. 5, Q97",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "You have just changed the priority on Router A to 150. All other routers have the default priority. What is wrong?",
+   "choices": [
+    "The HSRP group is not set for preemption.",
+    "The hold timer is set too high and needs to timeout.",
+    "The default priority is 150.",
+    "Router A has too low of an IP address."
+   ],
+   "answer": 0,
+   "explanation": "The HSRP group is not set for preemption, which is the default behavior for HSRP. You need to enable preemption, which will allow a reelection when the priority is changed or if a new standby router comes online. If preemption is disabled, the active router will have affinity.",
+   "source": "CCNA 100-105 · Ch. 5, Q98",
+   "topic": "5.5b Preemption",
+   "topic_n": 11
+  },
+  {
+   "question": "Which command will allow you to enable preemption for HSRP?",
+   "choices": [
+    "Router(config-if)#standby 1 preempt",
+    "Router(config)#standby 1 preemption",
+    "Router(config-if)#standby 1 preemption",
+    "Router(config-if)#hsrp 1 preempt"
+   ],
+   "answer": 0,
+   "explanation": "The command standby 1 preempt will configure HSRP group 1 for preemption. This command must be configured under the interface on which HSRP has been enabled. The command show standby will allow you to verify this.",
+   "source": "CCNA 100-105 · Ch. 5, Q99",
+   "topic": "5.5b Preemption",
+   "topic_n": 11
+  },
+  {
+   "question": "Which command will configure VRRP on an interface with an IP address of 10.1.2.3?",
+   "choices": [
+    "Router(config-if)#standby 1 10.1.2.3 Router(config-if)#standby 1 vrrp",
+    "Router(config)#vrrp 1 10.1.2.3 gi 0/0",
+    "Router(config-if)#vrrp 1 10.1.2.3",
+    "Router(config-if)#vrrp 1 ip 10.1.2.3"
+   ],
+   "answer": 3,
+   "explanation": "The command vrrp 1 ip 10.1.2.3 will configure the interface with VRRP with a virtual IP address of 10.1.2.3.",
+   "source": "CCNA 100-105 · Ch. 5, Q100",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which command from the host will allow you to see the router your packets have been routed with?",
+   "choices": [
+    "C:\\ipconfig /all",
+    "C:\\ping 10.1.2.33",
+    "C:\\tracert 10.1.2.33",
+    "C:\\arp -g"
+   ],
+   "answer": 2,
+   "explanation": "The command tracert 10.1.2.33 will allow you to see the real IP address on the router that is responding for the ICMP packet. With HSRP, the virtual MAC address is returned for the virtual IP address of the default gateway. However, when ping is used the ping packet enters the real interface, and then the interface responds with the real IP address.",
+   "source": "CCNA 100-105 · Ch. 5, Q102",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which command will allow you to see real-time diagnostics of HSRP?",
+   "choices": [
+    "Router#debug standby",
+    "Router#show ip hsrp",
+    "Router#debug ip hsrp",
+    "Router#debug ip standby"
+   ],
+   "answer": 0,
+   "explanation": "The command debug standby will allow you to see real-time information from HSRP on the router on which you have entered the command.",
+   "source": "CCNA 100-105 · Ch. 5, Q103",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which statement is correct about GLBP?",
+   "choices": [
+    "The active virtual gateway will respond with a MAC address of the active router.",
+    "GLBP allows for per-host load balancing.",
+    "GLBP allows for per-subnet load balancing.",
+    "The virtual router is responsible for responding to tracking requests."
+   ],
+   "answer": 1,
+   "explanation": "GLBP allows for per-host load balancing. It does this by allowing the active virtual router to respond for the virtual IP address. The AVG then hands out the MAC address in the ARP request for one of the active virtual forwarders. It does this in a round-robin fashion.",
+   "source": "CCNA 100-105 · Ch. 5, Q104",
+   "topic": "5.5 Configure, verify, and troubleshoot basic HSRP",
+   "topic_n": 9
+  },
+  {
+   "question": "Which command will allow you to set the hello and hold timer for HSRPv2 to a hello of 200 milliseconds and a hold of 700 milliseconds?",
+   "choices": [
+    "RouterA(config-if)#standby 1 timers 700 msec 200 msec",
+    "RouterA(config-if)#standby 1 timers msec 700 msec 200",
+    "RouterA(config-if)#standby 1 timers 200 msec 700 msec",
+    "RouterA(config-if)#standby 1 timers msec 200 msec 700"
+   ],
+   "answer": 3,
+   "explanation": "The command standby 1 timers msec 200 msec 700 will set the HSRP group of 1 with a hello timer of 200 milliseconds and a hold timer of 700 milliseconds. This is configured inside of the interface in which the HSRP group was created.",
+   "source": "CCNA 100-105 · Ch. 5, Q105",
+   "topic": "5.5c Version",
+   "topic_n": 12
+  },
+  {
+   "question": "Which method will allow you to use RFC 1918 addresses for Internet requests?",
+   "choices": [
+    "NAT",
+    "VPN",
+    "CIDR",
+    "Classful addressing"
+   ],
+   "answer": 0,
+   "explanation": "Network Address Translation (NAT) was created to slow the depletion of Internet addresses. It does this by translating RFC 1918 privatized addresses to one or many public IP addresses. It allows the packets to masquerade as the public IP address on the Internet until is it translated back to the private IP address.",
+   "source": "CCNA 100-105 · Ch. 5, Q106",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "Which is a disadvantage of using NAT?",
+   "choices": [
+    "Introduces security weaknesses",
+    "Increases bandwidth utilization",
+    "Requires address renumbering",
+    "Creates switching path delays"
+   ],
+   "answer": 3,
+   "explanation": "Network Address Translation creates packet switching path delay. This is because each address traveling through the NAT process requires lookup time for the translation.",
+   "source": "CCNA 100-105 · Ch. 5, Q107",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "Which type of Network Address Translation is used for one-to-one mapping between local and global addresses?",
+   "choices": [
+    "Dynamic NAT",
+    "NAT Overloading",
+    "Symmetric NAT",
+    "Static NAT"
+   ],
+   "answer": 3,
+   "explanation": "Static Network Address Translation is a one-to-one mapping between a local (private) and global (public) IP address. This is used for servers, such as web servers and email servers, so that they are Internet reachable.",
+   "source": "CCNA 100-105 · Ch. 5, Q108",
+   "topic": "5.6a Static",
+   "topic_n": 14
+  },
+  {
+   "question": "Which type of Network Address Translation is used for one-to-one mapping (sometimes called many-to-many) on the fly between local and global addresses that are allocated from a pool of addresses?",
+   "choices": [
+    "NAT Overloading",
+    "Dynamic NAT",
+    "Full cone NAT",
+    "Static NAT"
+   ],
+   "answer": 1,
+   "explanation": "Dynamic Network Address Translation is a one-to-one mapping on the fly in which the IP address is allocated from a pool of addresses. This is often called many-to-many. When a host makes an attempt to go through the NAT process, an IP address is mapped to the host from the global pool. This type of NAT is useful in network address overlap situations because there is less latency than NAT Overloading.",
+   "source": "CCNA 100-105 · Ch. 5, Q110",
+   "topic": "5.6b Pool",
+   "topic_n": 15
+  },
+  {
+   "question": "Which type of Network Address Translation is used for a many-to-one translation in which the source and destination ports are tracked?",
+   "choices": [
+    "Full cone NAT",
+    "Static NAT",
+    "NAT Overloading",
+    "Dynamic NAT"
+   ],
+   "answer": 2,
+   "explanation": "Network Address Translation overloading, sometimes called Port Address Translation, allows for one public IP address to be used for NAT. The conversations between local and global IPs are sorted using the source and destination ports for the various applications. This is the most common NAT and can be found in any home, small office, or enterprise.",
+   "source": "CCNA 100-105 · Ch. 5, Q111",
+   "topic": "5.6c PAT",
+   "topic_n": 16
+  },
+  {
+   "question": "Which statement is correct about static NAT?",
+   "choices": [
+    "Static NAT has less latency than dynamic NAT.",
+    "Static NAT is less secure than dynamic NAT.",
+    "The translation is always present in the NAT table.",
+    "The translation is never present in the NAT table."
+   ],
+   "answer": 2,
+   "explanation": "Static NAT translation entries are always present in the NAT table. Static NAT entries have the same amount of security and latency as dynamic NAT.",
+   "source": "CCNA 100-105 · Ch. 5, Q114",
+   "topic": "5.6a Static",
+   "topic_n": 14
+  },
+  {
+   "question": "Network Address Translation overloading is also called what?",
+   "choices": [
+    "I-NAT",
+    "PAT",
+    "Static NAT",
+    "CEF NAT"
+   ],
+   "answer": 1,
+   "explanation": "Network Address Translation overloading is also called Port Address Translation. This is because a single IP address can allow up to 65,535 simulations inside local connections, which are segregated in the NAT table by source and destination port number.",
+   "source": "CCNA 100-105 · Ch. 5, Q115",
+   "topic": "5.6c PAT",
+   "topic_n": 16
+  },
+  {
+   "question": "What is an advantage of Network Address Translation?",
+   "choices": [
+    "Decreased utilization of public IP addresses",
+    "Decreased latency of packets",
+    "Increased network application compatibility",
+    "Decreased memory utilization"
+   ],
+   "answer": 0,
+   "explanation": "A decrease in public IP address utilization is a direct benefit of using NAT. Memory utilization will increase, latency of packets will increase, and some network applications could have problems with NAT.",
+   "source": "CCNA 100-105 · Ch. 5, Q116",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "Which is a practical application of static Network Address Translation?",
+   "choices": [
+    "Internet access for an enterprise from private IP addressing",
+    "All of the above",
+    "Address overlap for an enterprise",
+    "Publishing a web server on the Internet from a private IP address"
+   ],
+   "answer": 3,
+   "explanation": "Static NAT is mainly used for publishing internal resources on the Internet, Such services are email servers, web servers, collaboration servers, and so on.",
+   "source": "CCNA 100-105 · Ch. 5, Q117",
+   "topic": "5.6a Static",
+   "topic_n": 14
+  },
+  {
+   "question": "Which term describes the IP address of the internal host before NAT?",
+   "choices": [
+    "Inside global",
+    "Outside global",
+    "Outside local",
+    "Inside local"
+   ],
+   "answer": 3,
+   "explanation": "The inside local address is “inside” the enterprise and under “local” control of the enterprise. This term is from the perspective of the NAT device.",
+   "source": "CCNA 100-105 · Ch. 5, Q118",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "Which of the following is an advantage to using Port Address Translation?",
+   "choices": [
+    "Flexibility of Internet connections",
+    "Lower levels of packet loss",
+    "Lower levels of jitter",
+    "Lower memory usage than other NAT types"
+   ],
+   "answer": 0,
+   "explanation": "The flexibility of Internet connections is usually a driving factor for PAT (NAT Overloading). Memory is significantly higher with PAT, since the source and destination port numbers must be recorded in the NAT table. There is no effect on packet loss, and jitter is marginally affected.",
+   "source": "CCNA 100-105 · Ch. 5, Q119",
+   "topic": "5.6c PAT",
+   "topic_n": 16
+  },
+  {
+   "question": "Which command would you configure on the private network interface for NAT?",
+   "choices": [
+    "Router(config)#ip nat inside gi0/0",
+    "Router(config-if)#ip nat private",
+    "Router(config-if)#ip nat inside",
+    "Router(config-if)#ip nat outside"
+   ],
+   "answer": 2,
+   "explanation": "The command to configure the private side of the network interface for NAT is ip nat inside . This command is configured on the interface in which you want to define it as the “inside” of your network.",
+   "source": "CCNA 100-105 · Ch. 5, Q120",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will allow you to view the NAT translations active on the router?",
+   "choices": [
+    "Router#show ip nat translations",
+    "Router#show translations nat",
+    "Router#show nat translations",
+    "Router#debug ip nat translations"
+   ],
+   "answer": 0,
+   "explanation": "The command show ip nat translations will allow you to view the active NAT translations on the router.",
+   "source": "CCNA 100-105 · Ch. 5, Q121",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will allow you to view the current number of active NAT translations on the router?",
+   "choices": [
+    "Router#show ip nat status",
+    "Router#show ip nat statistics",
+    "Router#show ip nat translations",
+    "Router#show ip nat summary"
+   ],
+   "answer": 1,
+   "explanation": "The command show ip nat statistics will allow you to view the number of active NAT translations on the router. In addition, it will provide you with the current inside and outside interfaces.",
+   "source": "CCNA 100-105 · Ch. 5, Q122",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "When configuring dynamic NAT, why must you configure an access list?",
+   "choices": [
+    "The access list allows incoming access from outside global addresses.",
+    "The access list allows outgoing access from outside local addresses.",
+    "The access list allows outgoing access from inside local addresses.",
+    "The access list allows outgoing access from inside global addresses."
+   ],
+   "answer": 2,
+   "explanation": "The access list allows the inside local address to pass through the NAT process.",
+   "source": "CCNA 100-105 · Ch. 5, Q125",
+   "topic": "5.6b Pool",
+   "topic_n": 15
+  },
+  {
+   "question": "Which command will wipe out all current NAT translations in the NAT table?",
+   "choices": [
+    "Router#no ip nat translation",
+    "Router#clear ip nat translation *",
+    "Router#clear ip nat",
+    "Router#clear ip nat translation"
+   ],
+   "answer": 1,
+   "explanation": "The command clear ip nat translation * will clear all IP NAT translations out of the NAT table. The asterisk is used as a wildcard for all addresses. You can alternatively specify a specific inside or outside NAT address.",
+   "source": "CCNA 100-105 · Ch. 5, Q126",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "What happens to host communications when the NAT table is manually cleared?",
+   "choices": [
+    "Established TCP sessions will need to reestablish and will not disturb communications.",
+    "Established UDP sessions will need to reestablish and will disturb communications.",
+    "Established TCP sessions will need to reestablish and will disturb communications.",
+    "No disturbance in communications will be observed."
+   ],
+   "answer": 2,
+   "explanation": "When the NAT table clears, established TCP sessions will need to reestablish via the three-way handshake. This creates a problem for some secure protocols such as SSH, which will drop the established connection and not reestablish a new connection. UDP does not have a state to its connection, so little or no disturbance will be seen.",
+   "source": "CCNA 100-105 · Ch. 5, Q127",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "Which command will allow you to see real time Network Address Translations?",
+   "choices": [
+    "Router#debug ip nat",
+    "Router#show ip translations",
+    "Router#debug ip translations",
+    "Router#show ip nat"
+   ],
+   "answer": 0,
+   "explanation": "The command debug ip nat will allow you to see real-time NAT translations. When you issue this command, you should know that each NAT translation will log to the screen or logging server and will spike CPU usage.",
+   "source": "CCNA 100-105 · Ch. 5, Q128",
+   "topic": "5.6 Configure, verify, and troubleshoot inside source NAT",
+   "topic_n": 13
+  },
+  {
+   "question": "Which protocol helps synchronize time for routers and switches?",
+   "choices": [
+    "SNMP",
+    "NTP",
+    "Syslog",
+    "ICMP"
+   ],
+   "answer": 1,
+   "explanation": "The Network Time Protocol (NTP) is used to synchronize time for routers and switches.",
+   "source": "CCNA 100-105 · Ch. 5, Q131",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  },
+  {
+   "question": "Why is time synchronization important for routers and switches?",
+   "choices": [
+    "It is important for serialized communication frame alignment.",
+    "It helps delivery of packets via timed queues.",
+    "It is important for quality of service queuing.",
+    "It is important for logging accuracy."
+   ],
+   "answer": 3,
+   "explanation": "Time synchronization is important for logging accuracy. Serial communication frame alignment is timed via DCE clocking and packet queues are timed by how fast they can respond.",
+   "source": "CCNA 100-105 · Ch. 5, Q132",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command will allow your router to synchronize with a time source of 129.6.15.28?",
+   "choices": [
+    "Router#ntp server 129.6.15.28",
+    "Router(config)#ntp client 129.6.15.28",
+    "Router(config)#ntp server 129.6.15.28",
+    "Router#ntp client 129.6.15.28"
+   ],
+   "answer": 2,
+   "explanation": "The command ntp server 129.6.15.28 will configure your router to connect to the server 129.6.15.28 as an NTP source. This command must be entered in global configuration mode.",
+   "source": "CCNA 100-105 · Ch. 5, Q133",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command configures the router or switch to trust its internal time clock?",
+   "choices": [
+    "Router(config)#ntp clock source",
+    "Router(config)#ntp server",
+    "Router(config)#ntp trusted",
+    "Router(config)#ntp master"
+   ],
+   "answer": 3,
+   "explanation": "The command ntp master configures the router or switch to trust its internal time clock.",
+   "source": "CCNA 100-105 · Ch. 5, Q134",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command will allow you to see if the router or switch is using NTP?",
+   "choices": [
+    "Router#show time",
+    "Router#show time source",
+    "Router#show ntp",
+    "Router#show clock detail"
+   ],
+   "answer": 3,
+   "explanation": "The command show clock detail will result in either no time source or time source is NTP if the router or switch is configured to slave off a server for time.",
+   "source": "CCNA 100-105 · Ch. 5, Q135",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command will allow you to view the time details from a configured server?",
+   "choices": [
+    "Router#show ntp skew",
+    "Router#show ntp detail",
+    "Router#show ntp associations detail",
+    "Router#show clock detail"
+   ],
+   "answer": 2,
+   "explanation": "The command show ntp associations detail will allow you to view the NTP clock details from the master NTP server.",
+   "source": "CCNA 100-105 · Ch. 5, Q136",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  },
+  {
+   "question": "Which protocol and port does NTP use for time synchronization?",
+   "choices": [
+    "TCP/123",
+    "TCP/161",
+    "UDP/123",
+    "UDP/69"
+   ],
+   "answer": 2,
+   "explanation": "The Network Time Protocol uses UDP port 123 for time synchronization.",
+   "source": "CCNA 100-105 · Ch. 5, Q137",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command will help you diagnose if the router or switch is getting an answer back from an NTP server?",
+   "choices": [
+    "Router#show ntp",
+    "Router#show ip ntp",
+    "Router#debug ntp packets",
+    "Router#debug ntp messages"
+   ],
+   "answer": 2,
+   "explanation": "The command debug ntp packets will allow you to verify packets received from an NTP server.",
+   "source": "CCNA 100-105 · Ch. 5, Q138",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  },
+  {
+   "question": "Which is a best practice for setting up NTP?",
+   "choices": [
+    "Always configure the time source to a DNS address.",
+    "Configure all devices as master servers.",
+    "Configure all devices to different NTP servers for redundancy.",
+    "Configure all devices to a public NTP server."
+   ],
+   "answer": 0,
+   "explanation": "A best practice is to configure the main router in your network to a known good trusted time source by its DNS address. All devices in your network should then be configured to point to this trusted router. All time sources should pyramid out from the central source of time in your network.",
+   "source": "CCNA 100-105 · Ch. 5, Q139",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command will allow you to view the time drift observed by NTP?",
+   "choices": [
+    "Router#show ntp status",
+    "Router#show ntp",
+    "Router#debug ntp drift",
+    "Router#show ip ntp status"
+   ],
+   "answer": 0,
+   "explanation": "The command show ntp status will allow you to see the current time source, the precision of the time source, and the drift from your internal time clock.",
+   "source": "CCNA 100-105 · Ch. 5, Q140",
+   "topic": "5.7 Configure and verify NTP operating in a client/server mode",
+   "topic_n": 17
+  }
+ ]
+}

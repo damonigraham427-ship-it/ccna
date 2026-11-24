@@ -1,0 +1,1936 @@
+{
+ "questions": [
+  {
+   "question": "Which method can restrict a user from plugging a wireless access point into a corporate network?",
+   "choices": [
+    "Port security",
+    "Static MAC addresses",
+    "Access control lists",
+    "Wired Equivalent Privacy"
+   ],
+   "answer": 0,
+   "explanation": "Port security can restrict a port to a single device by MAC address. This will effectively make plugging in a wireless access point a non-event for a corporate network.",
+   "source": "CCNA 100-105 · Ch. 6, Q1",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "What does port security use to block unauthorized access?",
+   "choices": [
+    "Destination IP addresses",
+    "Source MAC addresses",
+    "Source IP addresses",
+    "Destination MAC addresses"
+   ],
+   "answer": 1,
+   "explanation": "Port security blocks unauthorized access by examining the source address of a network device.",
+   "source": "CCNA 100-105 · Ch. 6, Q2",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will enable port security?",
+   "choices": [
+    "Switch(config-if)#port-security enable",
+    "Switch(config-if)#switchport port-security",
+    "Switch(config)#port-security enable",
+    "Switch(config)#switchport port-security"
+   ],
+   "answer": 1,
+   "explanation": "Port security is enabled by configuring the command switchport port-security . This command must be configured on the interface in which you want to enable port security.",
+   "source": "CCNA 100-105 · Ch. 6, Q3",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "If port security is enabled on an interface, what is the maximum number of MAC addresses allowed by default?",
+   "choices": [
+    "10 MAC addresses",
+    "1 MAC address",
+    "0 MAC addresses",
+    "2 MAC addresses"
+   ],
+   "answer": 1,
+   "explanation": "By default, only a single MAC address is allowed on an interface when port security is enabled.",
+   "source": "CCNA 100-105 · Ch. 6, Q4",
+   "topic": "6.1d Max MAC addresses",
+   "topic_n": 5
+  },
+  {
+   "question": "Which layer of the OSI model does port security use for securing a port?",
+   "choices": [
+    "Layer 2",
+    "Layer 3",
+    "Layer 1",
+    "Layer 0"
+   ],
+   "answer": 0,
+   "explanation": "Port security operates at layer 2 by inspecting the source MAC addresses in frames. It allows the configured number of source MAC addresses to be switched into the port and onto the switch processor.",
+   "source": "CCNA 100-105 · Ch. 6, Q5",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "Why would a network admin choose to configure port security on an interface?",
+   "choices": [
+    "To allow or disallow VLANs",
+    "To allow or disallow IP addresses",
+    "To prevent unauthorized access by MAC address",
+    "To prevent unauthorized access by user"
+   ],
+   "answer": 2,
+   "explanation": "Configuring port security helps a network administrator prevent unauthorized access by MAC address.",
+   "source": "CCNA 100-105 · Ch. 6, Q6",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "Which statement is correct about port security?",
+   "choices": [
+    "Port security works best in mobile environments.",
+    "Port security works best in static environments.",
+    "Port security always results in admin intervention to reset the port.",
+    "Port security requires a higher amount of memory."
+   ],
+   "answer": 1,
+   "explanation": "Port security works best in static environments where there is minimal change to the environment. It does not require any more memory since the results are pulled from the MAC address table.",
+   "source": "CCNA 100-105 · Ch. 6, Q7",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "When configuring port security on a port that contains a VoIP phone with a voice VLAN and a computer connected to the phone, how many MAC addresses must you allow?",
+   "choices": [
+    "1 MAC address",
+    "10 MAC addresses",
+    "2 MAC addresses",
+    "0 MAC addresses"
+   ],
+   "answer": 2,
+   "explanation": "Both the computer and the VoIP phone have MAC addresses, and therefore you will need to allow the port to have two MAC addresses, one for the phone to communicate and the other for the computer to communicate on the port.",
+   "source": "CCNA 100-105 · Ch. 6, Q8",
+   "topic": "6.1d Max MAC addresses",
+   "topic_n": 5
+  },
+  {
+   "question": "What is the default action of port security on the interface when the maximum number of MAC addresses is exceeded?",
+   "choices": [
+    "Restricted access with logging",
+    "Restricted access without logging",
+    "Administrative shutdown",
+    "Err-disabled shutdown"
+   ],
+   "answer": 3,
+   "explanation": "By default, when port security is configured on a port, the violation method is err-disabled shutdown.",
+   "source": "CCNA 100-105 · Ch. 6, Q9",
+   "topic": "6.1e Violation actions",
+   "topic_n": 6
+  },
+  {
+   "question": "You are configuring a port for port security and receive the error “Command rejected: FastEthernet0/1 is a dynamic port.” Which commands will help you configure the port?",
+   "choices": [
+    "SwitchA(config-if)#switchport mode access SwitchA(config-if)#no dynamic SwitchA(config-if)#switchport port-security",
+    "SwitchA(config-if)#switchport mode access SwitchA(config-if)#switchport nonnegotiate SwitchA(config-if)#switchport port-security",
+    "SwitchA(config-if)#switchport mode access SwitchA(config-if)#switchport port-security",
+    "SwitchA(config-if)#no switchport dynamic SwitchA(config-if)#switchport port-security"
+   ],
+   "answer": 1,
+   "explanation": "When port security is configured, the port cannot be in dynamic mode for Dynamic Trunking Protocol (DTP) mode. You must configure the port as an access port first, then turn off DTP with the command switchport nonnegotiate . You can then configure switchport port security.",
+   "source": "CCNA 100-105 · Ch. 6, Q10",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will allow you to configure two MAC addresses for port security?",
+   "choices": [
+    "SwitchA(config-if)#port-security maximum 2",
+    "SwitchA(config-if)#switchport maximum 2",
+    "SwitchA(config-if)#switchport port-security maximum 2",
+    "SwitchA(config-if)#switchport port-security limit 2"
+   ],
+   "answer": 2,
+   "explanation": "The command switchport port-security maximum 2 will configure the port with a maximum of two MAC addresses that shall pass through the port.",
+   "source": "CCNA 100-105 · Ch. 6, Q11",
+   "topic": "6.1d Max MAC addresses",
+   "topic_n": 5
+  },
+  {
+   "question": "Which command will limit devices via port security without disabling the port and logging the restricted device?",
+   "choices": [
+    "Switch(config-if)#switchport port-security violation restrict",
+    "Switch(config-if)#switchport port-security violation shutdown",
+    "Switch(config-if)#switchport port-security restrict",
+    "Switch(config-if)#switchport port-security violation protect"
+   ],
+   "answer": 0,
+   "explanation": "The command switchport port-security violation restrict will set the violation mode to restrict. This will drop frames over the maximum number of learned MAC addresses and will log security violations to the counters.",
+   "source": "CCNA 100-105 · Ch. 6, Q12",
+   "topic": "6.1e Violation actions",
+   "topic_n": 6
+  },
+  {
+   "question": "Which command will allow you to inspect the status of a port that has been configured for port security?",
+   "choices": [
+    "Switch#show port-security details interface gi 2/13",
+    "Switch#show running-configuration",
+    "Switch#show port-security interface gi 2/13",
+    "Switch#show port-security gi 2/13"
+   ],
+   "answer": 2,
+   "explanation": "The command show port-security interface gi 2/13 will allow you to see a detailed view of an individual port configured for port security.",
+   "source": "CCNA 100-105 · Ch. 6, Q13",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will limit devices via port security and send an SNMP trap notification?",
+   "choices": [
+    "Switch(config-if)#switchport port-security restrict",
+    "Switch(config-if)#switchport port-security violation protect",
+    "Switch(config-if)#switchport port-security violation shutdown",
+    "Switch(config-if)#switchport port-security violation restrict"
+   ],
+   "answer": 2,
+   "explanation": "The command switchport port-security violation shutdown puts the interface into the err-disable state immediately and sends an SNMP trap notification to a syslog server.",
+   "source": "CCNA 100-105 · Ch. 6, Q14",
+   "topic": "6.1e Violation actions",
+   "topic_n": 6
+  },
+  {
+   "question": "Which command will limit devices via port security without disabling the port and not provide logging for a security violation counter?",
+   "choices": [
+    "Switch(config-if)#switchport port-security violation shutdown",
+    "Switch(config-if)#switchport port-security violation restrict",
+    "Switch(config-if)#switchport port-security restrict",
+    "Switch(config-if)#switchport port-security violation protect"
+   ],
+   "answer": 3,
+   "explanation": "The command switchport port-security violation prote ct will set the violation mode to protect. This will drop frames over the maximum number of learned MAC addresses but will not log security violations to the counters.",
+   "source": "CCNA 100-105 · Ch. 6, Q15",
+   "topic": "6.1e Violation actions",
+   "topic_n": 6
+  },
+  {
+   "question": "Which command will allow you to see logged security violations for port security?",
+   "choices": [
+    "Switch#show port-security violations",
+    "Switch#show violations",
+    "Switch#show port-security",
+    "Switch#show psec violations"
+   ],
+   "answer": 2,
+   "explanation": "The command show port-security will show all ports that have logged port security violations.",
+   "source": "CCNA 100-105 · Ch. 6, Q16",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "You have been tasked to secure ports with port security. You need to make sure that only the computers installed can access the network. The computers are installed already. Which type of configuration for port security would require the least amount of administration?",
+   "choices": [
+    "Dynamic port security",
+    "Time limit port security",
+    "Sticky port security",
+    "Static port security"
+   ],
+   "answer": 2,
+   "explanation": "When you configure sticky port security, the first MAC address seen by the switch will become bound to the port. Any other MAC addresses will trip the access violation set.",
+   "source": "CCNA 100-105 · Ch. 6, Q17",
+   "topic": "6.1c Sticky",
+   "topic_n": 4
+  },
+  {
+   "question": "Which command will allow the first MAC address learned on the port to be allowed to only pass traffic on the port via port security?",
+   "choices": [
+    "SwitchA(config-if)#switchport port-security mac-address sticky",
+    "SwitchA(config-if)#switchport port-security mac-address learn",
+    "SwitchA(config-if)#switchport port-security mac-address dynamic",
+    "SwitchA(config-if)#switchport port-security mac-address static"
+   ],
+   "answer": 0,
+   "explanation": "The command switchport port-security mac-address sticky will configure the port to learn the first MAC address and allow only the first MAC address to pass traffic.",
+   "source": "CCNA 100-105 · Ch. 6, Q19",
+   "topic": "6.1c Sticky",
+   "topic_n": 4
+  },
+  {
+   "question": "Which command will configure the port with only the MAC address you want to allow via port security?",
+   "choices": [
+    "SwitchA(config-if)#switchport port-security mac-address static 0334.56f3.e4e4",
+    "SwitchA(config-if)#switchport port-security mac-address sticky",
+    "SwitchA(config-if)#switchport port-security mac-address 0334.56f3.e4e4",
+    "SwitchA(config-if)#switchport port-security static 0334.56f3.e4e4"
+   ],
+   "answer": 2,
+   "explanation": "The command switchport port-security mac-address 0334.56f3.e4e4 will configure the interface with a static MAC address of 0334.56f3.e4e4.",
+   "source": "CCNA 100-105 · Ch. 6, Q21",
+   "topic": "6.1a Static",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will allow you to globally reset all ports with an err- disable state with minimal disruption?",
+   "choices": [
+    "Switch#clear err-disable",
+    "Switch(config)#errdisable recovery cause psecure_violation",
+    "Switch#clear switchport port-security",
+    "Switch#clear port-security violation"
+   ],
+   "answer": 1,
+   "explanation": "The global config command errdisable recovery cause psecure_violation will reset all ports with an err-disable status.",
+   "source": "CCNA 100-105 · Ch. 6, Q23",
+   "topic": "6.1f Err-disable recovery",
+   "topic_n": 7
+  },
+  {
+   "question": "You need to verify the sticky MAC addresses learned on a port on the switch. Which command will allow you to verify the addresses learned?",
+   "choices": [
+    "SwitchA#show running-configuration",
+    "SwitchA#show port-security status",
+    "SwitchA#show port-security details",
+    "SwitchA#show port-security"
+   ],
+   "answer": 0,
+   "explanation": "The command show running-configuration will show you the learned MAC addresses from port security.",
+   "source": "CCNA 100-105 · Ch. 6, Q24",
+   "topic": "6.1c Sticky",
+   "topic_n": 4
+  },
+  {
+   "question": "Which is a correct statement about sticky MAC addresses learned on a switchport?",
+   "choices": [
+    "Sticky MAC addresses become part of the running-configuration.",
+    "Sticky MAC addresses are removed by performing a shutdown on the port.",
+    "Sticky MAC addresses can be explicitly configured manually.",
+    "Sticky MAC addresses automatically become part of the startup- configuration."
+   ],
+   "answer": 0,
+   "explanation": "Sticky MAC addresses become part of the running-configuration. If the running-configuration is saved to the NVRAM, then the sticky MAC address will become part of the startup-configuration.",
+   "source": "CCNA 100-105 · Ch. 6, Q25",
+   "topic": "6.1c Sticky",
+   "topic_n": 4
+  },
+  {
+   "question": "You need to change a device on a port with which a sticky MAC address is associated. Which command will allow you to change the device and allow for a new sticky MAC address to be learned?",
+   "choices": [
+    "Switch#clear port-security f 0/0",
+    "Switch(config-if)#no switchport port-security mac-address sticky 0045.2342.e4c3",
+    "Switch(config-if)#no switchport port-security",
+    "Switch#clear switchport port-security f 0/0"
+   ],
+   "answer": 1,
+   "explanation": "The command no switchport port-security mac-address sticky 0045.2342.e4c3 will remove the entry for the device. The command no switchport port-security mac-address sticky will remain, so the next device learned will create a new sticky entry.",
+   "source": "CCNA 100-105 · Ch. 6, Q26",
+   "topic": "6.1c Sticky",
+   "topic_n": 4
+  },
+  {
+   "question": "Which command will allow you to see all the dynamically learned MAC addresses for port security?",
+   "choices": [
+    "SwitchA#show port-security details",
+    "SwitchA#show port-security address",
+    "SwitchA#show mac address-table",
+    "SwitchA#show running-configuration"
+   ],
+   "answer": 1,
+   "explanation": "The command show port-security address will allow you to see all of the dynamically learned MAC addresses for port security. The command show running-configuration would allow you to see only dynamically learned MAC addresses that are sticky.",
+   "source": "CCNA 100-105 · Ch. 6, Q28",
+   "topic": "6.1b Dynamic",
+   "topic_n": 3
+  },
+  {
+   "question": "In which interface mode should you configure port security for end devices?",
+   "choices": [
+    "Voice",
+    "Dynamic",
+    "Access",
+    "Trunk"
+   ],
+   "answer": 2,
+   "explanation": "The interface switchport should be in an access mode before port security is applied to the interface. Trunks can participate in port security, but it is rare to use these two functions together.",
+   "source": "CCNA 100-105 · Ch. 6, Q31",
+   "topic": "6.1 Configure, verify, and troubleshoot port security",
+   "topic_n": 1
+  },
+  {
+   "question": "You have default configuration on a port, which is also configured for port security. One of your junior admins is switching out equipment on the port. Which command will need to be entered so the port does not go into the violation mode?",
+   "choices": [
+    "Switch#clear port-security interface gi 2/3",
+    "Switch(config-if)#no port-security mac-address",
+    "Switch(config-if)#switchport port-security maximum 2",
+    "Switch#clear port-security dynamic interface gi 2/3"
+   ],
+   "answer": 3,
+   "explanation": "The default configuration for port security is dynamic port security and a violation of shutdown. If a new device is connected to the port, it will enter an err-disable status. Therefore, clearing the dynamic MAC addresses will be required via the command clear port-security dynamic interface gi 2/3 . Alternatively, the command clear port-security dynamic would clear all dynamically learned MAC addresses on the entire switch.",
+   "source": "CCNA 100-105 · Ch. 6, Q34",
+   "topic": "6.1b Dynamic",
+   "topic_n": 3
+  },
+  {
+   "question": "Which command would configure a port to forget the dynamically learned MAC address after 24 hours?",
+   "choices": [
+    "Switch(config-if)#switchport port-security aging time 1440",
+    "Switch(config-if)#switchport port-security aging 1440",
+    "Switch(config-if)#switchport port-security maximum time 1440",
+    "Switch(config-if)#switchport port-security time 1440"
+   ],
+   "answer": 0,
+   "explanation": "The command switchport port-security aging time 1440 will configure the port to forget the dynamically learned MAC address after 1,440 minutes. This command is configured in minutes and saves an admin from entering a clear command. However, if a violation of shutdown is configured, the port will need to be manually reset if it enters violation mode within this time period.",
+   "source": "CCNA 100-105 · Ch. 6, Q35",
+   "topic": "6.1b Dynamic",
+   "topic_n": 3
+  },
+  {
+   "question": "Which term describes the area outside of the corporate firewall?",
+   "choices": [
+    "Internal area",
+    "Trusted area",
+    "DMZ area",
+    "Perimeter area"
+   ],
+   "answer": 3,
+   "explanation": "The perimeter area, or perimeter network, is outside of the corporate firewall. The perimeter area generally holds equipment necessary for routing to the ISP.",
+   "source": "CCNA 100-105 · Ch. 6, Q36",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "How does DHCP snooping track DHCP messages and mitigate attacks?",
+   "choices": [
+    "Untrusted ports",
+    "DHCP filtering",
+    "DHCP binding table",
+    "IOS ACLs"
+   ],
+   "answer": 2,
+   "explanation": "The DHCP binding table tracks all interface, MAC address, VLAN, and IP information. This database is critical in snooping out other ports from using identical information.",
+   "source": "CCNA 100-105 · Ch. 6, Q37",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "Which term describes the area accessible to the Internet yet protected by the corporate firewall?",
+   "choices": [
+    "Trusted",
+    "DMZ",
+    "Perimeter",
+    "Internal"
+   ],
+   "answer": 1,
+   "explanation": "The demilitarized zone (DMZ) is an area that is protected by the corporate firewall. However, it allows servers such as web servers, email servers, and application servers to be accessible via the Internet.",
+   "source": "CCNA 100-105 · Ch. 6, Q38",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "Which type of device can prevent an intrusion on your network?",
+   "choices": [
+    "IPS",
+    "IDS",
+    "Honey pots",
+    "HIDS"
+   ],
+   "answer": 0,
+   "explanation": "An intrusion prevention system, or IPS, can detect and prevent attacks based on their signature. They are commonly found in firewall systems such as Adaptive Security Appliance (ASA) devices.",
+   "source": "CCNA 100-105 · Ch. 6, Q39",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "When dealing with firewalls, the term trusted network is used to describe what?",
+   "choices": [
+    "A network with SSL",
+    "The DMZ",
+    "Internal network",
+    "The Internet"
+   ],
+   "answer": 2,
+   "explanation": "The internal network is defined by the firewall. Anything protected by the firewall on the internal network is considered to be the trusted network.",
+   "source": "CCNA 100-105 · Ch. 6, Q40",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "Which is a common attack method used to overwhelm services from traffic from multiple Internet sources?",
+   "choices": [
+    "IP address spoofing",
+    "Denial of service",
+    "Session hijacking",
+    "Distributed denial of service"
+   ],
+   "answer": 3,
+   "explanation": "Distributed denial of service, or DDoS, is a common attack technique used to deny others of service. It is performed by overwhelming the service with bogus traffic. When it is performed from multiple hosts on the Internet, it is very difficult to prevent and stop.",
+   "source": "CCNA 100-105 · Ch. 6, Q41",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "Which type of device can detect an intrusion on your network?",
+   "choices": [
+    "HIDS",
+    "Honey pots",
+    "IPS",
+    "IDS"
+   ],
+   "answer": 3,
+   "explanation": "An intrusion detection system, or IDS, can detect an attack based upon its signature. They are commonly found in firewall systems such as Adaptive Security Appliance (ASA) devices.",
+   "source": "CCNA 100-105 · Ch. 6, Q42",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "When you configure DHCP snooping on a network, which mode are clients configured in?",
+   "choices": [
+    "Access mode",
+    "Untrusted mode",
+    "Client mode",
+    "Trusted mode"
+   ],
+   "answer": 1,
+   "explanation": "By default, all ports are considered untrusted, which means they should never serve the request of a DHCP client. Only the port put into trusted mode is allowed to answer client requests.",
+   "source": "CCNA 100-105 · Ch. 6, Q43",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "What method does DHCP snooping employ to thwart DHCP starvation attacks?",
+   "choices": [
+    "DHCP guard",
+    "DHCP filtering",
+    "IOS ACLs",
+    "Rate limiting"
+   ],
+   "answer": 3,
+   "explanation": "Rate limiting is employed to thwart DHCP starvation attacks by limiting the number of DHCP packets a port can receive per second.",
+   "source": "CCNA 100-105 · Ch. 6, Q44",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "Which method will allow you to mitigate from a spurious DHCP attack?",
+   "choices": [
+    "IOS ACLs",
+    "DHCP filtering",
+    "DHCP snooping",
+    "Rate limiting"
+   ],
+   "answer": 2,
+   "explanation": "A spurious DHCP attack is when a rouge DHCP server is started on the network. It serves clients with incorrect DHCP information. DHCP snooping helps to mitigate this attack.",
+   "source": "CCNA 100-105 · Ch. 6, Q45",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "Which method can be used to stop ping sweep scans?",
+   "choices": [
+    "Deploying host intrusion detection systems",
+    "Deploying network intrusion detection systems",
+    "Blocking RFC 1918 addresses at the perimeter",
+    "Blocking ICMP echo-requests and echo-replies at the perimeter"
+   ],
+   "answer": 3,
+   "explanation": "Ping sweep scans are used by attackers to discover hosts on a network. The scan sends a flood of ICMP echo requests to the perimeter network and awaits echo replies. When ICMP is blocked at the perimeter, an attacker would not be able to scan the network via ICMP.",
+   "source": "CCNA 100-105 · Ch. 6, Q46",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "Which appliance can be used to mitigate denial of service attacks?",
+   "choices": [
+    "HIDS",
+    "IDS",
+    "IPS",
+    "Honey pots"
+   ],
+   "answer": 2,
+   "explanation": "An intrusion prevention system (IPS) will help mitigate denial of service attacks. Common features of IPS can be found in the Cisco Adaptive Security Appliance.",
+   "source": "CCNA 100-105 · Ch. 6, Q47",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "Which is a common attack method used to attempt to gain access to a system using a false identity?",
+   "choices": [
+    "Session hijacking",
+    "Denial of service",
+    "Distributed denial of service",
+    "IP address spoofing"
+   ],
+   "answer": 3,
+   "explanation": "IP address spoofing is a common attack method used to attempt to gain access to a system by spoofing the originating IP address.",
+   "source": "CCNA 100-105 · Ch. 6, Q48",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "Which method would prevent tampering of data in transit?",
+   "choices": [
+    "Encryption of the data",
+    "Spoofing mitigation",
+    "Secure Sockets Layer",
+    "Access control lists"
+   ],
+   "answer": 2,
+   "explanation": "Secure Sockets Layer (SSL) communications offer both encryption and authentication of the data via certificate signing. This would prevent tampering of the data end to end.",
+   "source": "CCNA 100-105 · Ch. 6, Q49",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "A rouge wireless access point is created with the same SSID as the corporate SSID. The attacker has employees connect to the SSID and watches the information as it’s relayed to the original SSID. What type of attack is described here?",
+   "choices": [
+    "Compromised key attack",
+    "Smurf attack",
+    "Man in the middle attack",
+    "Sniffer attack"
+   ],
+   "answer": 2,
+   "explanation": "This attack is called a man in the middle attack. The attacker sits in the middle of communications and relays it back while capturing it and possibly modifying it.",
+   "source": "CCNA 100-105 · Ch. 6, Q50",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "What can you use to protect against spoofing of internal IP addresses on the perimeter of your network?",
+   "choices": [
+    "Host intrusion detection systems",
+    "Secure Sockets Layer",
+    "Intrusion detection systems",
+    "Access control lists"
+   ],
+   "answer": 3,
+   "explanation": "Access control lists are an effective way to mitigate spoofing of internal IPs from outside the trusted network.",
+   "source": "CCNA 100-105 · Ch. 6, Q51",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "Which is a requirement for the use of DHCP snooping to protect a device?",
+   "choices": [
+    "Configuration of a dedicated IP for monitoring DHCP transactions.",
+    "The device is on a layer 2 switched port on the same VLAN.",
+    "The device is on a layer 3 routed port on the same VLAN.",
+    "The DHCP server is running on the layer 2 switch."
+   ],
+   "answer": 1,
+   "explanation": "A requirement of DHCP snooping is that the device is on the VLAN that DHCP snooping is monitoring.",
+   "source": "CCNA 100-105 · Ch. 6, Q52",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "What attack vector can be used for a man in the middle attack?",
+   "choices": [
+    "Wireless",
+    "DHCP",
+    "All of the above",
+    "DNS"
+   ],
+   "answer": 2,
+   "explanation": "Any service that allows the user to create a connection or access to information can be used as an attack vector. In the case of DHCP, the attacker will set the gateway to their IP address. In the case of DNS, the attacker could spoof a request to redirect the traffic.",
+   "source": "CCNA 100-105 · Ch. 6, Q53",
+   "topic": "6.2 Describe common access layer threat mitigation techniques",
+   "topic_n": 8
+  },
+  {
+   "question": "What is the default mode port configured on a switch for DHCP snooping?",
+   "choices": [
+    "Internal",
+    "External",
+    "Trusted",
+    "Untrusted"
+   ],
+   "answer": 3,
+   "explanation": "The default mode of switchports on a switch configured with DHCP snooping is untrusted. An admin must trust ports manually.",
+   "source": "CCNA 100-105 · Ch. 6, Q54",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "Which VLAN is the default native VLAN for Cisco switches?",
+   "choices": [
+    "VLAN 1",
+    "VLAN 2",
+    "VLAN 255",
+    "VLAN 1024"
+   ],
+   "answer": 0,
+   "explanation": "The default native VLAN for Cisco switches is VLAN 1.",
+   "source": "CCNA 100-105 · Ch. 6, Q55",
+   "topic": "6.2c Nondefault native VLAN",
+   "topic_n": 11
+  },
+  {
+   "question": "You have just configured DHCP snooping. Which ports should be trusted?",
+   "choices": [
+    "Ports connecting to web servers",
+    "Ports connecting to the DNS server",
+    "Ports connecting to clients",
+    "Ports connecting to other switches"
+   ],
+   "answer": 3,
+   "explanation": "Ports that are connecting to trusted infrastructure devices such as routers and switches should be trusted. This is because legitimate DHCP traffic could originate from these ports.",
+   "source": "CCNA 100-105 · Ch. 6, Q56",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "Which is a correct statement about how DHCP snooping works?",
+   "choices": [
+    "Untrusted ports allow Discover and Offer messages to be switched.",
+    "Untrusted ports allow Offer and Acknowledgment messages to be switched.",
+    "Untrusted ports drop Discover and Offer messages.",
+    "Untrusted ports drop Offer and Acknowledgment messages."
+   ],
+   "answer": 3,
+   "explanation": "The untrusted ports drop Offer and Acknowledgment DHCP messages. The only device that should offer and acknowledge IP addresses is the DHCP server on a trusted port.",
+   "source": "CCNA 100-105 · Ch. 6, Q57",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "Which attack can be used on a native VLAN?",
+   "choices": [
+    "Double tagging",
+    "Denial of service",
+    "VLAN traversal",
+    "Trunk popping"
+   ],
+   "answer": 0,
+   "explanation": "Double tagging is an attack that can be used against the native VLAN. The attacker will tag the native VLAN on a frame and then tag another inside that frame for the VLAN that the attacker intends to compromise. When the switch receives the first frame, it removes the default VLAN tag and forwards it to other switches via a trunk port. When the other switch receives the frame with the second VLAN tag, it forwards it to the VLAN which the attacker is targeting the attack upon.",
+   "source": "CCNA 100-105 · Ch. 6, Q58",
+   "topic": "6.2c Nondefault native VLAN",
+   "topic_n": 11
+  },
+  {
+   "question": "Which command is used to view the DHCP snooping database?",
+   "choices": [
+    "Switch#show ip dhcp snooping database",
+    "Switch#show ip dhcp binding",
+    "Switch#show dhcp binding",
+    "Switch#show ip dhcp snooping binding"
+   ],
+   "answer": 3,
+   "explanation": "The command show ip dhcp snooping binding will display the DHCP snooping database. This database will have entries for the MAC address, IP address, lease time, VLAN, and interface.",
+   "source": "CCNA 100-105 · Ch. 6, Q59",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "Which command is used to configure the port of a switch as trusted for DHCP snooping?",
+   "choices": [
+    "Switch(config-if)#ip dhcp trust",
+    "Switch(config-if)#ip dhcp snooping trust",
+    "Switch(config)#ip dhcp snooping trust interface gi 2/3",
+    "Switch(config-if)#dhcp snooping trust"
+   ],
+   "answer": 1,
+   "explanation": "The command ip dhcp snooping trust will configure the interface as a trusted port.",
+   "source": "CCNA 100-105 · Ch. 6, Q60",
+   "topic": "6.2b DHCP snooping",
+   "topic_n": 10
+  },
+  {
+   "question": "Why should you always change the native VLAN?",
+   "choices": [
+    "The native VLAN contains frames from all VLANs.",
+    "The native VLAN is configured on all switches for logging.",
+    "The native VLAN provides no encryption.",
+    "The native VLAN is the default on all switchports."
+   ],
+   "answer": 3,
+   "explanation": "The native VLAN is the default configuration on all switches. It is very possible that a user could be configured by accident for the native VLAN of 1. This would allow management access to switching and routing.",
+   "source": "CCNA 100-105 · Ch. 6, Q61",
+   "topic": "6.2c Nondefault native VLAN",
+   "topic_n": 11
+  },
+  {
+   "question": "Which technology will give selective access to the network based upon authentication?",
+   "choices": [
+    "802.1Q",
+    "ACLs",
+    "Firewall",
+    "802.1x"
+   ],
+   "answer": 3,
+   "explanation": "802.1x allows selective access to a network at layer 2. It allows this on the switch because the switch acts as an authenticator to an AAA server, only allowing access after the user or device has been authenticated.",
+   "source": "CCNA 100-105 · Ch. 6, Q62",
+   "topic": "6.2a 802.1x",
+   "topic_n": 9
+  },
+  {
+   "question": "What is the end device that sends credentials for 802.1x called?",
+   "choices": [
+    "Authenticator",
+    "AAA server",
+    "RADIUS server",
+    "Supplicant"
+   ],
+   "answer": 3,
+   "explanation": "The end device that sends credentials is called the supplicant. The supplicant is a piece of software in the operating system that supplies the credentials for AAA authentication.",
+   "source": "CCNA 100-105 · Ch. 6, Q63",
+   "topic": "6.2a 802.1x",
+   "topic_n": 9
+  },
+  {
+   "question": "What is the switch called in an 802.1x configuration?",
+   "choices": [
+    "AAA server",
+    "Authenticator",
+    "RADIUS server",
+    "Supplicant"
+   ],
+   "answer": 1,
+   "explanation": "The switch is responsible for communicating with the supplicant and sending information to the authenticating server. This device is called the authenticator.",
+   "source": "CCNA 100-105 · Ch. 6, Q64",
+   "topic": "6.2a 802.1x",
+   "topic_n": 9
+  },
+  {
+   "question": "What protocol does the supplicant communicate to the authenticator for 802.1x?",
+   "choices": [
+    "TCP",
+    "IP",
+    "UDP",
+    "802.1x layer 2 protocol"
+   ],
+   "answer": 3,
+   "explanation": "The protocol used to communicate between the supplicants (OS) and the authenticator (switch) is 802.1x. 802.1x is a layer 2 protocol used specifically for authenticating devices to switch ports.",
+   "source": "CCNA 100-105 · Ch. 6, Q65",
+   "topic": "6.2a 802.1x",
+   "topic_n": 9
+  },
+  {
+   "question": "What is the attack in which DTP is exploited by a malicious user?",
+   "choices": [
+    "VLAN hopping",
+    "Trunk popping",
+    "VLAN traversal",
+    "Native VLAN"
+   ],
+   "answer": 0,
+   "explanation": "VLAN hopping is an attack in which DTP is exploited. The attacker negotiates a trunk with the switch via DTP and can hop from VLAN to VLAN.",
+   "source": "CCNA 100-105 · Ch. 6, Q66",
+   "topic": "6.2c Nondefault native VLAN",
+   "topic_n": 11
+  },
+  {
+   "question": "Which protocol is used by 802.1x for end-to-end authentication from the supplicant to the authentication server?",
+   "choices": [
+    "IPSec",
+    "802.1x authentication headers",
+    "RADIUS",
+    "EAP"
+   ],
+   "answer": 3,
+   "explanation": "EAP, or Extensible Authentication Protocol, is used for authentication between the supplicant and RADIUS server. The EAP frame is first transmitted over the layer 2 connection via EAP over LAN (EAPoL). The switch then sends it to the RADIUS server encapsulated in a UDP packet.",
+   "source": "CCNA 100-105 · Ch. 6, Q67",
+   "topic": "6.2a 802.1x",
+   "topic_n": 9
+  },
+  {
+   "question": "Which device is the supplicant during the 802.1x authentication process?",
+   "choices": [
+    "The device that is controlling access via 802.1x",
+    "The device connecting the layer 3 network",
+    "The server that is providing authentication",
+    "The device requesting access"
+   ],
+   "answer": 3,
+   "explanation": "The device requesting access is the supplicant. The supplicant is built into the operating system in which it is authenticating.",
+   "source": "CCNA 100-105 · Ch. 6, Q68",
+   "topic": "6.2a 802.1x",
+   "topic_n": 9
+  },
+  {
+   "question": "Which mechanism is used to authenticate EAP-TLS during the 802.1x authentication process?",
+   "choices": [
+    "SSH",
+    "Certificates",
+    "Passwords",
+    "MD5"
+   ],
+   "answer": 1,
+   "explanation": "EAP-TLS, or Extensible Authentication Protocol/Transport Layer Security, uses certificates to authenticate end devices. It also provides a layer of encryption via the certificate infrastructure.",
+   "source": "CCNA 100-105 · Ch. 6, Q69",
+   "topic": "6.2a 802.1x",
+   "topic_n": 9
+  },
+  {
+   "question": "Which port must be open to the RADIUS or AAA server for authentication from the authenticator?",
+   "choices": [
+    "UDP/1821",
+    "UDP/1812",
+    "UDP/1813",
+    "UDP/49"
+   ],
+   "answer": 1,
+   "explanation": "The AAA server listens for requests on port 1812 UDP for authentication of credentials.",
+   "source": "CCNA 100-105 · Ch. 6, Q70",
+   "topic": "6.2a 802.1x",
+   "topic_n": 9
+  },
+  {
+   "question": "What is the range of a standard access list?",
+   "choices": [
+    "1 to 100",
+    "100 to 200",
+    "1 to 99",
+    "100 to 199"
+   ],
+   "answer": 2,
+   "explanation": "Standard access lists are within the range of 1 to 99.",
+   "source": "CCNA 100-105 · Ch. 6, Q71",
+   "topic": "6.3a Standard",
+   "topic_n": 13
+  },
+  {
+   "question": "Which statement is correct about a standard access control list?",
+   "choices": [
+    "Conditions can be based upon the source or destination address and source or destination port.",
+    "Conditions can be based upon only the source address and source port.",
+    "Conditions can be based upon only the source address.",
+    "Conditions can be based upon only the destination address."
+   ],
+   "answer": 2,
+   "explanation": "Access control lists can be based upon only the source address of the packet.",
+   "source": "CCNA 100-105 · Ch. 6, Q72",
+   "topic": "6.3a Standard",
+   "topic_n": 13
+  },
+  {
+   "question": "What is the range of an extended access list?",
+   "choices": [
+    "1 to 100",
+    "100 to 199",
+    "100 to 200",
+    "1 to 99"
+   ],
+   "answer": 1,
+   "explanation": "Extended access lists are within the range of 100 to 199.",
+   "source": "CCNA 100-105 · Ch. 6, Q73",
+   "topic": "6.3b Extended",
+   "topic_n": 14
+  },
+  {
+   "question": "What is at the end of every access control list?",
+   "choices": [
+    "End of ACL marker",
+    "Log all",
+    "Permit any any",
+    "Deny any any"
+   ],
+   "answer": 3,
+   "explanation": "At the end of every access list there is a deny any any rule. If a permit is not configured in the access list, the ACL does not serve a purpose. All ACLs must contain at least one permit statement.",
+   "source": "CCNA 100-105 · Ch. 6, Q74",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "Which statement is correct about an access control list?",
+   "choices": [
+    "Packets are compared sequentially against each line in an access list, and the last matching condition is the action taken.",
+    "At the end of the access control list, there is an implicit allow.",
+    "Packets are compared, and if no matching rule exists, they are allowed.",
+    "Packets are compared sequentially against each line in an access list until a match is made."
+   ],
+   "answer": 3,
+   "explanation": "When packets are compared to an access control list, they are compared in a sequential order. When the first rule is found to match, the action is acted upon. There is no further rule processing after the first match.",
+   "source": "CCNA 100-105 · Ch. 6, Q75",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "What is an advantage of using a standard access control list?",
+   "choices": [
+    "More specific rules",
+    "Less processing overhead",
+    "Blocking of applications",
+    "More secure"
+   ],
+   "answer": 1,
+   "explanation": "An advantage to a standard access control list is that they require less processing overhead from the ASIC or CPU (depending on the platform). Since they only inspect layer 3 headers, no further decapsulation is required for layer 4.",
+   "source": "CCNA 100-105 · Ch. 6, Q76",
+   "topic": "6.3a Standard",
+   "topic_n": 13
+  },
+  {
+   "question": "What is the expanded range of a standard access list?",
+   "choices": [
+    "1100 to 1299",
+    "1300 to 1999",
+    "2000 to 2699",
+    "1000 to 1999"
+   ],
+   "answer": 1,
+   "explanation": "The expanded range of a standard access list is 1300 to 1999.",
+   "source": "CCNA 100-105 · Ch. 6, Q77",
+   "topic": "6.3a Standard",
+   "topic_n": 13
+  },
+  {
+   "question": "You need to filter traffic for the 172.16.0.0/12 network. Which wildcard mask would you use?",
+   "choices": [
+    "0.15.255.255",
+    "255.240.0.0",
+    "0.0.240.255",
+    "255.3.0.0"
+   ],
+   "answer": 0,
+   "explanation": "A wildcard mask is the opposite of a network mask. The easy way to calculate a wildcard mask is to figure out what the subnet is and deduct 1 for the octet. For example, if the network address is 172.16.0.0/12 (Classless Inter-Domain Routing), or 255.240.0.0 (Dotted Decimal Notation), and each network number is a multiple of 16, the wildcard mask should be 0.15.255.255.",
+   "source": "CCNA 100-105 · Ch. 6, Q78",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "Which command would configure an ACL to block traffic coming from 192.168.1.0/24?",
+   "choices": [
+    "Router(config)#ip access-list 1 192.168.1.0/24",
+    "Router(config)#ip access-list 2 192.168.1.0 255.255.255.0",
+    "Router(config)#ip access-list 20 192.168.1.0 0.0.0.255",
+    "Router(config)#ip access-list 100 192.168.1.0 0.0.0.255"
+   ],
+   "answer": 2,
+   "explanation": "The command ip access-list 20 192.168.1.0 0.0.0.255 will configure an access list of 20, which is a standard access list. The source address of 192.168.1.0 is wildcard masked with 0.0.0.255.",
+   "source": "CCNA 100-105 · Ch. 6, Q79",
+   "topic": "6.3a Standard",
+   "topic_n": 13
+  },
+  {
+   "question": "If you configure a rule with the address of 0.0.0.0 and wildcard mask of 255.255.255.255, what are you doing?",
+   "choices": [
+    "Defining the network address",
+    "Defining all addresses",
+    "Defining no addresses",
+    "Defining the broadcast address"
+   ],
+   "answer": 1,
+   "explanation": "A rule with an address or 0.0.0.0 and wildcard mask of 255.255.255.255 defines all addresses. Effectively, it is another way to specify the “any” source or destination.",
+   "source": "CCNA 100-105 · Ch. 6, Q80",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "Which statement is correct about applying ACLs to an interface?",
+   "choices": [
+    "An access control list can be applied in only one direction.",
+    "An access control list can be applied only to a single port.",
+    "An access control list can be applied only to a single protocol.",
+    "All of the above"
+   ],
+   "answer": 3,
+   "explanation": "Access lists can be applied per a port, per a protocol, and per a direction. For example, you could apply only one ACL per the interface of Fast 0/1, per the protocol of IP in the inbound direction.",
+   "source": "CCNA 100-105 · Ch. 6, Q81",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "You need to filter an application. Which type of access list will you use to complete the task?",
+   "choices": [
+    "Dynamic",
+    "Extended",
+    "Standard",
+    "Expanded"
+   ],
+   "answer": 1,
+   "explanation": "An extended access list allows you to filter traffic by port, which defines an application being used, since web traffic is communicated on 80 or 443.",
+   "source": "CCNA 100-105 · Ch. 6, Q82",
+   "topic": "6.3b Extended",
+   "topic_n": 14
+  },
+  {
+   "question": "What is the expanded range of an extended access list?",
+   "choices": [
+    "1100 to 1299",
+    "2000 to 2699",
+    "1000 to 1999",
+    "1300 to 1999"
+   ],
+   "answer": 1,
+   "explanation": "The expanded range of a standard access list is 2000 to 2699.",
+   "source": "CCNA 100-105 · Ch. 6, Q83",
+   "topic": "6.3b Extended",
+   "topic_n": 14
+  },
+  {
+   "question": "You need to filter traffic for the 192.168.1.0/25 network. Which wildcard mask would you use?",
+   "choices": [
+    "255.255.255.128",
+    "0.0.0.128",
+    "0.0.0.127",
+    "0.0.0.63"
+   ],
+   "answer": 2,
+   "explanation": "A wildcard mask is the opposite of a network mask. The easy way to calculate a wildcard mask is to figure out what the subnet is and deduct 1 for the octet. For example, if the network address is 192.168.1.0/25 (Classless Inter-Domain Routing), or 255.255.255.128 (Dotted Decimal Notation), and each network number is a multiple of 128, the wildcard mask should be 0.0.0.127.",
+   "source": "CCNA 100-105 · Ch. 6, Q84",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "Which type of access control list allows for removing a single entry without removing the entire ACL?",
+   "choices": [
+    "Dynamic",
+    "Extended",
+    "Named",
+    "Standard"
+   ],
+   "answer": 2,
+   "explanation": "A named access control list allows for removing and adding entries by their line number.",
+   "source": "CCNA 100-105 · Ch. 6, Q85",
+   "topic": "6.3c Named",
+   "topic_n": 15
+  },
+  {
+   "question": "Which type of access control list allows you to open a port only after someone has successfully logged into the router?",
+   "choices": [
+    "Standard",
+    "Named",
+    "Dynamic",
+    "Extended"
+   ],
+   "answer": 2,
+   "explanation": "Once a successful login is performed at the router, the dynamic access control list is activated. This is also called lock and key security.",
+   "source": "CCNA 100-105 · Ch. 6, Q86",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "Which statement configures a standard access list?",
+   "choices": [
+    "Router(config)#access-list 180 permit udp any 172.16.0.0 0.255.255.255 eq 161",
+    "Router(config)#access-list 20 deny 172.16.0.0 0.255.255.255",
+    "Router(config)#access-list 130 permit permit ip any any",
+    "Router(config)#access-list 150 deny any 172.16.0.0 0.255.255.255"
+   ],
+   "answer": 1,
+   "explanation": "The statement access-list 20 deny 172.16.0.0 0.255.255.255 configures a standard access list for two reasons: the first is that the access list number is 20, which falls between the standard access list range of 1 to 99. The second reason is that you are depicting traffic by source address.",
+   "source": "CCNA 100-105 · Ch. 6, Q87",
+   "topic": "6.3a Standard",
+   "topic_n": 13
+  },
+  {
+   "question": "Which statement can be used in lieu of access-list 5 permit 192.168.1.5 0.0.0.0 ?",
+   "choices": [
+    "Router(config)#access-list 5 permit 192.168.1.5/24",
+    "Router(config)#access-list 5 permit 192.168.1.0 0.0.0.255",
+    "Router(config)#access-list 5 permit host 192.168.1.5",
+    "Router(config)#access-list 5 permit 192.168.1.5"
+   ],
+   "answer": 2,
+   "explanation": "The command access-list 5 permit host 192.168.1.5 specifies the traffic coming from the host 192.168.1.5. The statement access-list 5 permit 192.168.1 .5 0.0.0.0 achieves the same thing.",
+   "source": "CCNA 100-105 · Ch. 6, Q88",
+   "topic": "6.3a Standard",
+   "topic_n": 13
+  },
+  {
+   "question": "Which type of access list limits you to describing traffic by source address?",
+   "choices": [
+    "Dynamic",
+    "Named",
+    "Extended",
+    "Standard"
+   ],
+   "answer": 3,
+   "explanation": "Standard access lists only allow you to describe traffic by source address. This helps the processing of the access list because the router or switch does not need to de-capsulate packets further than layer 3.",
+   "source": "CCNA 100-105 · Ch. 6, Q90",
+   "topic": "6.3a Standard",
+   "topic_n": 13
+  },
+  {
+   "question": "Which statement will block traffic for a server of 192.168.1.5 for SSH?",
+   "choices": [
+    "Router(config)#access-list 90 deny ip host 192.168.1.5 eq 22",
+    "Router(config)#access-list 199 deny tcp any host 192.168.1.5 eq 22",
+    "Router(config)#access-list 199 deny tcp host 192.168.1.5 any eq 23",
+    "Router(config)#access-list 90 deny tcp any host 192.168.1.5 eq 22"
+   ],
+   "answer": 1,
+   "explanation": "The command access-list 199 deny tcp any host 192.168.1.5 eq 22 will create an extended access list of 199 and deny TCP communication from any computer to the host of 192.168.1.5 for port 22.",
+   "source": "CCNA 100-105 · Ch. 6, Q91",
+   "topic": "6.3b Extended",
+   "topic_n": 14
+  },
+  {
+   "question": "Which statement configures a valid access list?",
+   "choices": [
+    "Router(config)#access-list 153 permit any host 192.168.4.5 eq 22",
+    "Router(config)#access-list 189 deny any host 192.168.1.5 eq 22",
+    "Router(config)#access-list 99 deny tcp host 192.168.2.7 eq 443",
+    "Router(config)#access-list 143 permit tcp host 192.168.8.3 eq 80 any"
+   ],
+   "answer": 3,
+   "explanation": "The command access-list 143 permit tcp host 192.168.8.3 eq 80 any is a valid statement. All extended access lists that describe a port must also describe the protocol.",
+   "source": "CCNA 100-105 · Ch. 6, Q93",
+   "topic": "6.3b Extended",
+   "topic_n": 14
+  },
+  {
+   "question": "You want to apply an access list of 198 to an interface to filter traffic into the interface. Which command will achieve this?",
+   "choices": [
+    "Router(config-if)#ip access-class 198 in",
+    "Router(config-if)#ip access-list 198 in",
+    "Router(config-if)#ip access-group 198 in",
+    "Router(config)#ip access-list 198 in fast 0/1"
+   ],
+   "answer": 2,
+   "explanation": "The command ip access-group 198 in will apply access list 198 to the interface in which it is configured in the inbound direction.",
+   "source": "CCNA 100-105 · Ch. 6, Q94",
+   "topic": "6.3b Extended",
+   "topic_n": 14
+  },
+  {
+   "question": "Which type of ACL should be placed closest to the source of traffic?",
+   "choices": [
+    "Expanded",
+    "Extended",
+    "Dynamic",
+    "Standard"
+   ],
+   "answer": 1,
+   "explanation": "Extended ACLs should always be placed closest to the source of traffic since they are extremely granular.",
+   "source": "CCNA 100-105 · Ch. 6, Q97",
+   "topic": "6.3b Extended",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will create an extended named access list?",
+   "choices": [
+    "Router(config)#ip access-list named_list",
+    "Router(config)#ip access-list 101 named_list",
+    "Router(config)#ip access-list extended named_list",
+    "Router(config)#access-list 101 allow host 192.168.1.5 any"
+   ],
+   "answer": 2,
+   "explanation": "The command ip access-list extended named_list will create an extended named access list.",
+   "source": "CCNA 100-105 · Ch. 6, Q98",
+   "topic": "6.3c Named",
+   "topic_n": 15
+  },
+  {
+   "question": "Which type of ACL should be placed closest to the destination of traffic?",
+   "choices": [
+    "Expanded",
+    "Standard",
+    "Extended",
+    "Dynamic"
+   ],
+   "answer": 1,
+   "explanation": "Standard ACLs should always be placed closest to the destination of traffic since they are broad in the traffic they control.",
+   "source": "CCNA 100-105 · Ch. 6, Q99",
+   "topic": "6.3a Standard",
+   "topic_n": 13
+  },
+  {
+   "question": "After several edits to a named access control list, the numbers are no longer 10, 20, and 30, and you have no room to perform future edits. Which command will fix the problem with no disruption?",
+   "choices": [
+    "Switch(config)#ip access-list resequence named_list 10 10",
+    "Switch(config)#ip access-list re-number named_list",
+    "Switch#clear ip access-list named_list line-numbers",
+    "Switch(config)#ip access-list named_list renumber"
+   ],
+   "answer": 0,
+   "explanation": "The command ip access-list resequence named_list 10 10 will resequence the line numbers for the named access list called named_list. The numbering will start with 10 and increment by 10.",
+   "source": "CCNA 100-105 · Ch. 6, Q101",
+   "topic": "6.3c Named",
+   "topic_n": 15
+  },
+  {
+   "question": "Which command will apply the named access control list called named_list to the interface in an inbound direction?",
+   "choices": [
+    "Router(config)#ip access-list named_list in fast 0/1",
+    "Router(config-if)#ip access-class named_list in",
+    "Router(config-if)#ip access-list named_list in",
+    "Router(config-if)#ip access-group named_list in"
+   ],
+   "answer": 3,
+   "explanation": "The command ip access-group named_list in configured inside of the interface will apply an access list called named_list to the interface for the inbound direction.",
+   "source": "CCNA 100-105 · Ch. 6, Q102",
+   "topic": "6.3c Named",
+   "topic_n": 15
+  },
+  {
+   "question": "Which command will create an IPv6 access list?",
+   "choices": [
+    "Router(config)#ipv6 access-list named_list",
+    "Router(config)#ip access-list extended named_list ipv6",
+    "Router(config)#ip access-list deny 2100 ipv6 2001:db8::1/64",
+    "Router(config)#ipv6 access-list extended named_list"
+   ],
+   "answer": 0,
+   "explanation": "IPv6 access lists are created as named access lists. The command ipv6 access-list named_list will create an IPv6 named access list.",
+   "source": "CCNA 100-105 · Ch. 6, Q104",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "What is a difference between IPv6 and IPv4 access control lists?",
+   "choices": [
+    "All of the above",
+    "Implicit allow of Neighbor Discovery packets",
+    "The use of wildcard masks",
+    "Implicit allow of any any at the end of the ACL"
+   ],
+   "answer": 1,
+   "explanation": "IPv6 access control lists implicitly allow Neighbor Discovery packets. This is to facilitate a number of features that IPv6 has built in, such as SLAAC and DAD.",
+   "source": "CCNA 100-105 · Ch. 6, Q105",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "Which command will help verify that an access control list is applied to an interface?",
+   "choices": [
+    "Router#show access-list",
+    "Router#show ip access-list",
+    "Router#show interface fast 0/1",
+    "Router#show ip interface fast 0/1"
+   ],
+   "answer": 3,
+   "explanation": "The command show ip interface fast 0/1 will show the IP address details of the interface Fast 0/1. Included with these details you will find any outbound and inbound ACLs set on the interface.",
+   "source": "CCNA 100-105 · Ch. 6, Q106",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "Which command will allow notes to be added to an access control list?",
+   "choices": [
+    "Router(config-nacl)#remark This is a note about the ACL",
+    "Router(config-nacl)#banner ^This is a note about the ACL^",
+    "Router(config-nacl)#info This is a note about the ACL",
+    "Router(config-nacl)#note This is a note about the ACL"
+   ],
+   "answer": 0,
+   "explanation": "Using the command remark followed by the text is a way of adding notes in an ACL. This particular example is a named access list. However, remarks can also be used in traditional ACLs using a similar syntax in lieu of the permit and deny.",
+   "source": "CCNA 100-105 · Ch. 6, Q107",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "Which command will allow you to see matching statistics for an access control list?",
+   "choices": [
+    "Router#show ip interface fast 0/1",
+    "Router#debug ip access-list 2",
+    "Router#show access-list",
+    "Router#show ip access-list 2"
+   ],
+   "answer": 2,
+   "explanation": "The command show access-list will show the number of matches for each statement. This command also works for IPv6 access lists.",
+   "source": "CCNA 100-105 · Ch. 6, Q108",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "You want to see if a particular rule is matching packets in real time. Which command will allow you to do this?",
+   "choices": [
+    "Switch(config)#ip access-list 101 permit tcp host 192.168.1.6 any eq 80 log",
+    "Switch(config)#ip access-list 101 debug tcp host 192.168.1.6 any eq 80 debug",
+    "Switch(config)#ip access-list 101 permit tcp host 192.168.1.6 any eq 80 debug",
+    "Switch(config)#ip access-list 101 log tcp host 192.168.1.6 any eq 80 debug"
+   ],
+   "answer": 0,
+   "explanation": "The command ip access-list 101 permit tcp host 192.168.1.6 any eq 80 log will permit traffic from host 192.168.1.6 to any matching packets on port 80. When the log attribute is configured on the end of the command, the router or switch will send a syslog notification each time the packet is matched to the rule.",
+   "source": "CCNA 100-105 · Ch. 6, Q109",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "If the Neighbor Discovery Protocol for IPv6 is blocked via an ACL, what is the negative effect?",
+   "choices": [
+    "The gateway of the router will never be used.",
+    "Autoconfiguration of the network will be disabled.",
+    "All of the above",
+    "A duplicate IPv6 address is possible."
+   ],
+   "answer": 2,
+   "explanation": "Since NDP (Neighbor Discovery Protocol) is used for finding the gateway, Duplicate Address Detection, and Stateless Address Autoconfiguration, all of these functions would be impacted.",
+   "source": "CCNA 100-105 · Ch. 6, Q110",
+   "topic": "6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list for traffic filtering",
+   "topic_n": 12
+  },
+  {
+   "question": "What is the earliest version of the APIC-EM (Application Policy Infrastructure Controller Enterprise Module) required to use the Path Trace ACL Analysis tool?",
+   "choices": [
+    "Version 0.9",
+    "Version 1.1",
+    "Version 1.0",
+    "Version 1.2"
+   ],
+   "answer": 3,
+   "explanation": "The Path Trace tool was first debuted in version 1.0 of the APIC-EM (Application Policy Infrastructure Controller Enterprise Module). However, the ACL Analysis tool was not added as an option until version 1.2.",
+   "source": "CCNA 100-105 · Ch. 6, Q111",
+   "topic": "6.4 Verify ACLs using the APIC-EM Path Trace ACL Analysis tool",
+   "topic_n": 16
+  },
+  {
+   "question": "What will you need to do before performing a path trace ACL analysis?",
+   "choices": [
+    "Copy all ACLs into the APIC-EM.",
+    "Manually enter all routers and switches into the APIC-EM.",
+    "Perform an ACL detection.",
+    "Perform an environment discovery."
+   ],
+   "answer": 3,
+   "explanation": "Before performing a path trace ACL analysis, you must perform an environment discovery on your network topology.",
+   "source": "CCNA 100-105 · Ch. 6, Q112",
+   "topic": "6.4 Verify ACLs using the APIC-EM Path Trace ACL Analysis tool",
+   "topic_n": 16
+  },
+  {
+   "question": "What type of application is the Path Trace ACL Analysis tool?",
+   "choices": [
+    "DevNet application",
+    "Solutions application",
+    "Basic application",
+    "Base controller"
+   ],
+   "answer": 2,
+   "explanation": "The Path Trace ACL Analysis tool is a basic application. Basic applications do not require licensing, similar to the APIC-EM itself. Solution applications are licensed apps from Cisco and third parties; both run on top of the base controller.",
+   "source": "CCNA 100-105 · Ch. 6, Q113",
+   "topic": "6.4 Verify ACLs using the APIC-EM Path Trace ACL Analysis tool",
+   "topic_n": 16
+  },
+  {
+   "question": "Where do you download the APIC-EM?",
+   "choices": [
+    "The Cisco software download site",
+    "A Cisco partner download site",
+    "The Cisco DevNet site",
+    "The Cisco Network Academy site"
+   ],
+   "answer": 2,
+   "explanation": "The APIC-EM is a Cisco Development Network (DevNet) tool. It requires a login to the Cisco DevNet site. This is because the APIC-EM is a tool you can use to create applications for network management.",
+   "source": "CCNA 100-105 · Ch. 6, Q114",
+   "topic": "6.4 Verify ACLs using the APIC-EM Path Trace ACL Analysis tool",
+   "topic_n": 16
+  },
+  {
+   "question": "What does the APIC-EM Path Trace ACL Analysis tool perform?",
+   "choices": [
+    "It helps create ACLs for data paths.",
+    "It performs end-to-end analysis of ACLs for a given path.",
+    "It performs analysis of ACLs to make sure they are correct.",
+    "All of the above"
+   ],
+   "answer": 1,
+   "explanation": "The APIC-EM Path Trace ACL Analysis tool is used for end-to-end analysis of ACLs via the path an imaginary packet will take.",
+   "source": "CCNA 100-105 · Ch. 6, Q116",
+   "topic": "6.4 Verify ACLs using the APIC-EM Path Trace ACL Analysis tool",
+   "topic_n": 16
+  },
+  {
+   "question": "Which statement is correct about the Path Trace ACL Analysis tool?",
+   "choices": [
+    "When performing an analysis, you must start by selecting the ACL Analysis option.",
+    "When performing an analysis, you must start by selecting the Path Trace option.",
+    "The Path Trace ACL Analysis tool helps with what-if scenarios.",
+    "The Path Trace ACL Analysis tool helps you create ACLs."
+   ],
+   "answer": 1,
+   "explanation": "When performing path trace ACL analysis, you first start by selecting the Path Trace option. On the next screen, you select the ACL Analysis option, which will help you perform the ACL analysis.",
+   "source": "CCNA 100-105 · Ch. 6, Q117",
+   "topic": "6.4 Verify ACLs using the APIC-EM Path Trace ACL Analysis tool",
+   "topic_n": 16
+  },
+  {
+   "question": "What must be selected when performing a path trace ACL analysis?",
+   "choices": [
+    "The data payload for the test",
+    "The egress and ingress ports",
+    "The type of ACL to be examined",
+    "The path of the analysis"
+   ],
+   "answer": 1,
+   "explanation": "When performing a path trace ACL analysis, you must select the starting device and end device as well at the egress port and ingress port. The path of analysis will be calculated by the tool.",
+   "source": "CCNA 100-105 · Ch. 6, Q118",
+   "topic": "6.4 Verify ACLs using the APIC-EM Path Trace ACL Analysis tool",
+   "topic_n": 16
+  },
+  {
+   "question": "If a device is blocking traffic for a path trace ACL analysis, what information does the interface give you to diagnose the problem?",
+   "choices": [
+    "The tool will give you the correction to the ACL.",
+    "The tool will allow you to create a new ACL.",
+    "The tool will show you the access control entry blocking traffic.",
+    "The tool will allow you to perform a what-if scenario."
+   ],
+   "answer": 2,
+   "explanation": "If a packet is blocked, the analysis output will show you the access control entry (ACE) in the ACL that is blocking the packet.",
+   "source": "CCNA 100-105 · Ch. 6, Q120",
+   "topic": "6.4 Verify ACLs using the APIC-EM Path Trace ACL Analysis tool",
+   "topic_n": 16
+  },
+  {
+   "question": "Which command will configure the enable password for a router or switch?",
+   "choices": [
+    "Router(config)#password enable Password20!",
+    "Router(config)#secret enable Password20!",
+    "Router(config)#enable Password20!",
+    "Router(config)#enable secret Password20!"
+   ],
+   "answer": 3,
+   "explanation": "The command enable secret Password20! will set the enable password and encrypt the Password20! password.",
+   "source": "CCNA 100-105 · Ch. 6, Q121",
+   "topic": "6.5b Secure password",
+   "topic_n": 19
+  },
+  {
+   "question": "You need to set the login password for Telnet. Which command will you type first?",
+   "choices": [
+    "Switch(config)#line vty 0 5",
+    "Switch(config)#interface vlan 1",
+    "Switch(config)#line aux 1",
+    "Switch(config)#line console 1"
+   ],
+   "answer": 0,
+   "explanation": "The command line vty 0 5 will enter you into the line for the virtual teletype, which is where you configure your Telnet password.",
+   "source": "CCNA 100-105 · Ch. 6, Q122",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "You have set the enable password using enable password Password20! . However, when you try to get to a privileged exec prompt the router states that you are using an incorrect password. What is the problem?",
+   "choices": [
+    "The password is too long and has been truncated.",
+    "The enable secret password is set to something else.",
+    "You originally entered the wrong password.",
+    "The password Password20! contains a special character."
+   ],
+   "answer": 1,
+   "explanation": "If the enable password is set and the enable secret is set, the enable password will be ignored. Therefore the enable secret is being used to authenticate the user, and you are typing the wrong password. The command enable password exists for backward compatibility with pre 10.3 IOS and should no longer be used.",
+   "source": "CCNA 100-105 · Ch. 6, Q123",
+   "topic": "6.5b Secure password",
+   "topic_n": 19
+  },
+  {
+   "question": "Which command(s) will set a password and require login for a line?",
+   "choices": [
+    "Router(config-line)#password Password20! Router(config-line)#login password",
+    "Router(config-line)#login password Password20!",
+    "Router(config-line)#password Password20! Router(config-line)#login",
+    "Router(config-line)#set password Password20! Router(config-line)#request login"
+   ],
+   "answer": 2,
+   "explanation": "The command password Password20! will set the login password to Password20 ! . The sub-command login will require login for the line.",
+   "source": "CCNA 100-105 · Ch. 6, Q124",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "You telnet to a switch and receive the error Password required, but none set . [Connection to 192.168.1.1 closed by foreign host] . What is the problem?",
+   "choices": [
+    "The line login password is not set.",
+    "The enable secret is not set.",
+    "The enable password is not set.",
+    "The line is administratively shut down."
+   ],
+   "answer": 0,
+   "explanation": "The line login password is not set when you receive the error Password required, but none set . If the enable secret was not set, you would just not be able to get to a privilege exec prompt, but still be able to get to a user exec prompt.",
+   "source": "CCNA 100-105 · Ch. 6, Q125",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "What is required before generating the encryption keys for SSH on a router or switch?",
+   "choices": [
+    "Setting the key strength",
+    "Setting the hostname and domain name",
+    "Setting the key repository",
+    "Setting the time and date"
+   ],
+   "answer": 1,
+   "explanation": "The hostname and domain name are required before you attempt to generate the encryption keys for SSH.",
+   "source": "CCNA 100-105 · Ch. 6, Q126",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "Which command will enable SSH version 2 for logins?",
+   "choices": [
+    "Router(config-ssh)#version 2",
+    "Router(config)#ip ssh version 2",
+    "Router(config-line)#version 2",
+    "Router(config)#ssh version 2"
+   ],
+   "answer": 1,
+   "explanation": "The command ip ssh version 2 will set your SSH version to 2. This command is to be entered at a global configuration prompt.",
+   "source": "CCNA 100-105 · Ch. 6, Q127",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "Which command will configure the router or switch to allow SSH as a protocol for management with a fallback of Telnet?",
+   "choices": [
+    "Switch(config)#login ssh telnet",
+    "Switch(config-line)#login ssh telnet",
+    "Switch(config-line)#transport ssh telnet",
+    "Switch(config)#transport ssh telnet"
+   ],
+   "answer": 2,
+   "explanation": "The command transport ssh telnet will configure the VTY line to accept SSH as a login protocol and fallback to Telnet.",
+   "source": "CCNA 100-105 · Ch. 6, Q128",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "Why should Telnet be replaced with SSH?",
+   "choices": [
+    "SSH is encrypted.",
+    "SSH allows for file copy.",
+    "SSH makes it easier to create ACLs for access.",
+    "Telnet has weak encryption."
+   ],
+   "answer": 0,
+   "explanation": "SSH is encrypted and Telnet is in clear text. To keep passwords and configuration safe, SSH should always be used.",
+   "source": "CCNA 100-105 · Ch. 6, Q129",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "Which command will create and apply an access list to secure router or switch management?",
+   "choices": [
+    "Switch(config)#access-list 1 permit host 192.168.1.5 Switch(config)#line vty 0 5 Switch(config-line)#ip access-group 1 in",
+    "Switch(config)#access-list 1 permit host 192.168.1.5 Switch(config)#ip access-group 1 in",
+    "Switch(config)#access-list 1 permit host 192.168.1.5 Switch(config)#line vty 0 5 Switch(config-line)#ip access-class 1 in",
+    "Switch(config)#access-list 1 permit host 192.168.1.5 Switch(config)#interface vlan 1 Switch(config-if)#ip access-group 1 in"
+   ],
+   "answer": 2,
+   "explanation": "You must first create an access list to permit the host that will manage the router or switch with the command access-list 1 permit host 192.168.1.5 . Then enter the VTY line in which it will be applied with the command line vty 0 5 . Then apply it with the command ip access- class 1 in , which differs from the command ip access-group , which is used on interfaces.",
+   "source": "CCNA 100-105 · Ch. 6, Q130",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "You have created the SSH encryption keys, but you cannot enable SSH version 2. What is the problem?",
+   "choices": [
+    "The DNS server is not configured.",
+    "The time and date need to be corrected.",
+    "There is no host record for the switch or router.",
+    "The key strength needs to be 768 bits or higher."
+   ],
+   "answer": 3,
+   "explanation": "When you’re configuring a switch or router for SSH version 2, the key strength must be at least 768 bits for the modulus. The default is 512 bits, and it is standard practice to double the number to 1024 bits.",
+   "source": "CCNA 100-105 · Ch. 6, Q131",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "Which command will configure a local user for SSH access?",
+   "choices": [
+    "Router(config)#user user1 Password20!",
+    "Router(config)#account user1 Router(config-acct)#password Password20!",
+    "Router(config)#user-account user1 password Password20!",
+    "Router(config)#username user1 password Password20!"
+   ],
+   "answer": 3,
+   "explanation": "The command username user1 password Password20! will create a user account called user1 with a password of Password20! .",
+   "source": "CCNA 100-105 · Ch. 6, Q132",
+   "topic": "6.5a Local authentication",
+   "topic_n": 18
+  },
+  {
+   "question": "You configured the password for Telnet access, but when you perform a show running-configuration , the password shows in clear text. Which command should be run?",
+   "choices": [
+    "Router(config)#service password-encryption",
+    "Router(config)#service encryption",
+    "Router(config)#password-encryption service",
+    "Router(config)#password encryption"
+   ],
+   "answer": 0,
+   "explanation": "The command service password-encryption should be entered in global config. It should not be kept in the configuration as it will use CPU cycles. So after it is configured, you should perform a show running- configuration to double-check if the encryption worked and then perform a no service password-encryption to turn it off.",
+   "source": "CCNA 100-105 · Ch. 6, Q133",
+   "topic": "6.5b Secure password",
+   "topic_n": 19
+  },
+  {
+   "question": "Which command will generate the encryption keys for SSH?",
+   "choices": [
+    "Router#crypto key generate rsa",
+    "Router(config)#crypto key generate rsa",
+    "Router(config)#generate crypto key rsa",
+    "Router(config)#crypto generate key rsa"
+   ],
+   "answer": 1,
+   "explanation": "The command crypto key generate rsa will generate the encryption keys for SSH. You will be asked for the key strength, called the modulus, which should be over 768 bits to support SSH version 2.",
+   "source": "CCNA 100-105 · Ch. 6, Q134",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "Which command will disable auto-disconnect for idle privileged exec sessions?",
+   "choices": [
+    "Switch(config-line)#timeout 0 0",
+    "Switch(config)#exec-timeout 0",
+    "Switch(config-line)#exec-timeout 0 0",
+    "Switch(config-line)#no exec-timeout"
+   ],
+   "answer": 2,
+   "explanation": "The command exec-timeout 0 0 will disable auto-disconnect of idle privileged exec sessions.",
+   "source": "CCNA 100-105 · Ch. 6, Q135",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "You want to turn on local authentication so that a user must supply a username and password when managing the switch. You have created the username and password combinations on the switch. Which command will direct SSH and Telnet to use this authentication model?",
+   "choices": [
+    "Switch(config-line)#login local",
+    "Switch(config-line)#local authentication",
+    "Switch(config)#new aaa model",
+    "Switch(config)#local authentication"
+   ],
+   "answer": 0,
+   "explanation": "After configuring the username and password combinations that will be used on the switch or router, you will need to configure the line(s) that will use local authentication. The command used inside of the line is login local . This will apply to all the transport methods configured on the line.",
+   "source": "CCNA 100-105 · Ch. 6, Q137",
+   "topic": "6.5a Local authentication",
+   "topic_n": 18
+  },
+  {
+   "question": "During a recent external security audit, it was determined that your enable password should be secured with SHA-256 scrypt. Which command will change the password strength on the switches and routers?",
+   "choices": [
+    "Switch(config)#enable secret 9",
+    "Switch(config)#enable secret algorithm-type scrypt",
+    "Switch(config)#service password-encryption scrypt",
+    "Switch(config)#enable algorithm-type scrypt secret Password20!"
+   ],
+   "answer": 3,
+   "explanation": "The command enable algorithm-type scrypt secret Password20! will change the enable password to Password20! and use the scrypt algorithm type.",
+   "source": "CCNA 100-105 · Ch. 6, Q138",
+   "topic": "6.5b Secure password",
+   "topic_n": 19
+  },
+  {
+   "question": "What is the default encryption method for passwords, when you configure a line password?",
+   "choices": [
+    "MD5",
+    "SHA-128",
+    "Clear text",
+    "SHA-256"
+   ],
+   "answer": 2,
+   "explanation": "The default for encryption method for passwords configured for lines is clear text. If you want to encrypt the password, you should use the service password-encryption command.",
+   "source": "CCNA 100-105 · Ch. 6, Q139",
+   "topic": "6.5b Secure password",
+   "topic_n": 19
+  },
+  {
+   "question": "You need to change the default idle time before disconnection of privileged exec mode for network administrators. Which command will change it to 30 minutes?",
+   "choices": [
+    "Switch(config-line)#exec-timeout 0 30",
+    "Switch(config-line)#exec-timeout 30 0",
+    "Switch(config)#exec-timeout 30 0",
+    "Switch(config-line)#timeout 30 0"
+   ],
+   "answer": 1,
+   "explanation": "The command exec-timeout 30 0 will change the idle time to 30 minutes and zero seconds. If a privileged exec session is idle for 30 minutes, the network admin will be disconnected.",
+   "source": "CCNA 100-105 · Ch. 6, Q140",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "You need to disconnect a network admin from the switch or router. Which command would you use?",
+   "choices": [
+    "Switch#no line vty 2",
+    "Switch#clear line vty 2",
+    "Switch(config)#no enable secret",
+    "Switch#disconnect line vty 2"
+   ],
+   "answer": 1,
+   "explanation": "The command clear line vty 2 will disconnect a remote admin connected to the switch. Nothing stops the admin from reconnecting to the switch again.",
+   "source": "CCNA 100-105 · Ch. 6, Q141",
+   "topic": "6.5c Access to device 6.5c(i) Source address 6.5c(ii) Telnet/SSH",
+   "topic_n": 20
+  },
+  {
+   "question": "Which banner can deliver a message only to authenticated users regardless of connection type?",
+   "choices": [
+    "Exec banner",
+    "MOTD banner",
+    "Incoming banner",
+    "Login banner"
+   ],
+   "answer": 0,
+   "explanation": "The exec banner will display a message to authenticated users who have successfully logged in, regardless of whether they are connected via Telnet or SSH.",
+   "source": "CCNA 100-105 · Ch. 6, Q142",
+   "topic": "6.5d Login banner",
+   "topic_n": 21
+  },
+  {
+   "question": "Which banner will be displayed first when a user connects to a Cisco device via SSH?",
+   "choices": [
+    "Exec banner",
+    "Incoming banner",
+    "MOTD banner",
+    "Login banner"
+   ],
+   "answer": 3,
+   "explanation": "The login banner will be displayed during initial connection to a Cisco device via SSH.",
+   "source": "CCNA 100-105 · Ch. 6, Q143",
+   "topic": "6.5d Login banner",
+   "topic_n": 21
+  },
+  {
+   "question": "Which command will configure the login banner to read “CCNA Routing and Switching”?",
+   "choices": [
+    "Router(config-line)#banner login ^CCNA Routing and Switching^",
+    "Router(config)#banner login ^CCNA Routing and Switching^",
+    "Router(config)#login banner CCNA Routing and Switching",
+    "Router(config)#banner login CCNA Routing and Switching"
+   ],
+   "answer": 1,
+   "explanation": "The command banner login ^CCNA Routing and Switching^ will configure the login banner to read “CCNA Routing and Switching.” The marks at the beginning and end of the text are delimiters to mark the beginning and end of the banner.",
+   "source": "CCNA 100-105 · Ch. 6, Q144",
+   "topic": "6.5d Login banner",
+   "topic_n": 21
+  },
+  {
+   "question": "You have configured a message of the day (MOTD) banner, but it only shows up after you have logged into the router. What is the problem?",
+   "choices": [
+    "You are connecting via Telnet.",
+    "You are connecting via SSH.",
+    "You do not have an enable password set.",
+    "You are connecting via the console."
+   ],
+   "answer": 1,
+   "explanation": "When a user is connecting to a router via SSH, the MOTD banner is not displayed until after the user has authenticated to the router or switch. A login banner is always displayed pre-login.",
+   "source": "CCNA 100-105 · Ch. 6, Q145",
+   "topic": "6.5d Login banner",
+   "topic_n": 21
+  },
+  {
+   "question": "Which server will centralize authentication for all Cisco routers and switches?",
+   "choices": [
+    "Active Directory server",
+    "802.1x server",
+    "Terminal server",
+    "AAA server"
+   ],
+   "answer": 3,
+   "explanation": "The AAA server will centralize authentication for Cisco routers and switches. AAA stands for authentication, authorization, and accounting. It is pronounced “triple A.”",
+   "source": "CCNA 100-105 · Ch. 6, Q146",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  },
+  {
+   "question": "Which protocol and port does RADIUS authentication use?",
+   "choices": [
+    "TCP/1645",
+    "UDP/1911",
+    "UDP/1845",
+    "UDP/1645"
+   ],
+   "answer": 3,
+   "explanation": "RADIUS authentication uses the UDP protocol and port 1645 for communications between the switch or router and the AAA server.",
+   "source": "CCNA 100-105 · Ch. 6, Q147",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  },
+  {
+   "question": "Which is an authentication protocol for AAA servers to secure Telnet authentication?",
+   "choices": [
+    "802.1x",
+    "EAP",
+    "TACACS+",
+    "AD"
+   ],
+   "answer": 2,
+   "explanation": "TACACS+ (Terminal Access Controller Access Control System) is a protocol used for communications between a switch or router and the AAA server for authenticating users.",
+   "source": "CCNA 100-105 · Ch. 6, Q148",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  },
+  {
+   "question": "Which port and protocol does TACACS+ use?",
+   "choices": [
+    "UDP/69",
+    "TCP/74",
+    "UDP/47",
+    "TCP/49"
+   ],
+   "answer": 3,
+   "explanation": "TACACS+ uses TCP and port 49 for communications between the switch or router and the AAA server.",
+   "source": "CCNA 100-105 · Ch. 6, Q149",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  },
+  {
+   "question": "Which is a benefit of using TACACS+ for authentication of users?",
+   "choices": [
+    "It supports authenticating a user to a length of time.",
+    "It encrypts the password of users.",
+    "It is an open standard.",
+    "It supports authenticating a user to a subset of commands."
+   ],
+   "answer": 3,
+   "explanation": "TACACS+ is a Cisco defined protocol. One of the useful features it has is that it can authenticate a user and only allow that user to access certain commands on the router or switch.",
+   "source": "CCNA 100-105 · Ch. 6, Q150",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  },
+  {
+   "question": "Which command will configure the router to use a TACACS+ server and a backup of local for authentication of logins?",
+   "choices": [
+    "Router(config)#aaa-authentication login default tacacs+ local",
+    "Router(config)#aaa authentication login default group tacacs+ local",
+    "Router(config)#authentication login group tacacs+ local",
+    "Router(config)#aaa authentication login tacacs+ local"
+   ],
+   "answer": 1,
+   "explanation": "The command aaa authentication login default group tacacs+ local will configure AAA authentication for login using the default list and a group of TACACS+ servers for TACACS+ login first and a backup of local for authentication.",
+   "source": "CCNA 100-105 · Ch. 6, Q151",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  },
+  {
+   "question": "You configured the AAA authentication for login to default local but forgot to create a local AAA user. What will happen when you log out?",
+   "choices": [
+    "The router will lock you out.",
+    "The enable secret will work.",
+    "The console will still be available.",
+    "Nothing, since a username and password have not been set."
+   ],
+   "answer": 0,
+   "explanation": "The router will lock you out since you have not provided a local account to log in with. The password recovery procedure would need to be performed if the configuration was saved.",
+   "source": "CCNA 100-105 · Ch. 6, Q152",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  },
+  {
+   "question": "Why should you always provide a second method of local when setting up AAA remote authentication with a router or switch?",
+   "choices": [
+    "To provide a backup if the TACACS+ server is down or unreachable",
+    "To allow for a backdoor",
+    "All of the above",
+    "The local second method is required"
+   ],
+   "answer": 0,
+   "explanation": "The local second method should always be configured. This will ensure that if the router’s connection to the AAA server is down, you can still gain access to diagnose or repair.",
+   "source": "CCNA 100-105 · Ch. 6, Q153",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  },
+  {
+   "question": "Which command will configure the RADIUS server 192.168.1.5 with a secret of aaaauth?",
+   "choices": [
+    "Router(config)#radius-server host 192.168.1.5 secret aaaauth",
+    "Router(config)#radius-server host 192.168.1.5 key aaaauth",
+    "Router(config)#radius host 192.168.1.5 key aaaauth",
+    "Router(config)#radius-server 192.168.1.5 key aaaauth"
+   ],
+   "answer": 1,
+   "explanation": "The command radius-server host 192.168.1.5 key aaaauth will configure the radius server 192.168.1.5 with a secret key of aaaauth.",
+   "source": "CCNA 100-105 · Ch. 6, Q154",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  },
+  {
+   "question": "Which protocol will encrypt the entire packet from the switch or router to the AAA server?",
+   "choices": [
+    "IPSEC",
+    "RADIUS",
+    "802.1x",
+    "TACACS+"
+   ],
+   "answer": 3,
+   "explanation": "The TACACS+ protocol will encrypt the entire packet from the switch or router to the AAA server.",
+   "source": "CCNA 100-105 · Ch. 6, Q155",
+   "topic": "6.6 Describe device security using AAA with TACACS+ and RADIUS",
+   "topic_n": 22
+  }
+ ]
+}

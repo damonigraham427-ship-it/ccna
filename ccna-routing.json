@@ -1,0 +1,3910 @@
+{
+ "questions": [
+  {
+   "question": "Which criteria are routing decisions based upon?",
+   "choices": [
+    "Source IP",
+    "Destination IP address",
+    "TTL",
+    "Destination MAC address"
+   ],
+   "answer": 1,
+   "explanation": "All routing decisions are based upon destination IP address. The router examines the IP address and routes the packet to the next closest hop for the network it belongs to.",
+   "source": "CCNA 100-105 · Ch. 3, Q1",
+   "topic": "3.1b Forwarding decision based on route lookup",
+   "topic_n": 3
+  },
+  {
+   "question": "Which type of routing requires network administrator intervention?",
+   "choices": [
+    "Link-state routing",
+    "Dynamic routing",
+    "Static routing",
+    "Distance-vector routing"
+   ],
+   "answer": 2,
+   "explanation": "Static routing requires a network administrator to intervene and create a route in the routing table.",
+   "source": "CCNA 100-105 · Ch. 3, Q2",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "When an IP address is configured on the router’s interface, what happens in the routing table?",
+   "choices": [
+    "A route entry is created for the network attached to the IP address on the interface.",
+    "Dynamic routing protocols update all other routers.",
+    "A route entry is created for the IP address attached to the interface.",
+    "All of the above"
+   ],
+   "answer": 3,
+   "explanation": "When an IP address is configured on a router’s interface, the network is automatically put into the routing table. The IP address is also added to the routing table. When the routing table changes, this normally tells the routing protocol it should perform an update.",
+   "source": "CCNA 100-105 · Ch. 3, Q3",
+   "topic": "3.3 Describe how a routing table is populated by different routing information sources",
+   "topic_n": 13
+  },
+  {
+   "question": "Which is a correct statement about the subnet mask?",
+   "choices": [
+    "The destination computer checks the subnet mask on the packet to verify that it’s intended for that computer.",
+    "The subnet mask is used in routing to determine the destination network.",
+    "The subnet mask is used by the host to determine the destination network.",
+    "The router uses its subnet mask when routing a packet."
+   ],
+   "answer": 2,
+   "explanation": "The subnet mask is used by the host to determine the immediate network and the destination network. It then decides to either route the packet or try to deliver itself without the router’s help.",
+   "source": "CCNA 100-105 · Ch. 3, Q4",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "What protocol does the router or host use to find a MAC address for the frame when it determines that the packet is on the local network?",
+   "choices": [
+    "ICMP",
+    "ARP",
+    "IGMP",
+    "RARP"
+   ],
+   "answer": 1,
+   "explanation": "The Address Resolution Protocol (ARP) is employed by the host or router when a packet is determined to be local on one of its interfaces.",
+   "source": "CCNA 100-105 · Ch. 3, Q5",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "When a packet is determined remote from the network of the sending host, what happens?",
+   "choices": [
+    "The destination MAC address is changed to the router’s MAC address.",
+    "The destination IP address is changed to the router’s IP address.",
+    "The destination MAC address is changed to the destination host’s MAC address.",
+    "The source IP address is changed to the router’s IP address."
+   ],
+   "answer": 0,
+   "explanation": "The destination MAC address is changed to the router’s MAC address and the destination IP address is untouched.",
+   "source": "CCNA 100-105 · Ch. 3, Q6",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "Which statement describes correctly what happens when a packet moves through a router?",
+   "choices": [
+    "The source MAC address is changed to the original source MAC address.",
+    "The packet’s TTL is decremented.",
+    "All of the above",
+    "The destination IP address is changed to the original destination."
+   ],
+   "answer": 1,
+   "explanation": "The TTL, or time to live, is decremented usually by one. When the TTL reaches zero, a packet is considered un-routable. This prevents packets from eternally routing.",
+   "source": "CCNA 100-105 · Ch. 3, Q7",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "What is the entry for the IP address in the routing table called in IOS 15 code when an interface is configured?",
+   "choices": [
+    "Local route",
+    "Static route",
+    "IP address route",
+    "Dynamic route"
+   ],
+   "answer": 0,
+   "explanation": "When an IP address is configured on an interface, the entry in the routing table is called the local route. The local routes always have a prefix of /32.",
+   "source": "CCNA 100-105 · Ch. 3, Q8",
+   "topic": "3.3 Describe how a routing table is populated by different routing information sources",
+   "topic_n": 13
+  },
+  {
+   "question": "When a packet is determined to be on the local network, what happens?",
+   "choices": [
+    "The destination MAC address is changed to the destination host’s MAC address.",
+    "The source IP address is changed to the router’s IP address.",
+    "The destination IP address is changed to the router IP address.",
+    "The destination MAC address is changed to the router’s MAC address."
+   ],
+   "answer": 0,
+   "explanation": "When a packet is determined to be local to the sending host, ARP is used to resolve the MAC address for the IP address of the destination host, and the frame is sent directly to the host.",
+   "source": "CCNA 100-105 · Ch. 3, Q9",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "How does the sending host know if the destination is local or remote in respect to its immediate network?",
+   "choices": [
+    "The IP address is verified to be local to its network via ICMP.",
+    "The host performs ANDing on its subnet mask and the destination IP address comparing the result to its own network address.",
+    "The host compares the IP address to its internal routing table.",
+    "The host performs ANDing on the destination subnet mask and the destination IP address, comparing the result to its own network address."
+   ],
+   "answer": 1,
+   "explanation": "The sending host ANDs its subnet mask against the destination IP address, then against its IP address, and this give a frame of reference for where it needs to go and where it is.",
+   "source": "CCNA 100-105 · Ch. 3, Q10",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "What is the current method Cisco routers use for packet forwarding?",
+   "choices": [
+    "Fast switching",
+    "Cisco Express Forwarding",
+    "Process switching",
+    "Intelligent packet forwarding"
+   ],
+   "answer": 1,
+   "explanation": "The current method of packet forwarding used by Cisco routers is Cisco Express Forwarding (CEF). CEF creates several cache tables used for determining the best route for the destination network.",
+   "source": "CCNA 100-105 · Ch. 3, Q11",
+   "topic": "3.1b Forwarding decision based on route lookup",
+   "topic_n": 3
+  },
+  {
+   "question": "What is the process called at layer 2 when a packet hops from router to router and eventually to the host?",
+   "choices": [
+    "Frame rewrite",
+    "Packet switching",
+    "IP routing",
+    "Packet hopping"
+   ],
+   "answer": 0,
+   "explanation": "The layer 2 process is called frame rewrite. When a packet hops from router to router, the destination frame is rewritten for the next destination MAC address.",
+   "source": "CCNA 100-105 · Ch. 3, Q12",
+   "topic": "3.1c Frame rewrite",
+   "topic_n": 4
+  },
+  {
+   "question": "When a host sends an ARP request packet out, what is the destination address of the frame?",
+   "choices": [
+    "The host’s MAC address",
+    "The MAC address is in the form of a broadcast.",
+    "The router’s MAC address",
+    "The MAC address is in the form of a multicast."
+   ],
+   "answer": 1,
+   "explanation": "When a MAC address is unknown for the destination IP address or the default gateway, the ARP request is sent in the form of a broadcast.",
+   "source": "CCNA 100-105 · Ch. 3, Q13",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "What does every network device use to limit the amounts of ARP packets?",
+   "choices": [
+    "ARP cache",
+    "IP multicasting",
+    "Frame casting",
+    "IP cache"
+   ],
+   "answer": 0,
+   "explanation": "Every host contains an ARP cache. This cache allows for lookups of MAC addresses for destination IP addresses when the host frequently sends packets to the destination. Therefore, there are fewer ARP packets.",
+   "source": "CCNA 100-105 · Ch. 3, Q14",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "Which statement describes what happens when a packet enters a router?",
+   "choices": [
+    "The router decapsulates the packet and inspects the destination IP address.",
+    "Routers do not need to decapsulate packets to inspect the destination IP address.",
+    "The router accepts all incoming frames regardless of their destination MAC address.",
+    "Routers make routing decisions first by examining the source MAC address."
+   ],
+   "answer": 0,
+   "explanation": "After the frame is verified to be addressed to the router and the FCS has been checked, the router decapsulates the packet and strips off the frame.",
+   "source": "CCNA 100-105 · Ch. 3, Q15",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will display the router’s ARP cache?",
+   "choices": [
+    "Router#show arp table",
+    "Router#show ip arp",
+    "Router#show arp",
+    "Router#show arp cache"
+   ],
+   "answer": 1,
+   "explanation": "The command to display the router’s ARP cache is show ip arp .",
+   "source": "CCNA 100-105 · Ch. 3, Q16",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "What is the default time an entry will live in the ARP cache?",
+   "choices": [
+    "180 seconds",
+    "300 seconds",
+    "240 seconds",
+    "600 seconds"
+   ],
+   "answer": 2,
+   "explanation": "By default, all entries have a time to live, or TTL, of 240 seconds. They will be removed after that period if not used during the 240 seconds.",
+   "source": "CCNA 100-105 · Ch. 3, Q17",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "What is the relevance of the default gateway address on a host?",
+   "choices": [
+    "The destination IP address is replaced with the default gateway when the destination is remote.",
+    "The host sends the default gateway packets that are deemed remote via a broadcast.",
+    "The host creates a dedicated connection with the default gateway for remote traffic.",
+    "The host sends an ARP packet for the default gateway when the destination is remote."
+   ],
+   "answer": 3,
+   "explanation": "When traffic is remote to the immediate network, the host sends an ARP packet for the IP address of the default gateway. This determines the destination MAC address for the frame.",
+   "source": "CCNA 100-105 · Ch. 3, Q18",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will display the router’s routing table?",
+   "choices": [
+    "Router#show route table",
+    "Router#show ip route",
+    "Router#show route",
+    "Router#show routes"
+   ],
+   "answer": 1,
+   "explanation": "The command to view the routing table is show ip route .",
+   "source": "CCNA 100-105 · Ch. 3, Q19",
+   "topic": "3.2 Interpret the components of a routing table",
+   "topic_n": 5
+  },
+  {
+   "question": "Which type of routing allows for routers to share their routing tables with other routers in the network?",
+   "choices": [
+    "Dynamic routing",
+    "Stub routing",
+    "Default routing",
+    "Static routing"
+   ],
+   "answer": 0,
+   "explanation": "Dynamic routing allows for the population of routing tables from advertisements of other routers. There are several dynamic routing protocols, such as, for example, EIGRP, RIP, OSPF.",
+   "source": "CCNA 100-105 · Ch. 3, Q20",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which statement describes what happens during the routing process?",
+   "choices": [
+    "When a packet travels through the router, the transport information will be checked for the destination network.",
+    "When a route to the destination network is found, the router will attach the destination IP address for the next hop to the packet.",
+    "When a route to the destination network is found, the router will attach the destination MAC address for the next hop to the packet.",
+    "As a packet travels through the routers, the TTL of the packet will increase by one."
+   ],
+   "answer": 2,
+   "explanation": "When a route is found in the routing table, the router will find the gateway for the next hop and change the packet’s destination MAC address for the next router.",
+   "source": "CCNA 100-105 · Ch. 3, Q21",
+   "topic": "3.1b Forwarding decision based on route lookup",
+   "topic_n": 3
+  },
+  {
+   "question": "Which protocol allows for testing and connectivity of a route?",
+   "choices": [
+    "IGMP",
+    "RARP",
+    "ICMP",
+    "ARP"
+   ],
+   "answer": 2,
+   "explanation": "The Internet Control Message Protocol (ICMP) is a layer 3 protocol that allows for end-to-end testing with a command such as traceroute .",
+   "source": "CCNA 100-105 · Ch. 3, Q22",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "Which command will clear the ARP cache of the local router?",
+   "choices": [
+    "Router#clear arp",
+    "Router#clear arp table",
+    "Router#clear arp cache",
+    "Router#clear ip arp"
+   ],
+   "answer": 2,
+   "explanation": "The command clear arp cache will clear the ARP cache of a router. It is notable that the command clear arp-cache will clear the ARP cache of the local router as well as send a gratuitous ARP (GARP) for other devices to relinquish the ARP cache of the router’s address.",
+   "source": "CCNA 100-105 · Ch. 3, Q23",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "Which routing protocol is a distance-vector routing protocol?",
+   "choices": [
+    "IGRP",
+    "EIGRP",
+    "OSPF",
+    "RIP"
+   ],
+   "answer": 3,
+   "explanation": "The Routing Information Protocol (RIP) is a distance-vector protocol.",
+   "source": "CCNA 100-105 · Ch. 3, Q24",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "What uses ICMP to directly check the status of a router?",
+   "choices": [
+    "SNMP traps",
+    "Ping",
+    "ARP",
+    "Notifications"
+   ],
+   "answer": 1,
+   "explanation": "The ping command uses ICMP to check the status of a router. It also gives the round-trip time of the packet.",
+   "source": "CCNA 100-105 · Ch. 3, Q25",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "When an ICMP packet reaches a router for which is has no further route, what happens?",
+   "choices": [
+    "The router will send the packet back to the originating host.",
+    "The router will send back a destination unreachable message.",
+    "The router will discard the packet without notification.",
+    "The router will change the TTL of the packet to 0."
+   ],
+   "answer": 1,
+   "explanation": "The last router will send an ICMP packet back to the originating host, which has the result code of destination unreachable.",
+   "source": "CCNA 100-105 · Ch. 3, Q26",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "You have just used the ping command for a distant router. You received back five exclamation marks. What do these mean?",
+   "choices": [
+    "The distant router has a high response time.",
+    "The distant router has a low response time.",
+    "The distant router is not responding.",
+    "The distant router is responding."
+   ],
+   "answer": 3,
+   "explanation": "When you’re using the ping command, the exclamation marks signify that the ping was successful and the router is responding.",
+   "source": "CCNA 100-105 · Ch. 3, Q27",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "Which statement accurately describes a routing loop?",
+   "choices": [
+    "Packets are routed out one interface but come back on a different interface.",
+    "Packets are routed via an inefficient path.",
+    "Packets are transmitted within a series of routers and never reach the destination.",
+    "Packets reach the expiry TTL before reaching the destination network."
+   ],
+   "answer": 2,
+   "explanation": "A routing loop occurs when packets are routed between two or more routers and never make it to their destination. Routing loops can occur with more than two routers; it is in effect making the packet travel in a loop till its TTL expires.",
+   "source": "CCNA 100-105 · Ch. 3, Q28",
+   "topic": "3.1a Packet handling along the path through a network",
+   "topic_n": 2
+  },
+  {
+   "question": "Which routing protocol is a link-state routing protocol?",
+   "choices": [
+    "IGRP",
+    "OSPF",
+    "RIP",
+    "EIGRP"
+   ],
+   "answer": 1,
+   "explanation": "Open Shortest Path First (OSPF) is a link-state protocol. A link-state protocol tracks the state of a link between two routers and chooses the most efficient routes based upon the shortest path. EIGRP is an advanced distance-vector protocol.",
+   "source": "CCNA 100-105 · Ch. 3, Q29",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Where are dynamic routes stored in a router?",
+   "choices": [
+    "Startup configuration",
+    "Flash",
+    "Running configuration",
+    "RAM"
+   ],
+   "answer": 3,
+   "explanation": "Dynamic routes are stored in RAM. When the power is taken away from a router, all routes must be repopulated by neighboring routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q30",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "When a static route is made, what is the default administrative distance?",
+   "choices": [
+    "AD of 2",
+    "AD of 1",
+    "AD of 255",
+    "AD of 0"
+   ],
+   "answer": 1,
+   "explanation": "Static routes are highly trusted routes since an administrator created them. Therefore, they have the lowest administrative distance with a number of 1.",
+   "source": "CCNA 100-105 · Ch. 3, Q31",
+   "topic": "3.2e Administrative distance",
+   "topic_n": 10
+  },
+  {
+   "question": "You are examining a routing table and see a route marked with S* . Which type of route is this?",
+   "choices": [
+    "Dynamic route",
+    "OSPF route",
+    "Static route",
+    "Default route"
+   ],
+   "answer": 3,
+   "explanation": "Although this is a static route, it is a very special static route called a default route or gateway of last resort. The S signifies that it is static and the * signifies that it is the default route.",
+   "source": "CCNA 100-105 · Ch. 3, Q32",
+   "topic": "3.2g Gateway of last resort",
+   "topic_n": 12
+  },
+  {
+   "question": "What type of route is the destination of 0.0.0.0/0?",
+   "choices": [
+    "Local route",
+    "Default route",
+    "Loopback route",
+    "Dynamic route"
+   ],
+   "answer": 1,
+   "explanation": "The destination address of 0.0.0.0/0 is a special route called the default route or gateway of last resort. The 0.0.0.0/0 addresses all hosts, and if a specific route is not matched in the routing table, then this route is the last resort.",
+   "source": "CCNA 100-105 · Ch. 3, Q34",
+   "topic": "3.2g Gateway of last resort",
+   "topic_n": 12
+  },
+  {
+   "question": "You need to create a route for a network of 192.168.4.0/24 through the gateway of serial 0/1 on a 2621 router. Which is the proper command?",
+   "choices": [
+    "Router(config)#ip route 192.168.4.0/24 serial 0/1",
+    "Router(config)#ip route 192.168.4.0/24 interface serial 0/1",
+    "Router(config)#ip route 192.168.4.0 255.255.255.0 serial 0/1",
+    "Router(config)#ip route Router(config-rtr)#192.168.4.0/24 serial 0/1"
+   ],
+   "answer": 2,
+   "explanation": "The correct command sequence is ip route , followed by the network ID, the subnet mask, and then the gateway. In this case, the gateway is a serial line.",
+   "source": "CCNA 100-105 · Ch. 3, Q37",
+   "topic": "3.8b Network route",
+   "topic_n": 23
+  },
+  {
+   "question": "You type into the router ip default-gateway 192.168.11.2 . Why will traffic not route out the default gateway?",
+   "choices": [
+    "The specified gateway is wrong.",
+    "The ip default-network needs to be used in conjunction with ip default-gateway 192.168.11.2 .",
+    "The command is used for dynamic routing only.",
+    "The command is only used for the management plane of the router itself."
+   ],
+   "answer": 3,
+   "explanation": "The command ip default-gateway allows the management plane of the router to egress the network in which the router is configured upon through a different gateway.",
+   "source": "CCNA 100-105 · Ch. 3, Q38",
+   "topic": "3.8a Default route",
+   "topic_n": 22
+  },
+  {
+   "question": "When you configure an IP address on a router interface, what happens to the routing table?",
+   "choices": [
+    "The router creates a routing update if dynamic routing is configured.",
+    "All of the above",
+    "The router creates a /32 route for the IP address.",
+    "The router creates a summary address for the network."
+   ],
+   "answer": 1,
+   "explanation": "When an IP address of 192.168.1.1/24 is configured, for example, the router will create a summary route for 192.168.1.0/24 as well as a route for 192.168.1.1/32. Both of these changes to the routing table will trigger an update depending on which dynamic routing protocol is being used.",
+   "source": "CCNA 100-105 · Ch. 3, Q42",
+   "topic": "3.3 Describe how a routing table is populated by different routing information sources",
+   "topic_n": 13
+  },
+  {
+   "question": "You want to verify the IP addresses configured on the router. Which command will you use?",
+   "choices": [
+    "Router#show ip interfaces brief",
+    "Router#show ip",
+    "Router#show interfaces",
+    "Router#show ip brief"
+   ],
+   "answer": 0,
+   "explanation": "The command show ip interfaces brief will display all of the interfaces and their configured IP addresses.",
+   "source": "CCNA 100-105 · Ch. 3, Q43",
+   "topic": "3.3 Describe how a routing table is populated by different routing information sources",
+   "topic_n": 13
+  },
+  {
+   "question": "You configure a brand new IP address on a new router’s interface. However, when you look at the routing table, it does not show up. You see a link light on the interface. What is wrong?",
+   "choices": [
+    "The interface bandwidth is not set.",
+    "The route will not show up until you save the config.",
+    "The interface is administratively shut down.",
+    "The interface speed is incorrect."
+   ],
+   "answer": 2,
+   "explanation": "A route for the interface will not be populated in the routing table until the interface is in an up/up status. If the link was disconnected, this would create the same symptoms.",
+   "source": "CCNA 100-105 · Ch. 3, Q44",
+   "topic": "3.3 Describe how a routing table is populated by different routing information sources",
+   "topic_n": 13
+  },
+  {
+   "question": "What is a benefit of static routing?",
+   "choices": [
+    "It allows for configuration by any network admin in the network.",
+    "It reduces bandwidth used by router-to-router communications.",
+    "Adding networks is an easy task for network administrators.",
+    "It is suited for large networks because changes will not disturb routing."
+   ],
+   "answer": 1,
+   "explanation": "Static routing is suited for small networks, where the central admin has a good understanding of the network layout. It does reduce router-to- router communications because the overhead of routing dynamic protocols will not use up bandwidth.",
+   "source": "CCNA 100-105 · Ch. 3, Q46",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Where are static routes stored?",
+   "choices": [
+    "Routing database",
+    "Flash",
+    "Startup configuration",
+    "RAM"
+   ],
+   "answer": 2,
+   "explanation": "When you configure a static route, it is stored in the startup-config, which is located on the NVRAM. When a router loads, the routes are held in RAM.",
+   "source": "CCNA 100-105 · Ch. 3, Q47",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "You want to route 192.168.1.0/24, 192.168.2.0/24 to a destination address of 198.43.23.2. How can you accomplish this with one route statement so that other networks are not affected?",
+   "choices": [
+    "Router(config)#ip route 192.168.0.0 255.255.0.240 198.43.23.2",
+    "Router(config)#ip route 192.168.0.0 255.255.0.0 198.43.23.2",
+    "Router(config)#ip route 192.168.0.0 255.255.255.0 198.43.23.2",
+    "Router(config)#ip route 192.168.0.0 255.255.240.0 198.43.23.2"
+   ],
+   "answer": 3,
+   "explanation": "The easiest way to accomplish this is to super-net the addresses together. The network of 192.168.0.0/30 or 255.255.240.0 would capture traffic for the range of 192.168.0.1 to 192.168.3.254.",
+   "source": "CCNA 100-105 · Ch. 3, Q48",
+   "topic": "3.8b Network route",
+   "topic_n": 23
+  },
+  {
+   "question": "Why would you create a second route statement to the same network using a different administrative distance and different interface?",
+   "choices": [
+    "If there is a routing loop on the first interface, the second will overcome the loop.",
+    "If the first interface goes down, the second route will become active.",
+    "If there is a high amount of traffic on the first interface, the second route will become active.",
+    "If the first one fails to route to the destination, the second route will succeed."
+   ],
+   "answer": 1,
+   "explanation": "Secondary routes with higher administrative distance are used for failover. If the physical interface fails, the route statement will be taken out of the routing table. Then the second route will become active.",
+   "source": "CCNA 100-105 · Ch. 3, Q49",
+   "topic": "3.8d Floating static",
+   "topic_n": 25
+  },
+  {
+   "question": "Which route statement is configured when an IP address of 208.43.34.17/29 is configured on an interface?",
+   "choices": [
+    "S 208.43.34.17/29 is directly connected, Serial 0/0/0",
+    "S 208.43.34.17/32 is directly connected, Serial 0/0/0",
+    "S 208.43.34.24/29 is directly connected, Serial 0/0/0",
+    "S 208.43.34.8/29 is directly connected, Serial 0/0/0"
+   ],
+   "answer": 1,
+   "explanation": "The IP address of 208.43.34.17/29 belongs to the network of 208.43.34.16/29. In addition to the statement for the network which owns the IP address, the individual IP address will be configured as a local route with a /32.",
+   "source": "CCNA 100-105 · Ch. 3, Q50",
+   "topic": "3.3 Describe how a routing table is populated by different routing information sources",
+   "topic_n": 13
+  },
+  {
+   "question": "Why can a route have a destination of an interface rather than an IP address?",
+   "choices": [
+    "All of the above",
+    "Routing tables cause the destination address to change.",
+    "The router on the other side of an interface routes all traffic discovered.",
+    "Serial interfaces are point-to-point connections."
+   ],
+   "answer": 3,
+   "explanation": "Serial interfaces are point-to-point connections. Any traffic directed down the interface will automatically appear on the adjacent router. Routers will not process traffic normally unless Proxy ARP is configured for the interface.",
+   "source": "CCNA 100-105 · Ch. 3, Q52",
+   "topic": "3.8b Network route",
+   "topic_n": 23
+  },
+  {
+   "question": "Which route statement is configured when an IP address of 203.80.53.22/19 is configured on an interface?",
+   "choices": [
+    "S 203.80.48.0/19 is directly connected, Serial 0/0/0",
+    "S 203.80.32.0/19 is directly connected, Serial 0/0/0",
+    "S 203.80.53.22/19 is directly connected, Serial 0/0/0",
+    "S 203.80.16.0/19 is directly connected, Serial 0/0/0"
+   ],
+   "answer": 1,
+   "explanation": "The IP address of 203.80.53.22/19 belongs to the network of 203.80.32.0/19.",
+   "source": "CCNA 100-105 · Ch. 3, Q55",
+   "topic": "3.3 Describe how a routing table is populated by different routing information sources",
+   "topic_n": 13
+  },
+  {
+   "question": "Which route statement is configured when an IP address of 194.22.34.54/28 is configured on an interface?",
+   "choices": [
+    "S 194.22.34.64/28 is directly connected, Serial 0/0/0",
+    "S 194.22.34.48/28 is directly connected, Serial 0/0/0",
+    "S 194.22.34.54/28 is directly connected, Serial 0/0/ 0",
+    "S 194.22.34.32/28 is directly connected, Serial 0/0/0"
+   ],
+   "answer": 1,
+   "explanation": "The IP address of 194.22.34.54/28 belongs to the network of 194.22.34.48/28.",
+   "source": "CCNA 100-105 · Ch. 3, Q57",
+   "topic": "3.3 Describe how a routing table is populated by different routing information sources",
+   "topic_n": 13
+  },
+  {
+   "question": "You need to create a route for 205.34.54.85/29 and the next hop is 205.34.55.2. Which command would create this route?",
+   "choices": [
+    "Router(config)#ip route 205.34.55.2 255.255.255.248 205.34.54.85",
+    "Router(config)#ip route 205.34.54.85 255.255.255.248 205.34.55.2",
+    "Router(config)#ip route 205.34.54.85/24 205.34.55.2",
+    "Router(config)# ip route 205.34.54.85 255.255.255.240 205.34.55.2"
+   ],
+   "answer": 1,
+   "explanation": "The network of 205.34.54.85/29 is written out as 205.34.54.85 255.255.255.248. The next hop is 205.34.55.2, so the command would be ip route 205.34.54.85 255.255.255.248 205.34.55.2 .",
+   "source": "CCNA 100-105 · Ch. 3, Q58",
+   "topic": "3.8b Network route",
+   "topic_n": 23
+  },
+  {
+   "question": "Which command will create a default route through Serial 0/0 for IPv6?",
+   "choices": [
+    "Router(config)# ip route 0.0.0.0 0.0.0.0 serial 0/0",
+    "Router(config)# ip route ::/0 serial 0/0",
+    "Router(config)# ipv6 route ::/0 serial 0/0",
+    "Router(config)# ipv6 route 0.0.0.0 0.0.0.0 serial 0/0"
+   ],
+   "answer": 2,
+   "explanation": "When entering IPv6 routes. you must use the command ipv6 route . It is then followed by the IPv6 prefix and mask and then the gateway. The default route would be ipv6 route ::/0 serial 0/0 .",
+   "source": "CCNA 100-105 · Ch. 3, Q59",
+   "topic": "3.8a Default route",
+   "topic_n": 22
+  },
+  {
+   "question": "Which command would configure the route for an IPv6 network of FC00:0:0:1 with the exit interface of serial 0/0/0?",
+   "choices": [
+    "Router(config)#ipv6 route fc00:0:0:1 serial 0/0/0",
+    "Router(config)#ip route fc00:0:0:1 serial 0/0/0",
+    "Router(config)#ip route fc00:0:0:1/64 serial 0/0",
+    "Router(config)#ipv6 route fc00:0:0:1/64 serial 0/0/0"
+   ],
+   "answer": 3,
+   "explanation": "When configuring an IPv6 route, you use the ipv6 route command. You then must specify the network and mask using CIDR notation. Last, you specify the exit interface or next hop of serial 0/0/0 . The complete command will be ipv6 route fc00:0:0:1/64 serial 0/0/0 .",
+   "source": "CCNA 100-105 · Ch. 3, Q60",
+   "topic": "3.8b Network route",
+   "topic_n": 23
+  },
+  {
+   "question": "What is the administrative distance of RIP?",
+   "choices": [
+    "AD of 100",
+    "AD of 90",
+    "AD of 120",
+    "AD of 110"
+   ],
+   "answer": 2,
+   "explanation": "The administrative distance of the Routing Information Protocol (RIP) is 120.",
+   "source": "CCNA 100-105 · Ch. 3, Q62",
+   "topic": "3.2e Administrative distance",
+   "topic_n": 10
+  },
+  {
+   "question": "Why are administrative distances used with routing tables?",
+   "choices": [
+    "Administrative distances define protocol standards.",
+    "Administrative distances are programmed by the administrator for path selection.",
+    "Administrative distances allow for the shortest distance between routes.",
+    "Administrative distances define reliability of routing protocols."
+   ],
+   "answer": 3,
+   "explanation": "Administrative distance is an order of reliability between dynamic routing protocols and static routes.",
+   "source": "CCNA 100-105 · Ch. 3, Q63",
+   "topic": "3.3a Admin distance",
+   "topic_n": 14
+  },
+  {
+   "question": "What is the administrative distance of a directly connected network?",
+   "choices": [
+    "Directly connected networks do not have an AD.",
+    "The AD is 1.",
+    "The AD is 5.",
+    "The AD is 0."
+   ],
+   "answer": 3,
+   "explanation": "A directly connected network has an administrative distance of 0 and is the most highly reliable.",
+   "source": "CCNA 100-105 · Ch. 3, Q64",
+   "topic": "3.2e Administrative distance",
+   "topic_n": 10
+  },
+  {
+   "question": "What is the administrative distance of internal EIGRP?",
+   "choices": [
+    "90",
+    "110",
+    "120",
+    "100"
+   ],
+   "answer": 0,
+   "explanation": "Internal EIGRP has an administrative distance of 90.",
+   "source": "CCNA 100-105 · Ch. 3, Q65",
+   "topic": "3.2e Administrative distance",
+   "topic_n": 10
+  },
+  {
+   "question": "What is the administrative distance of OSPF?",
+   "choices": [
+    "110",
+    "120",
+    "100",
+    "90"
+   ],
+   "answer": 0,
+   "explanation": "The administrative distance of Open Shortest Path First (OSPF) is 110.",
+   "source": "CCNA 100-105 · Ch. 3, Q67",
+   "topic": "3.2e Administrative distance",
+   "topic_n": 10
+  },
+  {
+   "question": "Which statement is true when there are multiple route statements from different routing protocols for the same destination network?",
+   "choices": [
+    "The route chosen has the lowest metric.",
+    "The route is chosen with the highest administrative distance.",
+    "The route is chosen with the lowest administrative distance.",
+    "The route chosen has the highest metric."
+   ],
+   "answer": 2,
+   "explanation": "The routing protocol with the lowest administrative distance is always chosen. Within that protocol, if there are multiple routes to the same network, then the lowest metric is chosen.",
+   "source": "CCNA 100-105 · Ch. 3, Q68",
+   "topic": "3.3a Admin distance",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will configure a static route with an administrative distance higher than RIP?",
+   "choices": [
+    "Router(config)#ip route 192.168.2.0 255.255.255.0 192.168.4.1 110",
+    "Router(config)#ip route 192.168.2.0 255.255.255.0 192.168.4.1 130",
+    "Router(config)#ip route 110 192.168.2.0 255.255.255.0 192.168.4.1",
+    "Router(config)#ip route 130 192.168.2.0 255.255.255.0 192.168.4.1"
+   ],
+   "answer": 1,
+   "explanation": "The administrative distance can be added to the end of the route statement. Since RIP has an administrative distance of 120, 130 will be chosen if the RIP route is not present.",
+   "source": "CCNA 100-105 · Ch. 3, Q69",
+   "topic": "3.8d Floating static",
+   "topic_n": 25
+  },
+  {
+   "question": "A router has three routes to the same network: one route from a RIP with a metric of 4, another from OSPF with a metric of 3053092, and another from EIGRP with a metric of 4039043. Which of the three routes will be used for the routing decision?",
+   "choices": [
+    "RIP",
+    "OSPF",
+    "All of the above",
+    "EIGRP"
+   ],
+   "answer": 3,
+   "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) has the lowest administrative distance of the three protocols. Therefore, regardless of the metric, the lowest AD will always be chosen.",
+   "source": "CCNA 100-105 · Ch. 3, Q70",
+   "topic": "3.3a Admin distance",
+   "topic_n": 14
+  },
+  {
+   "question": "Which is a correct statement about SVI inter-VLAN routing (IVR)?",
+   "choices": [
+    "Latency is low with SVI inter-VLAN routing because of ASICs.",
+    "SVI inter-VLAN routing is a cheaper alternative to ROAS.",
+    "Bandwidth is limited compared to ROAS.",
+    "Latency is high with SVI inter-VLAN routing because of resource use."
+   ],
+   "answer": 0,
+   "explanation": "Latency is lower with SVI inter-VLAN routing because of the use of ASICs. This is usually why IVR switches are more expensive.",
+   "source": "CCNA 100-105 · Ch. 3, Q71",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "Which is a disadvantage of using router on a stick (ROAS)?",
+   "choices": [
+    "The number of VLANs you can route is tied to the number of physical ports.",
+    "The lack of dynamic routing protocol support",
+    "The lack of ISL support for VLANs",
+    "Scalability of ROAS for the number of VLANs"
+   ],
+   "answer": 3,
+   "explanation": "The scalability of ROAS is a major disadvantage. It does not scale well when a large number of VLANs are configured.",
+   "source": "CCNA 100-105 · Ch. 3, Q72",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "What is the purpose of issuing the command no switchport on a layer 3 switch?",
+   "choices": [
+    "It configures a port as a routed interface.",
+    "It configures an access port.",
+    "It configures a trunk port.",
+    "It configures a Switched Virtual Interface."
+   ],
+   "answer": 0,
+   "explanation": "The command no switchport does the opposite of configuring a port as a switch port. It turns the port into a routed interface in which an IP address can be configured.",
+   "source": "CCNA 100-105 · Ch. 3, Q73",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "Which is a correct statement about inter-VLAN routing (IVR)?",
+   "choices": [
+    "IVR restricts the use of subnetting.",
+    "IVR reduces the number of broadcast domains.",
+    "Each VLAN requires a unique IP network.",
+    "It does not support ACLs."
+   ],
+   "answer": 2,
+   "explanation": "The use of VLANs requires a unique IP network for each VLAN. This is how broadcast domains are increased, since all VLANs are behind a router interface (default gateway).",
+   "source": "CCNA 100-105 · Ch. 3, Q74",
+   "topic": "3.4 Configure, verify, and troubleshoot inter-VLAN routing",
+   "topic_n": 15
+  },
+  {
+   "question": "You need to configure a router that has three interfaces to route five VLANs. Which method would you choose to accomplish this?",
+   "choices": [
+    "Configure a dynamic routing protocol.",
+    "Purchase another router with additional interfaces.",
+    "Configure the router as a ROAS.",
+    "Purchase a new router with five interfaces."
+   ],
+   "answer": 2,
+   "explanation": "Router on a stick is created by configuring a trunk between the switch and the router. ROAS will receive tagged frames and route them, then send them back down the interface to the respective connected VLAN.",
+   "source": "CCNA 100-105 · Ch. 3, Q75",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "Which command do you need to enter on a switch to allow routing between VLANs?",
+   "choices": [
+    "Switch(config)#ip routing",
+    "Switch(config)#routing",
+    "Switch(config)#ip route",
+    "Switch(config)#ip router"
+   ],
+   "answer": 0,
+   "explanation": "The ip routing command must be entered in global config. When this command is entered, a routing table will be created and populated.",
+   "source": "CCNA 100-105 · Ch. 3, Q76",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "What is the method of using a single router interface to route between VLANs called?",
+   "choices": [
+    "ROAS routing",
+    "Bridge routing",
+    "Interface routing",
+    "SVI routing"
+   ],
+   "answer": 0,
+   "explanation": "When a router’s interface is used to allow routing, the method is called router on a stick, or ROAS.",
+   "source": "CCNA 100-105 · Ch. 3, Q77",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "When routing between VLANs with a router’s interface, which trunking protocol is always supported?",
+   "choices": [
+    "802.1x",
+    "802.1Q",
+    "ISL",
+    "VTP"
+   ],
+   "answer": 1,
+   "explanation": "802.1Q is the trunking protocol that should be used for tagging VLANs when you are routing between VLANs on a router.",
+   "source": "CCNA 100-105 · Ch. 3, Q78",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "What is a disadvantage of routing between VLANs on a router’s interface?",
+   "choices": [
+    "Routers do not handle large amounts of traffic very well.",
+    "Security cannot be implemented with ROAS.",
+    "Broadcast traffic is increased.",
+    "When using ROAS, bandwidth problems are encountered."
+   ],
+   "answer": 3,
+   "explanation": "Bandwidth is often a consideration because everything you send to the router must come back on the same port for routing to work. Routing between two VLANs on a 1 Gb/s interface will allow for the bandwidth of 1 Gb/s up and 1 Gb/s down. When a third VLAN is introduced they must all share the 1 Gb/s.",
+   "source": "CCNA 100-105 · Ch. 3, Q79",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "What is the method of routing between VLANs on a layer 3 switch?",
+   "choices": [
+    "Interface routing",
+    "Bridge routing",
+    "ROAS routing",
+    "SVI routing"
+   ],
+   "answer": 3,
+   "explanation": "When you perform inter-VLAN routing on a layer 3 switch, it is called Switched Virtual Interface (SVI) VLAN routing.",
+   "source": "CCNA 100-105 · Ch. 3, Q80",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command would configure the interface on the ROAS configuration as the native VLAN?",
+   "choices": [
+    "Router(config-if)#interface gi 0/1.2 native",
+    "Router(config-subif)#native vlan 2",
+    "Router(config-subif)#switchport native vlan 2",
+    "Router(config-subif)#encapsulation dot1q 2 native"
+   ],
+   "answer": 3,
+   "explanation": "The command encapsulation dot1q 2 will associate the subinterface with VLAN 2. If you specify the native tag after the command, it will make this subinterface the native VLAN for the trunk.",
+   "source": "CCNA 100-105 · Ch. 3, Q81",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "Which commands would you use to configure an IP address on an SVI?",
+   "choices": [
+    "Switch(config)#vlan 10 Switch(config-vlan)#ip address 192.168.10.0 255.255.255.0 Switch(config-vlan)#no shutdown",
+    "Switch(config)#interface vlan 10 Switch(config-if)#ip address 192.168.10.0/24",
+    "Switch(config)#interface vlan 10 Switch(config-if)#ip address 192.168.10.0 255.255.255.0 Switch(config-if)#no shutdown",
+    "Switch(config)#interface vlan 10 Switch(config-if)#ip address 192.168.10.0/24 Switch(config-if)#no shutdown"
+   ],
+   "answer": 2,
+   "explanation": "When configuring an IP address on an SVI, you must enter the interface of the VLAN. Once in the pseudo interface, you enter the ip address command and then enter no shutdown .",
+   "source": "CCNA 100-105 · Ch. 3, Q82",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "When configuring ROAS, which mode must the switch port on the switch be configured to?",
+   "choices": [
+    "Access mode",
+    "Switched mode",
+    "Trunk mode",
+    "Routed mode"
+   ],
+   "answer": 2,
+   "explanation": "When you are configuring a router on a stick, the switch port of the switch must be in trunk mode. This is so that traffic can be tagged as it gets sent to the router, which will see the tag and route it accordingly by the destination IP address.",
+   "source": "CCNA 100-105 · Ch. 3, Q83",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "When configuring the subinterfaces on a router for ROAS, what is a best practice when naming the subinterface?",
+   "choices": [
+    "Always name the subinterface the same as the VLAN number.",
+    "Always name the subinterface the same as the default gateway address.",
+    "Always name the subinterface the same as the switch’s interface number.",
+    "Always name the subinterface the same as the VLAN name."
+   ],
+   "answer": 0,
+   "explanation": "A best practice is to always name the subinterface the same as the VLAN number you are going to route. An example is if you are connected to Fa0/1 on the router, and you want to create an IP address on the subinterface for VLAN 2. Then you would name the subinterface Fa0/1.2.",
+   "source": "CCNA 100-105 · Ch. 3, Q84",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "Which command enables the routers to direct the frames for a particular VLAN to the subinterface?",
+   "choices": [
+    "Router(config-subif)#switchport access vlan 5",
+    "Router(config-subif)#vlan 5",
+    "Router(config-subif)#encapsulation dot1q 5",
+    "Router(config-if)#interface gi 0/1.5"
+   ],
+   "answer": 2,
+   "explanation": "The command encapsulation dot1q 5 , when configured inside of the subinterface, will program the subinterface to accept frames for VLAN 5.",
+   "source": "CCNA 100-105 · Ch. 3, Q85",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "Which command must be entered on 2960-XR switches to enable IP routing?",
+   "choices": [
+    "Switch(config)#sdm prefer lanbase-routing",
+    "Switch(config)#sdm lanbase-routing",
+    "Switch(config)#ip lanbase",
+    "Switch(config)#sdm routing"
+   ],
+   "answer": 0,
+   "explanation": "On 2960-XR switches you must enable the Switching Database Manager (SDM) for LAN Base routing to enable routing. The switch then requires a reload before you can configure routable SVIs.",
+   "source": "CCNA 100-105 · Ch. 3, Q86",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "You want to verify the configured SVI VLAN interfaces. Which command will show you the configured IP addresses on each of the SVI VLAN interfaces?",
+   "choices": [
+    "Switch#show ip interface brief",
+    "Switch#show switchports ip",
+    "Switch#show svi",
+    "Switch#show interfaces status"
+   ],
+   "answer": 0,
+   "explanation": "The same command used to verify physical interfaces on a router, is used to verify SVI interfaces on a switch. The command show ip interface brief will pull up the configured IP address on each VLAN interface.",
+   "source": "CCNA 100-105 · Ch. 3, Q87",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "You enter the command ip address 192.168.2.0 255.255.255.0 on interface VLAN 2. When you enter the command, you receive a “Bad mask /24 for address” error. What is the problem?",
+   "choices": [
+    "The VLAN has not been configured yet.",
+    "The subnet of 192.168.2.0 cannot be used for this interface.",
+    "The subnet mask is incorrect.",
+    "The IP address is invalid."
+   ],
+   "answer": 3,
+   "explanation": "The command ip address 192.168.2.0 255.255.255.0 only defines the 192.168.2.0 network. It does not specify a valid host IP address for the SVI.",
+   "source": "CCNA 100-105 · Ch. 3, Q88",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "You have purchased a layer 3 switch with the LAN Base feature. When you enter ip routing in global configuration mode, you receive an “Invalid input detected” error. What is the problem?",
+   "choices": [
+    "The IP Base feature is required.",
+    "There are no IP addresses configured on the switch.",
+    "The SDM of LAN Base routing has not been enabled.",
+    "There is not enough memory for routing tables."
+   ],
+   "answer": 2,
+   "explanation": "The LAN Base feature supports IP routing between SVIs. However, it must be enabled first via the Switching Database Manager (SDM) by using the sdm prefer lanbase-routing command.",
+   "source": "CCNA 100-105 · Ch. 3, Q89",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "You have a 3560 switch that supports layer 3 routing. You need to configure a physical interface to route a subnet. Which command needs to be used?",
+   "choices": [
+    "Switch(config-if)#switchport routed",
+    "Switch(config-if)#ip address 192.168.2.1 255.255.255.0",
+    "Switch(config-if)#no ip-routing",
+    "Switch(config-if)#no switchport"
+   ],
+   "answer": 3,
+   "explanation": "The no switchport will configure a physical port of a switch to act as a routed interface. Once the physical port is configured as a non-switch port, you will be able to configure an IP address directly on the interface.",
+   "source": "CCNA 100-105 · Ch. 3, Q90",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "Which command will allow you to examine a switch’s port to see if it is routed or switched?",
+   "choices": [
+    "Switch#show interface gi 0/2 switchport",
+    "Switch#show status interface gi 0/2",
+    "Switch#show interface gi 0/2 state",
+    "Switch#show switchport interface gi 0/2"
+   ],
+   "answer": 0,
+   "explanation": "The command show interface gi 0/2 switchport will show the state of a port. It will display if the port is switched or routed among several other attributes.",
+   "source": "CCNA 100-105 · Ch. 3, Q91",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "You need more bandwidth to your switch from the router. Currently you have one Gigabit Ethernet connection in use and both your router and switch have another available Gigabit Ethernet connection. What can you do to get more bandwidth?",
+   "choices": [
+    "Bundle both Gigabit Ethernet connections in an EtherChannel.",
+    "Nothing. Routers cannot aggregate bandwidth from multiple connections.",
+    "Use RIP to balance the bandwidth.",
+    "Use the switch to perform inter-VLAN routing."
+   ],
+   "answer": 0,
+   "explanation": "You can build an EtherChannel between routers and switches to obtain more bandwidth when using ROAS. It is supported on certain models of routers, such as 7000, 7200, and 7500 routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q92",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "You need to configure ROAS on a router’s interface to route VLAN 5 with ISL. Which command will specify the encapsulation and achieve this?",
+   "choices": [
+    "Router(config-if)#encapsulation 5",
+    "Router(config-if)#encapsulation isl 5",
+    "Router(config-subif)#switchport encapsulation isl 5",
+    "Router(config-subif)#encapsulation isl 5"
+   ],
+   "answer": 3,
+   "explanation": "The command encapsulation isl 5 configured in the subinterface will achieve this. It specifies the encapsulation as ISL and a VLAN of 5 that it will be tagged with.",
+   "source": "CCNA 100-105 · Ch. 3, Q93",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "You have just configured a new VLAN and have configured the SVI with an IP address and no shutdown command on the interface. However, when you perform a show ip route , it does not show a valid directly connected route for the SVI. What is the problem?",
+   "choices": [
+    "The VLAN is in a shutdown state.",
+    "No interfaces have been configured with the new VLAN yet.",
+    "No dynamic routing protocols have been configured.",
+    "The show ip route command will not display SVI directly connected routes."
+   ],
+   "answer": 1,
+   "explanation": "After configuring a VLAN and the respective SVI interface, a route will not show until at least one port is configured with the new VLAN.",
+   "source": "CCNA 100-105 · Ch. 3, Q94",
+   "topic": "3.4b SVI",
+   "topic_n": 17
+  },
+  {
+   "question": "Which of the following is a correct statement about Router On A Stick?",
+   "choices": [
+    "A ROAS is limited to a maximum of 16 routes.",
+    "A ROAS can only be used with 802.1Q.",
+    "Using a ROAS is a highly efficient alternative to routed SVIs.",
+    "Using a ROAS is a cheaper alternative to inter-VLAN routing on a switch."
+   ],
+   "answer": 3,
+   "explanation": "Using Router On A Stick is a cheaper alternative to IVR if the current switch does not support layer 3 routing.",
+   "source": "CCNA 100-105 · Ch. 3, Q95",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "Before configuring ROAS, which command should be entered in the interface connecting to the switch?",
+   "choices": [
+    "Router(config-if)#ip routing",
+    "Router(config-if)#no ip address",
+    "Router(config-if)#sdm routing",
+    "Router(config-if)#ip encapsulation dot1q"
+   ],
+   "answer": 1,
+   "explanation": "When configuring ROAS on a router’s interface, you should always issue the no ip address command. No IPs can be configured on the main interface. All IPs are configured on the subinterfaces.",
+   "source": "CCNA 100-105 · Ch. 3, Q96",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "You have configured a Router On A Stick and set up the switch to connect to the router. However, you cannot route between VLANs. Which command would you use on the switch to verify operations?",
+   "choices": [
+    "Switch#show interface trunk",
+    "Switch#show switchport",
+    "Switch#show ip route",
+    "Switch#show interface status"
+   ],
+   "answer": 0,
+   "explanation": "Verifying the proper operation of the switch would start with verifying that the port is correctly set as a trunk to the router. If it is not set as a trunk, it would not be able to tag frames for the router to direct to the proper interfaces.",
+   "source": "CCNA 100-105 · Ch. 3, Q97",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "When configuring a router in an ROAS configuration, which command will enable the interface to accept frames tagged for VLAN 10?",
+   "choices": [
+    "Switch(config-if)#interface Fa 0/0.10",
+    "Switch(config-subif)#encapsulation dot1q 10",
+    "Switch(config-subif)#encapsulation vlan 10 dot1q",
+    "Switch(config-subif)#ip address 192.168.10.1 255.255.255.0"
+   ],
+   "answer": 1,
+   "explanation": "When you’re configuring a router interface to accept VLAN tagging, the subinterface numbering does not matter. It is recommended that the subinterface match the VLAN for readability. However, encapsulation dot1q 10 is the command that allows the subinterface to accept the frames for VLAN 10.",
+   "source": "CCNA 100-105 · Ch. 3, Q98",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "Which statement is correct about ARP in relation to ROAS?",
+   "choices": [
+    "All of the above",
+    "Each subinterface has a unique MAC address, which responds to ARP requests.",
+    "Each IP address has a unique MAC address, which responds to ARP requests.",
+    "Each physical interface has a unique MAC address, which responds to ARP requests."
+   ],
+   "answer": 3,
+   "explanation": "When ROAS is implemented, only the physical interface has a unique MAC address. All ARP requests for the IP addresses configured on the subinterfaces respond with the same MAC address. They are not unique MAC addresses, but on each VLAN they are unique in the sense that no other machines on the VLAN share the same MAC address.",
+   "source": "CCNA 100-105 · Ch. 3, Q99",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "Which statement is correct about implementing ROAS?",
+   "choices": [
+    "You must configure at least one native VLAN.",
+    "All of the above",
+    "The main interface must be configured with the summary IP address for all VLANs.",
+    "Each IP address is configured on the subinterface as the gateway for the VLAN."
+   ],
+   "answer": 3,
+   "explanation": "Each IP address on a subinterface is the routed gateway for the VLAN on that subinterface. The main interface should be configured with the no ip address command when ROAS is configured. The default native VLAN of 1 is configured on the switch side only unless you explicitly configure a native VLAN on the router.",
+   "source": "CCNA 100-105 · Ch. 3, Q100",
+   "topic": "3.4a Router on a stick",
+   "topic_n": 16
+  },
+  {
+   "question": "Which is a reason for using a dynamic routing protocol?",
+   "choices": [
+    "You have a network with a few VLANs and many routers.",
+    "You have a network with only a few routers and network per branch.",
+    "You have a network with a large amount of VLANs and only one router.",
+    "You have a network with only a few VLANs and one router."
+   ],
+   "answer": 0,
+   "explanation": "The scalability of routes between routers should always be considered when choosing a static routing design vs. a dynamic routing design. A few VLANs over many routers creates a lot of work when a new VLAN is created and static routing is being used. However, when one router is being used, the administrative overhead is low.",
+   "source": "CCNA 100-105 · Ch. 3, Q101",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which routing technique is a type of static routing?",
+   "choices": [
+    "EIGRP routing",
+    "OSPF routing",
+    "Default routing",
+    "RIP routing"
+   ],
+   "answer": 2,
+   "explanation": "Default routing is a form of static routing. It is used on the edge of a network to direct all traffic to the inner core of the network.",
+   "source": "CCNA 100-105 · Ch. 3, Q102",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which is an advantage of using static routing?",
+   "choices": [
+    "There is less administrative overhead.",
+    "It is extremely scalable without issues.",
+    "It is extremely secure.",
+    "It can create resiliency in a network."
+   ],
+   "answer": 2,
+   "explanation": "Static routing is extremely secure, because it does not need to broadcast or multicast routing updates. These updates can be intercepted or injected into a network to create problems.",
+   "source": "CCNA 100-105 · Ch. 3, Q103",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which routing technique has the lowest bandwidth overhead?",
+   "choices": [
+    "RIP routing",
+    "OSPF routing",
+    "Static routing",
+    "EIGRP routing"
+   ],
+   "answer": 2,
+   "explanation": "Static routing has the lowest bandwidth overhead because there is no bandwidth required to maintain static routes.",
+   "source": "CCNA 100-105 · Ch. 3, Q104",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which routing technique requires no administrator intervention when a route goes down?",
+   "choices": [
+    "Dynamic routing",
+    "Default routing",
+    "Static routing",
+    "Directly connected routes"
+   ],
+   "answer": 0,
+   "explanation": "Dynamic routing does not require any administrator intervention when routes go down. This is because dynamic routes send route notifications and recalculate the routing tables of all participating routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q105",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which routing technique requires increased time for configuration as networks grow?",
+   "choices": [
+    "Default routing",
+    "RIP routing",
+    "Static routing",
+    "OSPF routing"
+   ],
+   "answer": 2,
+   "explanation": "Static routing requires increased time for configuration as networks grow in complexity. You will need to update routers that you add with all of the existing routes in the network. You will also need to update all of the existing routers with the new routes you add with the new router.",
+   "source": "CCNA 100-105 · Ch. 3, Q106",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which routing technique requires the lowest amount of router RAM consumption?",
+   "choices": [
+    "Default routing",
+    "Static routing",
+    "RIP routing",
+    "OSPF routing"
+   ],
+   "answer": 0,
+   "explanation": "Default routing requires the least amount of RAM consumption because one routing statement is required for every route. This type of routing technique is best used on stub network routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q107",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which dynamic routing protocol has the lowest overhead?",
+   "choices": [
+    "OSPF",
+    "BGP",
+    "EIGRP",
+    "RIP"
+   ],
+   "answer": 3,
+   "explanation": "Routing Information Protocol (RIP) has the lowest overhead of all of the routing protocols. However, it is not very scalable, the maximum number of hops is 15.",
+   "source": "CCNA 100-105 · Ch. 3, Q108",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which is an advantage of dynamic routing protocols?",
+   "choices": [
+    "Lower router RAM usage",
+    "Less bandwidth usage",
+    "Lower router CPU usage",
+    "Resiliency when routes become unavailable"
+   ],
+   "answer": 3,
+   "explanation": "The benefits of a dynamic routing protocol is that it creates resiliency when routes become unavailable. It does this by recalculating the best route in the network around the outage.",
+   "source": "CCNA 100-105 · Ch. 3, Q109",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which type of routing technique allows for route summarization to be computed automatically by routers?",
+   "choices": [
+    "Default routing",
+    "Directly connected routes",
+    "Dynamic routing",
+    "Static routing"
+   ],
+   "answer": 2,
+   "explanation": "Most dynamic routing protocols will summarize routes. They do this for efficiency, so the least number of route statements will need to exist in the routing table.",
+   "source": "CCNA 100-105 · Ch. 3, Q110",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which routing technique requires administrator intervention when a route goes down?",
+   "choices": [
+    "Directly connected routes",
+    "Static routing",
+    "Default routing",
+    "Dynamic routing"
+   ],
+   "answer": 1,
+   "explanation": "Static routing requires administrator intervention when a route goes down. Default routing is generally used for stub networks where the only route out of the network is the default route.",
+   "source": "CCNA 100-105 · Ch. 3, Q111",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which routing protocol broadcasts updates for routes?",
+   "choices": [
+    "OSPF",
+    "RIP",
+    "EIGRP",
+    "BGP"
+   ],
+   "answer": 1,
+   "explanation": "The Routing Information Protocol version 1 (RIPv1)broadcasts updates for routing tables.",
+   "source": "CCNA 100-105 · Ch. 3, Q112",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "What is an advantage of dynamic routing protocols?",
+   "choices": [
+    "Lower bandwidth utilization",
+    "Centralized routing tables",
+    "Ease of configuration",
+    "Optimized route selection"
+   ],
+   "answer": 3,
+   "explanation": "Optimized route selection is a direct advantage of using dynamic routing protocols. A protocol such as OSPF uses the shortest path first algorithm for route selection.",
+   "source": "CCNA 100-105 · Ch. 3, Q113",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "You have several routes configured on a router. Which command will show only the static routes?",
+   "choices": [
+    "Router#show static routes",
+    "Router#show ip static routes",
+    "Router#show ip routes",
+    "Router#show ip routes static"
+   ],
+   "answer": 3,
+   "explanation": "The show ip routes static command will display all of the routes that are configured as static routes.",
+   "source": "CCNA 100-105 · Ch. 3, Q114",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which routing technique is best suited for small networks in which the administrator wants control of routing?",
+   "choices": [
+    "Static routing",
+    "OSPF routing",
+    "EIGRP routing",
+    "RIP routing"
+   ],
+   "answer": 0,
+   "explanation": "Static routing is best suited for small networks in which there is not a lot of change. It should be chosen when administrators want absolute control over the routing process.",
+   "source": "CCNA 100-105 · Ch. 3, Q115",
+   "topic": "3.5 Compare and contrast static routing and dynamic routing",
+   "topic_n": 18
+  },
+  {
+   "question": "Which protocol is a distance-vector protocol?",
+   "choices": [
+    "BGP",
+    "RIP",
+    "EIGRP",
+    "OSPF"
+   ],
+   "answer": 1,
+   "explanation": "The Routing Information Protocol (RIP) is a distance-vector routing protocol. This is because RIP only advertises the discovered distance of a route and the metric is the number of hops.",
+   "source": "CCNA 100-105 · Ch. 3, Q116",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which protocol is a true link-state protocol?",
+   "choices": [
+    "BGP",
+    "EIGRP",
+    "OSPF",
+    "RIP"
+   ],
+   "answer": 2,
+   "explanation": "Open Shortest Path First (OSPF) is a true link-state protocol. Link- state protocols keep track of the state of the links as well as the bandwidth the link reports.",
+   "source": "CCNA 100-105 · Ch. 3, Q117",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which protocol is considered a hybrid protocol?",
+   "choices": [
+    "OSPF",
+    "BGP",
+    "RIP",
+    "EIGRP"
+   ],
+   "answer": 3,
+   "explanation": "The Enhanced Interior Gateway Routing Protocol (EIGRP) is a hybrid protocol. It has features of a vector-based protocol and a link-state protocol, hence it is considered a hybrid protocol.",
+   "source": "CCNA 100-105 · Ch. 3, Q118",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "What is an attribute of distance-vector protocols?",
+   "choices": [
+    "They re-advertise routes learned.",
+    "They track the status of routes learned.",
+    "Each router keeps its own topology database.",
+    "Each router checks the routes it learns."
+   ],
+   "answer": 0,
+   "explanation": "Protocols such as RIP re-advertise routes learned. This can be problematic since it is the equivalent of gossiping about what they have heard and nothing is checked.",
+   "source": "CCNA 100-105 · Ch. 3, Q119",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which type of network are distance-vector protocols best suited for?",
+   "choices": [
+    "Networks containing fewer than 15 routers",
+    "Networks containing more than 15 routers",
+    "Networks containing fewer than 255 routes",
+    "Networks containing more than 255 routers"
+   ],
+   "answer": 0,
+   "explanation": "RIP, which is a distance-vector protocol, is best suited for networks containing fewer than 15 routers. This is because RIP is limited to a 15 hop count. Any route that is more than 15 hops away is considered unreachable.",
+   "source": "CCNA 100-105 · Ch. 3, Q120",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "You have a network with varied bandwidths and need to choose a dynamic routing protocol. Which would you choose for optimal performance?",
+   "choices": [
+    "RIPv1",
+    "RIPv2",
+    "BGP",
+    "EIGRP"
+   ],
+   "answer": 3,
+   "explanation": "EIGRP metrics are bandwidth, delay, load, reliability, and MTU, while RIP is a distance-vector protocol and only takes hop count into consideration for the metric. BGP is not suited for optimal performance since a large amount of resources need to be dedicated for the protocol.",
+   "source": "CCNA 100-105 · Ch. 3, Q121",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which problem could arise from use of a distance-vector routing protocol?",
+   "choices": [
+    "Complexity of configuration",
+    "Routing loops",
+    "Default route propagation",
+    "Router compatibility"
+   ],
+   "answer": 1,
+   "explanation": "Routing loops are the most common problem when you’re using a distance-vector routing protocol. Although they can occur with any dynamic routing protocol, distance-vector protocols are most susceptible due to how they converge routes.",
+   "source": "CCNA 100-105 · Ch. 3, Q122",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which dynamic routing protocol uses the Dijkstra routing algorithm?",
+   "choices": [
+    "RIP",
+    "EIGRP",
+    "OSPF",
+    "BGP"
+   ],
+   "answer": 2,
+   "explanation": "The Dijkstra algorithm is used by OSPF to calculate the shortest path based on a cost calculation of the bandwidth of the link vs. distance vector, which is based on hop count.",
+   "source": "CCNA 100-105 · Ch. 3, Q123",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Why don’t link-state protocols suffer from routing loops like distance-vector protocols do?",
+   "choices": [
+    "Link-state protocols allow routers to maintain a link-state database of all routers.",
+    "Link-state protocols share the topology database between all routers.",
+    "Link-state protocols require routers to maintain their own topology database of the network.",
+    "Link-state protocols use multiple routes to the same destination."
+   ],
+   "answer": 2,
+   "explanation": "Link-state protocols such as OSPF require all routers to maintain their own topology database of the network. This topology database is why routing loops are less likely to occur. Distance-vector protocols don’t really have a topology of the network and thus suffer from routing loops.",
+   "source": "CCNA 100-105 · Ch. 3, Q124",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which dynamic routing protocol uses the Diffusing Update Algorithm as its routing algorithm?",
+   "choices": [
+    "BGP",
+    "EIGRP",
+    "OSPF",
+    "RIP"
+   ],
+   "answer": 1,
+   "explanation": "The Diffusing Update Algorithm, or DUAL, is used by EIGRP to calculate the best route for the destination network.",
+   "source": "CCNA 100-105 · Ch. 3, Q125",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which is a disadvantage of distance-vector routing protocols?",
+   "choices": [
+    "Slow convergence of routing tables",
+    "Router compatibility for RIP",
+    "Resource usage of CPU and RAM",
+    "The complexity of RIP design"
+   ],
+   "answer": 0,
+   "explanation": "Slow convergence of routing tables is a major disadvantage for distance-vector protocols like RIP. It could take several announcement cycles before the entire network registers a routing change.",
+   "source": "CCNA 100-105 · Ch. 3, Q126",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "What is an advantage of a link-state dynamic routing protocol?",
+   "choices": [
+    "The only metric needed is hop count.",
+    "Link-state dynamic routing protocols support CIDR and VLSM.",
+    "OSPF requires only a small amount of resources such as CPU and RAM.",
+    "Link-state dynamic routing protocols use triggered updates for recalculation of routing tables."
+   ],
+   "answer": 3,
+   "explanation": "OSPF employs Link-State-Announcement (LSA) flooding and triggered updates. When these occur, every participating router will recalculate its routing tables.",
+   "source": "CCNA 100-105 · Ch. 3, Q127",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "What type of network is best suited for a link-state routing protocol such as OSPF?",
+   "choices": [
+    "Networks with routers that have a limited amount of RAM and CPU",
+    "Extremely small networks of three routers",
+    "Large hierarchical networks, like global networks",
+    "Networks within organizations with limited training of network admins"
+   ],
+   "answer": 2,
+   "explanation": "Link-state protocols, such as OSPF are best suited for large hierarchical networks such as global networks, since they can separate out the participating routers with areas and border area routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q128",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which dynamic routing protocol uses the Bellman-Ford routing algorithm?",
+   "choices": [
+    "RIP",
+    "EIGRP",
+    "OSPF",
+    "BGP"
+   ],
+   "answer": 0,
+   "explanation": "The Routing Information Protocol (RIP) use the Bellman-Ford routing algorithm to calculate the shortest path based on distance. The distance is computed from the shortest number of hops.",
+   "source": "CCNA 100-105 · Ch. 3, Q129",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which is a design concept used to stop routing loops with distance- vector dynamic routing protocols?",
+   "choices": [
+    "Use of anti-flapping ACLs",
+    "Use of a topology database",
+    "Use of counting-to-infinity conditions",
+    "Use of holddown timers"
+   ],
+   "answer": 3,
+   "explanation": "The use of holddown timers allows the convergence of the network routing tables. This is used to hold down changes to the routing table before convergence can happen and a routing decision is hastily made by RIP.",
+   "source": "CCNA 100-105 · Ch. 3, Q130",
+   "topic": "3.6 Compare and contrast distance vector and link state routing protocols",
+   "topic_n": 19
+  },
+  {
+   "question": "Which is an exterior gateway routing protocol?",
+   "choices": [
+    "EIGRP",
+    "OSPF",
+    "RIP v1",
+    "BGP"
+   ],
+   "answer": 3,
+   "explanation": "The Border Gateway Protocol (BGP) is an exterior gateway routing protocol, which is used on the exterior of your network.",
+   "source": "CCNA 100-105 · Ch. 3, Q131",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "Which protocol is a Cisco proprietary interior gateway protocol?",
+   "choices": [
+    "BGP",
+    "RIP v1",
+    "OSPF",
+    "EIGRP"
+   ],
+   "answer": 3,
+   "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) is a Cisco proprietary interior gateway protocol.",
+   "source": "CCNA 100-105 · Ch. 3, Q132",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "Which statement is correct about interior gateway protocols (IGPs) vs. exterior gateway protocols (EGPs)?",
+   "choices": [
+    "Exterior routing protocols are used to exchange information between routers within an autonomous system.",
+    "Exterior routing protocols are used in the core of an internal network.",
+    "Interior routing protocols are used to exchange information between autonomous systems.",
+    "Interior routing protocols are used to exchange information between routers within an autonomous system."
+   ],
+   "answer": 3,
+   "explanation": "Interior routing protocols are used internally inside of a network. The functional difference is that IGPs exchange information within an autonomous system, and EGPs exchange information between autonomous systems.",
+   "source": "CCNA 100-105 · Ch. 3, Q133",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "How are routers managed with interior gateway protocols?",
+   "choices": [
+    "Routing protocols are redistributed between ASs.",
+    "All network IDs are advertised with the same autonomous system number.",
+    "All routers use the same interior routing protocol.",
+    "Routers are grouped into autonomous systems."
+   ],
+   "answer": 3,
+   "explanation": "Routers are grouped into the same autonomous system (AS). When they are within the same AS, they can exchange information such as routes to destination networks and converge their routing tables.",
+   "source": "CCNA 100-105 · Ch. 3, Q134",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "Which statement is correct about interior gateway protocols?",
+   "choices": [
+    "IGPs require a small number of resources, such as CPU and RAM.",
+    "IGPs function within an administrative domain.",
+    "IGPs use autonomous system numbers (ASN) that have been assigned by ARIN.",
+    "An EGP is an example of an interior gateway protocol."
+   ],
+   "answer": 1,
+   "explanation": "Interior gateway protocols function within an administrative domain. This administrative domain is defined with a common autonomous system number or area ID.",
+   "source": "CCNA 100-105 · Ch. 3, Q135",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "Why would you need to use an exterior gateway protocol?",
+   "choices": [
+    "You are dual-homed with two different ISPs.",
+    "You have been delegated a large number of IP addresses.",
+    "You need to connect your company to the Internet.",
+    "You want to achieve fast routing to the Internet."
+   ],
+   "answer": 0,
+   "explanation": "The only time you need to use an exterior gateway protocol such as Border Gateway Protocol (BGP) is when you have a dual-homed connection between two ISPs. An example of this would be routing between the Internet and Internet 2. You would need to know the fastest path to the destination network via the Internet connection.",
+   "source": "CCNA 100-105 · Ch. 3, Q136",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "You need to use BGP to advertise routes. Which do you need to obtain before you could use BGP?",
+   "choices": [
+    "An area ID from IANA",
+    "An autonomous system number from IANA",
+    "A BGP routing path",
+    "The process ID from IANA"
+   ],
+   "answer": 1,
+   "explanation": "In order to use BGP to advertise a route, you must obtain an ASN, or autonomous system number, from IANA.",
+   "source": "CCNA 100-105 · Ch. 3, Q137",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "How are BGP routes calculated?",
+   "choices": [
+    "The shorted AS path to the destination network",
+    "The bandwidth to the destination network",
+    "The most reliable path to the destination network",
+    "The number of hops to the destination network"
+   ],
+   "answer": 0,
+   "explanation": "BGP uses the entire database of entries to calculate the entire autonomous system path to the destination. Then it routes the packet to the next router, which performs the same calculation using the shortest AS path or the least number of ASs the packet must traverse.",
+   "source": "CCNA 100-105 · Ch. 3, Q138",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "Which is an example of an interior gateway protocol that is nonproprietary?",
+   "choices": [
+    "OSPF",
+    "EIGRP",
+    "EGP",
+    "BGP"
+   ],
+   "answer": 0,
+   "explanation": "Open Shortest Path First (OSPF) is an interior gateway protocol and a nonproprietary standard.",
+   "source": "CCNA 100-105 · Ch. 3, Q139",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "You have several sites, each with different administrative units in your company. Which routing protocol should you choose?",
+   "choices": [
+    "OSPF",
+    "RIPv2",
+    "BGP",
+    "EGP"
+   ],
+   "answer": 0,
+   "explanation": "Although you have different administrative units, all of the administrative units are in the same company. In this situation, it is recommended to use an interior gateway protocol that can segment each administrative unit. OSPF will perform this requirement with the use of area IDs.",
+   "source": "CCNA 100-105 · Ch. 3, Q140",
+   "topic": "3.7 Compare and contrast interior and exterior routing protocols",
+   "topic_n": 20
+  },
+  {
+   "question": "Which command will allow you to verify the IPv6 addresses configured on a router?",
+   "choices": [
+    "Router#show ip interfaces brief",
+    "Router#show ipv6 brief",
+    "Router#show ipv6 interfaces brief",
+    "Router#show ipv6"
+   ],
+   "answer": 2,
+   "explanation": "The command show ipv6 interfaces brief will show all of the IPv6 addresses configured for each of the interfaces on the router.",
+   "source": "CCNA 100-105 · Ch. 3, Q141",
+   "topic": "3.8 Configure, verify, and troubleshoot IPv4 and IPv6 static routing",
+   "topic_n": 21
+  },
+  {
+   "question": "On interface Serial 0/1, you type ipv6 address 2000:db8:4400:2300::1234/64 . Which statement is true?",
+   "choices": [
+    "The IPv6 address of 2000:0db8:4400:2300:1234:0000:0000:0000/128 will be assigned to Serial 0/0.",
+    "The router will calculate a network ID of 2000:db8:4400:2300:0000/64 for Serial 0/0.",
+    "The router will calculate a network ID of 2000:0db8:4400:2300::/64 for Serial 0/0.",
+    "The router will calculate a network ID of 2000:0db8::."
+   ],
+   "answer": 2,
+   "explanation": "The network ID of 2000:0db8:4400:2300::/64 will be calculated and assigned to the directly connected route of Serial 0/0.",
+   "source": "CCNA 100-105 · Ch. 3, Q142",
+   "topic": "3.8 Configure, verify, and troubleshoot IPv4 and IPv6 static routing",
+   "topic_n": 21
+  },
+  {
+   "question": "When you check the IPv6 addresses configured on the interfaces, you find two IPv6 addresses: One address is a 2001:db8::/64 address, and the other is an ff80::/64 address. However, you do not see a route statement for the ff80::/64 address in the routing table. Why?",
+   "choices": [
+    "Multicast addresses do not get added to the routing tables.",
+    "Broadcast addresses do not get added to the routing tables.",
+    "Link-local addresses do not get added to the routing tables.",
+    "Only one route statement can be in the routing table at a time for an interface."
+   ],
+   "answer": 2,
+   "explanation": "The second address on an interface with the prefix of ff80::/64 is the link-local address for Duplicate Address Detection (DAD) and Stateless Address Autoconfiguration (SLAAC). Link-local addresses are non-routable, so they will not get added to the routing table.",
+   "source": "CCNA 100-105 · Ch. 3, Q143",
+   "topic": "3.8 Configure, verify, and troubleshoot IPv4 and IPv6 static routing",
+   "topic_n": 21
+  },
+  {
+   "question": "Which command will show you the IPv6 routes in the routing table?",
+   "choices": [
+    "Router#show ipv6 route",
+    "Router#show ip route",
+    "Router#show ipv6 route summary",
+    "Router#show ipv6 route brief"
+   ],
+   "answer": 0,
+   "explanation": "The command show ipv6 route will display only the entries in the routing table for IPv6. The command show ip route will only display the entries in the routing table for IPv4.",
+   "source": "CCNA 100-105 · Ch. 3, Q144",
+   "topic": "3.8 Configure, verify, and troubleshoot IPv4 and IPv6 static routing",
+   "topic_n": 21
+  },
+  {
+   "question": "Which command will only show you all of the directly connected routes for IPv6?",
+   "choices": [
+    "Router#show ipv6 route connected",
+    "Router#show ipv6 interface summary",
+    "Router#show ipv6 interface brief",
+    "Router#show ipv6 summary"
+   ],
+   "answer": 0,
+   "explanation": "The command show ipv6 route connected will display only the directly connected routes on the router.",
+   "source": "CCNA 100-105 · Ch. 3, Q146",
+   "topic": "3.8 Configure, verify, and troubleshoot IPv4 and IPv6 static routing",
+   "topic_n": 21
+  },
+  {
+   "question": "Which area must be present when using the OSPF routing protocol with multiple areas?",
+   "choices": [
+    "Area 1",
+    "Area 10",
+    "Area 4",
+    "Area 0"
+   ],
+   "answer": 3,
+   "explanation": "Area 0 must be present in an OSPF network. It is the backbone area and all other areas must connect to it.",
+   "source": "CCNA 100-105 · Ch. 3, Q151",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which multicast address is used by OSPF for neighbor discovery?",
+   "choices": [
+    "224.0.0.5",
+    "224.0.0.7",
+    "224.0.0.6",
+    "224.0.0.4"
+   ],
+   "answer": 0,
+   "explanation": "OSPF uses 224.0.0.5 for neighbor discovery via Link-State Advertisements (LSAs).",
+   "source": "CCNA 100-105 · Ch. 3, Q153",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which statement is true about OSPF?",
+   "choices": [
+    "OSPF updates are event triggered.",
+    "OSPF broadcasts changes to the routing tables.",
+    "OSPF performs default auto-summarization.",
+    "OSPF is a distance-vector protocol."
+   ],
+   "answer": 0,
+   "explanation": "OSPF updates are event triggered. These events could be a neighbor router not responding or a route going down.",
+   "source": "CCNA 100-105 · Ch. 3, Q155",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "How do Cisco routers determine their router ID (RID)?",
+   "choices": [
+    "The highest IP address configured on the router",
+    "The lowest IP address configured on the router",
+    "The lowest IP address configured on the loopback interfaces",
+    "The highest MAC address configured on the router"
+   ],
+   "answer": 0,
+   "explanation": "The highest IP address configured on all of the loopback interfaces is chosen first. If a loopback is not configured, then the highest IP address on an active interface is chosen. However, if a RID is statically set via the OSPF process, it will override all of the above.",
+   "source": "CCNA 100-105 · Ch. 3, Q156",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "What is the definition of an OSPF link?",
+   "choices": [
+    "Two routers participating in OSPF routing",
+    "Two routers that share the same AS number",
+    "A routed interface added to the OSPF process",
+    "Two routers that share the same area ID"
+   ],
+   "answer": 2,
+   "explanation": "A link is a routed interface that is assigned to a network and participates in the OSPF process. This link will be tracked by the OSPF process for up/down information as well as the network it is associated with.",
+   "source": "CCNA 100-105 · Ch. 3, Q157",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which statement is correct about adjacency with OSPF on a broadcast network (LAN)?",
+   "choices": [
+    "An adjacency is formed between routers on the same link.",
+    "An adjacency is formed between the DR and every neighbor router on the same LAN.",
+    "An adjacency is formed between the DR and every router in the same OSPF area.",
+    "An adjacency is formed between the DR and every router in the same autonomous system."
+   ],
+   "answer": 1,
+   "explanation": "Adjacencies are formed between the designated router (DR) and its neighbors on the same LAN. This is done to ensure that all neighbor routers have the same Link State Database (LSDB).",
+   "source": "CCNA 100-105 · Ch. 3, Q158",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "How is a designated router elected for OSPF?",
+   "choices": [
+    "The DR is elected by the lowest priority and highest RID in the same area.",
+    "The DR is elected by the highest priority and highest RID in the same autonomous system.",
+    "The DR is elected by the lowest priority and lowest RID.",
+    "The DR is elected by the highest priority and highest RID in the same broadcast network."
+   ],
+   "answer": 3,
+   "explanation": "The designated router is elected by the highest priority in the LAN. If the priorities are all the same, then the highest RID becomes the tiebreaker. OSPF will elect a DR for each broadcast network, such as a LAN. This is to minimize the number of adjacencies formed.",
+   "source": "CCNA 100-105 · Ch. 3, Q159",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "In which database can you see all of the routers discovered in the OSPF network in which hello packets were sent and acknowledged?",
+   "choices": [
+    "The routing table database",
+    "The topological database",
+    "The link state database",
+    "The neighborship database"
+   ],
+   "answer": 3,
+   "explanation": "The neighborship database is where all of the routers can be found that have responded to hello packets. The neighborship database contains all of the routers by RID, and each router participating in OSPF manages its own neighborship database.",
+   "source": "CCNA 100-105 · Ch. 3, Q160",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which is a correct statement about OSPF?",
+   "choices": [
+    "OSPF uses RID for scalability.",
+    "OSPF uses areas for scalability.",
+    "OSPF uses process IDs for scalability.",
+    "OSPF uses autonomous systems for scalability."
+   ],
+   "answer": 1,
+   "explanation": "OSPF uses areas to create a hierarchal structure for routing. This structure begins with the backbone area of 0. All other areas connect to it to form a complete autonomous system. This enables scalability with OSPF, since each area works independently.",
+   "source": "CCNA 100-105 · Ch. 3, Q161",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which is an example of a broadcast (multi-access) network?",
+   "choices": [
+    "ATM network",
+    "Frame Relay",
+    "A LAN",
+    "An X.25 network"
+   ],
+   "answer": 2,
+   "explanation": "A LAN is an example of a broadcast multi-access network. All nodes in a network segment can hear a broadcast and have common access to the local area network. In OSPF, a broadcast (multi-access) network requires a DR and BDR.",
+   "source": "CCNA 100-105 · Ch. 3, Q162",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which multicast address is used by OSPF for communication between the designated router and adjacencies formed?",
+   "choices": [
+    "224.0.0.7",
+    "224.0.0.4",
+    "224.0.0.5",
+    "224.0.0.6"
+   ],
+   "answer": 3,
+   "explanation": "The multicast address of 224.0.0.6 is used to communicate between the designated router and the adjacencies formed. This multicast address is used for LSA flooding on broadcast networks.",
+   "source": "CCNA 100-105 · Ch. 3, Q163",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "What is the Cisco metric for OSPF?",
+   "choices": [
+    "K metrics",
+    "Bandwidth",
+    "10 8 /bandwidth",
+    "Delay, bandwidth, reliability, load"
+   ],
+   "answer": 2,
+   "explanation": "Cisco uses a metric for OSPF which is calculated as 10 8 /bandwidth. This cost value is of 100 Mb/s (reference bandwidth) divided by the interface bandwidth.",
+   "source": "CCNA 100-105 · Ch. 3, Q164",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "What does the command router ospf 20 configure?",
+   "choices": [
+    "An OSPF cost of 20",
+    "An OSPF router area of 20",
+    "An OSPF router process of 20",
+    "An OSPF router autonomous system of 20"
+   ],
+   "answer": 2,
+   "explanation": "The command router ospf 20 configures a process ID of 20. This process identifies the databases for an OSPF process as well as its configuration. The process ID is only locally significant to the router on which it is configured. It can be an arbitrary number from 1 to 65535.",
+   "source": "CCNA 100-105 · Ch. 3, Q165",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will verify the bandwidth of an interface participating in OSPF?",
+   "choices": [
+    "Router#show interface",
+    "Router#show ospf",
+    "Router#show ospf interface",
+    "Router#show running-config"
+   ],
+   "answer": 0,
+   "explanation": "The command show interface will display the reported bandwidth or configured bandwidth of an interface. The command show ospf interface will only display the calculated cost.",
+   "source": "CCNA 100-105 · Ch. 3, Q166",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will tune the cost of the OSPF metrics for integration with non-Cisco routers to participate in OSPF?",
+   "choices": [
+    "Router(config)#ip ospf cost 20000",
+    "Router(config)#ip cost 20000",
+    "Router(config-if)#ip ospf cost 20000",
+    "Router(config-if)#ip cost 20000"
+   ],
+   "answer": 2,
+   "explanation": "When you’re configuring Cisco routers to participate in OSPF with non-Cisco routers, each interface on the Cisco router needs to be configured. The ip ospf cost command can be tuned between 1 to 65,535 and will need to be matched with the other vendor.",
+   "source": "CCNA 100-105 · Ch. 3, Q167",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will configure a network of 192.168.1.0/24 for OSPF area 0?",
+   "choices": [
+    "Router(config)#router ospf 0 Router(config-router)#network 192.168.1.0 0.0.0.255",
+    "Router(config)#router ospf 1 Router(config-router)#network 192.168.1.0 0.0.0.255 area 0",
+    "Router(config)#router ospf 0 Router(config-router)#network 192.168.1.0 255.255.255.0",
+    "Router(config)#router ospf 0 Router(config-router)#network 192.168.1.0 0.0.0.255"
+   ],
+   "answer": 1,
+   "explanation": "The first command sets up the process ID of 1 via router ospf 1 . The next command advertises the network of 192.168.1.0 with a wildcard- mask of 0.0.0.255 and specifies area 0 via network 192.168.1.0 0.0.0.255 area 0 .",
+   "source": "CCNA 100-105 · Ch. 3, Q168",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "What is the default number of equal-cost routes for OSPF on Cisco routers?",
+   "choices": [
+    "16 routes",
+    "4 routes",
+    "32 routes",
+    "8 routes"
+   ],
+   "answer": 1,
+   "explanation": "By default, Cisco routes will load-balance four equal-cost routes with OSPF.",
+   "source": "CCNA 100-105 · Ch. 3, Q169",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "You want to advertise a network of 131.40.32.0/27 with OSPF. Which wildcard mask will you need to use?",
+   "choices": [
+    "0.0.32.255",
+    "255.255.224.0",
+    "0.0.31.255",
+    "0.0.224.255"
+   ],
+   "answer": 2,
+   "explanation": "The wildcard mask is 0.0.31.255 for a network advertisement of 131.40.32.0/27. A wildcard mask is a bitwise calculation that matches the bits that change. The /27 has subnets with multiples of 32. The easiest way to calculate wildcard masks for configuration is to subtract 1 from the subnet you are trying to match; for example, matching a subnet of 32 in the third octet minus 1 equals 31, and you want to match all bits in the fourth octet with 255.",
+   "source": "CCNA 100-105 · Ch. 3, Q170",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will allow changing the number of equal-cost routes for OSPF?",
+   "choices": [
+    "Router(config)#ospf equal-cost 10",
+    "Router(config-router)#ospf equal-cost 10",
+    "Router(config-router)#maximum-paths 10",
+    "Router(config)#ospf maximum-paths 10"
+   ],
+   "answer": 2,
+   "explanation": "The command maximum-paths 10 will configure a maximum of 10 routes of equal-cost for load balancing. This command must be entered under the OSPF router process.",
+   "source": "CCNA 100-105 · Ch. 3, Q171",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "What is the maximum number of equal-cost routes that can be configured for OSPF on Cisco routers?",
+   "choices": [
+    "32 routes",
+    "8 routes",
+    "16 routes",
+    "4 routes"
+   ],
+   "answer": 0,
+   "explanation": "The maximum number of equal-cost routes that can be configured for load balancing with OSPF on a Cisco router is 32.",
+   "source": "CCNA 100-105 · Ch. 3, Q172",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will allow you to verify the router’s RID for OSPF?",
+   "choices": [
+    "Router#show ip ospf rid",
+    "Router#show ip interface",
+    "Router#show ip ospf neighbor",
+    "Router#show ip ospf"
+   ],
+   "answer": 3,
+   "explanation": "The command show ip ospf will allow you to verify the currently configured router ID (RID) or the IP address acting as the router’s RID.",
+   "source": "CCNA 100-105 · Ch. 3, Q173",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "You want to advertise a network of 192.168.1.16/28 with OSPF. Which wildcard mask will you need to use?",
+   "choices": [
+    "0.0.0.16",
+    "0.0.0.240",
+    "0.0.0.15",
+    "255.255.255.240"
+   ],
+   "answer": 2,
+   "explanation": "The wildcard mask is 0.0.0.15 for a network advertisement of 192.168.1.16/28. A wildcard mask is a bitwise calculation that matches the bits that change. The /28 has subnets with multiples of 16. The easiest way to calculate wildcard masks for configuration is to subtract 1 from the subnet you are trying to match; for example, matching a subnet of 16 in the fourth octet minus 1 equals 15.",
+   "source": "CCNA 100-105 · Ch. 3, Q174",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will allow you to verify if a remote router has formed an adjacency with the current router?",
+   "choices": [
+    "Router#show ip ospf router",
+    "Router#show ip ospf",
+    "Router#show ip ospf neighbor",
+    "Router#show router adjacency"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip ospf neighbor will show all of the adjacencies formed as well as the routers discovered.",
+   "source": "CCNA 100-105 · Ch. 3, Q175",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "What is the default OSPF hello interval in which hello packets are sent out on a broadcast (multi-access) network?",
+   "choices": [
+    "60 seconds",
+    "5 seconds",
+    "30 seconds",
+    "10 seconds"
+   ],
+   "answer": 3,
+   "explanation": "The default hello interval is 10 seconds for a broadcast (multi- access) network such as a LAN.",
+   "source": "CCNA 100-105 · Ch. 3, Q176",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "You are running OSPF on a router. One of the interfaces, Gi0/1, connects to your ISP. You want to make sure you do not forward any OSPF packets to your ISP. How can you achieve this?",
+   "choices": [
+    "Router(config)#passive-interface gigabitethernet 0/1",
+    "Router(config-router)#passive-interface gigabitethernet 0/1",
+    "Router(config-if)#passive-interface default",
+    "Router(config-if)#passive-interface"
+   ],
+   "answer": 1,
+   "explanation": "The command passive-interface gigabitethernet 0/1 must be configured under the router process. This command will suppress hello packets from exiting the Gi0/1 interface.",
+   "source": "CCNA 100-105 · Ch. 3, Q177",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will help verify which interfaces hello packets are being sent out for OSPF?",
+   "choices": [
+    "Router#show ip routes",
+    "Router#show ip ospf brief",
+    "Router#show ip ospf interface",
+    "Router#show interfaces"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip ospf interface will show all interfaces in which OSPF is configured and sending hello packets.",
+   "source": "CCNA 100-105 · Ch. 3, Q178",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will statically set the RID for OSPF and override all others?",
+   "choices": [
+    "Router(config-router)#rid 192.168.1.5",
+    "Router(config-router)#router-id 192.168.1.5",
+    "Router(config)#interface fa 0/1 Router(config-if)#ip address 192.168.1.5 255.255.255.0",
+    "Router(config)#interface loopback 0 Router(config-if)#ip address 192.168.1.5 255.255.255.0"
+   ],
+   "answer": 1,
+   "explanation": "Although all of these are valid methods of possibly setting the router ID (RID) of the router for OSPF, the configuration of router-id 192.168.1.5 will override all others.",
+   "source": "CCNA 100-105 · Ch. 3, Q179",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command(s) will only allow interface Gi0/2 to send hello packets for OSPF?",
+   "choices": [
+    "Router(config-router)#passive-interface default Router(config-router)#no passive-interface gigabitethernet 0/2",
+    "Router(config-router)#passive-interface gigabitethernet 0/2",
+    "Router(config-router)#active-interface gigabitethernet 0/2",
+    "Router(config-router)#passive-interface default Router(config-router)#active-interface gigabitethernet 0/2"
+   ],
+   "answer": 0,
+   "explanation": "The command passive-interface default configured under the OSPF process will cease hello packets by default on all interfaces. The command no passive-interface gigabitethernet 0/2 will allow hello packets to exit the interface and allow Gi0/2 to become a neighbor.",
+   "source": "CCNA 100-105 · Ch. 3, Q180",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "After changing the router’s RID for OSPF, which command needs to be entered?",
+   "choices": [
+    "Router#clear ip ospf",
+    "Router#clear ospf",
+    "Router(config-router)#shut Router(config-router)#no shut",
+    "Router(config-router)#clear ip ospf"
+   ],
+   "answer": 0,
+   "explanation": "After the OSPF configuration is changed, OSPF needs to be restarted. This is achieved at the privileged exec prompt by typing clear ip ospf .",
+   "source": "CCNA 100-105 · Ch. 3, Q181",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which statement about OSPF area border routers is correct?",
+   "choices": [
+    "ABRs exchange Type 3 Link-State Advertisements between areas.",
+    "ABRs sit between an autonomous system and OSPF.",
+    "ABRs exchange Type 1 Link-State Advertisements between areas.",
+    "ABRs exchange Type 2 Link-State Advertisements between areas."
+   ],
+   "answer": 0,
+   "explanation": "Type 3 Link-State Advertisements contain summary information about the networks on the other side of the ABR. These LSA announcements are called Summary Link Advertisements, or SLAs.",
+   "source": "CCNA 100-105 · Ch. 3, Q182",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will allow you to see the summary of OSPF Link- State Advertisements?",
+   "choices": [
+    "Router#show ip ospf states",
+    "Router#show ip ospf neighbors",
+    "Router#show ip ospf database",
+    "Router#show ip ospf topology"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip ospf database will show you a summary count of all the LSAs in the database.",
+   "source": "CCNA 100-105 · Ch. 3, Q184",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Two routers, called Router A and Router B, are configured in the same area and share a common LAN. However, they cannot form an adjacency. What could the problem be?",
+   "choices": [
+    "Router A is configured with a hello timer of 30.",
+    "Router B is configured with a hello timer of 10.",
+    "There is a static route configured between the two routers.",
+    "Router A is configured with multiple area IDs."
+   ],
+   "answer": 0,
+   "explanation": "The default hello interval on a LAN is 10 seconds. If a router is configured with a hello timer of 30, the hello/dead interval will not match. In order to form an adjacency, the hello/dead intervals must match.",
+   "source": "CCNA 100-105 · Ch. 3, Q186",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which is a direct benefit of a hierarchical OSPF design?",
+   "choices": [
+    "Fast convergence",
+    "Reduction of configuration complexity",
+    "Better security",
+    "Increased bandwidth"
+   ],
+   "answer": 0,
+   "explanation": "Fast convergence of the Link State Database (LSDB) that feeds the routing tables, is a direct result of a hierarchical OSPF design. The use of areas allows for routers within an area to converge and send Summary Link Advertisements to other areas.",
+   "source": "CCNA 100-105 · Ch. 3, Q187",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "You have configured a router with the following command. However, when you enter show ip routes you do not see any routes for OSPF. What is the problem? Router(config)#router ospf 255 Router(config-router)#network 10.0.0.0 255.0.0.0 area 255",
+   "choices": [
+    "The wildcard mask is incorrect.",
+    "The area number is incorrect.",
+    "The network ID is incorrect.",
+    "The process ID is incorrect."
+   ],
+   "answer": 0,
+   "explanation": "The wildcard mask is incorrect because it is a bitmask, which is the opposite of a subnet mask. The 1s in the host section, rather than 1s in the network section, define the wildcard. The correct wildcard mask is 0.0.0.255 for this configuration.",
+   "source": "CCNA 100-105 · Ch. 3, Q190",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which state in the neighbor table indicates that the router has successfully downloaded the LSA information from a neighboring router?",
+   "choices": [
+    "FULL state",
+    "INIT state",
+    "EXCHANGE state",
+    "EXSTART state"
+   ],
+   "answer": 0,
+   "explanation": "The FULL state is only achieved after the router has created an adjacency with a neighbor router and downloaded the LSAs to form its topological database.",
+   "source": "CCNA 100-105 · Ch. 3, Q192",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "You have two links that enter the same OSPF router with the same bandwidth. You want to prefer one route over the other yet allow the second as a backup route. Which command would you use to achieve this?",
+   "choices": [
+    "Router(config-if)#ip ospf route primary",
+    "Router(config-router)#passive interface gi 0/0",
+    "Router(config-if)#ip ospf cost 25",
+    "Router(config-router)#ip ospf priority 25"
+   ],
+   "answer": 2,
+   "explanation": "The command ip ospf cost 25 should be configured on the interface that will act as the backup route. This adjustment of cost will allow the router to prefer the other route first.",
+   "source": "CCNA 100-105 · Ch. 3, Q194",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will display the designated router for a LAN?",
+   "choices": [
+    "Router#show ip ospf database",
+    "Router#show ip ospf interfaces",
+    "Router#show ip ospf neighbor",
+    "Router#show ip ospf dr"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip ospf interfaces will display the interface details of each interface for OSPF. In this information, the DR and BDR router ID will be displayed.",
+   "source": "CCNA 100-105 · Ch. 3, Q197",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will set the bandwidth of an interface to 2.048 Mb/s?",
+   "choices": [
+    "Router(config-if)#bandwidth 2048000000",
+    "Router(config-if)#bandwidth 2048000",
+    "Router(config-if)#bandwidth 2.048",
+    "Router(config-if)#bandwidth 2048"
+   ],
+   "answer": 3,
+   "explanation": "Bandwidth is always specified in kilobits per second (Kb/s), so 2.048 Mb/s would be 2,048,000 bits per second, or 2,048 Kb/s.",
+   "source": "CCNA 100-105 · Ch. 3, Q200",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will allow you to see the networks the current router is advertising for OSPF?",
+   "choices": [
+    "Router#show ip ospf database",
+    "Router#show ip ospf neighbors",
+    "Router#show ip protocols",
+    "Router#show ip ospf"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip protocols will list the router ID of the current router as well as the networks that are being advertised via OSPF on the current router.",
+   "source": "CCNA 100-105 · Ch. 3, Q202",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which statement is true of routers in the same area?",
+   "choices": [
+    "All routers in the same area have the same process IDs.",
+    "All routers in the same area have the same neighbor table.",
+    "All routers in the same area have the same topology table.",
+    "All routers in the same area have the same hello/dead timers."
+   ],
+   "answer": 2,
+   "explanation": "An area defines a topology inside of the OSPF hierarchy. Since each router in an area calculates its own costs, they all contain the same topological database, or LSDB.",
+   "source": "CCNA 100-105 · Ch. 3, Q203",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command would you use to make sure Router A never becomes a designated router?",
+   "choices": [
+    "Router(config)#no ospf designated",
+    "Router(config-router)#passive interface gi 0/0",
+    "Router(config-router)#no ospf designated",
+    "Router(config-if)#ip ospf priority 0"
+   ],
+   "answer": 3,
+   "explanation": "All routers by default have an OSPF priority of 1. If you set the priority to 0, the router will never become a designated router. This command must be set in the interface.",
+   "source": "CCNA 100-105 · Ch. 3, Q204",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "You enter a show ip route command and see the following line. What does the [110/1] identify? O 192.168.3.0/24 [110/1] via 192.168.10.6, 00:58:55, Serial0/3/1",
+   "choices": [
+    "Administrative distance of 110 and a 1 Gb/s link",
+    "Administrative distance of 1 and a 110 Mb/s link",
+    "Administrative distance of 110 and a 100 Mb/s link",
+    "Administrative distance of 110 and a 10 Mb/s link"
+   ],
+   "answer": 2,
+   "explanation": "It identifies the administrative distance of 110 for OSPF. The cost calculation is the reference bandwidth of 100 Mb/s divided by the link bandwidth. This calculation would result in a cost of 1.",
+   "source": "CCNA 100-105 · Ch. 3, Q205",
+   "topic": "3.9 Configure, verify, and troubleshoot single area and multi-area OSPFv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 26
+  },
+  {
+   "question": "Which command will start an OSPFv3 process with an ID of 4?",
+   "choices": [
+    "Router(config)#ip router ospfv3 4",
+    "Router(config)#router ospf3 4",
+    "Router(config)#router ospfv3 4",
+    "Router(config)#ipv6 router ospf 4"
+   ],
+   "answer": 3,
+   "explanation": "The command ipv6 router ospf 4 will start an IPv6 process with an ID of 4. Most IPv6 commands will start with ipv6 .",
+   "source": "CCNA 100-105 · Ch. 3, Q206",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "Which IPv6 address does OSPFv3 use to communicate with designated routers?",
+   "choices": [
+    "ff02::5",
+    "ff02::6",
+    "fe02::5",
+    "fe02::6"
+   ],
+   "answer": 1,
+   "explanation": "OSPFv3 used the multicast address ff02::6 to send communications to designated routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q207",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "When configuring OSPFv3, how do you configure the router ID?",
+   "choices": [
+    "The router ID is configured as the 64-bit host section of an IPv6 address.",
+    "The router ID is configured as a 32-bit IPv4 address.",
+    "The router ID is configured as a 128-bit IPv6 address.",
+    "The router ID is configured as a 48-bit MAC address."
+   ],
+   "answer": 1,
+   "explanation": "When an OSPFv3 process is configured, the process will handle IPv6. However, the router ID is still configured as an IPv4 address.",
+   "source": "CCNA 100-105 · Ch. 3, Q208",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "You are configuring an OSPFv3 process of 4 for an interface of Serial 0/0 with an IPv6 address of 2001:db8:1:2::1/64 in area 0. Which command will you use?",
+   "choices": [
+    "Router(config-router)#network 2001:db8:1:2/64 area 0",
+    "Router(config-rtr)#network 2001:db8:1:2/64 area 0",
+    "Router(config-if)#ipv6 ospf area 0",
+    "Router(config-if)#ipv6 ospf 4 area 0"
+   ],
+   "answer": 3,
+   "explanation": "With OSPFv3 IPv6 configuration, the duplication of long IPv6 network addresses can cause erroneous entries. So OSPFv3 is configured directly on the IPv6 link with the command ipv6 ospf 4 area 0 .",
+   "source": "CCNA 100-105 · Ch. 3, Q209",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "You have an interface of Serial 0/0, which is connected to your ISP. You want to suppress OSPFv3 LSAs on the IPv6 link to the ISP. Which command will you use?",
+   "choices": [
+    "Router(config-router)#passive-interface serial 0/0",
+    "Router(config-if)#passive-interface",
+    "Router(config-rtr)#passive-interface serial 0/0",
+    "Router(config-if)#ipv6 passive-interface"
+   ],
+   "answer": 2,
+   "explanation": "Configuring OSPFv3 for a passive interface it is similar to configuring OSPFv2. However, the configuration prompt for IPv6 is Router(config-rtr)# .",
+   "source": "CCNA 100-105 · Ch. 3, Q210",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "You have a number of routers with 10 Gb/s and 1 Gb/s links running OSPFv3. You need to adjust the cost for all links on the router. Which command will allow you to achieve this with the fewest commands?",
+   "choices": [
+    "Router(config)#auto-cost reference-bandwidth 10000",
+    "Router(config-rtr)#auto-cost 10000",
+    "Router(config-rtr)#auto-cost reference-bandwidth 10000",
+    "Router(config-rtr)#auto-cost reference-bandwidth 10000000"
+   ],
+   "answer": 2,
+   "explanation": "The easiest way to achieve this is to change the reference bandwidth from 100 Mb/s to 10 Gb/s. This is done as a command in the OSPFv3 router process with the command auto-cost reference- bandwidth 10000 . This will adjust the reference-bandwidth for all links associated with this process ID.",
+   "source": "CCNA 100-105 · Ch. 3, Q211",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "Which IPv6 address does OSPFv3 use to send LSA hello packets?",
+   "choices": [
+    "fe02::6",
+    "ff02::6",
+    "ff02::5",
+    "fe02::5"
+   ],
+   "answer": 2,
+   "explanation": "OSPFv3 used the multicast address ff02::5 to send hello packets to neighbor routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q212",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "Which command will allow you to verify only OSPFv3 routes?",
+   "choices": [
+    "Router#show ip route opsf3",
+    "Router#show ipv6 route opsf3",
+    "Router#show ip route opsfv3",
+    "Router#show ipv6 route ospf"
+   ],
+   "answer": 3,
+   "explanation": "The command show ipv6 route ospf will display only the OSPFv3 routes.",
+   "source": "CCNA 100-105 · Ch. 3, Q213",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "Which command would you use to verify that the hello/dead timers match for OSPFv3?",
+   "choices": [
+    "Router#show ip ospf interface",
+    "Router#show ipv6 ospf interface",
+    "Router#show ipv6 database",
+    "Router#show ipv6 ospfv3 interface"
+   ],
+   "answer": 1,
+   "explanation": "The command show ipv6 ospf interface will display numerous stats about the interfaces participating in OSPFv3. One of the stats is the hello/dead timers.",
+   "source": "CCNA 100-105 · Ch. 3, Q214",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "A common problem with IPv6 and OSPFv3 is MTU. Why is it a common problem with IPv6 and not IPv4?",
+   "choices": [
+    "OSPFv3 ignores MTU settings.",
+    "IPv6 addresses are large and require jumbo frames.",
+    "IPv4 uses TCP to transmit OSPF packets.",
+    "IPv4 fragments packets."
+   ],
+   "answer": 3,
+   "explanation": "IPv4 allows for packet fragmentation. However, IPv6 does not fragment packets because at the layer 3 header there is no fragmentation functionality. So close attention needs to be made to link MTUs on adjacent neighbors.",
+   "source": "CCNA 100-105 · Ch. 3, Q215",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "You need to configure OSPFv3 for the network 2001:db8:2:3/64 with an area of 0. Which configuration would you use?",
+   "choices": [
+    "Router(config-router)#network 2001:db8:2:3/64 area 0",
+    "Router(config-rtr)#network 2001:db8:2:3/64 area 0",
+    "Router(config-if)#ip ospf 2 area 0",
+    "Router(config-if)#ipv6 ospf 2 area 0.0.0.0"
+   ],
+   "answer": 3,
+   "explanation": "The configuration of OSPFv3 for IPv6 is always done on the interface. Area 0 can be represented as 0.0.0.0, because the area as defined by the RFC is a 32-bit value. The Cisco IOS allows you to enter the last octet of the area or the whole 32-bit value.",
+   "source": "CCNA 100-105 · Ch. 3, Q216",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "You begin to configure OSPFv3 but get the error % IPv6 routing not enabled. Which command needs to be entered?",
+   "choices": [
+    "Router(config)#enable ipv6 routing",
+    "Router(config)#enable ipv6 unicast-routing",
+    "Router(config)#enable ipv6",
+    "Router(config)#ipv6 unicast-routing"
+   ],
+   "answer": 3,
+   "explanation": "You must enable IPv6 routing via the command ipv6 unicast- routing in order to use OSPFv3.",
+   "source": "CCNA 100-105 · Ch. 3, Q217",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "You have configured OSPFv3 with a process ID of 5. You want to view only the OSPFv3 process ID of 5. Which command will achieve this?",
+   "choices": [
+    "Router#show ospfv3 5",
+    "Router#show ipv6 ospfv3 5",
+    "Router#show ip ospf 5",
+    "Router#show ipv6 ospf 5"
+   ],
+   "answer": 3,
+   "explanation": "The command show ipv6 ospf 5 will only show the OSPFv3 process ID of 5.",
+   "source": "CCNA 100-105 · Ch. 3, Q218",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "You have two routers that will not form an OPSFv3 adjacency. You’ve identified that the hello timer on Router B has been changed. Which command will rectify the problem?",
+   "choices": [
+    "RouterB(config-rtr)#no ipv6 ospf hello-interval",
+    "RouterB(config-rtr)#no ipv6 ospf hello timer",
+    "RouterB(config-if)#no ipv6 ospf hello timer",
+    "RouterB(config-if)#no ipv6 ospf hello-interval"
+   ],
+   "answer": 3,
+   "explanation": "The hello interval timer is configured per the interface, since broadcast (multi-access) would apply to a LAN interface vs. a non- broadcast multiple access (NBMA) network interface. The command no ipv6 ospf hello-interval will set the hello timer back to the original default value.",
+   "source": "CCNA 100-105 · Ch. 3, Q219",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "After you configure a new router ID for an OSPFv3 process, which command must be entered for the change to take effect?",
+   "choices": [
+    "Router#clear ipv6 ospf process",
+    "Router(config-rtr)#clear ipv6 ospf",
+    "Router(config-if)#restart ipv6 ospf process",
+    "Router(config)#restart ipv6 ospf process"
+   ],
+   "answer": 0,
+   "explanation": "The command to restart the OSPFv3 process is performed at the privileged exec command prompt. The command to be entered for OSPFv3 would be clear ipv6 ospf process . You will then be asked to confirm it.",
+   "source": "CCNA 100-105 · Ch. 3, Q220",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "When configuring OSPFv3, what is an alternative to specifying a router ID?",
+   "choices": [
+    "Specifying the command router-id autoconfigure",
+    "Specifying the command ipv6 ospf 1 area 0 on an IPv4 interface",
+    "Configuring the highest IP address on the network",
+    "Configuring a loopback interface"
+   ],
+   "answer": 1,
+   "explanation": "When you configure the command ipv6 ospf 1 area 0 on an IPv4 interface, the IP address on the interface is used as the router ID.",
+   "source": "CCNA 100-105 · Ch. 3, Q223",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "Which statement is correct about OSPFv3 vs. OSPFv2?",
+   "choices": [
+    "OSPFv3 will advertise all networks configured on a link.",
+    "OSPFv3 can load-balance links of unequal cost.",
+    "OSFPv3 requires directed broadcast enabled on the router.",
+    "OSPFv3 can run a maximum of four instances per router."
+   ],
+   "answer": 0,
+   "explanation": "Unlike OSPFv2, OSPFv3 will advertise all of the networks that are configured on a link in which OSPFv3 is configured. This replaces the need to use the network command, which is used in OSPFv2.",
+   "source": "CCNA 100-105 · Ch. 3, Q224",
+   "topic": "3.10 Configure, verify, and troubleshoot single area and multi-area OSPFv3 for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub, virtuallink, and LSAs)",
+   "topic_n": 27
+  },
+  {
+   "question": "Which dynamic routing protocol is a Cisco proprietary routing protocol?",
+   "choices": [
+    "OSPFv3",
+    "EIGRP",
+    "RIPv2",
+    "BGP"
+   ],
+   "answer": 1,
+   "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) is a Cisco proprietary dynamic routing protocol. Only Cisco routers can participate in EIGRP.",
+   "source": "CCNA 100-105 · Ch. 3, Q226",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "By default, which metrics are used by EIGRP to calculate path cost?",
+   "choices": [
+    "Bandwidth and delay",
+    "Bandwidth and reliability",
+    "Bandwidth and hop count",
+    "Bandwidth and MTU"
+   ],
+   "answer": 0,
+   "explanation": "EIGRP can use bandwidth, delay, load, reliability, and MTU as the cost metrics. Default configuration of EIGRP only uses bandwidth and delay as the cost metrics, although others can be configured.",
+   "source": "CCNA 100-105 · Ch. 3, Q227",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which is a requirement for EIGRP routers to create a neighborship?",
+   "choices": [
+    "Matching K metrics",
+    "Matching areas",
+    "Matching bandwidth metrics",
+    "Matching delay metrics"
+   ],
+   "answer": 0,
+   "explanation": "A requirement for routers to become neighbors is matching K metrics. The K metrics are values that can be adjusted for the EIGRP metrics of bandwidth, delay, load, reliability, and MTU.",
+   "source": "CCNA 100-105 · Ch. 3, Q228",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which IPv4 multicast address is used by EIGRP?",
+   "choices": [
+    "224.0.0.10",
+    "224.0.0.5",
+    "224.0.0.4",
+    "224.0.0.6"
+   ],
+   "answer": 0,
+   "explanation": "The Reliable Transport Protocol (RTP), which is part of EIGRP, uses 224.0.0.10 to send hello messages.",
+   "source": "CCNA 100-105 · Ch. 3, Q229",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the default formula for metric calculation for EIGRP?",
+   "choices": [
+    "metric = ((107 / least-bandwidth) + cumulative-delay) * 256",
+    "metric = least-bandwidth + cumulative-delay / 256",
+    "metric = least-bandwidth + cumulative-delay",
+    "metric = ([K1 * bandwidth + (K2 * bandwidth) / (256 – load) + K3 * delay] * [K5 / (reliability + K4)]) * 256"
+   ],
+   "answer": 0,
+   "explanation": "The default metric calculation for EIGRP is metric = ((107 / least- bandwidth) + cumulative-delay) * 256.",
+   "source": "CCNA 100-105 · Ch. 3, Q230",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which condition must be met for two routers participating in EIGRP to become neighbors?",
+   "choices": [
+    "Matching area numbers",
+    "Matching hello/dead timers",
+    "Matching autonomous system numbers",
+    "Matching MTUs"
+   ],
+   "answer": 2,
+   "explanation": "A neighbor requirement is matching autonomous system numbers. The autonomous system number is EIGRP’s scalability mechanism.",
+   "source": "CCNA 100-105 · Ch. 3, Q231",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the default hop count of EIGRP?",
+   "choices": [
+    "Infinite",
+    "255",
+    "15",
+    "100"
+   ],
+   "answer": 3,
+   "explanation": "EIGRP has a default hop count of 100 hops before a packet is considered unroutable.",
+   "source": "CCNA 100-105 · Ch. 3, Q232",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "What mechanism does EIGRP have for scalability?",
+   "choices": [
+    "Autonomous system numbers",
+    "Diffusing Update Algorithm",
+    "Holddown timers",
+    "Reliable Transport Protocol"
+   ],
+   "answer": 0,
+   "explanation": "EIGRP uses AS numbers to segment routing updates to an autonomous system. This provides scalability of the EIGRP routing protocol.",
+   "source": "CCNA 100-105 · Ch. 3, Q233",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "How often are hello messages sent between EIGRP participating routers by default?",
+   "choices": [
+    "Every 15 seconds",
+    "Every 30 seconds",
+    "Every 40 seconds",
+    "Every 5 seconds"
+   ],
+   "answer": 3,
+   "explanation": "The default hello timer for EIGRP is 5 seconds. This is performed by RTP.",
+   "source": "CCNA 100-105 · Ch. 3, Q234",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "When does the EIGRP protocol advertise the entire database?",
+   "choices": [
+    "Every 5 seconds",
+    "Every 30 seconds",
+    "Upon forming an adjacency",
+    "When a route update is sent"
+   ],
+   "answer": 2,
+   "explanation": "Upon forming an adjacency with its neighbor, EIGRP neighboring routers will send their entire database. After the initial load of the database, each router will watch for updates.",
+   "source": "CCNA 100-105 · Ch. 3, Q235",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the maximum stable hop count for EIGRP?",
+   "choices": [
+    "100",
+    "255",
+    "15",
+    "Infinite"
+   ],
+   "answer": 1,
+   "explanation": "The default hop count is 100 for EIGRP. However, the maximum stable hop count is 255 hops before a route is considered undeliverable.",
+   "source": "CCNA 100-105 · Ch. 3, Q236",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which table is used to feed information to the topology table with EIGRP?",
+   "choices": [
+    "Routing table",
+    "Neighbor table",
+    "Feasibility table",
+    "RTP table"
+   ],
+   "answer": 1,
+   "explanation": "Hello packets and the RTP table help to build the neighbor table. In return, the neighbor table sends this information to the topology table.",
+   "source": "CCNA 100-105 · Ch. 3, Q237",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which mechanism does RTP use if an established neighbor does not respond to a multicast hello packet for EIGRP?",
+   "choices": [
+    "Hello packet proxy",
+    "Holddown timers",
+    "Unicast packets",
+    "Broadcasts"
+   ],
+   "answer": 2,
+   "explanation": "If an established neighbor does not respond to its multicast hello packet, the router will send unicast packets. After 16 missed unicast packets, the neighbor will be declared dead. This process is called reliable multicast.",
+   "source": "CCNA 100-105 · Ch. 3, Q238",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "What happens when a hold interval for EIGRP has expired?",
+   "choices": [
+    "The hello message is retransmitted via broadcast packets.",
+    "The hello message is retransmitted via unicast packets.",
+    "The neighbor is considered down.",
+    "The link is considered down."
+   ],
+   "answer": 2,
+   "explanation": "When the hold interval has expired and a hello message has not been seen, the neighboring router is considered down or failed.",
+   "source": "CCNA 100-105 · Ch. 3, Q239",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "How many equal-cost links can EIGRP load-balance?",
+   "choices": [
+    "16 links",
+    "8 links",
+    "32 links",
+    "4 links"
+   ],
+   "answer": 3,
+   "explanation": "By default, EIGRP can load balance up to 4 equal-cost links.",
+   "source": "CCNA 100-105 · Ch. 3, Q240",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which routing algorithm does EIGRP use?",
+   "choices": [
+    "Shortest Path First",
+    "Bellman-Ford",
+    "DUAL",
+    "Dijkstra"
+   ],
+   "answer": 2,
+   "explanation": "EIGRP uses the Diffusing Update Algorithm to calculate route cost.",
+   "source": "CCNA 100-105 · Ch. 3, Q241",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "After a router has been acknowledged, which table is built from the network routes discovered for the EIGRP protocol?",
+   "choices": [
+    "The routing table",
+    "The topology table",
+    "The adjacency table",
+    "The neighbor table"
+   ],
+   "answer": 1,
+   "explanation": "After the neighbor process has been established, the routers will exchange full topology tables with each other. These topology tables are sent in full, then maintained only by partial updates if a route changes.",
+   "source": "CCNA 100-105 · Ch. 3, Q242",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "A router has learned two routes to the same network. EIGRP has a route to the destination network with a cost of 202342520. OSPF has a route to the destination network with a cost of 64. Which route will be used to the destination network?",
+   "choices": [
+    "Both routes will be used with load balancing.",
+    "The routes will be used in a spill and fill configuration.",
+    "The EIGRP route with a cost of 202342520",
+    "The OSPF route with a cost of 64"
+   ],
+   "answer": 2,
+   "explanation": "The cost of the link between routing protocols is irrelevant. The administrative distance (AD) of EIGRP is 90, and the AD of OSPF is 110. Therefore, the lowest AD routing protocol is used. If the EIGRP route becomes invalid or is removed from the routing table, then OSPF will be used.",
+   "source": "CCNA 100-105 · Ch. 3, Q243",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the default hold interval for EIGRP?",
+   "choices": [
+    "5 seconds",
+    "15 seconds",
+    "30 seconds",
+    "40 seconds"
+   ],
+   "answer": 1,
+   "explanation": "The EIGRP hold interval by default is three times the hello interval. Since the hello interval is 5 seconds, the hold interval is 15 seconds. Hold intervals are usually three times the initial discovery interval.",
+   "source": "CCNA 100-105 · Ch. 3, Q244",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which metric is considered to be infinite for an EIGRP route in which the router will not try to route packets to the destination network?",
+   "choices": [
+    "15 hops",
+    "2 32 – 1",
+    "255 hops",
+    "2 24 – 1"
+   ],
+   "answer": 1,
+   "explanation": "EIGRP metrics are not based on hops. EIGRP metrics are based on bandwidth and delay as a composite metric. The metric can be a very large number, but the limit to this metric in which the route is considered invalid is 2 32 – 1.",
+   "source": "CCNA 100-105 · Ch. 3, Q245",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which statement is correct about EIGRP and how it works with updates?",
+   "choices": [
+    "EIGRP sends changes to routes only when they are detected.",
+    "EIGRP sends its full routing table during each hello interval.",
+    "EIGRP sends its link state during each hello interval.",
+    "EIGRP sends its full routing table every 30 seconds."
+   ],
+   "answer": 0,
+   "explanation": "EIGRP only sends updates if a route has changed. Updates happen only after two routers have become neighbors and originally send their full route database and converge. If changes have not occurred, then the neighbor believes the route is still valid, under the condition that they are still neighbors.",
+   "source": "CCNA 100-105 · Ch. 3, Q246",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which table is a router added to when it acknowledges a hello packet for EIGRP?",
+   "choices": [
+    "The neighbor table",
+    "The topology table",
+    "The routing table",
+    "The adjacency table"
+   ],
+   "answer": 0,
+   "explanation": "When a router acknowledges a hello packet from a neighboring router, the router is added to the neighbor table of the router that sent the hello packet.",
+   "source": "CCNA 100-105 · Ch. 3, Q247",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which is a condition that must be met for a router to become a neighbor router for EIGRP?",
+   "choices": [
+    "Both routers have the same hello/hold interval.",
+    "Both routers are on the same subnet.",
+    "Both routers have the same link types.",
+    "Both routers have the same area ID."
+   ],
+   "answer": 1,
+   "explanation": "Although two routers can have different hello/hold intervals, they could still become neighbors. However, to do so they must be on the same subnet.",
+   "source": "CCNA 100-105 · Ch. 3, Q248",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the definition of the reported distance for EIGRP?",
+   "choices": [
+    "The remote router’s calculated metric for the remote network",
+    "The remote router’s calculated metric for the local network",
+    "The local router’s calculated metric for the remote network",
+    "The local router’s calculated metric for the local network"
+   ],
+   "answer": 0,
+   "explanation": "The reported distance is the remote router’s calculated metric for the remote network. EIGRP uses this reported distance in its calculation for a feasible successor route.",
+   "source": "CCNA 100-105 · Ch. 3, Q249",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which route will be entered into the routing table from EIGRP calculation of metrics?",
+   "choices": [
+    "The successor route",
+    "The feasible distance route",
+    "The reported distance route",
+    "The feasible successor route"
+   ],
+   "answer": 0,
+   "explanation": "After DUAL calculates the metrics of the topology table, a successor route is calculated using the feasible distance. This route is populated into the routing table. A feasible successor route is also calculated based upon the reported distance and feasible distance.",
+   "source": "CCNA 100-105 · Ch. 3, Q250",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which table does EIGRP use to calculate the feasible distance of a remote route?",
+   "choices": [
+    "The neighbor table",
+    "The adjacency table",
+    "The routing table",
+    "The topology table"
+   ],
+   "answer": 3,
+   "explanation": "The topology table is used to calculate the feasible distance of a remote network. The DUAL routing algorithm interacts with the topology table to calculate this metric.",
+   "source": "CCNA 100-105 · Ch. 3, Q251",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which command will create a routing process for EIGRP using an autonomous system number (ASN) of 20?",
+   "choices": [
+    "Router(config)#eigrp 20",
+    "Router(config)#router eigrp 20",
+    "Router(config)#router eigrp asn 20",
+    "Router(config)#ip eigpr 20"
+   ],
+   "answer": 1,
+   "explanation": "The command to configure EIGRP with an ASN of 20 is router eigrp 20 .",
+   "source": "CCNA 100-105 · Ch. 3, Q253",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the default variance of EIGRP?",
+   "choices": [
+    "2",
+    "1",
+    "128",
+    "0"
+   ],
+   "answer": 1,
+   "explanation": "The default variance is a value of 1 by default. This is because the variance is a multiplier that is applied to the feasible distance. All EIGRP routers multiply the feasible distance by 1 by default.",
+   "source": "CCNA 100-105 · Ch. 3, Q254",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which command will change the router ID of an EIGRP router?",
+   "choices": [
+    "Router(config-router)#router-id 2.2.2.2",
+    "Router(config)#eigrp router-id 2.2.2.2",
+    "Router(config-router)#eigrp router-id 2.2.2.2",
+    "Router(config)#ip eigrp router-id 2.2.2.2"
+   ],
+   "answer": 2,
+   "explanation": "The command eigrp router-id 2.2.2.2 configured in the sub- command of the router process will change the router ID to 2.2.2.2.",
+   "source": "CCNA 100-105 · Ch. 3, Q255",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which command should be used when configuring networks with discontiguous IP addresses for EIGRP?",
+   "choices": [
+    "Router(config-router)#network discontiguous",
+    "Router(config)#network discontiguous",
+    "Router(config-router)#no auto-summary",
+    "Router(config)#no auto-summary"
+   ],
+   "answer": 2,
+   "explanation": "The command no auto-summary will stop the router process of EIGRP from auto-summarizing network addresses. In a discontiguous network, this is problematic and should be turned off.",
+   "source": "CCNA 100-105 · Ch. 3, Q256",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which command will advertise the network 192.168.1.0/24 for an EIGRP ASN of 20?",
+   "choices": [
+    "Router(config-router)#network 192.168.1.0 0.0.0.255 20",
+    "Router(config-router)#network 192.168.1.0/24",
+    "Router(config-router)#network 192.168.1.0 0.0.0.255",
+    "Router(config-router)#network 192.168.1.0 255.255.255.0"
+   ],
+   "answer": 2,
+   "explanation": "The command network 192.168.1.0 0.0.0.255 will advertise the network of 192.168.1.0/24 for EIGRP with an ASN of 20. The .0.0.255 is a wildcard mask and matches bits in the last octet of the IP address.",
+   "source": "CCNA 100-105 · Ch. 3, Q257",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "You need to verify the adjacent routers participating in EIGRP. Which command will allow you to see the adjacent routers?",
+   "choices": [
+    "Router#show ip eigrp adajcent",
+    "Router#show ip eigrp",
+    "Router#show ip eigrp database",
+    "Router#show ip eigrp neighbors"
+   ],
+   "answer": 3,
+   "explanation": "The command show ip eigrp neighbors will allow you to inspect the routers that have created an adjacency with the current router you are working on.",
+   "source": "CCNA 100-105 · Ch. 3, Q259",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which command will allow you to inspect the K metrics for EIGRP?",
+   "choices": [
+    "Router#show ip eigrp detail",
+    "Router#show ip eigrp neighbors",
+    "Router#show ip protocols",
+    "Router#show ip eigrp interfaces"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip protocols will allow you to see specifics about the configured routing protocols. In the details of the output will be the K metrics for EIGRP.",
+   "source": "CCNA 100-105 · Ch. 3, Q260",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "You need to suppress EIGRP hello advertisements on the interface connecting you to your ISP. Which command will suppress EIGRP hello packets?",
+   "choices": [
+    "Router(config-if)#ip eigrp 20 suppress-hello",
+    "Router(config-if)#eigrp 20 passive-interface",
+    "Router(config-router)#passive-interface serial 0/0",
+    "Router(config-if)#eigrp passive-interface"
+   ],
+   "answer": 2,
+   "explanation": "The command passive-interface serial 0/0 configured inside the router process for EIGRP will set the Serial 0/0 as a passive interface. This will suppress EIGRP hello packets exiting the interface.",
+   "source": "CCNA 100-105 · Ch. 3, Q261",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "You want to confirm a Feasible-Successor route for EIGRP. Which command will allow you to verify this?",
+   "choices": [
+    "Router#show running-configuration",
+    "Router#show ip eigrp route",
+    "Router#show ip eigrp topology",
+    "Router#show ip route eigrp"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip eigrp topology will allow you to see the calculated metrics for routes inside of the EIGRP topology table. For each network, the number of successors will be displayed. This information will help verify a feasible successor for a particular network.",
+   "source": "CCNA 100-105 · Ch. 3, Q262",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "You have two paths you want to load-balance that have slightly different delays. Which command will allow you to tune the unequal paths so they will load-balance with EIGRP?",
+   "choices": [
+    "Router(config-router)#variance 2",
+    "Router(config-if)#variance 2",
+    "Router(config-if)#variance 2 asn 20",
+    "Router(config-if)#variance 20 2"
+   ],
+   "answer": 0,
+   "explanation": "The variance command is configured in the router instance of EIGRP. The command variance 2 configures the router variance with a multiplier of 2.",
+   "source": "CCNA 100-105 · Ch. 3, Q263",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "When is the command no passive-interface serial 0/0 used with EIGRP?",
+   "choices": [
+    "When you want to allow hello packets exiting on interface serial 0/0",
+    "When you want to suppress hello packets from entering interface serial 0/0",
+    "When you want to allow hello packets to enter interface serial 0/0",
+    "When you want to suppress hello packets exiting on interface serial 0/0"
+   ],
+   "answer": 0,
+   "explanation": "The command no passive-interface serial 0/0 is used when either passive-interface serial 0/0 or passive-interface default has been used in the router instance.",
+   "source": "CCNA 100-105 · Ch. 3, Q264",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which mechanism in EIGRP allows for EIGRP to support multiple protocols?",
+   "choices": [
+    "Auto-summarization",
+    "Protocol-dependent module",
+    "Diffusing Update Algorithm",
+    "Reliable Transport Protocol"
+   ],
+   "answer": 1,
+   "explanation": "The protocol-dependent module (PDM) allows for multiple protocols to be supported with EIGRP. This allows for the same algorithm and methodology to be applied and for PDM-compliant modules such as IPv6, IP, and IPX to be used.",
+   "source": "CCNA 100-105 · Ch. 3, Q268",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Two routers, Router A and Router B, will not form an adjacency with EIGRP. You discover that someone configured a custom K metric. Which command will configure the router’s K metrics back to their default setting?",
+   "choices": [
+    "Router(config-router)#no metric weights",
+    "Router(config-router)#metric weights 1 1 1 1 1",
+    "Router(config-router)#metric 0 0 0 0 0",
+    "Router(config-router)#no k-metric"
+   ],
+   "answer": 0,
+   "explanation": "The command to configure the K metrics back to their default setting is no metric weights . This command should be entered in the router instance. The default metrics are K1=1, K2=0, K3=1, K4=0, K5=0.",
+   "source": "CCNA 100-105 · Ch. 3, Q269",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "Which command will allow you to verify the routes advertised by EIGRP?",
+   "choices": [
+    "Router#show ip protocols",
+    "Router#show ip eigrp database",
+    "Router#show ip eigrp neighbors",
+    "Router#show ip eigrp topology"
+   ],
+   "answer": 0,
+   "explanation": "The command show ip protocols will display the networks that are being advertised on the current router.",
+   "source": "CCNA 100-105 · Ch. 3, Q270",
+   "topic": "3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the IPv6 address for EIGRPv6 neighbor discovery?",
+   "choices": [
+    "ff03::c",
+    "ff02::a",
+    "ff02::6",
+    "ff03::5"
+   ],
+   "answer": 1,
+   "explanation": "The multicast address for neighbor discovery for EIGRPv6 is ff02::a.",
+   "source": "CCNA 100-105 · Ch. 3, Q271",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "Which command must be entered before EIGRPv6 can be configured?",
+   "choices": [
+    "Router(config)#enable ipv6 unicast-routing",
+    "Router(config)#enable ipv6 routing",
+    "Router(config)#enable ipv6",
+    "Router(config)#ipv6 unicast-routing"
+   ],
+   "answer": 3,
+   "explanation": "The ipv6 unicast-routing command must be entered first to enable the IPv6 protocol stack for routing.",
+   "source": "CCNA 100-105 · Ch. 3, Q272",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "Which command must be entered to start the EIGRPv6 router instance?",
+   "choices": [
+    "Router(config-rtr)#start eigrp",
+    "Router(config-rtr)#no shutdown",
+    "Router(config)#ipv6 eigrp 10",
+    "Router(config-rtr)#run"
+   ],
+   "answer": 1,
+   "explanation": "The command no shutdown must be entered in the router instance to start EIGRPv6. By default, it is shut down.",
+   "source": "CCNA 100-105 · Ch. 3, Q273",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "You have configured EIGRPv6 with an ASN of 10. Which command will add networks to be advertised?",
+   "choices": [
+    "Router(config-if)#ipv6 eigrp asn 10",
+    "Router(config-rtr)#interface serial 0/0",
+    "Router(config-rtr)#network 2001:db8:2:3::1/64",
+    "Router(config-if)#ipv6 eigrp 10"
+   ],
+   "answer": 3,
+   "explanation": "When configuring EIGRPv6 to avoid erroneous duplication of IPv6 addresses, the interface is added to the EIGRPv6 routing process. This advertises all networks that are configured on the interface.",
+   "source": "CCNA 100-105 · Ch. 3, Q274",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "When configuring a router with EIGRPv6 and only IPv6 is configured on the router, which command is necessary for EIGRPv6 operations?",
+   "choices": [
+    "Router(config)#router-id 1.1.1.1",
+    "Router(config-if)#eigrp router-id 1.1.1.1",
+    "Router(config-rtr)#router-id 1.1.1.1",
+    "Router(config-rtr)#router id 1.1.1.1"
+   ],
+   "answer": 2,
+   "explanation": "The command router-id 1.1.1.1 is required for EIGRPv6 operations. This command must be configured in the EIGRPv6 routing instance. The IPv4 address is the router’s ID, since EIGRPv6 requires an IPv4 router ID.",
+   "source": "CCNA 100-105 · Ch. 3, Q275",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "You have configured EIGRPv6 on a router that also faces your Internet service provider. Which command should you use to restrict hello packets from being directed to the ISP?",
+   "choices": [
+    "Router(config-if)#ipv6 eigrp 10 passive-interface",
+    "Router(config-rtr)#ipv6 passive-interface serial 0/0",
+    "Router(config-if)#ipv6 eigrp passive-interface",
+    "Router(config-rtr)#passive-interface serial 0/0"
+   ],
+   "answer": 3,
+   "explanation": "The command to restrict hello packets from exiting the serial 0/0 interface is passive-interface serial 0/0 entered in the EIGRPv6 router instance.",
+   "source": "CCNA 100-105 · Ch. 3, Q276",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "You want to verify the K metrics that EIGRPv6 is using. Which command will display the K metrics?",
+   "choices": [
+    "Router#show ipv6 protocols",
+    "Router#show ipv6 eigrp interfaces",
+    "Router#show ip protocols",
+    "Router#show running-configuration"
+   ],
+   "answer": 0,
+   "explanation": "The command show ipv6 protocols will display the routing protocols running with IPv6. In the output of the EIGRPv6 instance, the K metrics will be displayed. Although show running-configuration will display the configured K-metrics, it will not show the default configuration.",
+   "source": "CCNA 100-105 · Ch. 3, Q277",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "Which command will help you verify that a router has created an adjacency with EIGRPv6?",
+   "choices": [
+    "Router#show ipv6 eigrp neighbors",
+    "Router#show ipv6 eigrp adjacency",
+    "Router#show ipv6 eigrp",
+    "Router#show ipv6 eigrp database"
+   ],
+   "answer": 0,
+   "explanation": "The command show ipv6 eigrp neighbors will display the adjacencies the router has made with other EIGRPv6 routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q278",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "Which command will show only the EIGRPv6 routes?",
+   "choices": [
+    "Router#show ipv6 route eigrp",
+    "Router#show ipv6 eigrp",
+    "Router#show ipv6 route",
+    "Router#show ipv6 eigrp route"
+   ],
+   "answer": 0,
+   "explanation": "The command show ipv6 route eigrp will display only the EIGRPv6 routes.",
+   "source": "CCNA 100-105 · Ch. 3, Q279",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "You need to verify the interfaces that are participating in EIGRPv6. Which command will show this?",
+   "choices": [
+    "Router#show ipv6 eigrp neighbors",
+    "Router#show ipv6 protocols",
+    "Router#show ipv6 interface",
+    "Router#show ipv6 eigrp topology"
+   ],
+   "answer": 1,
+   "explanation": "The command show ipv6 protocols will display the routing protocols for IPv6. Included in this output are the interfaces participating in EIGRPv6.",
+   "source": "CCNA 100-105 · Ch. 3, Q280",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "Which command will change the hello timer for EIGRPv6 ASN from 10 to 5 seconds?",
+   "choices": [
+    "Router(config)#ipv6 hello- interval eigrp 10 5",
+    "Router(config)#ip hello-timer eigrp 10 5",
+    "Router(config-if)#ipv6 hello-interval eigrp 10 5",
+    "Router(config-rtr)#ipv6 hello-interval eigrp 5"
+   ],
+   "answer": 2,
+   "explanation": "The command ipv6 hello-interval eigrp 10 5 will change the hello timer. It must be entered in the interface on which you want to change the hello interval.",
+   "source": "CCNA 100-105 · Ch. 3, Q281",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "Which statement is true for EIGRP but not for EIGRPv6?",
+   "choices": [
+    "Router IDs must match.",
+    "K metrics must match for an adjacency to form.",
+    "Hello and holddown timers must match for an adjacency to form.",
+    "Interfaces must be on the same subnet for an adjacency to form."
+   ],
+   "answer": 3,
+   "explanation": "Interfaces for EIGRP must be on the same subnet for an adjacency to form. However, that is not a requirement for EIGRPv6.",
+   "source": "CCNA 100-105 · Ch. 3, Q282",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "You need to calculate a variance for EIGRPv6. Which table will allow you to calculate the variance for unequal-cost load balancing?",
+   "choices": [
+    "Router#show ipv6 eigrp adjacency",
+    "Router#show ipv6 eigrp interfaces",
+    "Router#show ipv6 eigrp neighbors",
+    "Router#show ipv6 eigrp topology"
+   ],
+   "answer": 3,
+   "explanation": "The command show ipv6 eigrp topology will allow you to verify the metrics. From this, you can calculate the variance multiplier for unequal-cost load balancing.",
+   "source": "CCNA 100-105 · Ch. 3, Q283",
+   "topic": "3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding authentication, filtering, manual summarization, redistribution, stub)",
+   "topic_n": 29
+  },
+  {
+   "question": "What is the maximum hop count for RIP?",
+   "choices": [
+    "100 hops",
+    "255 hops",
+    "16 hops",
+    "15 hops"
+   ],
+   "answer": 3,
+   "explanation": "The maximum hop count for RIP is 15. A hop count over 15 hops is considered unroutable or unreachable.",
+   "source": "CCNA 100-105 · Ch. 3, Q286",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which statement is true about RIPv2 advertisements?",
+   "choices": [
+    "RIPv2 allows for neighborship through hello packets.",
+    "RIPv2 multicasts the full routing table every 60 seconds.",
+    "RIPv2 multicasts the full routing table every 30 seconds.",
+    "RIPv2 broadcasts only updates on all active interfaces."
+   ],
+   "answer": 2,
+   "explanation": "By default, RIPv2 multicasts the full routing table on all active interfaces every 30 seconds.",
+   "source": "CCNA 100-105 · Ch. 3, Q287",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which metric does RIPv2 use to calculate routes?",
+   "choices": [
+    "Delay",
+    "Bandwidth and delay",
+    "Bandwidth",
+    "Hop count"
+   ],
+   "answer": 3,
+   "explanation": "RIPv2 uses hop count to calculate routes. When a router sends its routing table, the next router adds a +1 to the metric for the entries in the table.",
+   "source": "CCNA 100-105 · Ch. 3, Q288",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which multicast address does RIPv2 use for advertising routes?",
+   "choices": [
+    "224.0.0.9",
+    "224.0.0.5",
+    "224.0.0.6",
+    "224.0.0.2"
+   ],
+   "answer": 0,
+   "explanation": "RIPv2 uses the multicast address of 224.0.0.9 to advertise routes.",
+   "source": "CCNA 100-105 · Ch. 3, Q289",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "When RIP is configured on a router, what must be configured to allow for classless routing?",
+   "choices": [
+    "Router(config)#ip classless",
+    "Router(config-router)#version 2",
+    "Router(config)#router rip v2",
+    "Router(config-router)#ip classless"
+   ],
+   "answer": 1,
+   "explanation": "When you’re configuring RIP on a router, the RIP process will default to RIPv1, which is classful. The command version 2 must be configured in the router instance of RIP to allow for RIPv2.",
+   "source": "CCNA 100-105 · Ch. 3, Q290",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "You need to configure the advertisement of the network 192.168.1.0/24 for RIPv2. Which command will achieve this?",
+   "choices": [
+    "Router(config-router)#network 192.168.1.0 0.0.0.255",
+    "Router(config-router)#network 192.168.1.0/24",
+    "Router(config-router)#network 192.168.1.0",
+    "Router(config-router)#network 192.168.1.0 255.255.255.0"
+   ],
+   "answer": 2,
+   "explanation": "The command network 192.168.1.0 will configure the RIPv2 route process to advertise the network 192.168.1.0.",
+   "source": "CCNA 100-105 · Ch. 3, Q291",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which command will allow you to see the next advertisement interval for RIPv2?",
+   "choices": [
+    "Router#show ip rip",
+    "Router#show ip rip database",
+    "Router#show ip protocols",
+    "Router#show ip interface"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip protocols will display the next interval when RIPv2 advertisements are sent out.",
+   "source": "CCNA 100-105 · Ch. 3, Q292",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which command will allow you to inspect RIPv2 calculations for routes discovered?",
+   "choices": [
+    "Router#show ip protocols rip",
+    "Router#show ip rip topology",
+    "Router#show ip interface",
+    "Router#show ip rip database"
+   ],
+   "answer": 3,
+   "explanation": "The command show ip rip database will display all of the discovered routes and their calculated metrics.",
+   "source": "CCNA 100-105 · Ch. 3, Q293",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "You have RIPv2 configured on an Internet-facing router. Which command will propagate the default route to all other RIPv2 routers?",
+   "choices": [
+    "Router(config-router)#network 0.0.0.0",
+    "Router(config-router)#default-route advertise",
+    "Router(config-router)#default-information originate",
+    "Router(config-router)#network 0.0.0.0 default"
+   ],
+   "answer": 2,
+   "explanation": "The command default-information originate will advertise the default route to all other RIPv2 routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q294",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which command will allow you to inspect RIPv2 advertisements?",
+   "choices": [
+    "Router#debug ip rip",
+    "Router#debug rip",
+    "Router#show ip rip",
+    "Router#show ip protocols"
+   ],
+   "answer": 0,
+   "explanation": "The command debug ip rip will allow you to see advertisements in real time.",
+   "source": "CCNA 100-105 · Ch. 3, Q295",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "You need to advertise the routes of 192.168.1.0/24, 192.168.2.0/24, and 192.168.3.0/24. Which configuration will achieve this?",
+   "choices": [
+    "Router(config-router)#network 192.168.0.0/16",
+    "Router(config-router)#network 192.168.0.0",
+    "Router(config-router)#network 192.168.1.0 Router(config-router)#network 192.168.2.0 Router(config-router)#network 192.168.3.0",
+    "Router(config-router)#network 192.168.0.0 0.0.255.255"
+   ],
+   "answer": 2,
+   "explanation": "The three Class C networks need to be advertised separately. RIPv2 uses the default class network mask when configuring networks.",
+   "source": "CCNA 100-105 · Ch. 3, Q296",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "You have RIPv2 configured on an Internet-facing router. Which command will suppress RIPv2 advertisements on the interface link?",
+   "choices": [
+    "Router(config-router)#passive-interface serial 0/0",
+    "Router(config-if)#rip passive-interface",
+    "Router(config-if)#ip rip passive-interface",
+    "Router(config-if)#ip rip suppress-advertisement"
+   ],
+   "answer": 0,
+   "explanation": "The command passive-interface serial 0/0 configured in the router instance will suppress updates from exiting interface Serial 0/0.",
+   "source": "CCNA 100-105 · Ch. 3, Q297",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "What is the default invalid timer for RIPv2?",
+   "choices": [
+    "180 seconds",
+    "240 seconds",
+    "60 seconds",
+    "90 seconds"
+   ],
+   "answer": 0,
+   "explanation": "The default invalid timer for RIP is 180 seconds. This holddown timer is six times the advertisement interval of 30 seconds.",
+   "source": "CCNA 100-105 · Ch. 3, Q298",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which is a problem with using RIPv2 in a network?",
+   "choices": [
+    "Slow convergence",
+    "Complex configuration",
+    "Routing support for classless networks",
+    "The use of broadcasts"
+   ],
+   "answer": 0,
+   "explanation": "RIPv2 has extremely slow convergence time. This is because the advertisement of routes is every 30 seconds. So a router four hops away potentially could take 120 seconds before discovering the route.",
+   "source": "CCNA 100-105 · Ch. 3, Q299",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which technique is used to stop routing loops with RIPv2?",
+   "choices": [
+    "Split horizons",
+    "Invalid timers",
+    "Zoning",
+    "Advertisement intervals"
+   ],
+   "answer": 0,
+   "explanation": "Split horizons are used to stop routing loops with RIPv2. Split horizons prevent a router from advertising a route to a router in which the original route was discovered.",
+   "source": "CCNA 100-105 · Ch. 3, Q300",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which algorithm does RIPv2 use to calculate routes?",
+   "choices": [
+    "Shortest Path First",
+    "DUAL",
+    "Dijkstra",
+    "Bellman-Ford"
+   ],
+   "answer": 3,
+   "explanation": "RIPv2 uses the Bellman-Ford algorithm to calculate its metrics.",
+   "source": "CCNA 100-105 · Ch. 3, Q301",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which command will need to be configured for support of discontinuous networks?",
+   "choices": [
+    "Router(config)#network discontiguous",
+    "Router(config)#no auto-summary",
+    "Router(config-router)#no auto-summary",
+    "Router(config-router)#network discontiguous"
+   ],
+   "answer": 2,
+   "explanation": "The command no auto-summary will stop the router process of RIPv2 from auto-summarizing network addresses. In a discontiguous network, this is problematic and should be turned off.",
+   "source": "CCNA 100-105 · Ch. 3, Q302",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which command configures RIPv2 on a router and advertises a network of 192.168.20.0/24?",
+   "choices": [
+    "Router(config)#ip router rip Router(config-router)#version 2 Router(config-router)#network 192.168.20.0 0.0.0.255",
+    "Router(config)#ip router ripv2 Router(config-router)#network 192.168.20.0",
+    "Router(config)#router rip Router(config-router)#version 2 Router(config-router)#network 192.168.20.0",
+    "Router(config)#router rip Router(config-router)#version 2 Router(config-router)#network 192.168.20.0 0.0.0.255"
+   ],
+   "answer": 2,
+   "explanation": "Configuring RIPv2 begins with configuration of the router instance of RIP via the command router rip . RIPv2 is configured inside of the router instance with the command version 2 . Then the network of 192.168.20.0/24 is advertised with the command network 192.168.20.0 .",
+   "source": "CCNA 100-105 · Ch. 3, Q303",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "What is the purpose of the RIPv2 holddown timer?",
+   "choices": [
+    "Holddown timers allow for time between when a route becomes invalid and it is flushed from the routing table.",
+    "Holddown timers allow for time between when a route has become unreachable and when it can be updated again.",
+    "Holddown timers define the time when a route becomes invalid.",
+    "Holddown timers define the time when a valid route is present in the routing table."
+   ],
+   "answer": 1,
+   "explanation": "The holddown timer’s job is to allow the network to stabilize after a route had become unreachable via an update. This limits the potential problems related to a flapping port and allows RIPv2 to converge route updates in the entire network.",
+   "source": "CCNA 100-105 · Ch. 3, Q304",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "What is the default number of equal-cost routes RIPv2 will load balance?",
+   "choices": [
+    "4 routes",
+    "2 routes",
+    "8 routes",
+    "16 routes"
+   ],
+   "answer": 0,
+   "explanation": "The default number of routes that RIPv2 will load balance is a total of 4.",
+   "source": "CCNA 100-105 · Ch. 3, Q306",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which protocol will support IPv6 for RIP?",
+   "choices": [
+    "RIPng",
+    "RIPv1",
+    "RIPv2",
+    "RIPv6"
+   ],
+   "answer": 0,
+   "explanation": "RIPng is the next generation of the RIP protocol for use with IPv6.",
+   "source": "CCNA 100-105 · Ch. 3, Q307",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which command will display which routes the RIPv2 router is advertising?",
+   "choices": [
+    "Router#show ip rip",
+    "Router#show ip route",
+    "Router#show ip interface",
+    "Router#show ip rip database"
+   ],
+   "answer": 3,
+   "explanation": "The command show ip rip database will display the routes being advertised by RIPv2. These routes will be identified with the directly connected statement.",
+   "source": "CCNA 100-105 · Ch. 3, Q308",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "How would you configure a router to use split horizons for RIPv2?",
+   "choices": [
+    "Router(config-if)#ip split-horizon",
+    "Router(config)#ip rip split-horizon",
+    "Router(config-router)#ip split-horizon",
+    "Router(config-router)#rip split-horizon"
+   ],
+   "answer": 0,
+   "explanation": "The command ip spilt-horizon configured on the interface will configure split-horizon processing for RIPv2.",
+   "source": "CCNA 100-105 · Ch. 3, Q309",
+   "topic": "3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding authentication, filtering, manual summarization, redistribution)",
+   "topic_n": 30
+  },
+  {
+   "question": "Which command will allow you to check basic connectivity at layer 3?",
+   "choices": [
+    "Router#ip ping 192.168.4.1",
+    "Router#show ip route",
+    "Router#pathping 192.168.4.1",
+    "Router#ping 192.168.4.1"
+   ],
+   "answer": 3,
+   "explanation": "The ping command will allow basic connectivity testing at layer 3.",
+   "source": "CCNA 100-105 · Ch. 3, Q311",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "Which command will allow you to see the path on which a packet gets routed to its destination?",
+   "choices": [
+    "Router#traceroute 192.168.7.56",
+    "Router#pathping 192.168.7.56",
+    "Router#show ip route",
+    "Router#tracert 192.168.7.56"
+   ],
+   "answer": 0,
+   "explanation": "The command traceroute will allow you to verify the path on which a packet gets routed.",
+   "source": "CCNA 100-105 · Ch. 3, Q312",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "You perform a ping to a host on the network. However, the first packet is dropped. Why did the first packet drop?",
+   "choices": [
+    "The routing table was updating.",
+    "The remote router dropped the first packet.",
+    "The ARP request timed out the ping packet.",
+    "The local router dropped the first packet."
+   ],
+   "answer": 2,
+   "explanation": "The ARP request took time for the ARP reply, and during this time, the ICMP timeout threshold was exceeded. This is common on a router, and the following pings should not time out unless the ARP entry is cleared after its TTL expires.",
+   "source": "CCNA 100-105 · Ch. 3, Q313",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "Which command on Windows will allow you to verify your IP address, subnet mask, default gateway, and MAC address?",
+   "choices": [
+    "C:\\>ipconfig /all",
+    "C:\\>ipstatus",
+    "C:\\>ipconfig",
+    "C:\\>hostname"
+   ],
+   "answer": 0,
+   "explanation": "The command ipconfig /all will help you verify the IP address, subnet mask, default gateway, and MAC address of your computer. The command of ipconfig doesn’t show the MAC address.",
+   "source": "CCNA 100-105 · Ch. 3, Q314",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "Which command on Windows will allow you to verify the path a packet gets routed through on the network?",
+   "choices": [
+    "C:\\>traceroute 198.78.34.2",
+    "C:\\>tracert 198.78.34.2",
+    "C:\\>route print",
+    "C:\\>ping 198.78.34.2"
+   ],
+   "answer": 1,
+   "explanation": "The Windows command for tracing a route is tracert .",
+   "source": "CCNA 100-105 · Ch. 3, Q315",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "You ping from a router to another router and receive back !!!!! . What does this mean?",
+   "choices": [
+    "All packets are successfully acknowledged.",
+    "There is congestion in the path.",
+    "The packets were received, but after the ICMP timeout.",
+    "All packets have been dropped."
+   ],
+   "answer": 0,
+   "explanation": "When you see an exclamation mark, it means that the packets were successfully acknowledged on the other side and an ICMP response was received.",
+   "source": "CCNA 100-105 · Ch. 3, Q316",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "You want to ping a router on your network from interface Serial 0/0 and not the path in the routing table. How can you achieve this?",
+   "choices": [
+    "Configure a temporary route for the router exiting the interface.",
+    "This cannot be done; packets cannot disregard the routing table.",
+    "Enter the interface in configuration mode, and ping the remote router.",
+    "Enter extended ping, and specify the exit interface."
+   ],
+   "answer": 3,
+   "explanation": "The extended ping command allows you to specify a number of parameters such as repeat count, datagram size, and source address or exit interface. There are several other parameters that can be adjusted.",
+   "source": "CCNA 100-105 · Ch. 3, Q317",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "You perform a traceroute to a destination network and receive back several lines of output. On the end of each line are three parameters such as 1 192.168.1.1 20 msec 34 msec 67 msec . What do they mean?",
+   "choices": [
+    "They are the minimum, average, and maximum of the ICMP query.",
+    "They are the maximum, average, and minimum of the ICMP query.",
+    "They are the three response times of each ICMP request.",
+    "They are the minimum, maximum, and average of the ICMP query."
+   ],
+   "answer": 0,
+   "explanation": "The three times are the minimum response time, average response time, and maximum response time of the ICMP Echo and Reply.",
+   "source": "CCNA 100-105 · Ch. 3, Q318",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "You need to make a Telnet connection to a remote router from a router you are configuring. Which command will allow you to do this?",
+   "choices": [
+    "Router#198.56.33.3",
+    "Router#connect 198.56.33.3",
+    "Router#remote 198.56.33.3",
+    "Router#vty 198.56.33.3"
+   ],
+   "answer": 0,
+   "explanation": "The IP address or hostname entered in privileged exec mode will create a direct Telnet request. Alternatively, you can specify the command telnet 198.56.33.3 .",
+   "source": "CCNA 100-105 · Ch. 3, Q319",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "An administrator calls you and states that they believe an interface is down on a router you maintain. Which command will show only the interface, the IP address configured, and the status of the interface?",
+   "choices": [
+    "Router#show ip interface",
+    "Router#show ip interface brief",
+    "Router#show interface brief",
+    "Router#show interface"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip interface brief will display only the necessary information of interface, IP, and status to aid in the diagnostic process.",
+   "source": "CCNA 100-105 · Ch. 3, Q320",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "You need to ping an IPv6 address of 2001:db8:3:4::2. Which command will achieve this?",
+   "choices": [
+    "Router#pingv6 2001:db8:3:4::2",
+    "Router#ipv6 ping 2001:db8:3:4::2",
+    "Router#ping 2001:db8:3:4::2",
+    "Router#ping6 2001:db8:3:4::2"
+   ],
+   "answer": 2,
+   "explanation": "The normal ping command will achieve this task. Originally in Windows XP, the command ping6 was used in lieu of the command ping . The command ping6 is also found in Linux. However, today, most operating systems have extended the ping command to both IPv4 and IPv6.",
+   "source": "CCNA 100-105 · Ch. 3, Q321",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  },
+  {
+   "question": "Which IPv6 command will verify that you have received a Router Advertisement message from a local router?",
+   "choices": [
+    "Router#show ipv6 neighbors",
+    "Router#show neighbors",
+    "Router#show ipv6 ra",
+    "Router#show ipv6 cache"
+   ],
+   "answer": 0,
+   "explanation": "The command show ipv6 neighbors will display all of the neighboring routers that have sent a Router Advertisement message. This cache will normally contain the link-local addresses of the neighboring routers.",
+   "source": "CCNA 100-105 · Ch. 3, Q322",
+   "topic": "3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues",
+   "topic_n": 31
+  }
+ ]
+}

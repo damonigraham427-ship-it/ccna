@@ -1,0 +1,81 @@
+{
+ "exams": [
+  {
+   "file": "ccna-network-fundamentals.json",
+   "title": "CCNA — Network Fundamentals",
+   "note": "205 questions",
+   "category": "CCNA",
+   "chapter": "Network Fundamentals",
+   "draw": 20,
+   "pie": true
+  },
+  {
+   "file": "ccna-lan-switching.json",
+   "title": "CCNA — LAN Switching Technologies",
+   "note": "236 questions",
+   "category": "CCNA",
+   "chapter": "LAN Switching Technologies",
+   "draw": 20,
+   "pie": true
+  },
+  {
+   "file": "ccna-routing.json",
+   "title": "CCNA — Routing Technologies",
+   "note": "279 questions",
+   "category": "CCNA",
+   "chapter": "Routing Technologies",
+   "draw": 20,
+   "pie": true
+  },
+  {
+   "file": "ccna-wan.json",
+   "title": "CCNA — WAN Technologies",
+   "note": "121 questions",
+   "category": "CCNA",
+   "chapter": "WAN Technologies",
+   "draw": 20,
+   "pie": true
+  },
+  {
+   "file": "ccna-infrastructure-services.json",
+   "title": "CCNA — Infrastructure Services",
+   "note": "125 questions",
+   "category": "CCNA",
+   "chapter": "Infrastructure Services",
+   "draw": 20,
+   "pie": true
+  },
+  {
+   "file": "ccna-infrastructure-security.json",
+   "title": "CCNA — Infrastructure Security",
+   "note": "138 questions",
+   "category": "CCNA",
+   "chapter": "Infrastructure Security",
+   "draw": 20,
+   "pie": true
+  },
+  {
+   "file": "ccna-infrastructure-management.json",
+   "title": "CCNA — Infrastructure Management",
+   "note": "135 questions",
+   "category": "CCNA",
+   "chapter": "Infrastructure Management",
+   "draw": 20,
+   "pie": true
+  },
+  {
+   "file": "ccna-practice-test-1.json",
+   "title": "CCNA — Practice Test 1",
+   "note": "42 questions · full test",
+   "category": "CCNA",
+   "chapter": "Practice Tests"
+  },
+  {
+   "file": "ccna-practice-test-2.json",
+   "title": "CCNA — Practice Test 2",
+   "note": "45 questions · full test",
+   "category": "CCNA",
+   "chapter": "Practice Tests"
+  }
+ ]
+}

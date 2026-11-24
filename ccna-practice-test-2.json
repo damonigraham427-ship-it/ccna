@@ -1,0 +1,634 @@
+{
+ "questions": [
+  {
+   "question": "On which OSI layer does the Address Resolution Protocol (ARP) function?",
+   "choices": [
+    "Session layer",
+    "Data Link layer",
+    "Application layer",
+    "Network layer"
+   ],
+   "answer": 1,
+   "explanation": "The Address Resolution Protocol (ARP) functions on layer 2, the Data Link layer. It helps the Data Link layer resolve the destination MAC address for framing of data.",
+   "source": "CCNA 100-105 · Practice Test 2, Q1",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which flags are used during the three-way-handshake process for TCP?",
+   "choices": [
+    "SYN and RDY",
+    "FIN and ACK",
+    "SYN and ACK",
+    "SYN and FIN"
+   ],
+   "answer": 2,
+   "explanation": "During the three-way-handshake, Computer A sends a SYN flag along with its receiving window size and initial sequence number. Then Computer B sends a SYN flag and ACK flag along with its receiving window and acknowledgment of the sequence number. Finally, Computer A sends an ACK flag, which acknowledges the synchronization of Computer B’s receiving window. Communication begins and is considered to be in an established state.",
+   "source": "CCNA 100-105 · Practice Test 2, Q2",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You are running several web servers in a cloud with a server load balancer. As demand increases, you add web servers. According to the NIST standard of cloud computing, which feature can you use to increase your compute capability for demand?",
+   "choices": [
+    "Resource pooling",
+    "Measured services",
+    "Broad network access",
+    "Rapid elasticity"
+   ],
+   "answer": 3,
+   "explanation": "Rapid elasticity is the ability to add and remove compute capability in the cloud. As demand is needed, compute power can be increased by adding more CPUs or servers. As demand for compute power decreases, CPUs or servers can be removed.",
+   "source": "CCNA 100-105 · Practice Test 2, Q3",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "In Cisco’s three-tier architecture, the links between the distribution layer indicate what kind of topology?",
+   "choices": [
+    "Full mesh topology",
+    "Star topology",
+    "Ring topology",
+    "Partial mesh topology"
+   ],
+   "answer": 3,
+   "explanation": "The distribution layer is a partial mesh topology. Links between the distribution switches and core switches are multi-homed to each device for redundancy. Also, the links between the distribution switches and access switches are multi-homed to each device for redundancy. Although, this might seems to be a full mesh topology, the distribution switches are not connected to each other.",
+   "source": "CCNA 100-105 · Practice Test 2, Q4",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which type of cabling is used for high-speed long-distance transmission of data?",
+   "choices": [
+    "Twinax",
+    "T1 serial lines",
+    "Multi-mode fiber",
+    "Single-mode fiber"
+   ],
+   "answer": 3,
+   "explanation": "Single-mode fiber is typically used in high-speed long-distance transmission of data. It can span up to 70 kilometers (km) with the proper transceivers. The speeds of single-mode fiber can be up the 100 Gb/s with the proper transceivers.",
+   "source": "CCNA 100-105 · Practice Test 2, Q5",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What is the last step in the diagnosis and resolution of a problem?",
+   "choices": [
+    "Escalating the problem",
+    "Analyzing the problem",
+    "Documenting the problem",
+    "Isolating the problem"
+   ],
+   "answer": 2,
+   "explanation": "Documenting the problem is the last step in resolving a problem. After you monitor the problem for the implementation of the fix, the documentation should describe the problem, the root cause of the problem, and the resolution. The documentation can then be used for future problems that match the same criteria.",
+   "source": "CCNA 100-105 · Practice Test 2, Q6",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which classification of IP address does 225.34.5.4 belong to?",
+   "choices": [
+    "Class D",
+    "Class C",
+    "Class B",
+    "Class A"
+   ],
+   "answer": 0,
+   "explanation": "The IP address 225.34.5.4 is a multicast IP address. Multicast IP addresses are defined as Class D addresses in the range 224.0.0.1 to 239.255.255.254.",
+   "source": "CCNA 100-105 · Practice Test 2, Q7",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "In IPv6, the solicited-node multicast message is used for what?",
+   "choices": [
+    "Capability discovery of neighboring devices",
+    "Discovery of the gateway",
+    "Discovery of the network ID",
+    "Resolution of the MAC address for an IPv6 address"
+   ],
+   "answer": 3,
+   "explanation": "In IPv6, the solicited-node multicast message is used for resolution of the MAC address for an IPv6 address. The first 104 bits of the 128-bit IPv6 address is ff02::1:ff, and the last 24 bits comprise the last 24 bits of the IPv6 address that needs to be resolved. The solicited-node multicast message is also used for Duplicate Address Detection (DAD).",
+   "source": "CCNA 100-105 · Practice Test 2, Q8",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Under what circumstance will a switch flood a frame to all ports on the switch?",
+   "choices": [
+    "When the destination MAC address is a multicast address",
+    "When the destination MAC address is 0000.0000.0000",
+    "When the destination MAC address is unknown by the switch",
+    "When the source MAC address is unknown by the switch"
+   ],
+   "answer": 2,
+   "explanation": "When the destination MAC address is not in the MAC address table, the switch will flood the frame to all ports on the switch. When the computer or device responds, the switch will memorize the source MAC address with the port on which it sees the traffic.",
+   "source": "CCNA 100-105 · Practice Test 2, Q10",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You have several VLANs and need to route between them. You configure a trunk between your router and switch. What will you need to configure on the router to support each VLAN for routing?",
+   "choices": [
+    "Virtual interface",
+    "Subinterface",
+    "VLAN database",
+    "Switched virtual interface"
+   ],
+   "answer": 1,
+   "explanation": "When implementing Router on a Stick (ROAS), you must first create a trunk to the router. Once the trunk is created, you must create subinterfaces for each VLAN to be routed and specify the IP address and 802.1Q encapsulation.",
+   "source": "CCNA 100-105 · Practice Test 2, Q13",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "How many bytes are used in an 802.1Q frame for tagging of VLANs?",
+   "choices": [
+    "8 bytes",
+    "2 bytes",
+    "4 bytes",
+    "16 bytes"
+   ],
+   "answer": 2,
+   "explanation": "An 802.1Q frame is a modified Ethernet frame. The type field is relocated after the 4 bytes used for 802.1Q tagging. Two of the bytes are used for tagging the frame, and two of the bytes are used for controls such as Class of Service (CoS).",
+   "source": "CCNA 100-105 · Practice Test 2, Q14",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "When VLANs are configured in global configuration mode, where are the VLANs stored by default?",
+   "choices": [
+    "In the running configuration or RAM",
+    "In the startup configuration or NVRAM",
+    "In the vlan.dat on the NVRAM",
+    "In the vlan.dat on the flash"
+   ],
+   "answer": 3,
+   "explanation": "Under normal circumstances, when VLANs are configured, they are stored in a file separate from the startup or running-configuration. The VLAN database is stored in a file called vlan.dat on the flash. When decommissioning a switch, if you were to erase the configuration of a switch, you would also need to delete the vlan.dat.",
+   "source": "CCNA 100-105 · Practice Test 2, Q16",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which statement is correct about VLAN Trunking Protocol (VTP) transparent mode?",
+   "choices": [
+    "Switches participating in transparent mode contain their own vlan.dat file for the VLAN database.",
+    "Switches participating in transparent mode will not forward VTP updates when received.",
+    "Switches participating in transparent mode will receive VTP updates and merge them with their VLAN database.",
+    "Switches participating in transparent mode will not process VTP updates but will forward them to other switches."
+   ],
+   "answer": 3,
+   "explanation": "Switches that are configured in transparent mode will not process VTP updates. They will, however, forward the updates to switches that are connected to them. Transparent mode switches store their VLAN database in their running-configuration and startup-configuration.",
+   "source": "CCNA 100-105 · Practice Test 2, Q17",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "When you connect a device to a switch, the device takes a minute before it is reachable via its IP address. What should be configured to fix this issue so that you can get immediate access to the device?",
+   "choices": [
+    "Configure BPDU Guard mode for spanning tree.",
+    "Turn off auto-negotiation on the interface.",
+    "Configure PortFast mode for spanning tree.",
+    "Turn off port security."
+   ],
+   "answer": 2,
+   "explanation": "The long delay for the device to become active on the interface is the wait time for convergence of Spanning Tree Protocol (STP). If the interface will only connect a device to the port, then the port should be configured with spanning-tree PortFast mode. This will skip the blocking mode during convergence of STP.",
+   "source": "CCNA 100-105 · Practice Test 2, Q18",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Under which circumstance will two switches not form a trunk link with Dynamic Trunking Protocol (DTP)?",
+   "choices": [
+    "Switch A is configured as auto and Switch B is configured as desirable.",
+    "Switch A is configured as auto and Switch B is configured as auto.",
+    "Switch A is configured as auto and Switch B is configured as a trunk.",
+    "Switch A is configured as desirable and Switch B is configured as desirable."
+   ],
+   "answer": 1,
+   "explanation": "When both Switch A and Switch B are configured as auto for DTP, the link will not form a trunk since neither switch is sending negotiation messages. The ports will remain in access mode.",
+   "source": "CCNA 100-105 · Practice Test 2, Q19",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You perform the show spanning-tree vlan 100 command on a switch. The output shows that all ports on the switch are in designated mode. What can be determined from this?",
+   "choices": [
+    "This switch is the root bridge.",
+    "This switch is connected to a root bridge.",
+    "This switch is not participating in STP.",
+    "This switch is a backup root bridge."
+   ],
+   "answer": 0,
+   "explanation": "When all of the ports on a switch are in designated mode, it means that the switch is the root bridge for the Spanning Tree Protocol (STP).",
+   "source": "CCNA 100-105 · Practice Test 2, Q20",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which routing protocol will not contain a topology of the network?",
+   "choices": [
+    "BGP",
+    "RIP",
+    "EIGRP",
+    "OSPF"
+   ],
+   "answer": 1,
+   "explanation": "Routing Information Protocol (RIP) does not contain a topology table. RIP compiles its table from multiple broadcasts or multicasts in the network from which it learns routes. However, it never has a full topological diagram of the network like OSPF, EIGRP, and BGP.",
+   "source": "CCNA 100-105 · Practice Test 2, Q21",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which routing loop avoidance method is used by routers to prevent routing updates to exit an interface in which they have been learned?",
+   "choices": [
+    "Route poisoning",
+    "Holddowns",
+    "Split horizons",
+    "Routing to infinity"
+   ],
+   "answer": 2,
+   "explanation": "The split horizons method prevents routing updates from exiting an interface in which they have been learned. This stops false information from propagating in the network, which can cause a routing loop.",
+   "source": "CCNA 100-105 · Practice Test 2, Q22",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What is the default priority for Open Shortest Path First (OSPF) routers?",
+   "choices": [
+    "1",
+    "100",
+    "32,768",
+    "255"
+   ],
+   "answer": 0,
+   "explanation": "The Open Shortest Path First (OSPF) priority for a router is a value of 1. This priority is used when electing a designated router (DR) and backup designated router (BDR). The higher the value, the higher the chances of the router becoming a DR or BDR.",
+   "source": "CCNA 100-105 · Practice Test 2, Q23",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You have changed the router’s priority for Open Shortest Path First (OSPF) to make the router the designated router (DR), but the router has not become a DR. What must be done to force the election?",
+   "choices": [
+    "In privileged exec mode, you must enter the command clear ip ospf process x.",
+    "In global configuration mode, you must enter the command ospf election force.",
+    "You must use the shutdown and no shutdown commands on the interface with the highest IP address.",
+    "In privileged exec mode on the DR, you must enter the command clear ip ospf process x."
+   ],
+   "answer": 3,
+   "explanation": "When configuring OSPF for the designated router (DR), if you configure another router with a higher priority, the original DR will remain the current DR. OSPF does not allow for preemption, and therefore you must force the election by clearing the OSPF process on the DR. This will force the DR to relinquish its status.",
+   "source": "CCNA 100-105 · Practice Test 2, Q24",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will allow you to change the default number of unequal-cost load-balancing paths for Enhanced Interior Gateway Routing Protocol (EIGRP)?",
+   "choices": [
+    "Router(config-router)#maximum-paths 6",
+    "Router(config-router)#paths 6",
+    "Router(config)#maximum-paths 6",
+    "Router(config)#unequal-paths 6"
+   ],
+   "answer": 0,
+   "explanation": "The command of maximum-paths 6 will configure the maximum number of unequal paths for load balancing with EIGRP to a value of 6. This command must be entered in the router EIGRP process.",
+   "source": "CCNA 100-105 · Practice Test 2, Q25",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which packet forwarding method is the fastest and does not directly use the central processing unit (CPU)?",
+   "choices": [
+    "Process switching",
+    "Fast switching",
+    "Expedited forwarding",
+    "Cisco Express Forwarding (CEF)"
+   ],
+   "answer": 3,
+   "explanation": "Cisco Express Forwarding (CEF) allows the CPU to initially populate a sort of route cache called the forwarding information base (FIB). Any packets entering the router can be checked against the FIB and routed without the help of the CPU.",
+   "source": "CCNA 100-105 · Practice Test 2, Q26",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You see a number of IPv6 packets on your network with a destination address of ff02::a. What can be concluded about what is running on your network?",
+   "choices": [
+    "Enhanced Interior Gateway Routing Protocol (EIGRP) for IPv6 is running on the network.",
+    "Routing Information Protocol Next Generation (RIPng) is running on the network.",
+    "Open Shortest Path First version 3 (OSPFv3) is running on the network.",
+    "Stateless Address Autoconfiguration (SLAAC) is running on the network."
+   ],
+   "answer": 0,
+   "explanation": "The multicast address of ff02::a is the multicast address for IPv6 EIGRP updates. Updates for routers participating in IPv6 EIGRP will be multicast to the IPv6 address of ff02::a.",
+   "source": "CCNA 100-105 · Practice Test 2, Q27",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You need to configure an IP address on a switchport interface. However, when you enter the command ip address 192.168.1.1 255.255.255.0, it returns an error. Which command will fix the issue?",
+   "choices": [
+    "Switch(config-if)#switchport routed",
+    "Switch(config-if)#switchport mode routed",
+    "Switch(config)#ip routing",
+    "Switch(config-if)#no switchport"
+   ],
+   "answer": 3,
+   "explanation": "The command no switchport will configure the interface as a layer 3 routed interface. The command ip routing needs to be configured for routing of the interface, but it will not hinder assigning an IP address.",
+   "source": "CCNA 100-105 · Practice Test 2, Q28",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "How can you suppress all hello messages out of a router by default for Enhanced Interior Gateway Routing Protocol (EIGRP)?",
+   "choices": [
+    "Router(config-router)#passive-interface default",
+    "Router(config)#passive-interface default",
+    "Router(config)#passive-interface all",
+    "Router(config-router)#passive-interface all"
+   ],
+   "answer": 0,
+   "explanation": "The command passive-interface default when entered in the EIGRP router process will suppress hello messages for all interfaces. You can then include only the interfaces on which you want hello messages to be advertised with the command no passive-interface gi 0/1.",
+   "source": "CCNA 100-105 · Practice Test 2, Q29",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command would allow you to see the next hop information for Cisco Express Forwarding (CEF)?",
+   "choices": [
+    "Router#show cef nop",
+    "Router#show ip cef",
+    "Router#show cef",
+    "Router#show cef route"
+   ],
+   "answer": 1,
+   "explanation": "The command show ip cef will display all of the network prefixes and the next hop that Cisco Express Forwarding (CEF) has in the forwarding information base (FIB). The command will also display the exit interface for the next hop.",
+   "source": "CCNA 100-105 · Practice Test 2, Q30",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which WAN connectivity method supports error detection and correction?",
+   "choices": [
+    "Metro Ethernet",
+    "HDLC",
+    "MPLS",
+    "PPP"
+   ],
+   "answer": 3,
+   "explanation": "The Point-to-Point Protocol (PPP) supports compression, authentication, error detection, and correction. PPP can detect errors in the transmission and request retransmission of the packets.",
+   "source": "CCNA 100-105 · Practice Test 2, Q31",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which device is responsible for adding the label to a Multiprotocol Label Switching (MPLS) packet?",
+   "choices": [
+    "Label switch routers (LSR)",
+    "Customer premise switch",
+    "Provider edge (PE) router",
+    "Customer edge (CE) router"
+   ],
+   "answer": 2,
+   "explanation": "The provider edge (PE) router is responsible for adding the MPLS label to a packet.",
+   "source": "CCNA 100-105 · Practice Test 2, Q33",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which WAN connectivity method is quickly scalable?",
+   "choices": [
+    "MPLS",
+    "VPN",
+    "Metro Ethernet",
+    "PPP"
+   ],
+   "answer": 1,
+   "explanation": "Virtual Private Networks (VPNs) are extremely scalable because they only require an Internet connection at each site. We can reuse the existing Internet connection at each site to create a site-to-site VPN tunnel.",
+   "source": "CCNA 100-105 · Practice Test 2, Q34",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will configure a policy map on an interface?",
+   "choices": [
+    "Router(config-if)#policy-class USER-MAP out",
+    "Router(config-if)#service-policy USER-MAP out",
+    "Router(config-if)#policy-map USER-MAP out",
+    "Router(config-if)#service-map USER-MAP out"
+   ],
+   "answer": 1,
+   "explanation": "The command service-policy USER-MAP out will configure the policy map called USER-MAP on the interface in an outbound direction.",
+   "source": "CCNA 100-105 · Practice Test 2, Q35",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "When a packet it sent through Network Address Translation (NAT) to a remote web server on the Internet, what term is used to refer to the web server’s IP address?",
+   "choices": [
+    "Outside global",
+    "Inside global",
+    "Inside local",
+    "Outside local"
+   ],
+   "answer": 0,
+   "explanation": "The web server’s IP address is referred to as the outside global address in reference to Network Address Translation (NAT).",
+   "source": "CCNA 100-105 · Practice Test 2, Q36",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "When configuring the Network Time Protocol (NTP), what is the stratum used for?",
+   "choices": [
+    "The stratum designates a level of trust associated with the time clock.",
+    "The stratum designates the type of time clock.",
+    "The stratum designates the location of the time clock.",
+    "The stratum designates the level of precision associated with the time clock."
+   ],
+   "answer": 3,
+   "explanation": "The Network Time Protocol (NTP) defines 16 levels of stratums. A stratum of zero has absolute precision, such as an atomic clock, which also has little or no delay. When an NTP clock is timed off a stratum zero clock, it becomes a stratum one, and when an NTP clock is timed off of a stratum one, it becomes a stratum two. The process continues onward, adding a one to each slave unit, as delay increases and you move further away from absolute precision.",
+   "source": "CCNA 100-105 · Practice Test 2, Q37",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "A client has an IP address of 192.168.1.5/24 and a default gateway of 192.168.1.1. Hot Standby Router Protocol (HSRP) is in use in the network. Which type of router is the default gateway?",
+   "choices": [
+    "Virtual router",
+    "Support router",
+    "Active router",
+    "Standby router"
+   ],
+   "answer": 0,
+   "explanation": "When Hot Standby Router Protocol (HSRP) is used, the default gateway the client is issued is an IP address for the virtual router. The virtual router is not a physical router, but it is mapped to a physical router via HSRP. The active router processes requests for the virtual router IP address by responding to the virtual MAC address associated with the virtual router IP address.",
+   "source": "CCNA 100-105 · Practice Test 2, Q38",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What option should be configured along with interface tracking that will allow the original router to regain its active status once a failed link is repaired?",
+   "choices": [
+    "Preempt option",
+    "Interface tracking resets",
+    "Priority tracking",
+    "Failback option"
+   ],
+   "answer": 0,
+   "explanation": "When interface tracking is turned on and a link that is being tracked fails, the priority of the active router is lowered, and an election is forced. This will make the standby router become the active router. However, if the link is repaired, the priority will recover to its normal value, but the current active router will remain the active router. Preemption allows for the value to instantly reelect the original router as the active router.",
+   "source": "CCNA 100-105 · Practice Test 2, Q39",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which record sets the time to live (TTL) for a Domain Name System (DNS) resource record when the resource record does not have one explicitly configured?",
+   "choices": [
+    "TTL record",
+    "PTR record",
+    "A record",
+    "SOA record"
+   ],
+   "answer": 3,
+   "explanation": "The Start of Authority (SOA) record establishes several key pieces of information, such as the primary DNS server, the timers for refreshing DNS entries, and a default time to live (TTL). The default TTL is used when a resource record is not explicitly configured with a TTL.",
+   "source": "CCNA 100-105 · Practice Test 2, Q40",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "In a basic VLAN hopping attack, which switch feature do attackers take advantage of?",
+   "choices": [
+    "Forwarding of broadcasts",
+    "Automatic encapsulation negotiation",
+    "An open Telnet connection",
+    "The default automatic trunking configuration"
+   ],
+   "answer": 3,
+   "explanation": "An attacker will take advantage of the automatic trunking configuration of Dynamic Trunking Protocol (DTP). This will allow the attacker to create a trunk with the switch and tag packets so that they can hop onto different VLANs.",
+   "source": "CCNA 100-105 · Practice Test 2, Q41",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "When you are protecting an interface with port security, to which mode should you set the switchport?",
+   "choices": [
+    "Dynamic mode",
+    "Access mode",
+    "Trunk mode",
+    "Voice mode"
+   ],
+   "answer": 1,
+   "explanation": "When you are configuring port security on an interface, the switchport should have a mode of access configured. This will also protect the switch from transitioning into a trunk if another switch is connected.",
+   "source": "CCNA 100-105 · Practice Test 2, Q42",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which security mitigation technique can be used to stop a MAC address flooding attack?",
+   "choices": [
+    "Port security",
+    "Network Address Translation (NAT)",
+    "Access control lists (ACLs)",
+    "VLAN access control lists (VACLs)"
+   ],
+   "answer": 0,
+   "explanation": "Port security can prevent MAC address flooding attacks by restricting the number of MAC addresses associated to an interface. This will prevent the Content Addressable Memory (CAM) from being overrun by bogus entries.",
+   "source": "CCNA 100-105 · Practice Test 2, Q43",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will configure an access list that will deny Telnet access from the 192.168.2.0/24 network and allow all other traffic?",
+   "choices": [
+    "Router(config)#access-list 101 block tcp 192.168.2.0 0.0.0.255 any eq 23 Router(config)#access-list 101 permit ip any any",
+    "Router(config)#access-list 101 deny 192.168.2.0 0.0.0.255 any eq 23 Router(config)#access-list 101 permit any any",
+    "Router(config)#access-list 101 deny tcp 192.168.2.0 0.0.0.255 any eq 23 Router(config)#access-list 101 permit ip any any",
+    "Router(config)#access-list 101 deny 192.168.2.0 0.0.0.255 eq 23 Router(config)#access-list 101 permit ip any any"
+   ],
+   "answer": 2,
+   "explanation": "The command access-list 101 deny tcp 192.168.2.0 0.0.0.255any eq 23 will deny TCP traffic from 192.168.2.0/24 to any address with adestination of 23 (Telnet). The command access-list 101 permit ip anyany will permit all other traffic.",
+   "source": "CCNA 100-105 · Practice Test 2, Q44",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You need to make a modification to a rule in a standard conventional access list. How can you achieve this?",
+   "choices": [
+    "Enter the ACL editor and change the entry.",
+    "Remove the line number and add the new line number back with the modification.",
+    "Remove the entire ACL and add it back with the modification.",
+    "Remove the entry with the no command and add it back."
+   ],
+   "answer": 2,
+   "explanation": "Conventional access lists lack the ability to edit a single entry. Theentire ACL must be removed and re-added with the correct entry. Analternative to conventional access lists is named access lists. A namedaccess list is referenced by line numbers, which allows for removal andadditions of single entries.",
+   "source": "CCNA 100-105 · Practice Test 2, Q45",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What type of message is generated from an SNMP agent to the network management station (NMS)?",
+   "choices": [
+    "Trap",
+    "Alert",
+    "Get",
+    "Set"
+   ],
+   "answer": 0,
+   "explanation": "Trap messages are sent from Simple Network Management Protocol(SNMP) agents to the network management station (NMS). This happenswhen an event that the router or switch is set to alert the NMS about istriggered. An example of this is overheating of the switch or an importantlink going down.",
+   "source": "CCNA 100-105 · Practice Test 2, Q46",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What can you use to secure SNMP version 2c?",
+   "choices": [
+    "Complex passwords",
+    "MD5 hashing",
+    "Complex community names",
+    "SHA hashing"
+   ],
+   "answer": 2,
+   "explanation": "Simple Network Management Protocol version 2c lacks security.The only mechanism you can employ for security is complex communitynames. Security was introduced in version 3 of SNMP.",
+   "source": "CCNA 100-105 · Practice Test 2, Q47",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will allow you to configure interfaces Gi1/1 to Gi1/12?",
+   "choices": [
+    "Switch(config)#interface gigabitethernet range 1/1 - 12",
+    "Switch(config)#interface range gigabitethernet range 1/1,12",
+    "Switch(config)#interface range gigabitethernet 1/1 - 12",
+    "Switch(config)#interface range gigabitethernet 1/1 1/12"
+   ],
+   "answer": 2,
+   "explanation": "The command interface range gigabitethernet 1/1 - 12 willallow you to configure the interfaces Gigabit Ethernet 1/1 to 1/12.",
+   "source": "CCNA 100-105 · Practice Test 2, Q48",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What is the default level for syslog facility logging?",
+   "choices": [
+    "Warning",
+    "Debug",
+    "Informational",
+    "Notice"
+   ],
+   "answer": 1,
+   "explanation": "The default syslog facility level is debug 7. All debug messages arelogged to the internal buffer by default.",
+   "source": "CCNA 100-105 · Practice Test 2, Q49",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command(s) are required before you can use an FTP server for backing up configuration? Assume that the username is USER and the password is USERPASS.",
+   "choices": [
+    "Router(config)#ftp USER password USERPASS",
+    "Router(config)#username USER password USERPASS",
+    "Router(config)#ip ftp username USER Router(config)#ip ftp password USERPASS",
+    "Router(config)#ip ftp username USER password USERPASS"
+   ],
+   "answer": 2,
+   "explanation": "The command ip ftp username USER will configure the usernameUSER for FTP connections. The command ip ftp password USERPASS willconfigure the password USERPASS for FTP connections.",
+   "source": "CCNA 100-105 · Practice Test 2, Q50",
+   "topic": "Practice Test",
+   "topic_n": 1
+  }
+ ]
+}

@@ -1,0 +1,592 @@
+{
+ "questions": [
+  {
+   "question": "At which layer of the OSI model does Structured Query Language (SQL) operate?",
+   "choices": [
+    "Session layer",
+    "Presentation layer",
+    "Transport layer",
+    "Application layer"
+   ],
+   "answer": 0,
+   "explanation": "Structured Query Language (SQL) operates at the Session layer of the OSI model. It uses half-duplex communications to request data and receive the reply. Other examples of Session layer protocols are Network File System (NFS), Server Message Block (SMB), and NetBIOS.",
+   "source": "CCNA 100-105 · Practice Test 1, Q1",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You are designing a wireless network for an office building. The building has a large number of tenants that utilize wireless already. Which protocol will least likely overlap with wireless channels the tenants are currently using?",
+   "choices": [
+    "802.11g",
+    "802.11n",
+    "802.11b",
+    "802.11ac"
+   ],
+   "answer": 3,
+   "explanation": "The 802.11ac protocol will be least likely to overlap the wireless channels the tenants are using. The 802.11ac protocol uses the 5 GHz wireless frequency spectrum. The 5 GHz spectrum defines 24 non-overlapping wireless channels. The 2.4 GHz spectrum defines 11 channels, but only 3 of them are non-overlapping. Although 802.11n operates on 2.4 GHz and 5 GHz, 802.11ac only operates on 5 GHz. Therefore, 802.11ac will have the least likely overlap of current channels.",
+   "source": "CCNA 100-105 · Practice Test 1, Q2",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which protocol is connectionless and is used for flow control?",
+   "choices": [
+    "UDP",
+    "ICMP",
+    "TCP",
+    "IP"
+   ],
+   "answer": 0,
+   "explanation": "Flow control is a function of the Transport layer of the Open Systems Interconnection (OSI) model. User Datagram Protocol (UDP) operates at the Transport layer. UDP provides a program with a connectionless method of transmitting segments. TCP is a connection-based protocol and maintains a state throughout the transfer of data.",
+   "source": "CCNA 100-105 · Practice Test 1, Q3",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which cloud service is likely to be used for software development?",
+   "choices": [
+    "IaaS",
+    "PaaS",
+    "DRaaS",
+    "SaaS"
+   ],
+   "answer": 1,
+   "explanation": "Platform as a Service (PaaS) is commonly used by software developers. It provides a development platform that the software developer can use to create applications. An example of this is a web server with PHP and MySQL, which is hosted in the cloud.",
+   "source": "CCNA 100-105 · Practice Test 1, Q4",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which statement is correct about straight-through cables and crossover cables?",
+   "choices": [
+    "Crossover cables are wired with the 568B specification on both sides.",
+    "Straight-through cables are wired with the 568B specification on one side and the 568A specification on the other side.",
+    "Crossover cables are wired with pins 1 through 8 on one side and 8 through 1 on the other side.",
+    "Crossover cables are wired with the 568B specification on one side and the 568A specification on the other side."
+   ],
+   "answer": 3,
+   "explanation": "Crossover cables are wired with the 568B specification on one side, and on the other side, the 568A specification is used. This change in wiring delivers the TX pair on pins 4 and 5 to the RX pair on pins 1 and 2. Straight-through cables are wired with the 568B specification on one side, and on the other side, the 568B specification is used.",
+   "source": "CCNA 100-105 · Practice Test 1, Q5",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which protocol is used by IPv6 to assist Stateless Address Autoconfiguration (SLAAC) in IPv6 addressing for hosts?",
+   "choices": [
+    "DHCPv6",
+    "TCP",
+    "ICMPv6",
+    "UDP"
+   ],
+   "answer": 2,
+   "explanation": "Stateless Address Autoconfiguration (SLAAC) relies on the Neighbor Discovery Protocol (NDP). NDP works by using multicast and ICMPv6 message types. The host will multicast to ff02::1 an ICMPv6 Router Solicitation (RS) message, and the router will respond with a Router Advertisement (RA) message. This response will allow the host to obtain the network address and gateway of the network. The host will then create a host address portion of the IPv6 address and use the Duplicate Address Discovery (DAD) protocol to check for a duplicate address.",
+   "source": "CCNA 100-105 · Practice Test 1, Q6",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which term best describes the IPv6 address of 2202:0ff8:0002:2344:3533:8eff:fe22:ae4c?",
+   "choices": [
+    "EUI-64 address",
+    "Anycast address",
+    "Multicast address",
+    "Link local address"
+   ],
+   "answer": 0,
+   "explanation": "The IPv6 address 2202:0ff8:0002:2344:3533:8eff:fe22:ae4c is an EUI-64 generated address. The host portion of the address is 3533:8eff:fe22:ae4c, the fffe in the middle of it depicts that the address was generated from the MAC address. The MAC address of this host would be 37-33-8e-02-ae-4c. When EUI-64 is used, an ffee is placed in the middle of the MAC address, and then the 7th bit from the left is flipped. This changes the first two hex digits of the MAC address from 35 to 37.",
+   "source": "CCNA 100-105 · Practice Test 1, Q7",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which network does the IP address 192.168.4.28/27 belong to?",
+   "choices": [
+    "192.168.4.64/27 network",
+    "192.168.4.8/27 network",
+    "192.168.4.16/27 network",
+    "192.168.4.32/27 network"
+   ],
+   "answer": 3,
+   "explanation": "The network 192.168.4.32/27 has a valid IP address range of 192.168.4.33 to 192.168.4.62. The /27 CIDR notation, or 255.255.255.224 dotted-decimal notation (DDN) defines networks in multiples of 32. Therefore, the address 192.168.4.28/27 is part of the 192.168.4.32/27 network.",
+   "source": "CCNA 100-105 · Practice Test 1, Q8",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which switch function reads the frame and uses the MAC address table to decide the egress interface for the frame?",
+   "choices": [
+    "Loop avoidance",
+    "Forward/filter",
+    "Address learning",
+    "Frame flooding"
+   ],
+   "answer": 1,
+   "explanation": "The forward/filter function of a switch is used to look up the destination MAC address in a MAC address table and decide the egress interface for the frame. If the MAC address is not in the table, the frame is forwarded out all of the interfaces. When the client responds, its source MAC address will be recorded in the MAC address table for future lookup.",
+   "source": "CCNA 100-105 · Practice Test 1, Q10",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which type of switchport strips all VLAN information from the frame before it egresses the interface on the switch?",
+   "choices": [
+    "DTP port",
+    "Trunk port",
+    "Voice port",
+    "Access port"
+   ],
+   "answer": 3,
+   "explanation": "Access ports strip all VLAN information before the frame egresses the destination interface. The endpoint on an access switchport will never see any of the VLAN information that was associated with the frame.",
+   "source": "CCNA 100-105 · Practice Test 1, Q11",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You have VLAN 10 and VLAN 11 configured on a trunk switchport as allowed. What will happen if you enter the command switchport trunk allowed vlan 12 on the trunk interface?",
+   "choices": [
+    "VLAN 12 will be added to the existing allowed VLAN list.",
+    "VLANs 1 through 12 will be added to the allowed VLAN list.",
+    "Only VLAN 12 will be on the allowed VLAN list.",
+    "The native VLAN will be switched to VLAN 12."
+   ],
+   "answer": 2,
+   "explanation": "The command switchport trunk allowed vlan 12 will remove all other VLANs and only VLAN 12 will be allowed on the trunk interface. The proper command to add an additional VLAN would be switchport trunk allowed vlan add 12. This command will add a VLAN to the already established list.",
+   "source": "CCNA 100-105 · Practice Test 1, Q12",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "On a switch you enter the commands switchport mode access and switchport nonegotiate. Which statement is true about the interface you’ve configured?",
+   "choices": [
+    "The interface will become a trunk switchport if a non-Cisco switch is plugged in and statically configured as a trunk switchport.",
+    "The interface will become a trunk switchport if a switch is plugged in and DTP is turned on for the other switch.",
+    "The interface will become a trunk switchport if a switch is plugged in and the other switch is set statically to a trunk switchport.",
+    "The interface will always remain an access switchport, regardless of whether another a switch is plugged in."
+   ],
+   "answer": 3,
+   "explanation": "When you configure the switchport to a mode of access, you are statically configuring the interface to remain an access switchport. When you configure the switchport to nonegotiate, you are turning off Dynamic Trunking Protocol (DTP). The switch will never negotiate its switchport.",
+   "source": "CCNA 100-105 · Practice Test 1, Q15",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You are configuring a channel group for two interfaces. You configure the command channel-group 1 mode passive. What must be configured on the other switch to use Link Aggregation Control Protocol (LACP)?",
+   "choices": [
+    "The other switch must be configured with channel-group 1 mode auto.",
+    "The other switch must be configured with channel-group 1 mode desirable.",
+    "The other switch must be configured with channel-group 1 mode active.",
+    "The other switch must be configured with channel-group 1 mode on."
+   ],
+   "answer": 2,
+   "explanation": "The command channel-group 1 mode passive configures the port to be placed in a passive negotiating state. The other switch must be placed into an active negotiating state for LACP to become the control protocol for the channel group.",
+   "source": "CCNA 100-105 · Practice Test 1, Q16",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You have BPDU Guard configured on an interface. You receive a call that the interface is down. You perform a show interface gi 0/1 only to find that the port is in an err-disable state. What caused the err-disable state?",
+   "choices": [
+    "The interface is transitioning between an up and down state rapidly, called interface flapping.",
+    "The endpoint device connected to the interface sent a BPDU.",
+    "A neighboring switch recalculated its Spanning Tree Protocol (STP).",
+    "The endpoint device was disconnected for a long period of time."
+   ],
+   "answer": 1,
+   "explanation": "When BPDU Guard is configured on a port, it guards the port from creating a loop. It also guards STP so that the STP calculation of redundant links is not affected by the device connect to the interface. If a BPDU is seen on the interface, the interface will immediately enter into an err-disable state. The most likely cause was that another switch was plugged into the interface.",
+   "source": "CCNA 100-105 · Practice Test 1, Q17",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which protocol assists in synchronizing a VLAN database across multiple Cisco switches?",
+   "choices": [
+    "ISL",
+    "NTP",
+    "VTP",
+    "IGMP"
+   ],
+   "answer": 2,
+   "explanation": "The VLAN Trunking Protocol assists in synchronizing a VLAN database across all Cisco switches participating in VTP. You must initially configure the VTP domain on the switch that will hold the master database. Then all other switches must be configured as clients and the VTP domain must be configured as well.",
+   "source": "CCNA 100-105 · Practice Test 1, Q18",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "When you’re using 802.1w, which switchport state will always forward traffic?",
+   "choices": [
+    "Alternate",
+    "Disabled",
+    "Backup",
+    "Designated"
+   ],
+   "answer": 3,
+   "explanation": "The 802.1w Rapid Spanning Tree Protocol defines that designated switchports always forward traffic. The designated port is a port that is forwarding traffic and is opposite of the root port or blocking port if it is a redundant link.",
+   "source": "CCNA 100-105 · Practice Test 1, Q19",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What is the definition of route statement administrative distance (AD)?",
+   "choices": [
+    "The AD is a metric that routing protocols use to select the best route.",
+    "The AD is a value assigned by network administrators for route selection.",
+    "The AD is a value associated with the cost to the destination.",
+    "The AD is a rating of trust when multiple routes exist to the same destination."
+   ],
+   "answer": 3,
+   "explanation": "The administrative distance (AD) is a rating of trust between different routing protocols and route methods. This trust scale is important when multiple routes exist to the same destination. Directly connected routes have ADs with the highest level of trust.",
+   "source": "CCNA 100-105 · Practice Test 1, Q21",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which must be configured so that EIGRP can calculate the best route?",
+   "choices": [
+    "Load",
+    "Bandwidth",
+    "Delay",
+    "Reliability"
+   ],
+   "answer": 1,
+   "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) uses bandwidth and delay by default for calculating routes. The bandwidth should be set to the actual bandwidth of the link so that routing protocols such as EIGRP can calculate the best route. Delay cannot be set because it is a variable of the interface.",
+   "source": "CCNA 100-105 · Practice Test 1, Q22",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You perform a show ip route on the router and see several routes with an administrative distance (AD) of 90. Which routing protocol has generated these route statements?",
+   "choices": [
+    "EIGRP",
+    "OSPF",
+    "RIP",
+    "IGRP"
+   ],
+   "answer": 0,
+   "explanation": "The administrative distance (AD) of EIGRP is 90. The most common ADs are 90 for EIGRP, 100 for IGRP, 110 for OSPF, and 120 for RIP. The mnemonic of 90 Exotic Indian Oval Rubies will help you remember the order; then starting with EIGRP with a value of 90, increment the following values by 10.",
+   "source": "CCNA 100-105 · Practice Test 1, Q23",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You are configuring RIP for a network and you need to advertise the network. Which command will advertise the route for 203.244.234.0/24?",
+   "choices": [
+    "Router(config-router)#network 203.244.234.0",
+    "Router(config-router)#network 203.244.234.0 0.0.0.255",
+    "Router(config-router)#network 203.244.234.0/24",
+    "Router(config-router)#network 203.244.234.0 255.255.255.0"
+   ],
+   "answer": 0,
+   "explanation": "The command network 203.244.234.0 will advertise the 203.244.234.0 network. When you’re configuring RIP, only the network address needs to be configured with the network command.",
+   "source": "CCNA 100-105 · Practice Test 1, Q24",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command must be enabled on a switch to enable routing between switched virtual interfaces for VLAN routing?",
+   "choices": [
+    "Switch(config)#ip route svi",
+    "Switch(config)#ip routing",
+    "Switch(config)#feature svi routing",
+    "Switch(config)#svi routing"
+   ],
+   "answer": 1,
+   "explanation": "When you want to turn on the layer 3 functionality of a switch, you must configure the command ip routing in global configuration. This is required when you want to create switched virtual interfaces (SVIs) for VLANs and want to route on the switch between the VLANs. This method of routing is much more efficient since the traffic is routed in the ASICs on the switch.",
+   "source": "CCNA 100-105 · Practice Test 1, Q26",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which network is part of the summary route of 172.16.32.0/21?",
+   "choices": [
+    "172.16.64.0/24",
+    "172.16.48.0/24",
+    "172.16.38.0/24",
+    "172.16.40.0/24"
+   ],
+   "answer": 2,
+   "explanation": "The summary route of 172.16.32.0/21 contains 172.16.38.0/24 as a valid network route. The /21 CIDR mask defines networks in multiples of 8 in the third octet of the network address. Therefore, the next network address is 172.16.40.0/21.",
+   "source": "CCNA 100-105 · Practice Test 1, Q27",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which OSPF packets contain link-state and routing information?",
+   "choices": [
+    "LSA packets",
+    "Dead packets",
+    "Hello packets",
+    "LSU packets"
+   ],
+   "answer": 0,
+   "explanation": "Link State Advertisement (LSA) packets communicate the topology of the local router with other routers in the OSPF area. The information contained in the LSA packet is a summary of links the local router’s topology consists of.",
+   "source": "CCNA 100-105 · Practice Test 1, Q29",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which field in the IP header is used to prevent a packet from endlessly routing?",
+   "choices": [
+    "Checksum",
+    "TTL",
+    "Header length",
+    "Flags"
+   ],
+   "answer": 1,
+   "explanation": "Time to Live (TTL) is a field in the IP header that prevents packets from endlessly routing in networks. Each time a packet is routed, the router’s responsibility is to decrement the TTL by one. When the TTL reaches zero, the packet is considered unrouteable and dropped.",
+   "source": "CCNA 100-105 · Practice Test 1, Q30",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which layer 2 protocol has built-in security for WAN connections?",
+   "choices": [
+    "PPP",
+    "IPSec",
+    "HDLC",
+    "Metro Ethernet"
+   ],
+   "answer": 0,
+   "explanation": "Point-to-Point Protocol (PPP) is a layer 2 wide area network (WAN) protocol. PPP supports Challenge Handshake Authentication Protocol (CHAP), which secures connections. Although Metro Ethernet is built site to site by the service provider, there is no guarantee of security in the form of authentication.",
+   "source": "CCNA 100-105 · Practice Test 1, Q31",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which QoS marking is used at layer 3 for routed packets?",
+   "choices": [
+    "CEF",
+    "CoS",
+    "DSCP",
+    "QoE"
+   ],
+   "answer": 2,
+   "explanation": "The Differentiated Services Code Point (DSCP) is a layer 3 QoS marking for routers and layer 3 devices. The DSCP markings are located in the Type of Service (ToS) field in an IP header. Class of Service (CoS) is a layer 2 QoS service marking found in 802.1Q frames.",
+   "source": "CCNA 100-105 · Practice Test 1, Q32",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which WAN protocol does not support multicast packets?",
+   "choices": [
+    "GRE",
+    "PPP",
+    "IPSec",
+    "MPLS"
+   ],
+   "answer": 2,
+   "explanation": "Internet Protocol Security (IPSec) does not support multicast packets. If you require both, you can set up a GRE tunnel for the multicast and broadcast traffic, then encrypt only the data over IPSec. However, by itself IPSec does not support multicast or broadcast traffic.",
+   "source": "CCNA 100-105 · Practice Test 1, Q33",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which is a correct statement about support for OSPF on an MPLS network?",
+   "choices": [
+    "The provider edge (PE) routers can only host area 0.",
+    "The customer edge (CE) routers can only host area 0.",
+    "Both the customer edge (CE) routers and the provider edge (PE) routers can participate in area 0.",
+    "The customer edge (CE) routers must use GRE for OSPF."
+   ],
+   "answer": 2,
+   "explanation": "Both the customer edge (CE) routers and the provider edge (PE) routers can host area 0. However, the service provider must support area 0, called the super backbone, on its PE routers since all areas must be connected to area 0. The customer chooses whether the CE participates in area 0.",
+   "source": "CCNA 100-105 · Practice Test 1, Q34",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What is the definition of a trust boundary in relation to QoS?",
+   "choices": [
+    "A trust boundary is where the QoS markings are stripped at the router.",
+    "A trust boundary is where the QoS markings are first configured.",
+    "A trust boundary is the separations of QoS queues based upon their priority.",
+    "A trust boundary is where the network begins to trust the QoS markings from devices."
+   ],
+   "answer": 3,
+   "explanation": "A trust boundary is the point in the network where the QoS markings are trusted from the devices connected to it. A network administrator will create a trust boundary where a VoIP phone will placed. Since the VoIP phone will be trusted, the markings will be accepted and used for priority throughout the network. The trust boundary should always be placed closest to the IT-controlled equipment.",
+   "source": "CCNA 100-105 · Practice Test 1, Q35",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which WAN connectivity technology is always configured in a hub-and-spoke topology?",
+   "choices": [
+    "Metro Ethernet",
+    "DMVPN",
+    "IPSec",
+    "MPLS"
+   ],
+   "answer": 1,
+   "explanation": "The Cisco Dynamic Multipoint Virtual Private Network (DMVPN) is always configured in a hub-and-spoke topology. The central router creates a multiport GRE connection between all of the branch routers.",
+   "source": "CCNA 100-105 · Practice Test 1, Q36",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Under which circumstance will a DHCP server issue a NACK message to the client?",
+   "choices": [
+    "When the DHCP client’s lease time has ended.",
+    "When the DHCP client requests an IP address that has not been offered.",
+    "When the DHCP server IP address pool is depleted.",
+    "When the DHCP client requests an IP address that the DHCP server cannot lease."
+   ],
+   "answer": 3,
+   "explanation": "The DHCP Negative Acknowledgment (NACK) message is issued by the DHCP server to the client when a client requests an IP address the DHCP cannot lease. This often happens when two DHCP servers are misconfigured in the same LAN with two different scopes. One server will issue the NACK message when it hears the request destined for the other DHCP server.",
+   "source": "CCNA 100-105 · Practice Test 1, Q37",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You have four routers configured with Host Standby Routing Protocol (HSRP). Three routers—Router A, Router B, and Router C—are configured with the default priority. You change the priority of Router A to 80, Router B to 100, and Router C to 140. Which router will become the active router?",
+   "choices": [
+    "Router D will become the active router.",
+    "Router A will become the active router.",
+    "Router C will become the active router.",
+    "Router B will become the active router."
+   ],
+   "answer": 2,
+   "explanation": "Router C will become the active router since it has the highest priority. The default priority of HSRP is 100, and therefore, the router with the highest priority will become the active router. It is important to note that nothing will change if preemption is not configured on the routers.",
+   "source": "CCNA 100-105 · Practice Test 1, Q38",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "When a DHCP server is responding to a DHCP Discover message from a client, which address does the DHCP server use in its response?",
+   "choices": [
+    "Client’s IP address",
+    "Server’s MAC address",
+    "Client’s MAC address",
+    "Broadcast MAC address"
+   ],
+   "answer": 2,
+   "explanation": "When a DHCP server sends the DHCP Offer message in response to a DHCP Discover message, the client’s MAC address is used in the response.",
+   "source": "CCNA 100-105 · Practice Test 1, Q39",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which authentication method will allow an authenticated user to be able to access only certain commands on a router or switch?",
+   "choices": [
+    "TACACS+",
+    "RADIUS",
+    "AAA",
+    "802.1X"
+   ],
+   "answer": 0,
+   "explanation": "TACACS+ will allow for authentication of users, and it also provides a method of restricting users to specific commands. This allows for much granular control of lower-level administrators.",
+   "source": "CCNA 100-105 · Practice Test 1, Q42",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "If a router has two interfaces and you only use IPv4, how many access control lists can be configured on the router’s interfaces?",
+   "choices": [
+    "One",
+    "Eight",
+    "Two",
+    "Four"
+   ],
+   "answer": 3,
+   "explanation": "You can have only one access control list (ACL) per direction, per protocol, and per interface. Therefore, each of the two interfaces can have both an inbound and outbound ACL, per the protocol of IPv4. This allows for a total of four ACLs, which can be used to control access through the router.",
+   "source": "CCNA 100-105 · Practice Test 1, Q43",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You have a router that you configured with a password, but you have forgotten the password. You have a copy of a recent configuration, and the password line reads as password 7 06074352EFF6. How can you access the router?",
+   "choices": [
+    "Perform a password recovery on the router.",
+    "You must call the Cisco Technical Assistance Center to reverse the password.",
+    "Log into another router and type decrypt-password 06074352EFF6 in privilege exec mode.",
+    "You need to enter the password 06074352EFF6."
+   ],
+   "answer": 0,
+   "explanation": "Once the password has been forgotten, a password recovery must be performed on the router. Although you have the encrypted password, it cannot be reversed since it is a hash of the password. A hash is a one-way encryption of the password; only the same combination of letters and number will produce the same hash.",
+   "source": "CCNA 100-105 · Practice Test 1, Q44",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will achieve the same goal as the command access-list 2 permit host 192.168.2.3?",
+   "choices": [
+    "Router(config)#access-list 2 permit 192.168.2.3 0.0.0.0",
+    "Router(config)#access-list 2 permit 192.168.2.3 255.255.255.255",
+    "Router(config)#access-list 2 permit 192.168.2.3",
+    "Router(config)#ip access-list 2 permit host 192.168.2.3"
+   ],
+   "answer": 0,
+   "explanation": "The command access-list 2 permit 192.168.2.3 0.0.0.0 will perform the same function as access-list 2 permit host 192.168.2.3. The command configures the host 192.168.2.3 with a bit mask, which will only match the single IP address. Although it can be configured as a bit mask, it should be configured via the host parameter for readability.",
+   "source": "CCNA 100-105 · Practice Test 1, Q45",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You have a license on a USB drive. Which command would you use to install a license to a router that was obtained from Cisco?",
+   "choices": [
+    "Router#license install usbflash0:FTX3463434Z_2016030415234562345.lic",
+    "Router(config)#license install usbflash0:FTX3463434Z_ 2016030415234562345.lic",
+    "Router#license install file usbflash0:FTX3463434Z_ 2016030415234562345.lic",
+    "Router#copy usbflash0:FTX3463434Z_2016030415234562345.lic flash:"
+   ],
+   "answer": 0,
+   "explanation": "The command license install usbflash0:FTX3463434Z_2016030415234562345.lic will install the license file to the router. This command must be entered in privileged exec mode.",
+   "source": "CCNA 100-105 · Practice Test 1, Q46",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What is the default destination of Cisco devices for sending syslog messages?",
+   "choices": [
+    "Broadcasts to a syslog server",
+    "Console",
+    "NVRAM",
+    "TTY"
+   ],
+   "answer": 1,
+   "explanation": "By default, all syslog messages are sent to the console of the router or switch. It is recommended to configure a syslog server, because once the router or switch is powered off, the information is lost.",
+   "source": "CCNA 100-105 · Practice Test 1, Q47",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "You perform a show version and see the configuration register of 0x2142. What will the router do on the next reload?",
+   "choices": [
+    "The router will ignore breaks to the IOS.",
+    "The router will ignore the contents of NVRAM.",
+    "The router will boot into ROMMON mode.",
+    "The router will reboot with a console speed of 19200 baud."
+   ],
+   "answer": 1,
+   "explanation": "The configuration register of 0x2142 is used for the password recovery process. The configuration register will tell the boot process to ignore the contents of NVRAM, which is where the startup-configuration is located. It will only use NVRAM for the location of the boot system variable.",
+   "source": "CCNA 100-105 · Practice Test 1, Q48",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "On which software-defined network (SDN) plane does CDP function?",
+   "choices": [
+    "Network plane",
+    "Management plane",
+    "Control plane",
+    "Data plane"
+   ],
+   "answer": 1,
+   "explanation": "The Cisco Discovery Protocol functions on the management plane of the SDN model. It helps with management of the routers and switches and does not directly impact the data plane.",
+   "source": "CCNA 100-105 · Practice Test 1, Q49",
+   "topic": "Practice Test",
+   "topic_n": 1
+  },
+  {
+   "question": "What must the network management station (NMS) be configured with before it can read the SNMP counters on a router or switch?",
+   "choices": [
+    "MIB",
+    "Version of SNMP",
+    "All of the above",
+    "SNMP community"
+   ],
+   "answer": 2,
+   "explanation": "The network management station (NMS) must be configured with the version of SNMP, the community, and the management information base (MIB) before it can access the counters on a router or switch.",
+   "source": "CCNA 100-105 · Practice Test 1, Q50",
+   "topic": "Practice Test",
+   "topic_n": 1
+  }
+ ]
+}

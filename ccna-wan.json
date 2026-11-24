@@ -1,0 +1,1698 @@
+{
+ "questions": [
+  {
+   "question": "Which is the default encapsulation on a serial connection for Cisco?",
+   "choices": [
+    "PPPoE",
+    "HDLC",
+    "PPP",
+    "MPLS"
+   ],
+   "answer": 1,
+   "explanation": "High-Level Data Link Control (HDLC) is the default encapsulation on a serial connection for Cisco.",
+   "source": "CCNA 100-105 · Ch. 4, Q1",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "You are connecting a Cisco router to a leased line serial connection. The other side of the connection has non-Cisco equipment. Which protocol should you choose for compatibility?",
+   "choices": [
+    "PPP",
+    "PPPoE",
+    "X.25",
+    "HDLC"
+   ],
+   "answer": 0,
+   "explanation": "The Point-to-Point Protocol (PPP) is an open standard. Cisco routers default to the HDLC protocol. However, HDLC is a proprietary standard for Cisco. So PPP should be used for compatibility.",
+   "source": "CCNA 100-105 · Ch. 4, Q2",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which sub-protocol inside of the PPP suite is responsible for tagging layer 3 protocols so that multiple protocols can be used over a PPP connection?",
+   "choices": [
+    "NCP",
+    "LCP",
+    "MPLS",
+    "PCP"
+   ],
+   "answer": 0,
+   "explanation": "The Network Control Protocol (NCP) works at layer 3 tagging the network protocols from end to end when PPP is used. This gives PPP the ability to offer multi-protocol transport.",
+   "source": "CCNA 100-105 · Ch. 4, Q3",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will configure PPP on a serial interface?",
+   "choices": [
+    "Router(config-if)#ppp protocol",
+    "Router(config-if)#ppp enable",
+    "Router(config-if)#encapsulation ppp",
+    "Router(config-if)#protocol ppp"
+   ],
+   "answer": 2,
+   "explanation": "The command encapsulation ppp configures the serial interface with the Point to Point Protocol (PPP). PPP is an encapsulation protocol.",
+   "source": "CCNA 100-105 · Ch. 4, Q4",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which sub-protocol inside of the PPP suite is responsible for authentication?",
+   "choices": [
+    "MPLS",
+    "LCP",
+    "ACP",
+    "NCP"
+   ],
+   "answer": 1,
+   "explanation": "The Link Control Protocol (LCP) provides the authentication phase of a PPP connection.",
+   "source": "CCNA 100-105 · Ch. 4, Q5",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which encapsulation protocol is used with PPP to transmit data over serial links?",
+   "choices": [
+    "HDLC",
+    "PPPoE",
+    "MPLS",
+    "X.25"
+   ],
+   "answer": 0,
+   "explanation": "The High-Level Data Link Control protocol is used as the encapsulation method for serial links. This protocol is the open standard HDLC compared to the native Cisco-proprietary version.",
+   "source": "CCNA 100-105 · Ch. 4, Q6",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which authentication method used with PPP uses a nonce (random number) to hash the password and prevent replay attacks?",
+   "choices": [
+    "PSAP",
+    "PAP",
+    "NTLM",
+    "CHAP"
+   ],
+   "answer": 3,
+   "explanation": "The Challenge Handshake Authentication Protocol (CHAP) works by sending a random number called the challenge. This challenge is received by the authenticating router and used to hash the password. The password is transferred to the challenging router and authenticates the authenticating router.",
+   "source": "CCNA 100-105 · Ch. 4, Q7",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which sub-protocol inside of the PPP suite facilitates multilink connections?",
+   "choices": [
+    "ACP",
+    "NCP",
+    "MPLS",
+    "LCP"
+   ],
+   "answer": 3,
+   "explanation": "The Link Control Protocol provides the facility for multilink connections.",
+   "source": "CCNA 100-105 · Ch. 4, Q8",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which is a benefit of using MLPPP?",
+   "choices": [
+    "Does not require authentication protocols",
+    "Does not require routing protocols",
+    "Simplified layer 3 configuration",
+    "Provides end-to-end encryption"
+   ],
+   "answer": 2,
+   "explanation": "MultiLink PPP simplifies layer 3 configuration. It does this by bundling the connections together at layer 2. It provides a pseudo interface representing the individual interface where all layer 3 configuration is applied.",
+   "source": "CCNA 100-105 · Ch. 4, Q9",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which configuration will create the multilink interface for an MLPPP connection to an adjoining router?",
+   "choices": [
+    "RouterA(config)#interface multilink 1 RouterA(config-if)#encapsulation ppp multilink",
+    "RouterA(config)#interface multilink 1 RouterA(config-if)#encapsulation ppp RouterA(config-if)#ppp multilink RouterA(config-if)#ip address 192.168.1.1 255.255.255.0 RouterA(config-if)#ppp multilink group 1",
+    "RouterA(config)#interface multilink 1 RouterA(config-if)#ppp multilink RouterA(config-if)#ip address 192.168.1.1 255.255.255.0",
+    "RouterA(config)#interface multilink 1 RouterA(config-if)#ip address 192.168.1.1 255.255.255.0 RouterA(config-if)#ppp multilink group 1"
+   ],
+   "answer": 1,
+   "explanation": "The pseudo interface must be created first with the command interface multilink 1 . Then the encapsulation must be set to PPP with encapsulation ppp . The ppp multilink command configures the ability to use multilink for the encapsulation of PPP. Then the IP address is configured. Last, the ppp multilink group 1 command associates the interface multilink 1 with the multilink group to be used for bundling.",
+   "source": "CCNA 100-105 · Ch. 4, Q10",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will allow verification of the active links in a multilink connection?",
+   "choices": [
+    "Router#show multilink",
+    "Router#show ppp multilink",
+    "Router#show ppp",
+    "Router#show run"
+   ],
+   "answer": 1,
+   "explanation": "The command show ppp multilink will display the active links of a multilink connection.",
+   "source": "CCNA 100-105 · Ch. 4, Q11",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "You need to set up PPP authentication for RouterA. The adjoining router is named RouterB, and both routers will have a matching password of cisco . Which commands will achieve this?",
+   "choices": [
+    "RouterA(config)#username RouterB password cisco RouterA(config)#interface serial 0/1/0 RouterA(config-if)#ppp authentication chap pap",
+    "RouterA(config)#username RouterA cisco RouterA(config)#interface serial 0/1/0 RouterA(config-if)#ppp authentication chap pap",
+    "RouterA(config)#username RouterA password cisco RouterA(config)#interface serial 0/1/0 RouterA(config-if)#ppp authentication chap pap",
+    "RouterA(config)#username RouterA password cisco RouterA(config)#interface serial 0/1/0 RouterA(config-if)#authentication chap pap"
+   ],
+   "answer": 0,
+   "explanation": "The first step is to set the username of RouterB to use for authentication via username RouterB password cisco . Then enter the interface and configure authentication with the command ppp authentication chap pap .",
+   "source": "CCNA 100-105 · Ch. 4, Q12",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will allow you to diagnose PPP authentication failures?",
+   "choices": [
+    "Router#debug ppp authentication",
+    "Router#debug ppp",
+    "Router#debug ppp events",
+    "Router#show interface"
+   ],
+   "answer": 0,
+   "explanation": "The command debug ppp authentication will allow you to watch the authentication exchange between two routers in real time. This will help you diagnose an authentication problem between two routers.",
+   "source": "CCNA 100-105 · Ch. 4, Q13",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will allow you to see the authentication protocol that PPP has authenticated with on the adjoining router?",
+   "choices": [
+    "RouterA#show interface",
+    "RouterA#show ppp all",
+    "RouterA#show running-configuration",
+    "RouterA#debug ppp"
+   ],
+   "answer": 1,
+   "explanation": "The command show ppp all will show the current authentication protocol used between two routers. The output will look similar to this: Se0/3/0 LCP+ CHAP+ IPCP+ CDPC> LocalT 192.168.1.1 RouterB",
+   "source": "CCNA 100-105 · Ch. 4, Q14",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will configure PPP to support CHAP first and PAP if CHAP is not supported?",
+   "choices": [
+    "Router(config-if)#authentication pap chap",
+    "Router(config-if)#ppp authentication chap",
+    "Router(config-if)#ppp authentication chap pap",
+    "Router(config-if)#authentication chap pap"
+   ],
+   "answer": 2,
+   "explanation": "The command ppp authentication chap pap will configure PPP authentication. The first authentication protocol is preferred, and if that protocol is not supported, then authentication will fall back to PAP.",
+   "source": "CCNA 100-105 · Ch. 4, Q16",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "You have set up a PPP multilink connection between two routers. You want to add authentication. Where should you configure the authentication?",
+   "choices": [
+    "On the multilink interface",
+    "On both serial interfaces in the bundle",
+    "On the multilink group that joins the bundle",
+    "On the first serial interface in the bundle"
+   ],
+   "answer": 1,
+   "explanation": "Layer 2 functionality such as authentication is configured on the interfaces in the bundle. Layer 3 configuration is on the multilink interface, such as the IP address of the bundle.",
+   "source": "CCNA 100-105 · Ch. 4, Q19",
+   "topic": "4.1 Configure and verify PPP and MLPPP on WAN interfaces using local authentication",
+   "topic_n": 1
+  },
+  {
+   "question": "What encapsulation is used with DSL connections?",
+   "choices": [
+    "HDLC",
+    "MPLS",
+    "PPP",
+    "PPPoE"
+   ],
+   "answer": 3,
+   "explanation": "Point-to-Point Protocol over Ethernet (PPPoE) is used for DSL connections. PPPoE allows CHAP to be used to authenticate users over an Ethernet network that is configured on the customer side.",
+   "source": "CCNA 100-105 · Ch. 4, Q21",
+   "topic": "4.2 Configure, verify, and troubleshoot PPPoE client-side interfaces using local authentication",
+   "topic_n": 2
+  },
+  {
+   "question": "What is the maximum transmission unit that should be set for PPPoE?",
+   "choices": [
+    "1,548",
+    "1,400",
+    "1,500",
+    "1,492"
+   ],
+   "answer": 3,
+   "explanation": "The MTU for PPPoE should be set to 1,492 bytes. Normal MTU size is 1,500, but when PPPoE is used, there is an overhead of 2 bytes for PPP and 6 bytes for the PPPoE headers. 1500 bytes – 8 overhead bytes = 1,492 bytes MTU for data.",
+   "source": "CCNA 100-105 · Ch. 4, Q22",
+   "topic": "4.2 Configure, verify, and troubleshoot PPPoE client-side interfaces using local authentication",
+   "topic_n": 2
+  },
+  {
+   "question": "You are configuring PPPoE and have configured a dialer interface with a number of 1. Interface Gi0/1 connected the router to the ISP. Which command will set the gateway of last resort to the ISP?",
+   "choices": [
+    "Router(config-if)#ppp default-gateway",
+    "Router(config)#ip default-gateway gi 0/1",
+    "Router(config)#ip route 0.0.0.0 0.0.0.0 gi 0/1",
+    "Router(config)#ip route 0.0.0.0 0.0.0.0 dialer 1"
+   ],
+   "answer": 3,
+   "explanation": "When PPPoE is configured, the dialer interface serves as the exit interface. The command ip route 0.0.0.0 0.0.0.0 dialer 1 will configure the gateway of last resort to the ISP.",
+   "source": "CCNA 100-105 · Ch. 4, Q24",
+   "topic": "4.2 Configure, verify, and troubleshoot PPPoE client-side interfaces using local authentication",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command can be used to diagnose if the PPPoE session has been established?",
+   "choices": [
+    "Router#show ppp",
+    "Router#show pppoe users",
+    "Router#show running-configuration",
+    "Router#show pppoe session"
+   ],
+   "answer": 3,
+   "explanation": "The command show pppoe session will display all of the interfaces involved with the PPPoE establishment and shows the status of each interface.",
+   "source": "CCNA 100-105 · Ch. 4, Q25",
+   "topic": "4.2 Configure, verify, and troubleshoot PPPoE client-side interfaces using local authentication",
+   "topic_n": 2
+  },
+  {
+   "question": "Which protocol is responsible in configuring the dialer interface for PPPoE with an IP address?",
+   "choices": [
+    "IPCP",
+    "LCP",
+    "CHAP",
+    "PPP"
+   ],
+   "answer": 0,
+   "explanation": "The Internet Protocol Control Protocol (IPCP) is an NCP protocol that is responsible for configuring the IP address on the PPPoE client.",
+   "source": "CCNA 100-105 · Ch. 4, Q26",
+   "topic": "4.2 Configure, verify, and troubleshoot PPPoE client-side interfaces using local authentication",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will allow you to see how many PPPoE sessions are terminated on the aggregation router (ISP router)?",
+   "choices": [
+    "Router#show pppoe states",
+    "Router#show pppoe summary",
+    "Router#show running-configuration",
+    "Router#show pppoe users"
+   ],
+   "answer": 1,
+   "explanation": "The command show pppoe summary entered on the aggregation router (ISP router) will show you how many PPPoE sessions are terminated (active) on the router.",
+   "source": "CCNA 100-105 · Ch. 4, Q29",
+   "topic": "4.2 Configure, verify, and troubleshoot PPPoE client-side interfaces using local authentication",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command creates an IP pool for PPPoE on the aggregation router?",
+   "choices": [
+    "Router(config)#ip pool poolname 192.168.1.0 255.255.255.0",
+    "Router(config)#ip local pool poolname 192.168.1.0",
+    "Router(config)#ip local pool poolname 192.168.1.2 192.168.1.254",
+    "Router(config)#ip pool poolname 192.168.1.2 192.168.1.254"
+   ],
+   "answer": 2,
+   "explanation": "The command ip local pool poolname 192.168.1.2 192.168.1.254 configures a local IP pool with a name of poolname . The address range is configured first with the starting address of 192.168.1.2 (leaving 192.168.1.1 for the router) to 192.168.1.254, the end of the range.",
+   "source": "CCNA 100-105 · Ch. 4, Q32",
+   "topic": "4.2 Configure, verify, and troubleshoot PPPoE client-side interfaces using local authentication",
+   "topic_n": 2
+  },
+  {
+   "question": "Which is a disadvantage of PPPoE?",
+   "choices": [
+    "Lower speeds than leased lines",
+    "Single point of aggregation for bandwidth",
+    "Smaller MTU per packet",
+    "Higher level of security"
+   ],
+   "answer": 2,
+   "explanation": "When using PPPoE, the MTU is smaller than the standard 1,500 MTU on Ethernet. If attention is not taken to the MTU, it can be problematic.",
+   "source": "CCNA 100-105 · Ch. 4, Q34",
+   "topic": "4.2 Configure, verify, and troubleshoot PPPoE client-side interfaces using local authentication",
+   "topic_n": 2
+  },
+  {
+   "question": "Which statement is correct about GRE tunnels?",
+   "choices": [
+    "GRE provides packet-in-packet encapsulation.",
+    "GRE uses IPSec security.",
+    "GRE uses a protocol of 57.",
+    "GRE provides per-packet authentication."
+   ],
+   "answer": 0,
+   "explanation": "GRE tunnels provide packet-in-packet encapsulation. It takes the original IP packet and encapsulates it, adding another IP packet for the GRE tunnel. GRE tunnels alone do not provide any encryption.",
+   "source": "CCNA 100-105 · Ch. 4, Q36",
+   "topic": "4.3 Configure, verify, and troubleshoot GRE tunnel connectivity",
+   "topic_n": 3
+  },
+  {
+   "question": "Which tunnel protocol is a Cisco proprietary protocol?",
+   "choices": [
+    "PPP",
+    "GRE",
+    "IPSec",
+    "SSL"
+   ],
+   "answer": 1,
+   "explanation": "Generic Routing Encapsulation is a Cisco proprietary standard for encapsulating layer 3 protocols over an IP network, such as the Internet.",
+   "source": "CCNA 100-105 · Ch. 4, Q37",
+   "topic": "4.3 Configure, verify, and troubleshoot GRE tunnel connectivity",
+   "topic_n": 3
+  },
+  {
+   "question": "Which layer 3 protocol does GRE use?",
+   "choices": [
+    "Protocol 4",
+    "Protocol 43",
+    "Protocol 57",
+    "Protocol 47"
+   ],
+   "answer": 3,
+   "explanation": "GRE uses the layer 3 protocol 47, which is the protocol that is stated in the layer 3 header.",
+   "source": "CCNA 100-105 · Ch. 4, Q38",
+   "topic": "4.3 Configure, verify, and troubleshoot GRE tunnel connectivity",
+   "topic_n": 3
+  },
+  {
+   "question": "What is the MTU of a Generic Router Encapsulation (GRE) tunnel?",
+   "choices": [
+    "MTU 1528",
+    "MTU 1476",
+    "MTU 1500",
+    "MTU 1492"
+   ],
+   "answer": 1,
+   "explanation": "The maximum transmission unit of a GRE tunnel is 1,476, because there are 24 bytes of overhead for the GRE header—20 bytes are used by the public IP header and 4 bytes are used for GRE.",
+   "source": "CCNA 100-105 · Ch. 4, Q41",
+   "topic": "4.3 Configure, verify, and troubleshoot GRE tunnel connectivity",
+   "topic_n": 3
+  },
+  {
+   "question": "Which command will help you verify the source and destination of a GRE tunnel?",
+   "choices": [
+    "Router#show ip route",
+    "Router#show ip gre",
+    "Router#show interface tunnel 0",
+    "Router#show ip tunnel 0"
+   ],
+   "answer": 2,
+   "explanation": "The command show interface tunnel 0 will show in the output the source and destination of the tunnel.",
+   "source": "CCNA 100-105 · Ch. 4, Q42",
+   "topic": "4.3 Configure, verify, and troubleshoot GRE tunnel connectivity",
+   "topic_n": 3
+  },
+  {
+   "question": "Which protocol helps resolve and direct traffic for DMVPN connections?",
+   "choices": [
+    "ARP",
+    "NHRP",
+    "GRE",
+    "HSRP"
+   ],
+   "answer": 1,
+   "explanation": "The Next Hop Router Protocol (NHRP) is responsible for resolving and directing traffic for Dynamic Multipoint VPN (DMVPN) traffic.",
+   "source": "CCNA 100-105 · Ch. 4, Q45",
+   "topic": "4.5d Internet VPN (DMVPN, site-to-site VPN, client VPN)",
+   "topic_n": 13
+  },
+  {
+   "question": "What is the default keepalive for serial interfaces?",
+   "choices": [
+    "5 seconds",
+    "1 second",
+    "60 seconds",
+    "10 seconds"
+   ],
+   "answer": 3,
+   "explanation": "The default keepalive time is 10 seconds. The keepalive allows both adjoining routers to know when the connection should be turned to a down state so routing protocols can choose a new route.",
+   "source": "CCNA 100-105 · Ch. 4, Q46",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "Which technology is a point-to-point dedicated line between two private facilities?",
+   "choices": [
+    "Wireless WAN",
+    "DMVPN",
+    "T1 leased line",
+    "VPN"
+   ],
+   "answer": 2,
+   "explanation": "A T1 is a leased line from the phone company that is a dedicated point-to-point connection between two facilities. T1 lines are serial communications lines, which guarantees a bandwidth of 1.544 Mb/s between two locations.",
+   "source": "CCNA 100-105 · Ch. 4, Q47",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "Which topology will allow for fault tolerance to a single ISP?",
+   "choices": [
+    "Dual-homed",
+    "Single-homed",
+    "Dual multi-homed",
+    "Single multi-homed"
+   ],
+   "answer": 0,
+   "explanation": "A fault-tolerant connection to a single ISP would be a dual-homed connection. With a dual-homed connection, two dedicated lines will terminate from the ISP to your facility. If one line were to fail, the other would be the fault-tolerant line.",
+   "source": "CCNA 100-105 · Ch. 4, Q49",
+   "topic": "4.4d Single vs. dual-homed",
+   "topic_n": 8
+  },
+  {
+   "question": "Which topology provides no fault tolerance?",
+   "choices": [
+    "Dual-homed",
+    "Single multi-homed",
+    "Single-homed",
+    "Dual multi-homed"
+   ],
+   "answer": 2,
+   "explanation": "A single-homed connection will provide no fault tolerance in the event of an outage of the line itself at the ISP.",
+   "source": "CCNA 100-105 · Ch. 4, Q50",
+   "topic": "4.4d Single vs. dual-homed",
+   "topic_n": 8
+  },
+  {
+   "question": "What is the function of a keepalive on a dedicated line?",
+   "choices": [
+    "It sends the clocking information.",
+    "It keeps the connection alive by transmitting small amounts of data.",
+    "It helps routers know when a connection no longer functions.",
+    "It helps identify congestion."
+   ],
+   "answer": 2,
+   "explanation": "The keepalive function on a serial interface helps the router notice when a connection no longer functions. The router can then bring the interface to a DOWN status and recalculate routes.",
+   "source": "CCNA 100-105 · Ch. 4, Q51",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "Which technology is primarily used as a point-to-point connection?",
+   "choices": [
+    "MLPPP",
+    "E-LAN services",
+    "DMVPN",
+    "E-Tree services"
+   ],
+   "answer": 0,
+   "explanation": "MultiLink Point-to-Point Protocol is used as a point-to-point connectivity method. Although there are multiple connections, they are dual-homed to the same locations.",
+   "source": "CCNA 100-105 · Ch. 4, Q53",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "Which technology provides for a hub-and-spoke design?",
+   "choices": [
+    "Wireless WAN",
+    "E-Line services",
+    "E-LAN services",
+    "E-Tree services"
+   ],
+   "answer": 3,
+   "explanation": "The E-Tree services of Metro Ethernet allows for a root to be established to serve the remote sites or leaf endpoints. The root can communicate to the leaf endpoints and the leaf endpoints can communicate to the root. However, the leaf endpoints cannot communicate to each other.",
+   "source": "CCNA 100-105 · Ch. 4, Q54",
+   "topic": "4.4b Hub and spoke",
+   "topic_n": 6
+  },
+  {
+   "question": "Which technology provides for a dedicated point-to-point design?",
+   "choices": [
+    "E-Tree services",
+    "Wireless WAN",
+    "E-LAN services",
+    "E-Line services"
+   ],
+   "answer": 3,
+   "explanation": "Ethernet Line services, or E-Line services, provided with Metro Ethernet, is a dedicated point-to-point topology. This is commonly done with the use of an Ethernet Virtual Circuit defined at the service provider.",
+   "source": "CCNA 100-105 · Ch. 4, Q55",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "Which technology provides for a mesh design?",
+   "choices": [
+    "E-Tree services",
+    "E-Line services",
+    "E-LAN services",
+    "Wireless WAN"
+   ],
+   "answer": 2,
+   "explanation": "E-LAN is a service of Metro Ethernet. It provides a full mesh capability between endpoints. E-LAN services perform this by allowing all endpoints participating in E-LAN to communicate with each other. This type of communication is normally found on a common network LAN. This allows all sites to communicate with each other while only requiring a single line to the point of presence (PoP).",
+   "source": "CCNA 100-105 · Ch. 4, Q56",
+   "topic": "4.4c Full mesh",
+   "topic_n": 7
+  },
+  {
+   "question": "Which is a typical use case for hub-and-spoke WAN design?",
+   "choices": [
+    "Connections for an enterprise spread over a metropolitan area",
+    "Connections between two or more corporate locations",
+    "Connections for an Internet service provider to its customers",
+    "Connection internally inside of a service provider’s network"
+   ],
+   "answer": 2,
+   "explanation": "The most common hub-and-spoke WAN design is the way an Internet service provider is connected to their customers. The Internet connection is centrally located in a common physical location of the Internet provider called the point-of-presence or meet-me-room. All lines connect out from this point in a hub-and-spoke design.",
+   "source": "CCNA 100-105 · Ch. 4, Q57",
+   "topic": "4.4b Hub and spoke",
+   "topic_n": 6
+  },
+  {
+   "question": "You are configuring a serial interface for a point-to-point connection. You want to verify that clocking has been detected. Which command will help you verify clocking?",
+   "choices": [
+    "Router#show ip protocols",
+    "Router#show interface serial 0/0",
+    "Router#show clocking serial 0/0",
+    "Router#show controllers serial 0/0"
+   ],
+   "answer": 3,
+   "explanation": "The command show controllers serial 0/0 will show the controller configuration and status. If clocking is detected, you will see DTE V.35 TX and RX clocks detected .",
+   "source": "CCNA 100-105 · Ch. 4, Q59",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "In a DS1 serial connection, how many DS0 channels exist?",
+   "choices": [
+    "12 DS0 channels",
+    "23 DS0 channels",
+    "24 DS0 channels",
+    "32 DS0 channels"
+   ],
+   "answer": 2,
+   "explanation": "A T1 or DS1 comprises 24 DS0 channels at 64 kb/s. 24 × 64 = 1.536 Mb/s (advertised as 1.544 Mb/s).",
+   "source": "CCNA 100-105 · Ch. 4, Q60",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "PPPoE is an example of which topology?",
+   "choices": [
+    "Point-to-point",
+    "Hub-and-spoke",
+    "Full-mesh",
+    "Dual-homed"
+   ],
+   "answer": 0,
+   "explanation": "Point-to-Point over Ethernet (PPPoE) is a point-to-point technology. It creates a connection between two facilities.",
+   "source": "CCNA 100-105 · Ch. 4, Q61",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "You are configuring a serial point-to-point connection between two routers and need to provide clocking. Which command will configure the router as a DCE device?",
+   "choices": [
+    "Router(config-if)#clock-rate 64000",
+    "Router(config-if)#clock 64000",
+    "Router(config-if)#mode dce",
+    "Router(config-if)#dce clocking"
+   ],
+   "answer": 0,
+   "explanation": "The command clock-rate 64000 will set the interface as a DCE interface and provide a clock rate of 64000 bits per second.",
+   "source": "CCNA 100-105 · Ch. 4, Q62",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "In a leased line point-to-point configuration, what is responsible for sending the clocking for data alignment?",
+   "choices": [
+    "The CSU/DSU",
+    "A single side of the customer’s routers",
+    "Both of the customer’s routers",
+    "The Telco provider network"
+   ],
+   "answer": 3,
+   "explanation": "The Telco provider network is responsible for providing clocking for data alignment. If clocking is not detected, then the status of the interface will show as DOWN/DOWN since this is considered a layer 1 requirement.",
+   "source": "CCNA 100-105 · Ch. 4, Q63",
+   "topic": "4.4a Point-to-point",
+   "topic_n": 5
+  },
+  {
+   "question": "MLPPP is an example of which topology?",
+   "choices": [
+    "Single-homed",
+    "Dual multi-homed",
+    "Dual-homed",
+    "Single multi-homed"
+   ],
+   "answer": 2,
+   "explanation": "MultiLink Point to Point Protocol (MLPPP) is an example of a dual- homed topology. This is because there are two links to the same location for aggregation of bandwidth and failover.",
+   "source": "CCNA 100-105 · Ch. 4, Q64",
+   "topic": "4.4d Single vs. dual-homed",
+   "topic_n": 8
+  },
+  {
+   "question": "DMVPN is an example of which topology?",
+   "choices": [
+    "Dual-homed",
+    "Full-mesh",
+    "Hub-and-spoke",
+    "Point-to-point"
+   ],
+   "answer": 2,
+   "explanation": "Dynamic Multipoint VPN (DMVPN) is an example of a hub-and- spoke or point-to-multipoint topology. All of the satellite connections terminate back to the central location.",
+   "source": "CCNA 100-105 · Ch. 4, Q65",
+   "topic": "4.4b Hub and spoke",
+   "topic_n": 6
+  },
+  {
+   "question": "Why would you use Multiprotocol Label Switching (MPLS) as a connectivity option?",
+   "choices": [
+    "You need support for both IPv4 and IPv6 packets.",
+    "You need a high amount of bandwidth.",
+    "You need support for multicast packets.",
+    "You require encryption."
+   ],
+   "answer": 0,
+   "explanation": "The requirement for multiple protocols is a compelling reason to use MPLS. The protocols moving across MPLS nodes are irrelevant to the technology. This is because layer 3 information is not examined to route packets.",
+   "source": "CCNA 100-105 · Ch. 4, Q66",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "What does the term customer edge describe with respect to MPLS?",
+   "choices": [
+    "The customer’s router that sits at the edge of the customer’s network",
+    "The path that the packet travels in an MPLS network",
+    "The router in the provider’s network that switches customer packets",
+    "The provider’s router closest to the customer"
+   ],
+   "answer": 0,
+   "explanation": "The term customer edge defines the edge of the customer’s network. The router at the customer’s edge is usually only responsible for routing packets to the provider edge.",
+   "source": "CCNA 100-105 · Ch. 4, Q67",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "What is the field in the layer 3 header that helps MPLS support quality of service?",
+   "choices": [
+    "DSCP",
+    "VOIP",
+    "QoS",
+    "802.1p"
+   ],
+   "answer": 0,
+   "explanation": "The field in the layer 3 header is called Differentiated Services, or DiffServ. The value is an 8-bit Differentiated Services Code Point. This DSCP value helps classify QoS for MPLS.",
+   "source": "CCNA 100-105 · Ch. 4, Q68",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "What does the term provider edge describe with respect to MPLS?",
+   "choices": [
+    "The provider’s router closest to the customer edge router",
+    "The router in the provider’s network that switches customer packets",
+    "The customer’s router that sits at the edge of the customer’s network",
+    "The path that the packet travels in an MPLS network"
+   ],
+   "answer": 0,
+   "explanation": "The term provider edge router is the router closest to the customer edge router. This router is responsible for labeling traffic and redistribution of routing protocols for the customer edge router.",
+   "source": "CCNA 100-105 · Ch. 4, Q69",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "Which WAN option provides a layer 2 connection between sites?",
+   "choices": [
+    "GRE tunnels",
+    "MPLS",
+    "Metro Ethernet",
+    "Wireless WAN"
+   ],
+   "answer": 2,
+   "explanation": "Metro Ethernet provides a layer 2 connection between sites defined by the MEF services. Distances are overcome by the use of fiber optics.",
+   "source": "CCNA 100-105 · Ch. 4, Q70",
+   "topic": "4.5b Metro Ethernet",
+   "topic_n": 11
+  },
+  {
+   "question": "What is MPLS referred to as?",
+   "choices": [
+    "Layer 3 protocol",
+    "Layer 2.5 protocol",
+    "Layer 2 protocol",
+    "Layer 1 protocol"
+   ],
+   "answer": 1,
+   "explanation": "MPLS is referred to as a layer 2.5 protocol. This is because it shims a header between the layer 2 and layer 3 protocols; the header contains the label for the traffic.",
+   "source": "CCNA 100-105 · Ch. 4, Q71",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "Which benefit of using a secure VPN allows verification that a packet was not tampered with in transit?",
+   "choices": [
+    "Anti-replay",
+    "Confidentiality",
+    "Data integrity",
+    "Authentication"
+   ],
+   "answer": 2,
+   "explanation": "Date integrity is one of the benefits of using a secure VPN protocol. To ensure its integrity, a packet is sealed with a hash which must equate to the same hash on the other side when it is received and decrypted.",
+   "source": "CCNA 100-105 · Ch. 4, Q72",
+   "topic": "4.5d Internet VPN (DMVPN, site-to-site VPN, client VPN)",
+   "topic_n": 13
+  },
+  {
+   "question": "Which Cisco technology is often used to create VPN tunnels between sites?",
+   "choices": [
+    "Cisco routers",
+    "Catalyst switches",
+    "Policy-based routing",
+    "Adaptive Security Appliance"
+   ],
+   "answer": 3,
+   "explanation": "Cisco Adaptive Security Appliance (ASA) devices are used to create VPN tunnels between sites. ASA devices run the Cisco ASA software, which allows for firewall, intrusion prevention, and VPNs among other security-related functions.",
+   "source": "CCNA 100-105 · Ch. 4, Q73",
+   "topic": "4.5d Internet VPN (DMVPN, site-to-site VPN, client VPN)",
+   "topic_n": 13
+  },
+  {
+   "question": "You have several remote workers who enter patient information and require a high level of security. Which technology would best suit the connectivity for these workers?",
+   "choices": [
+    "Client SSL/VPN",
+    "Site-to-site VPN",
+    "Wireless WAN",
+    "GRE tunnels"
+   ],
+   "answer": 0,
+   "explanation": "Since you have several remote workers who telecommute, the best connectivity option would be client SSL/VPN connectivity. A product called Cisco AnyConnect Secure Mobility Client allows for SSL encryption for VPN tunnels back to the main site.",
+   "source": "CCNA 100-105 · Ch. 4, Q74",
+   "topic": "4.5d Internet VPN (DMVPN, site-to-site VPN, client VPN)",
+   "topic_n": 13
+  },
+  {
+   "question": "You have obtained an ADSL circuit at a remote office for central office connectivity. What will you need to configure on the remote office router?",
+   "choices": [
+    "Metro Ethernet",
+    "PPP",
+    "PPPoE",
+    "MPLS"
+   ],
+   "answer": 2,
+   "explanation": "Asymmetrical Digital Subscriber Line (ADSL) connectivity typically uses PPPoE to authenticate subscribers. The subscriber’s credentials are often relayed to a RADIUS server for subscription checks.",
+   "source": "CCNA 100-105 · Ch. 4, Q75",
+   "topic": "4.5c Broadband PPPoE",
+   "topic_n": 12
+  },
+  {
+   "question": "What is the term used to describe the telephone company’s switching office?",
+   "choices": [
+    "Main data frame",
+    "Demarcation point",
+    "Central office",
+    "Network edge"
+   ],
+   "answer": 2,
+   "explanation": "The central office, sometimes referred to as the CO, is the local switching office. The CO is where your data lines meet the public network for data and voice.",
+   "source": "CCNA 100-105 · Ch. 4, Q76",
+   "topic": "4.5 Describe WAN access connectivity options",
+   "topic_n": 9
+  },
+  {
+   "question": "Which is a correct statement about private WANs?",
+   "choices": [
+    "Private WANs secure by isolation.",
+    "Private WANs use PPPoE for authentication.",
+    "Private WANs use GRE tunnels.",
+    "Private WANs have built-in encryption."
+   ],
+   "answer": 0,
+   "explanation": "Private WANs secure transmissions of their clients by providing isolation between them. It is up to the customer to use encryption for an added level of security, depending on the nature of the business.",
+   "source": "CCNA 100-105 · Ch. 4, Q77",
+   "topic": "4.5 Describe WAN access connectivity options",
+   "topic_n": 9
+  },
+  {
+   "question": "What is the definition of an Ethernet virtual circuit (EVC)?",
+   "choices": [
+    "An EVC defines the path that an MPLS packet will travel.",
+    "An EVC defines two endpoints for MPLS customers.",
+    "An EVC defines two endpoints for Metro Ethernet customers.",
+    "An EVC defines the path that a PPPoE packet will travel."
+   ],
+   "answer": 2,
+   "explanation": "An EVC defines the endpoints inside of a Metro Ethernet network. These endpoints are the customers’ sites in which traffic will flow.",
+   "source": "CCNA 100-105 · Ch. 4, Q78",
+   "topic": "4.5b Metro Ethernet",
+   "topic_n": 11
+  },
+  {
+   "question": "What is the term that defines the access point for the service provider’s services?",
+   "choices": [
+    "Demarcation point",
+    "Network edge",
+    "Point of presence",
+    "Customer edge"
+   ],
+   "answer": 2,
+   "explanation": "Point of presence (PoP) is the term that defines the access point of the provider’s services. These services might be Internet, private WAN, or cloud resources.",
+   "source": "CCNA 100-105 · Ch. 4, Q79",
+   "topic": "4.5 Describe WAN access connectivity options",
+   "topic_n": 9
+  },
+  {
+   "question": "When implementing routing protocols such as OSPF with E-LAN Metro Ethernet, which statement is true?",
+   "choices": [
+    "Only the leaf routers and the root will become neighbors.",
+    "All routers in an E-LAN service require a unique network ID.",
+    "All of the E-LAN service sites require a unique area ID.",
+    "All routers in an E-LAN service will become neighbors."
+   ],
+   "answer": 3,
+   "explanation": "A Metro Ethernet E-LAN service allows for a full-mesh topology between all of the sites. Since all of the sites are connected in a method similar to a layer 2 (LAN) network, all of the routers will become neighbors. This is similar to having multiple routers on a LAN.",
+   "source": "CCNA 100-105 · Ch. 4, Q80",
+   "topic": "4.5b Metro Ethernet",
+   "topic_n": 11
+  },
+  {
+   "question": "Which routing protocol do MPLS providers typically use internally in the provider’s network?",
+   "choices": [
+    "OSPF",
+    "EIGRP",
+    "IS-IS",
+    "MP-BGP"
+   ],
+   "answer": 3,
+   "explanation": "MPLS providers typically use Multiprotocol-Border Gateway Protocol (MP-BGP) internally. This is because MP-BGP can advertise multiple routes while allowing logical separation between customers’ routes.",
+   "source": "CCNA 100-105 · Ch. 4, Q81",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "What device connects the remote office DSL modem to the telco’s PSTN and the Internet?",
+   "choices": [
+    "Digital cross-connect System",
+    "5ESS switch",
+    "DSL access multiplier",
+    "DSL concentrator"
+   ],
+   "answer": 2,
+   "explanation": "DSL access multipliers, or DSLAMs, share the local loop with analog phone traffic to intercept communications from the DSL modem. DASLAMs provide the switching of data to the Internet.",
+   "source": "CCNA 100-105 · Ch. 4, Q82",
+   "topic": "4.5c Broadband PPPoE",
+   "topic_n": 12
+  },
+  {
+   "question": "Which protocol does IPSec use to encrypt data packets?",
+   "choices": [
+    "AH",
+    "IKE",
+    "ESP",
+    "ISAKMP"
+   ],
+   "answer": 2,
+   "explanation": "IPSec uses the Encapsulating Security Payload protocol to encrypt data.",
+   "source": "CCNA 100-105 · Ch. 4, Q83",
+   "topic": "4.5d Internet VPN (DMVPN, site-to-site VPN, client VPN)",
+   "topic_n": 13
+  },
+  {
+   "question": "What is a benefit of site-to-site IPSec VPNs?",
+   "choices": [
+    "Lower latency",
+    "Lower bandwidth requirements",
+    "Scalability",
+    "Support for multicast"
+   ],
+   "answer": 2,
+   "explanation": "Site-to-site IPSec VPNs offer scalability as a benefit. This is because each remote office only needs an Internet connection to create a VPN tunnel back to the main office.",
+   "source": "CCNA 100-105 · Ch. 4, Q84",
+   "topic": "4.5d Internet VPN (DMVPN, site-to-site VPN, client VPN)",
+   "topic_n": 13
+  },
+  {
+   "question": "You have been asked to recommend a private WAN technology. All of the remote offices have varied physical connectivity paths. Which private WAN technology should you recommend?",
+   "choices": [
+    "MPLS",
+    "GRE tunnels",
+    "PPPoE",
+    "Metro Ethernet"
+   ],
+   "answer": 0,
+   "explanation": "Multiprotocol Label Switching allows for varied access links such as serial leased lines, Frame Relay, Metro Ethernet, and so on. You can leverage the existing connectivity methods to form a private WAN.",
+   "source": "CCNA 100-105 · Ch. 4, Q85",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "Which statement is true about implementing routing protocols such as OSPF with E-Tree Metro Ethernet?",
+   "choices": [
+    "All routers in an E-Tree service require a unique network ID.",
+    "All of the E-Tree service sites require a unique area ID.",
+    "All routers in an E-Tree service will become neighbors.",
+    "Only the leaf routers and the root will become neighbors."
+   ],
+   "answer": 3,
+   "explanation": "E-Tree services allow the root to talk to the leafs in the tree. The leafs cannot forward traffic to each other without going through the root. Routing protocols are no different in traffic patterns.",
+   "source": "CCNA 100-105 · Ch. 4, Q86",
+   "topic": "4.5b Metro Ethernet",
+   "topic_n": 11
+  },
+  {
+   "question": "Which statement about using MPLS and dynamic routing protocols is true?",
+   "choices": [
+    "CE routers form neighbor relations with other CE routers.",
+    "CE routers form neighbor relations with PE routers.",
+    "CE routers receive their routing updates with route redistribution from other CE routers.",
+    "CE routers receive their routing updates with route redistribution from PE routers."
+   ],
+   "answer": 3,
+   "explanation": "CE routers do not form adjacencies or neighbors (depending on protocol) with other CE routers. They depend on PE routers and route redistribution of routing protocols to receive their routing updates and tables.",
+   "source": "CCNA 100-105 · Ch. 4, Q87",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "When using MPLS and OSPF, the PE routers function as what?",
+   "choices": [
+    "Autonomous system boundary routers",
+    "Point-to-multipoint routers",
+    "Area border routers",
+    "Super backbone routers"
+   ],
+   "answer": 3,
+   "explanation": "Every area must connect back to the backbone area, or area 0. However, CE routers cannot create neighborships with other sites. So the MPLS PE routers can either extend area 0 or create the area 0 network, which is called a super backbone.",
+   "source": "CCNA 100-105 · Ch. 4, Q88",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "Which mechanism does a service provider use for controlling overages on Metro Ethernet services?",
+   "choices": [
+    "Ethernet virtual circuits",
+    "Shaping of traffic",
+    "Policing of traffic",
+    "ACLs on the SP network"
+   ],
+   "answer": 2,
+   "explanation": "Service providers use policing on Ethernet virtual circuits to allow the customer to burst up to the line’s potential bandwidth yet only allow sustained data rates according to the contracted committed information rate (CIR).",
+   "source": "CCNA 100-105 · Ch. 4, Q89",
+   "topic": "4.5b Metro Ethernet",
+   "topic_n": 11
+  },
+  {
+   "question": "When working with the MPLS provider on providing QOS, which is a consideration for the customer?",
+   "choices": [
+    "MPLS support of multiple access link technologies",
+    "MPLS support of DSCP markings",
+    "Redistribution of routing protocols",
+    "Internal speed of the customer network"
+   ],
+   "answer": 0,
+   "explanation": "Although all of these can be considerations for the customer, the largest impact can be the access link technology used between the PE and CE routers. If the customer uses Frame Relay, the QOS can be unusable because of discarded frames due to congestion.",
+   "source": "CCNA 100-105 · Ch. 4, Q90",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "Which protocol does IPSec use to check integrity of data packets?",
+   "choices": [
+    "ISAKMP",
+    "IKE",
+    "ESP",
+    "AH"
+   ],
+   "answer": 3,
+   "explanation": "IPSec uses the Authentication Header protocol to check data integrity. This is done by creating a numerical hash of the data via SHA1, SHA2, or MD5 algorithms.",
+   "source": "CCNA 100-105 · Ch. 4, Q91",
+   "topic": "4.5d Internet VPN (DMVPN, site-to-site VPN, client VPN)",
+   "topic_n": 13
+  },
+  {
+   "question": "When creating GRE tunnels, what is a consideration that can restrict tunnel creation?",
+   "choices": [
+    "Speed of the tunnel",
+    "The tunnel interface number",
+    "ACLs on the firewall",
+    "Number of hops between the source and destination"
+   ],
+   "answer": 2,
+   "explanation": "ACLs are a major consideration since they are neither TCP nor UDP; they are a layer 3 protocol of their own. The ACL required for the tunnel creation is permit gre {source} {destination} , which would be for a named access list.",
+   "source": "CCNA 100-105 · Ch. 4, Q92",
+   "topic": "4.3 Configure, verify, and troubleshoot GRE tunnel connectivity",
+   "topic_n": 3
+  },
+  {
+   "question": "When purchasing a Metro Ethernet connection, which option is generally tied to the monthly reoccurring cost of the connection?",
+   "choices": [
+    "Routing protocols used to support the service",
+    "The use of QOS",
+    "IP addresses used to support the service",
+    "The committed information rate on the EVC"
+   ],
+   "answer": 3,
+   "explanation": "The CIR, or committed information rate, is the sustainable speed that the customer can communicate on the Ethernet virtual circuit. This CIR is directly tied to the price of the Monthly Recurring Charge (MRC), since the service provider must dedicate this bandwidth for the customer agreement.",
+   "source": "CCNA 100-105 · Ch. 4, Q93",
+   "topic": "4.5b Metro Ethernet",
+   "topic_n": 11
+  },
+  {
+   "question": "Which mechanism can a Metro Ethernet customer employ to ensure proper QoS?",
+   "choices": [
+    "Policing of traffic",
+    "Ethernet virtual circuits",
+    "ACLs on the SP network",
+    "Shaping of traffic"
+   ],
+   "answer": 3,
+   "explanation": "Metro Ethernet service providers employ policing of traffic on Ethernet virtual circuits according to the committed information rate (CIR). The policing of traffic discards any traffic over the CIR without prejudice to the type of traffic. Therefore, the customer should shape traffic according to their preference of QoS on important traffic so that important packets are not discarded by the provider during high utilization.",
+   "source": "CCNA 100-105 · Ch. 4, Q94",
+   "topic": "4.5b Metro Ethernet",
+   "topic_n": 11
+  },
+  {
+   "question": "When a customer purchases MPLS and supports EIGRP, which statement is correct?",
+   "choices": [
+    "The customer can opt to have the PE provide EIGRP.",
+    "All of the routers must share the super backbone.",
+    "The customer must configure all of the EIGRP routers to use different Autonomous System Numbers (ASNs).",
+    "The customer can configure all of the EIGRP routers to use the same Autonomous System Number (ASN)."
+   ],
+   "answer": 3,
+   "explanation": "The customer has the option to configure each site with a different Autonomous System Number (ASN) for EIGRP, or they can configure all sites with the same ASN. Regardless, the routes would be route redistributed from the internal Multiprotocol-Border Gateway Protocol (MP-BGP) process on the Provider Edge (PE) routers.",
+   "source": "CCNA 100-105 · Ch. 4, Q95",
+   "topic": "4.5a MPLS",
+   "topic_n": 10
+  },
+  {
+   "question": "Which Exterior Gateway Protocol (EGP) is used to route Internet traffic?",
+   "choices": [
+    "iBGP",
+    "eBGP",
+    "IS-IS",
+    "OSPF"
+   ],
+   "answer": 1,
+   "explanation": "eBGP stands for external Border Gateway Protocol. It is the only protocol used on the Internet to route traffic from one edge of the Internet to the other.",
+   "source": "CCNA 100-105 · Ch. 4, Q96",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which statement correctly identifies the differences between iBGP and eBGP?",
+   "choices": [
+    "iBGP routers peer with other iBGP routers in the same AS.",
+    "eBGP routers peer with other eBGP routers in the same AS.",
+    "iBGP connects enterprise networks with ISPs.",
+    "An iBGP router advertises prefixes with other iBGP routers in which the router has learned."
+   ],
+   "answer": 0,
+   "explanation": "A major difference between iBGP and eBGP is that iBGP routers peer with other iBGP routers in the same Autonomous System (AS), whereas eBGP routers peer with other eBGP routers in different Autonomous Systems (ASs). iBGP routers will not advertise routes learned within their common AS number.",
+   "source": "CCNA 100-105 · Ch. 4, Q97",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "How are BGP neighbors formed?",
+   "choices": [
+    "Via BGP discovery",
+    "BGP multicasting",
+    "Via BGP hello packets",
+    "Via static BGP neighbor assignment"
+   ],
+   "answer": 3,
+   "explanation": "BGP neighbors are formed via static neighbor assignment. BGP neighboring routers will not form a neighborship without manual intervention.",
+   "source": "CCNA 100-105 · Ch. 4, Q98",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which statement is correct about Exterior Border Gateway Protocol (eBGP)?",
+   "choices": [
+    "eBGP is a very scalable routing protocol.",
+    "eBGP has extremely fast convergence.",
+    "Any AS number can be used for connecting to the Internet.",
+    "eBGP is a link-state protocol."
+   ],
+   "answer": 0,
+   "explanation": "EBGP is not very fast in terms of convergence, due to the volume of routes it must handle and calculate. However, it is extremely scalable and that is why it is used specifically for the routing functionality of the Internet.",
+   "source": "CCNA 100-105 · Ch. 4, Q99",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "What does eBGP use to determine best path?",
+   "choices": [
+    "Reliability",
+    "Path attributes",
+    "Speed",
+    "Delay"
+   ],
+   "answer": 1,
+   "explanation": "EBGP uses path attributes to calculate best path selection. Rather than relying on one metric, a number of calculations are derived from the path attributes, which are updated with the network prefixes.",
+   "source": "CCNA 100-105 · Ch. 4, Q100",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which algorithm is used with eBGP for path selection?",
+   "choices": [
+    "Bellman-Ford algorithm",
+    "Dijkstra algorithm",
+    "Best path algorithm",
+    "Edge disjoint shortest pair algorithm"
+   ],
+   "answer": 2,
+   "explanation": "Best path algorithm is used with EBGP for path selection. The algorithm is a path-vector-based algorithm. Path-vector algorithms closely resemble distance-vector algorithms. However, with EBGP, there are about 14 pieces of criteria examined rather than just hop count, although AS path count is weighted heavily in the decision process.",
+   "source": "CCNA 100-105 · Ch. 4, Q101",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Where is it common to find single-homed eBGP connections?",
+   "choices": [
+    "The link between internal ISP structures",
+    "The link providing redundancy for an ISP",
+    "The link connecting ISPs to larger ISPs",
+    "The link connecting an enterprise with the ISP"
+   ],
+   "answer": 3,
+   "explanation": "Single-homed EBGP connections are found on the Internet edge. It is the link connecting the enterprise structure with a single ISP.",
+   "source": "CCNA 100-105 · Ch. 4, Q102",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "How are eBGP messages exchanged by peers?",
+   "choices": [
+    "Via UDP/179",
+    "Via multicasts",
+    "Via TCP/179",
+    "Via broadcasts"
+   ],
+   "answer": 2,
+   "explanation": "EBGP tables are initially loaded and updated via TCP port 179 by peer routers in a neighborship as well as by messages for peer setup. This is different than other routing protocols that use layer 3 protocols. EBGP uses the layer 4 protocol TCP to move data.",
+   "source": "CCNA 100-105 · Ch. 4, Q103",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which statement is correct about prefix advertisements with eBGP?",
+   "choices": [
+    "Only subnets of address blocks should be advertised with eBGP as they are used in a network.",
+    "Private and public address blocks should be advertised with eBGP.",
+    "All network addresses, including subnets, should be advertised with eBGP.",
+    "Only public network address blocks should be advertised with eBGP."
+   ],
+   "answer": 3,
+   "explanation": "Only public address blocks such as 180.45.65.0/24 should be advertised with EBGP. Subnets can be advertised, but often policies with your ISP will prohibit it. Private IPs should not be advertised with EBGP and are usually filtered at the ISP.",
+   "source": "CCNA 100-105 · Ch. 4, Q104",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "What can an ISP employ with eBGP to reduce load on the enterprise router?",
+   "choices": [
+    "Default route advertisement",
+    "Condensed prefix advertisement",
+    "Redistribution of eBGP to IGP protocols",
+    "AS reduction advertisement"
+   ],
+   "answer": 0,
+   "explanation": "In a single-homed Internet edge design, the default gateway will always be the ISP’s router. Therefore, to reduce the load on the enterprise router, the default gateway can be advertised as the ISP router.",
+   "source": "CCNA 100-105 · Ch. 4, Q105",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will start a BGP router process for an AS of 2001?",
+   "choices": [
+    "Router(config)#router bgp 2001",
+    "Router(config)#ip bgp 2001",
+    "Router(config)#ip router bgp 2001",
+    "Router(config)#bgp 2001"
+   ],
+   "answer": 0,
+   "explanation": "The command router bgp 2001 will start a router process of BGP for the AS number of 2001.",
+   "source": "CCNA 100-105 · Ch. 4, Q106",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "What is the administrative distance of eBGP?",
+   "choices": [
+    "40",
+    "90",
+    "200",
+    "20"
+   ],
+   "answer": 3,
+   "explanation": "The administrative distance of external BGP is a value of 20. The AD of internal BGP is a value of 200.",
+   "source": "CCNA 100-105 · Ch. 4, Q107",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will configure and advertise a network of 120.187.230.0/24 for BGP?",
+   "choices": [
+    "Router(config-router)#network 120.187.230.0/24",
+    "Router(config-router)#network 120.187.0.0",
+    "Router(config-router)#network 120.187.230.0 255.255.255.0",
+    "Router(config-router)#network 120.187.230.0 mask 255.255.255.0"
+   ],
+   "answer": 3,
+   "explanation": "The network address 120.187.230.0 is a Class B address. Therefore, the mask of 255.255.255.0 must be specified, via the command network 120.187.230.0 mask 255.255.255.0 .",
+   "source": "CCNA 100-105 · Ch. 4, Q108",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will allow you to verify the BGP neighbors the router is peered with?",
+   "choices": [
+    "Router#show ip bgp summary",
+    "Router#show ip route",
+    "Router#show ip bgp neighbors",
+    "Router#show ip bgp"
+   ],
+   "answer": 2,
+   "explanation": "The command show ip bgp neighbors will display all of the BGP neighbors that the router is peered with. The command will also show statistics about the peer(s).",
+   "source": "CCNA 100-105 · Ch. 4, Q109",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will perform a soft reset of BGP for a neighbor?",
+   "choices": [
+    "Router#bgp reset 198.23.45.2",
+    "Router#clear ip bgp 198.23.45.2 soft in",
+    "Router#clear ip bgp 198.23.45.2",
+    "Router#clear bgp 198.23.45.2"
+   ],
+   "answer": 1,
+   "explanation": "The command clear ip bgp 198.23.45.2 soft in will soft-reset the BGP neighbor of 198.23.45.2 for inbound connections. This will soft- refresh the BGP table for the peer of 198.23.45.2 and cause a new set of inbound updates.",
+   "source": "CCNA 100-105 · Ch. 4, Q110",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will allow you to verify that you are connected to a BGP peer and can receive data?",
+   "choices": [
+    "Router#show bgp",
+    "Router#show tcp brief",
+    "Router#show ip bgp",
+    "Router#show ip tcp brief"
+   ],
+   "answer": 1,
+   "explanation": "The command show tcp brief will allow you to see TCP terminated connections on the router. Since BGP uses TCP 179 for BGP messages, there should be an “established” connection on the router from the remote peer.",
+   "source": "CCNA 100-105 · Ch. 4, Q112",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will allow you to temporarily disable a BGP peer?",
+   "choices": [
+    "Router(config-router)#disable neighbor 198.45.32.2",
+    "Router(config)#no router bgp 200",
+    "Router(config)#clear ip bgp neighbor 198.45.32.2",
+    "Router(config-router)#neighbor 198.45.32.2 shutdown"
+   ],
+   "answer": 3,
+   "explanation": "The command neighbor 198.45.32.2 shutdown will put the neighbor into an Administratively Shutdown status. When you are ready to reestablish the peer, the no neighbor 198.45.32.2 shutdown command will return BGP back to normal. This is done to retain neighbor configuration while being able to disable the neighbor.",
+   "source": "CCNA 100-105 · Ch. 4, Q113",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "You have several /29 blocks of public IPs configured on Router A. You need to advertise the entire /24 block to your ISP with BGP. Which command will allow you to achieve this?",
+   "choices": [
+    "Router(config)#ip route 194.56.32.0 255.255.255.0 null0",
+    "Router(config-router)#network 194.56.32.0",
+    "Router(config-router)#network 194.56.32.0 mask 255.255.255.0",
+    "Router(config)#ip route 194.56.32.0 255.255.255.0 lo0"
+   ],
+   "answer": 0,
+   "explanation": "Using a route statement of ip route 194.56.32.0 255.255.255.0 null0 will create a discard route. This route will allow BGP to advertise the network prefix as a /24. The routing to the /29 networks will be overridden in Router A’s route table since the connected route is more specific than the /24 route.",
+   "source": "CCNA 100-105 · Ch. 4, Q114",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will allow you to verify routes line-by-line in a subset of the general route statement?",
+   "choices": [
+    "Router#show ip route 160.45.23.0 255.255.255.0 longer- prefixes",
+    "Router#show ip route bgp",
+    "Router#show ip route 160.45.23.0 255.255.255.0",
+    "Router#show ip route"
+   ],
+   "answer": 0,
+   "explanation": "The command show ip route 160.45.23.0 255.255.255.0 longer- prefixes will detail all of the specific routes contained in the route for 16.45.23.0/24.",
+   "source": "CCNA 100-105 · Ch. 4, Q115",
+   "topic": "4.6 Configure and verify single-homed branch connectivity using eBGP IPv4 (limited to peering and route advertisement using Network command only)",
+   "topic_n": 14
+  },
+  {
+   "question": "Which measurement describes the speed of a link?",
+   "choices": [
+    "Loss",
+    "Bandwidth",
+    "Jitter",
+    "Delay"
+   ],
+   "answer": 1,
+   "explanation": "Bandwidth describes the speed of a link in terms of bits per second.",
+   "source": "CCNA 100-105 · Ch. 4, Q116",
+   "topic": "4.7 Describe basic QoS concepts",
+   "topic_n": 15
+  },
+  {
+   "question": "Where should QoS marking be performed?",
+   "choices": [
+    "On every device in the network",
+    "On the core router in the network",
+    "Closest to the source of the traffic",
+    "Closest to the Internet router"
+   ],
+   "answer": 2,
+   "explanation": "QoS marking should always be performed closest to the source of the traffic. All switches and routers in the network should be configured to properly prioritize markings of traffic in queues.",
+   "source": "CCNA 100-105 · Ch. 4, Q117",
+   "topic": "4.7a Marking",
+   "topic_n": 16
+  },
+  {
+   "question": "Which measurement describes the time a packet takes from source to destination?",
+   "choices": [
+    "Loss",
+    "Jitter",
+    "Delay",
+    "Bandwidth"
+   ],
+   "answer": 2,
+   "explanation": "Delay is the time it takes for a packet to travel from source to destination, which is a description of one-way delay. Round-trip delay is the time it takes for the packet to travel from source to destination (one- way delay) plus the time it takes for the destination computer to send the packet back to the originating node to form a round-trip.",
+   "source": "CCNA 100-105 · Ch. 4, Q118",
+   "topic": "4.7 Describe basic QoS concepts",
+   "topic_n": 15
+  },
+  {
+   "question": "How do routers classify traffic for QoS?",
+   "choices": [
+    "Route tables",
+    "Layer 2 ASICs",
+    "Frame filters",
+    "Access control lists"
+   ],
+   "answer": 3,
+   "explanation": "QoS classifies traffic with access control lists and applies markings to the packets.",
+   "source": "CCNA 100-105 · Ch. 4, Q119",
+   "topic": "4.7a Marking",
+   "topic_n": 16
+  },
+  {
+   "question": "Which measurement describes the variation of consecutive packet time from source to destination?",
+   "choices": [
+    "Delay",
+    "Bandwidth",
+    "Jitter",
+    "Loss"
+   ],
+   "answer": 2,
+   "explanation": "Jitter is the measurement of variation between consecutive packet times from source to destination (one-way delay). For example, if the first packet takes 10 ms, and the second, third, and fourth take 10 ms, the jitter or variance is 0 ms. The simple calculation is an average of packet times. However, data size has an influence on jitter, so the more accurate calculation is J = J + (D (I – 1 , I) – J) / 16.",
+   "source": "CCNA 100-105 · Ch. 4, Q120",
+   "topic": "4.7 Describe basic QoS concepts",
+   "topic_n": 15
+  },
+  {
+   "question": "Which is a true statement about the Class of Service field?",
+   "choices": [
+    "The Class of Service field is a layer 3 field.",
+    "The Class of Service field is 6 bits.",
+    "The Class of Service field is only present in 802.1Q frames.",
+    "The Class of Service field is present from end to end of a transmission."
+   ],
+   "answer": 2,
+   "explanation": "The Class of Service field is only found in layer 2 transmissions, specifically only across trunks due to the dependency of 802.1Q. The CoS field is a 3-bit field in the 802.1Q frame type.",
+   "source": "CCNA 100-105 · Ch. 4, Q121",
+   "topic": "4.7a Marking",
+   "topic_n": 16
+  },
+  {
+   "question": "What is the measurement of packets discarded due to congestion of queues?",
+   "choices": [
+    "Bandwidth",
+    "Delay",
+    "Loss",
+    "Jitter"
+   ],
+   "answer": 2,
+   "explanation": "Loss is the measurement of discarded packets. The measurement is a percentage of transmitted packets. For example, if 100 packets are transmitted and 3 packets are dropped, then the loss is 3%. Loss can be attributed to congestions, faulty wiring, EMI, or device queue congestion.",
+   "source": "CCNA 100-105 · Ch. 4, Q122",
+   "topic": "4.7 Describe basic QoS concepts",
+   "topic_n": 15
+  },
+  {
+   "question": "Which technology is used to identify and mark applications such as Bittorrent and Netflix for QoS?",
+   "choices": [
+    "Routing tables",
+    "ACLs",
+    "NBAR2",
+    "Tail drop"
+   ],
+   "answer": 2,
+   "explanation": "Network Based Application Recognition version 2 is used to classify applications based on a Protocol Description Language Module (PDLM).",
+   "source": "CCNA 100-105 · Ch. 4, Q123",
+   "topic": "4.7a Marking",
+   "topic_n": 16
+  },
+  {
+   "question": "Which layer 3 protocol is used for marking packets with QoS?",
+   "choices": [
+    "CoS",
+    "DSCP",
+    "802.1Q",
+    "QoE"
+   ],
+   "answer": 1,
+   "explanation": "The Differentiated Services Code Point (DSCP) is a 6-bit value in the Type of Service (ToS) field of the IP header. The DSCP value defines the importance of packets at layer 3.",
+   "source": "CCNA 100-105 · Ch. 4, Q124",
+   "topic": "4.7a Marking",
+   "topic_n": 16
+  },
+  {
+   "question": "Which is a correct statement about device trust boundary for QoS?",
+   "choices": [
+    "The trust boundary should always be an asset IT controls.",
+    "The switch should always be set as the trust boundary.",
+    "Only routers can create trust boundaries.",
+    "Only IP phones can become trust boundaries."
+   ],
+   "answer": 0,
+   "explanation": "A malicious user can mark all of his or her traffic as high priority. Therefore, a trust boundary must be established by the network administrator. A common trust boundary device is the IP phone, but it is any device that is in control of the network administrator.",
+   "source": "CCNA 100-105 · Ch. 4, Q125",
+   "topic": "4.7b Device trust",
+   "topic_n": 17
+  },
+  {
+   "question": "Which DSCP marking has the highest priority?",
+   "choices": [
+    "DSCP AF 11",
+    "DSCP EF 46",
+    "DSCP AF 43",
+    "DSCP AF 00"
+   ],
+   "answer": 1,
+   "explanation": "The standardized marking of DSCP EF, or Expedite Forwarding, is a decimal equivalent of 46. This marking has the highest priority and should be used for VoIP traffic and video.",
+   "source": "CCNA 100-105 · Ch. 4, Q126",
+   "topic": "4.7a Marking",
+   "topic_n": 16
+  },
+  {
+   "question": "What is the recommended maximum delay VoIP traffic should not exceed?",
+   "choices": [
+    "10 ms",
+    "150 ms",
+    "300 ms",
+    "90 ms"
+   ],
+   "answer": 1,
+   "explanation": "The maximum delay that VOIP traffic should not exceed is 150 ms. At 150 ms, you will have call disruption.",
+   "source": "CCNA 100-105 · Ch. 4, Q127",
+   "topic": "4.7c Prioritization",
+   "topic_n": 18
+  },
+  {
+   "question": "Which QoS queue has priority over all other queues in the scheduler?",
+   "choices": [
+    "CIR",
+    "CBWFQ",
+    "LLQ",
+    "FIFO"
+   ],
+   "answer": 2,
+   "explanation": "Low Latency Queue (LLQ) overrides Class Based Weighted Fair Queuing (CBWFQ). CBWFQ uses a weighted round-robin scheduling of packets. LLQ has priority override when packets come in matching the classification for LLQ.",
+   "source": "CCNA 100-105 · Ch. 4, Q128",
+   "topic": "4.7c Prioritization",
+   "topic_n": 18
+  },
+  {
+   "question": "Which method helps combat queue starvation for QoS queuing?",
+   "choices": [
+    "CBWFQ",
+    "FIFO",
+    "Policing",
+    "LLQ"
+   ],
+   "answer": 2,
+   "explanation": "QoS queue starvation occurs when the Low Latency Queuing (LLQ) is given priority over the Class-Based Weighted Fair Queuing. Therefore, policing of the LLQ will help limit queue starvation and allow those queues an equal share of the total output bandwidth.",
+   "source": "CCNA 100-105 · Ch. 4, Q129",
+   "topic": "4.7e Policing",
+   "topic_n": 20
+  },
+  {
+   "question": "Which statement is correct about shaping of traffic for QoS?",
+   "choices": [
+    "Shaping holds packets in the queue over the configured bit rate to cause jitter.",
+    "Shaping holds packets in the queue over the configured bit rate to cause delay.",
+    "Shaping drops packets over the configured bit rate to cause loss.",
+    "Shaping slows packets in the queue over the configured bit rate to adhere to the speed."
+   ],
+   "answer": 1,
+   "explanation": "Shaping monitors the bit rate of packets. If the bit rate is exceeded for a configured queue, then shaping holds packets over the configured bit rate, causing a delay.",
+   "source": "CCNA 100-105 · Ch. 4, Q130",
+   "topic": "4.7d Shaping",
+   "topic_n": 19
+  },
+  {
+   "question": "Which QoS method uses a round-robin scheduler for packet queuing?",
+   "choices": [
+    "CBWFQ",
+    "LLQ",
+    "PQ",
+    "FIFO"
+   ],
+   "answer": 0,
+   "explanation": "Class-Based Weighted Fair Queuing, or CBWFQ, is driven by a round-robin scheduler. The queues are weighted for priority in the scheduler and the packets are put into the queues upon classification.",
+   "source": "CCNA 100-105 · Ch. 4, Q131",
+   "topic": "4.7f Congestion management",
+   "topic_n": 21
+  },
+  {
+   "question": "Which statement is correct about policing of traffic for QoS?",
+   "choices": [
+    "Policing holds packets in the queue over the configured bit rate to cause delay.",
+    "Policing slows packets in the queue over the configured bit rate to adhere to the bit rate.",
+    "Policing holds packets in the queue over the configured bit rate to cause jitter.",
+    "Policing drops packets over the configured bit rate to cause loss."
+   ],
+   "answer": 3,
+   "explanation": "Policing monitors the bit rate of packets. If the bit rate is exceeded for a configured queue, then policing drops packets over the configured bit rate, causing loss. In some cases it can be configured to re-mark the packets.",
+   "source": "CCNA 100-105 · Ch. 4, Q132",
+   "topic": "4.7e Policing",
+   "topic_n": 20
+  },
+  {
+   "question": "When should QoS policing be implemented?",
+   "choices": [
+    "To help police WAN applications",
+    "To maintain a contracted burst rate",
+    "To help police LAN applications",
+    "To maintain a contracted CIR"
+   ],
+   "answer": 3,
+   "explanation": "QoS policing should be implemented to adhere network traffic to a contracted CIR. As an example, if your enterprise contracted a Metro Ethernet connection with an access link of 1 Gb/s and a CIR of 400 Mb/s, you would need to make sure that traffic does not exceed the CIR except for occasional bursts.",
+   "source": "CCNA 100-105 · Ch. 4, Q133",
+   "topic": "4.7e Policing",
+   "topic_n": 20
+  },
+  {
+   "question": "Which statement is correct about tail drop with QoS queues?",
+   "choices": [
+    "Tail drop is a method of QoS.",
+    "Tail drop happens when the queues are full.",
+    "Tail drop helps slow down protocols that are monopolizing bandwidth.",
+    "Tail drop happens when the queues round-robin."
+   ],
+   "answer": 1,
+   "explanation": "Tail drop happens when the QoS queues are full and cannot send packets fast enough. There is no more room in the queue, and any packets being added to the tail of the queue are dropped.",
+   "source": "CCNA 100-105 · Ch. 4, Q134",
+   "topic": "4.7f Congestion management",
+   "topic_n": 21
+  },
+  {
+   "question": "When should QoS shaping be implemented?",
+   "choices": [
+    "When the service provider is policing traffic",
+    "When WAN applications require a minimum bit rate",
+    "When maintaining a contracted burst rate",
+    "When LAN applications require a minimum bit rate"
+   ],
+   "answer": 0,
+   "explanation": "QoS shaping should be used when the service provider is policing traffic. If the traffic is policed and exceeds the CIR, the ISP will drop packets. Therefore, traffic shaping can delay the packets to slow the protocols vs. being dropped by the ISP.",
+   "source": "CCNA 100-105 · Ch. 4, Q135",
+   "topic": "4.7d Shaping",
+   "topic_n": 19
+  },
+  {
+   "question": "Which command will allow the CoS value to be trusted for a VoIP phone?",
+   "choices": [
+    "Switch(config-if)#qos trust cos",
+    "Switch(config-if)#cos trust qos",
+    "Switch(config-if)#auto qos trust cos",
+    "Switch(config-if)#auto qos"
+   ],
+   "answer": 2,
+   "explanation": "The command auto qos trust cos will configure the interface to be trusted for the CoS value. This type of QoS will happen at layer 2 with the CoS field. Based upon the CoS value, the interface will be trusted for QoS. Normally, devices should not be trusted for QoS since the CoS value could be forged so that the user can gain preferential treatment of their packets.",
+   "source": "CCNA 100-105 · Ch. 4, Q136",
+   "topic": "4.7b Device trust",
+   "topic_n": 17
+  },
+  {
+   "question": "When configuring QoS for packet shaping, which is an important guideline to follow?",
+   "choices": [
+    "Always use the maximum bit rate.",
+    "Always make the bit rate small.",
+    "Always make the time interval large.",
+    "Always make the time interval small."
+   ],
+   "answer": 3,
+   "explanation": "QoS packet shapers work by measuring traffic over a time interval. If the time interval is too large, the packets will be sent in the initial start of the interval. Then the router will wait until the interval is over to transmit again. Configuring a small time interval is desired so that the router is not waiting for the next interval to send packets. It is recommended to use a time interval of 10 milliseconds (ms) for voice and video traffic.",
+   "source": "CCNA 100-105 · Ch. 4, Q137",
+   "topic": "4.7d Shaping",
+   "topic_n": 19
+  },
+  {
+   "question": "How do congestion avoidance tools help to prevent tail drop?",
+   "choices": [
+    "When the queue depth is above the minimum threshold, a percentage of TCP packets are dropped.",
+    "When the queue depth is empty, a percentage of TCP packets are dropped.",
+    "When the queue depth is full, a percentage of TCP packets are dropped.",
+    "When the queue depth is below the minimum threshold, a percentage of TCP packets are dropped."
+   ],
+   "answer": 0,
+   "explanation": "When the queue depth is above the minimum threshold, a percentage of TCP packets are dropped. This allows the TCP window to shrink and allows a normal slowdown of TCP transmissions. This is done in hopes that the queue will fall under the minimum threshold and return to normal.",
+   "source": "CCNA 100-105 · Ch. 4, Q138",
+   "topic": "4.7f Congestion management",
+   "topic_n": 21
+  },
+  {
+   "question": "Which command on a Cisco switch will show the default CoS value?",
+   "choices": [
+    "Switch#show qos",
+    "Switch#show mls qos interface",
+    "Switch#show qos interface",
+    "Switch#show interface"
+   ],
+   "answer": 1,
+   "explanation": "The command show mls qos interface will display information related to the current QoS trust level on the interface along with the default CoS value.",
+   "source": "CCNA 100-105 · Ch. 4, Q139",
+   "topic": "4.7b Device trust",
+   "topic_n": 17
+  },
+  {
+   "question": "If a traffic is marked with AF31 and another traffic pattern is marked with AF41, which statement explains the traffic markings?",
+   "choices": [
+    "Both AF31 and AF41 marked traffic has an equal queue.",
+    "AF31 marked traffic has a better queue than AF41 marked traffic.",
+    "During high congestion, AF41 queues will be dropped and AF31 queues won’t.",
+    "AF41 marked traffic has a better queue than AF31 marked traffic."
+   ],
+   "answer": 3,
+   "explanation": "AF41 marked traffic has a better position in the queue than traffic marked AF31. During high congestion times, traffic with lower positions in the queues (AF3x, AF2x, AF1x) would have more chances of being dropped than AF41.",
+   "source": "CCNA 100-105 · Ch. 4, Q140",
+   "topic": "4.7a Marking",
+   "topic_n": 16
+  }
+ ]
+}

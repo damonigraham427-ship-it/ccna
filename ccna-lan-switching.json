@@ -1,0 +1,3308 @@
+{
+ "questions": [
+  {
+   "question": "Which benefit to a LAN does a switch provide?",
+   "choices": [
+    "Allows for a fast uplink port",
+    "Breaks up collision domains",
+    "Breaks up broadcast domains",
+    "Forces full-duplex on all ports"
+   ],
+   "answer": 1,
+   "explanation": "Switches break up collision domains by allowing full-duplex. Switches are set to auto-negotiate duplex and speed by default, and they do not force full-duplex.",
+   "source": "CCNA 100-105 · Ch. 2, Q1",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "Where are MAC address tables stored?",
+   "choices": [
+    "NVRAM",
+    "CPU registers",
+    "Flash",
+    "RAM"
+   ],
+   "answer": 3,
+   "explanation": "MAC address tables, also called CAM tables, are always built and stored temporarily in RAM. When the switch is turned off or the clear command is issued, the table no longer exists.",
+   "source": "CCNA 100-105 · Ch. 2, Q2",
+   "topic": "2.1d MAC address table",
+   "topic_n": 5
+  },
+  {
+   "question": "Which advantage(s) are gained using switches?",
+   "choices": [
+    "Low latency",
+    "All of the above",
+    "High cost",
+    "Software switching"
+   ],
+   "answer": 0,
+   "explanation": "Switches allow for low latency because frames are forwarded. They utilize ASIC hardware-based switching and have low cost.",
+   "source": "CCNA 100-105 · Ch. 2, Q3",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "How do switches forward frames only to the destination computer?",
+   "choices": [
+    "Forward filter decisions based on the MAC address table",
+    "Broadcasting for the MAC address",
+    "Flooding ports for the destination MAC address",
+    "Forward filter decisions based on the routing table"
+   ],
+   "answer": 0,
+   "explanation": "Switches make forward/filter decisions based upon the MAC address to port association in the MAC address table.",
+   "source": "CCNA 100-105 · Ch. 2, Q4",
+   "topic": "2.1b Frame switching",
+   "topic_n": 3
+  },
+  {
+   "question": "Which mechanism does a switch employ to stop switching loops?",
+   "choices": [
+    "Ether channels",
+    "Port channels",
+    "Spanning Tree Protocol",
+    "Trunks"
+   ],
+   "answer": 2,
+   "explanation": "The mechanism that switches use for loop avoidance is STP, or Spanning Tree Protocol.",
+   "source": "CCNA 100-105 · Ch. 2, Q5",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "How are MAC addresses learned and associated with the port?",
+   "choices": [
+    "Port listen/learning",
+    "Source MAC address learning",
+    "Destination MAC address learning",
+    "Frame type learning"
+   ],
+   "answer": 1,
+   "explanation": "Switches learn MAC addresses by inspecting the frame’s source MAC address on the incoming port. They then associate the source MAC address with the port it came in on.",
+   "source": "CCNA 100-105 · Ch. 2, Q6",
+   "topic": "2.1a MAC learning and aging",
+   "topic_n": 2
+  },
+  {
+   "question": "Which command will allow you to see the MAC address table?",
+   "choices": [
+    "Switch# show mac table",
+    "Switch# show mac address-table",
+    "Switch# show mac",
+    "Switch# show cam table"
+   ],
+   "answer": 1,
+   "explanation": "The command to see the MAC address table is show mac address- table . However, on some 4000 and 6500 series switches, show cam dynamic will perform the same function.",
+   "source": "CCNA 100-105 · Ch. 2, Q11",
+   "topic": "2.1d MAC address table",
+   "topic_n": 5
+  },
+  {
+   "question": "Which statement is true of an ARP request entering into a switch?",
+   "choices": [
+    "The switch will respond directly back with an ARP reply.",
+    "The switch will only forward the ARP request to the port for the destination computer.",
+    "The source MAC address of the frame will be all F s.",
+    "The destination MAC address of the frame will be all F s."
+   ],
+   "answer": 3,
+   "explanation": "The destination MAC address for broadcasts are always all F s, such as ffff.ffff.ffff.",
+   "source": "CCNA 100-105 · Ch. 2, Q14",
+   "topic": "2.1c Frame flooding",
+   "topic_n": 4
+  },
+  {
+   "question": "Which command will display all connected ports on a switch and include descriptions?",
+   "choices": [
+    "Switch# show ports",
+    "Switch# show counters interfaces",
+    "Switch# show interfaces counters",
+    "Switch# show interfaces status"
+   ],
+   "answer": 3,
+   "explanation": "The show interfaces status command will display the port number, connected status, VLAN, duplex, speed, and type of interface.",
+   "source": "CCNA 100-105 · Ch. 2, Q15",
+   "topic": "2.3 Troubleshoot interface and cable issues (collisions, errors, duplex, speed)",
+   "topic_n": 7
+  },
+  {
+   "question": "Which is a consequence of not using loop avoidance with layer 2 switching?",
+   "choices": [
+    "MAC address thrashing",
+    "Duplicate unicast frames",
+    "All of the above",
+    "Broadcast storms"
+   ],
+   "answer": 2,
+   "explanation": "When loop avoidance such as STP is not employed and loops exist, you will get duplicate unicast frames and broadcast storms. This will inevitably thrash the MAC address table and degrade bandwidth to nothing.",
+   "source": "CCNA 100-105 · Ch. 2, Q16",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "What is the default MAC address aging time for dynamic entries on most switches?",
+   "choices": [
+    "60 seconds",
+    "500 seconds",
+    "30 seconds",
+    "300 seconds"
+   ],
+   "answer": 3,
+   "explanation": "The default MAC address aging time for dynamic entries is 300 seconds, or 5 minutes.",
+   "source": "CCNA 100-105 · Ch. 2, Q17",
+   "topic": "2.1a MAC learning and aging",
+   "topic_n": 2
+  },
+  {
+   "question": "Which is a correct statement when hubs are replaced with switches?",
+   "choices": [
+    "The replacement decreases broadcast domains.",
+    "The replacement decreases collision domains.",
+    "The replacement increases collision domains.",
+    "The replacement increases broadcast domains."
+   ],
+   "answer": 2,
+   "explanation": "The replacement of hubs with switches increases collision domains and effectively increases bandwidth.",
+   "source": "CCNA 100-105 · Ch. 2, Q18",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command will show the number of entries in a MAC address table?",
+   "choices": [
+    "Switch# show mac count",
+    "Switch# show cam count",
+    "Switch# show mac address-table count",
+    "Switch# show mac address-table"
+   ],
+   "answer": 2,
+   "explanation": "The command to show the current MAC address entry count in the MAC address table is show mac address-table count . This command will also show the maximum number of entries the table can hold.",
+   "source": "CCNA 100-105 · Ch. 2, Q20",
+   "topic": "2.1d MAC address table",
+   "topic_n": 5
+  },
+  {
+   "question": "When a switch receives a frame, what does it use to make a forwarding decision?",
+   "choices": [
+    "Source IP address in the frame",
+    "Source MAC address in the frame",
+    "Destination IP address in the frame",
+    "Destination MAC address in the frame"
+   ],
+   "answer": 3,
+   "explanation": "Forward filter decisions are made upon the destination MAC address in the frame.",
+   "source": "CCNA 100-105 · Ch. 2, Q21",
+   "topic": "2.1b Frame switching",
+   "topic_n": 3
+  },
+  {
+   "question": "Which switching method checks the CRC as the frame is received by the switch?",
+   "choices": [
+    "Cut-through mode",
+    "Frag-free mode",
+    "Store-and-forward mode",
+    "Fast switching"
+   ],
+   "answer": 2,
+   "explanation": "Store-and-forward mode is the default mode for mode edge switching equipment. Store-and-forward receives the frame, calculates the CRC, and then makes a forwarding decision.",
+   "source": "CCNA 100-105 · Ch. 2, Q22",
+   "topic": "2.1b Frame switching",
+   "topic_n": 3
+  },
+  {
+   "question": "Which statement is true about collision domains?",
+   "choices": [
+    "All computers in the collision domain are set to 10 Mb/s full-duplex.",
+    "All computers in the collision domain have the potential to receive layer 2 broadcast messages.",
+    "All computers in the collision domain have the potential to have a frame collision.",
+    "All computers in the collision domain have the potential to receive layer 3 broadcast messages."
+   ],
+   "answer": 2,
+   "explanation": "A collision domain is defined as a group of computers that can potentially have a frame collision. Adding switches that can negotiate full- duplex and forward/filter fixes these issues.",
+   "source": "CCNA 100-105 · Ch. 2, Q23",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "Which switch mode operation reads only the first 64 bytes before making a switching decision?",
+   "choices": [
+    "Cut-through mode",
+    "Store-and-forward mode",
+    "Fragment-free mode",
+    "Fast switching"
+   ],
+   "answer": 2,
+   "explanation": "Fragment-free mode reads the first 64 bytes and deems the frame intact and forwardable. This is because most collisions that would create frame fragments happen within the first 64 bytes of a frame. This method of switching is often found on SOHO switching equipment.",
+   "source": "CCNA 100-105 · Ch. 2, Q25",
+   "topic": "2.1b Frame switching",
+   "topic_n": 3
+  },
+  {
+   "question": "Which protocol on the host machine allows for a mapping of IP to MAC address?",
+   "choices": [
+    "Address Resolution Protocol",
+    "Reverse Address Resolution Protocol",
+    "Internet Control Message Protocol",
+    "MAC Address Resolution Protocol"
+   ],
+   "answer": 0,
+   "explanation": "Address Resolution Protocol (ARP) is used to map remote IPs on the current LAN to MAC addresses. It does this by broadcasting at layer 2 to all nodes for a response for the MAC address. Thus, it is a mapping of IP address to MAC address.",
+   "source": "CCNA 100-105 · Ch. 2, Q26",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "Which protocol on the host machine allows for a mapping of MAC to IP address?",
+   "choices": [
+    "MAC Address Resolution Protocol",
+    "Address Resolution Protocol",
+    "Internet Control Message Protocol",
+    "Reverse Address Resolution Protocol"
+   ],
+   "answer": 3,
+   "explanation": "Reverse Address Resolution Protocol (RARP) is used to map MAC addresses on the current LAN to IPs. BOOTP also uses this method to allocate an IP address via the MAC address. Thus, it is a mapping of MAC address to IP address.",
+   "source": "CCNA 100-105 · Ch. 2, Q30",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "Which command would you use to reset the MAC address table for learned MAC addresses in a switch?",
+   "choices": [
+    "Switch#clear mac-address-table dynamic",
+    "Switch#clear mac-address-table",
+    "Switch#reset mac address-table",
+    "Switch#clear mac table"
+   ],
+   "answer": 0,
+   "explanation": "The command used to reset the MAC address table is clear mac- address-table dynamic .",
+   "source": "CCNA 100-105 · Ch. 2, Q31",
+   "topic": "2.1d MAC address table",
+   "topic_n": 5
+  },
+  {
+   "question": "You need to see all of the MAC addresses associated with a single interface. Which command would you use?",
+   "choices": [
+    "Switch>show address-table interfaces fast 0/1",
+    "Switch#show mac interfaces fast 0/1",
+    "Switch>show mac address-table interfaces fast 0/1",
+    "Switch#show address-table fast 0/1"
+   ],
+   "answer": 2,
+   "explanation": "The command to see all of the MAC addresses on a single interface is show mac address-table interfaces fast 0/1 . This command can be entered in either privileged exec mode or user exec mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q33",
+   "topic": "2.1d MAC address table",
+   "topic_n": 5
+  },
+  {
+   "question": "Which switch mode operation reads only the first 6 bytes before making a switching decision?",
+   "choices": [
+    "Store-and-forward mode",
+    "Cut-through mode",
+    "Fast switching",
+    "Frag-free mode"
+   ],
+   "answer": 1,
+   "explanation": "Cut-through mode copies the first 6 bytes after the preamble into memory and makes a switching decision on the destination MAC address. Many data center switches use this method of switching to provide low latency while assuming no collisions will exist.",
+   "source": "CCNA 100-105 · Ch. 2, Q34",
+   "topic": "2.1b Frame switching",
+   "topic_n": 3
+  },
+  {
+   "question": "Which option describes latency in switching?",
+   "choices": [
+    "The delay between switching the frame to the destination interface",
+    "The delay in forward lookups to forward frames",
+    "The delay in forward lookups to forward packets",
+    "The delay between routing packets to the destination interface"
+   ],
+   "answer": 0,
+   "explanation": "Latency in switching is the total time it takes to forward an incoming frame to its destination interface. Latency of frame forwarding adversely affects total bandwidth.",
+   "source": "CCNA 100-105 · Ch. 2, Q35",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "Which is attributed to lowering switch latency?",
+   "choices": [
+    "Hardware-based bridging (ASICs)",
+    "The use of higher bandwidth connections",
+    "Spanning Tree Protocol",
+    "Multiple interfaces aggregated together"
+   ],
+   "answer": 0,
+   "explanation": "Hardware-based bridging uses specialized application-specific integrated circuits (ASICs) to provide low latency in switching frames.",
+   "source": "CCNA 100-105 · Ch. 2, Q36",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "What is the difference between a broadcast frame and a flooded frame?",
+   "choices": [
+    "A broadcast frame and a flooded frame are the same.",
+    "Flooding of frames only occurs if there are switching loops.",
+    "A broadcast frame contains a destination MAC address beginning with ff:ff:ff.",
+    "A flooded frame is a frame that is unknown in the MAC address table."
+   ],
+   "answer": 3,
+   "explanation": "Flooding occurs only when the destination MAC address is not in the current MAC address table.",
+   "source": "CCNA 100-105 · Ch. 2, Q37",
+   "topic": "2.1c Frame flooding",
+   "topic_n": 4
+  },
+  {
+   "question": "What is the most accurate definition of wire speed with switching?",
+   "choices": [
+    "The switch can process requests at the incoming and outgoing speed of the connection.",
+    "The switch can auto-negotiate between several different wire speeds.",
+    "The switch can process requests at the incoming speed of the connection.",
+    "Switching between two ports can happen at wire speed."
+   ],
+   "answer": 0,
+   "explanation": "Wire speed is the switch’s ability to process packets both incoming and outgoing on the same port at wire speed. However, this is not the switch’s ability to switch at that speed; the speed of the switch is limited by its backplane bandwidth.",
+   "source": "CCNA 100-105 · Ch. 2, Q38",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "Which is a function of a layer 2 switch?",
+   "choices": [
+    "Learning the MAC address by examining the destination MAC addresses",
+    "Forwarding the date based upon logical addressing",
+    "Repeating the electrical signal to all ports",
+    "Determining the forwarding interfaces based upon the destination MAC address and tables"
+   ],
+   "answer": 3,
+   "explanation": "Switches learn MAC addresses based upon incoming ports and examination of the source MAC address. It will build a MAC address table for future lookups. It then determines forwarding interfaces based upon the destination MAC address contained in the frame.",
+   "source": "CCNA 100-105 · Ch. 2, Q39",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "What is a reason a network administrator would segment a network with a switch?",
+   "choices": [
+    "Create less collision domains.",
+    "Create isolation of ARP messages.",
+    "Isolate traffic between segments.",
+    "Create more broadcast domains."
+   ],
+   "answer": 2,
+   "explanation": "A switch creates micro-segmentation, which in turns isolates traffic between two talking computers from other computers that are not part of the communications. This in turn increases bandwidth for the computers that are not part of the communications between the two talking computers.",
+   "source": "CCNA 100-105 · Ch. 2, Q40",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "If a switch uses the store and forward method of switching and receives a frame in which its CRC is invalid, what will happen?",
+   "choices": [
+    "The switch will re-create the frame with a new CRC and correct the missing information.",
+    "The switch will drop the frame and wait for retransmission of a new frame.",
+    "The switch will send back a frame for retransmission of the frame.",
+    "The switch will store the frame until a new frame with a matching CRC is received."
+   ],
+   "answer": 1,
+   "explanation": "The store and forward method of switching allows the switch to receive the entire frame and calculate the CRC against the data contained in the frame. If the CRC does not match, the frame is dropped, and the sending node must retransmit after an expiry timer or upper-protocol timer times out.",
+   "source": "CCNA 100-105 · Ch. 2, Q41",
+   "topic": "2.1b Frame switching",
+   "topic_n": 3
+  },
+  {
+   "question": "What information is added to the MAC address table when a frame is received on an interface?",
+   "choices": [
+    "Destination MAC address of the frame and outgoing port number",
+    "Destination MAC address of the frame and incoming port number",
+    "Source MAC address of the frame and incoming port number",
+    "Source MAC address of the frame and outgoing port number"
+   ],
+   "answer": 2,
+   "explanation": "When a frame is received on an incoming port, both the incoming port and the source MAC address are added to the MAC address table and set with an aging timer.",
+   "source": "CCNA 100-105 · Ch. 2, Q42",
+   "topic": "2.1a MAC learning and aging",
+   "topic_n": 2
+  },
+  {
+   "question": "What is the maximum wire speed of a single port on a 48-port Gigabit Ethernet switch?",
+   "choices": [
+    "48 Gb/s",
+    "1,000 Mb/s",
+    "96 Gb/s",
+    "2 Gb/s"
+   ],
+   "answer": 1,
+   "explanation": "Wire speed of a single port on a 48-port gigabit switch would be 1 Gb/s, or 1,000 Mb/s.",
+   "source": "CCNA 100-105 · Ch. 2, Q44",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "You need to change the default mac address aging time on a switch to 400 seconds. Which command would you use?",
+   "choices": [
+    "Switch#mac-address-table aging-time 400",
+    "Switch#set mac aging 400",
+    "Switch#mac address-aging 400",
+    "Switch#mac aging-time 400 seconds"
+   ],
+   "answer": 0,
+   "explanation": "MAC address aging time can be configured via the command mac- address-table aging-time 400 . You can additionally specify a VLAN ID.",
+   "source": "CCNA 100-105 · Ch. 2, Q45",
+   "topic": "2.1a MAC learning and aging",
+   "topic_n": 2
+  },
+  {
+   "question": "Which statement describes the micro-segmentation that a switch provides?",
+   "choices": [
+    "Each port on the switch creates an isolation for layer 2 broadcasts.",
+    "Each port on the switch creates its own collision domain.",
+    "Each port on the switch segments broadcasts.",
+    "All of the ports on the switch create a single collision domain."
+   ],
+   "answer": 1,
+   "explanation": "Each port on a switch creates its own collision domain. An increase in collision domains raises bandwidth since each port creates its own segment (micro-segmentation) and isolates possible collisions on other ports.",
+   "source": "CCNA 100-105 · Ch. 2, Q47",
+   "topic": "2.1 Describe and verify switching concepts",
+   "topic_n": 1
+  },
+  {
+   "question": "Under which circumstance will a switch drop a frame?",
+   "choices": [
+    "If the destination MAC address of the frame is unknown in the MAC address table",
+    "If the source MAC address of the frame is unknown in the MAC address table",
+    "If the destination MAC address exists in another switch’s MAC address table",
+    "If the frame is deemed to be corrupt via the CRC"
+   ],
+   "answer": 3,
+   "explanation": "The only time a frame is dropped is when the cyclic redundancy check (CRC) calculated against the frame’s payload deems the frame corrupt. If the destination MAC address is not known, it will be flooded to all active ports on the switch, but it will not be dropped.",
+   "source": "CCNA 100-105 · Ch. 2, Q49",
+   "topic": "2.1b Frame switching",
+   "topic_n": 3
+  },
+  {
+   "question": "In a layer 2 frame, where is the destination MAC address?",
+   "choices": [
+    "The destination MAC address is found in the preamble.",
+    "The destination MAC address is in the second 6 bytes after the preamble.",
+    "The destination MAC address is in the first 6 bytes after the preamble.",
+    "The destination MAC address is the payload data."
+   ],
+   "answer": 2,
+   "explanation": "The 6-byte destination MAC address is after the preamble/SFD so that it can be read by the switch for forwarding.",
+   "source": "CCNA 100-105 · Ch. 2, Q51",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "What is the significance of the preamble?",
+   "choices": [
+    "The preamble allows the switch to sync timing for the receipt of information to follow.",
+    "The preamble allows the switch to read the sequence and acknowledge receipt of the frame.",
+    "The preamble allows the switch to allocate a buffer.",
+    "The preamble allows the switch to sense collisions before data is transmitted."
+   ],
+   "answer": 0,
+   "explanation": "The preamble allows for the source computer to sync its timing of the physical media independent interface with the destination computer. It achieves this via an alternating 1 and 0 pattern at a specific frequency, depending on data transfer speed. The Start Frame Delimiter (SFD) has an extra bit to let the destination computer know anything that follows is data.",
+   "source": "CCNA 100-105 · Ch. 2, Q52",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "How many bits is the OUI assigned by the IEEE?",
+   "choices": [
+    "24 bits",
+    "22 bits",
+    "48 bits",
+    "6 bits"
+   ],
+   "answer": 0,
+   "explanation": "The organizationally unique identifier, or OUI, is 24 bits, or the first 3 bytes of the MAC address.",
+   "source": "CCNA 100-105 · Ch. 2, Q53",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "What function does the Frame Check Sequence (FCS) perform?",
+   "choices": [
+    "Both A and B",
+    "The FCS will error-correct data in a frame.",
+    "The FCS is used for acknowledgment of receipt of the frame.",
+    "The FCS will detect errors in a frame’s data."
+   ],
+   "answer": 3,
+   "explanation": "The Frame Check Sequence is a 4-byte cyclical redundancy check (CRC) calculation. Its only function is to detect erroneous frames; it will not correct data and contains no parity to do so.",
+   "source": "CCNA 100-105 · Ch. 2, Q54",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "If the Individual/Group (I/G) bit is set to 1 in the OUI portion of the MAC address, which statement is true?",
+   "choices": [
+    "The MAC address is a broadcast or multicast.",
+    "The MAC address is locally governed.",
+    "The MAC address should always be broadcast.",
+    "The MAC address is unique and governed by the IEEE."
+   ],
+   "answer": 0,
+   "explanation": "When the I/G bit is set, it means that the MAC address is intended to be a broadcast or multicast for a group of recipients.",
+   "source": "CCNA 100-105 · Ch. 2, Q55",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "If the Group/Local (G/L) bit is set to 1 in the OUI portion of the MAC address, which statement is true?",
+   "choices": [
+    "The MAC address is a broadcast or multicast.",
+    "The MAC address is a unique computer and governed by the IEEE.",
+    "The MAC address should always be broadcast.",
+    "The MAC address is locally governed."
+   ],
+   "answer": 3,
+   "explanation": "When the G/L bit (sometimes referred to as the U/L bit) is set, it means that the MAC address is locally governed. This means that the user has manually set the MAC address.",
+   "source": "CCNA 100-105 · Ch. 2, Q56",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "Which is a reason that the Ethernet protocol uses physical addresses?",
+   "choices": [
+    "It creates a differentiation between layer 2 and layer 3 communications.",
+    "It uniquely identifies devices at layer 2.",
+    "It defines a logical address scheme for devices.",
+    "It allows the node to decide if the device is remote or local."
+   ],
+   "answer": 1,
+   "explanation": "MAC addresses are physical addresses that are burned into every NIC card and network device. They are unique at the Data Link layer for direct communication purposes.",
+   "source": "CCNA 100-105 · Ch. 2, Q57",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "What is the nominal MTU for LAN communications?",
+   "choices": [
+    "9,000 bytes",
+    "1,500 bytes",
+    "1,500 bits",
+    "9,000 bits"
+   ],
+   "answer": 1,
+   "explanation": "The nominal MTU size is 1,500 bytes of data. It may also be advertised as 1,518 bytes, which is calculated from 1,500-bytes (payload) + 6 bytes (source MAC address) + 6 bytes (destination MAC address) + 2 bytes (type field) + 4 bytes (FCS) = 1,518 bytes. If 802.1Q VLAN tagging is being used, it can be advertised as 1,522 bytes to allow for 4 bytes for tagging. If ISL VLAN tagging is being used, ISL requires 30 bytes + 1,518 bytes = 1,548 bytes.",
+   "source": "CCNA 100-105 · Ch. 2, Q58",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "What is the 2-byte type field used for in an Ethernet frame?",
+   "choices": [
+    "It describes the length of data contained within the frame.",
+    "It is a calculation with the FCS to provide error detection.",
+    "It identifies the upper-layer protocol for the data contained within the frame.",
+    "It defines the data type contained within the frame."
+   ],
+   "answer": 2,
+   "explanation": "The Ethernet type field is 2 bytes and it identifies at layer 2 which upper-layer protocol to send the data to. When IPv4 is used, the type field is 08-00. When IPv6 is used, the type field is 86-dd.",
+   "source": "CCNA 100-105 · Ch. 2, Q59",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "What is the purpose of the State Frame Delimiter byte in a frame?",
+   "choices": [
+    "It provides a means for the receiving node to know when data begins.",
+    "It delimits the destination and source MAC address.",
+    "It divides the data and the physical timing portion of the frame.",
+    "It provides physical timing for the frame following."
+   ],
+   "answer": 0,
+   "explanation": "The preamble is 7 bytes of alternating 1s and 0s at a frequency that matches the bandwidth of the link. It is important to note that the 1s and 0s pattern starts with a 1 and ends with a 0 for 7 bytes (10101010). The SFD has an extra lower bit signaling the end of timing and the start of data (10101011).",
+   "source": "CCNA 100-105 · Ch. 2, Q60",
+   "topic": "2.2 Interpret Ethernet frame format",
+   "topic_n": 6
+  },
+  {
+   "question": "You have just resolved a problem and now need to monitor the problem on the interface. How would you reset the error counts for a single interface?",
+   "choices": [
+    "Switch#clear statistics interface fast 0/1",
+    "Switch#clear counters interface fast 0/1",
+    "Switch#reset counters interface fast 0/1",
+    "Switch#clear interface fast 0/1"
+   ],
+   "answer": 1,
+   "explanation": "In order to clear the counters for a single interface, you would use the command clear counters interface fast 0/1 . After it’s entered, you will need to confirm clearing of the counters. Then you can monitor the solution provided on the interface.",
+   "source": "CCNA 100-105 · Ch. 2, Q63",
+   "topic": "2.3 Troubleshoot interface and cable issues (collisions, errors, duplex, speed)",
+   "topic_n": 7
+  },
+  {
+   "question": "You have statically set an interface to 100 Mb/s full-duplex. However, the device you are plugging in will not work. Which command would you use to set speed and duplex back to auto-negotiate?",
+   "choices": [
+    "Switch(config-if)#speed autonegotiate Switch(config-if)#duplex autonegotiate",
+    "Switch(config-if)#speed auto Switch(config-if)#duplex auto",
+    "Switch(config-if)#interface autonegotiate",
+    "Switch(config-if)#switchport autonegotiate"
+   ],
+   "answer": 1,
+   "explanation": "The commands to set the port back to auto-negotiation are speed auto and duplex auto . You can also negate the command with no speed and no duplex commands. Both methods will set auto-negotiation back on the port.",
+   "source": "CCNA 100-105 · Ch. 2, Q67",
+   "topic": "2.3 Troubleshoot interface and cable issues (collisions, errors, duplex, speed)",
+   "topic_n": 7
+  },
+  {
+   "question": "You have auto-negotiation turned off on the node, but it is turned on at the switch’s interface connecting the node. The interface is a 10/100/1000 Mb/s interface and the node is 100 Mb/s full-duplex. What will the outcome be when you plug in the node?",
+   "choices": [
+    "The switch interface will be set to the 10 Mb/s full-duplex.",
+    "The switch interface will be set to the 100 Mb/s full-duplex.",
+    "The switch interface will be set to the 10 Mb/s half-duplex.",
+    "The switch interface will be set to the 100 Mb/s half-duplex."
+   ],
+   "answer": 3,
+   "explanation": "Cisco switches can auto-detect speed, so the speed sensed will be 100 Mb/s. However, if the switch cannot detect the speed, then it will fall back to 10 Mb/s. Duplex is decided upon bandwidth when IEEE auto- negotiation is turned off. If the speed is 10 Mb/s or 100 Mb/s, then the duplex will be half-duplex; otherwise it will be full-duplex on 1000 Mb/s links.",
+   "source": "CCNA 100-105 · Ch. 2, Q68",
+   "topic": "2.3 Troubleshoot interface and cable issues (collisions, errors, duplex, speed)",
+   "topic_n": 7
+  },
+  {
+   "question": "You plug a 100 Mb/s hub into a switch. What is the expected outcome?",
+   "choices": [
+    "The switch interface will be set to the 10 Mb/s full-duplex.",
+    "The switch interface will be set to the 10 Mb/s half-duplex.",
+    "The switch interface will be set to the 100 Mb/s half-duplex.",
+    "The switch interface will be set to the 100 Mb/s full-duplex."
+   ],
+   "answer": 2,
+   "explanation": "Hubs do not participate in IEEE negotiation, and therefore the speed will be detected. However, since duplex cannot be negotiated, 10 Mb/s and 100 Mb/s connections will be half-duplex and 1000 Mb/s connections will be full-duplex.",
+   "source": "CCNA 100-105 · Ch. 2, Q69",
+   "topic": "2.3 Troubleshoot interface and cable issues (collisions, errors, duplex, speed)",
+   "topic_n": 7
+  },
+  {
+   "question": "You want to see a status of all speed and duplex negotiations for all interfaces. Which command would you use?",
+   "choices": [
+    "Switch# show interfaces counters",
+    "Switch# show run",
+    "Switch# show counters interfaces",
+    "Switch# shower interfaces status"
+   ],
+   "answer": 3,
+   "explanation": "The show interfaces status command will display the port number, description, connected status, VLAN, duplex, speed, and type of interface.",
+   "source": "CCNA 100-105 · Ch. 2, Q70",
+   "topic": "2.3 Troubleshoot interface and cable issues (collisions, errors, duplex, speed)",
+   "topic_n": 7
+  },
+  {
+   "question": "You are trying to reprovision a switch in a different part of your network. However, you still see the old VLANs configured from the old network. How can you rectify the problem?",
+   "choices": [
+    "Type erase startup-config , confirm it, and reload.",
+    "Type clear vlan , confirm it, and reload.",
+    "Delete the vlan.dat , confirm it, and reload.",
+    "Upgrade the IOS."
+   ],
+   "answer": 2,
+   "explanation": "The vlan.dat is the database for VLANs configured on a switch either manually or through VTP. It is persistent even if config.text (startup-config) is deleted. You must manually delete the vlan.dat .",
+   "source": "CCNA 100-105 · Ch. 2, Q71",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "Which VLAN is the default VLAN used to configure all switches from the factory?",
+   "choices": [
+    "VLAN 1002",
+    "VLAN 1",
+    "VLAN 1005",
+    "VLAN 999"
+   ],
+   "answer": 1,
+   "explanation": "All switches are configured by default with all interfaces in VLAN 1. This simplifies configuration if the switch is to be used as a direct replacement for a hub since nothing needs to be configured.",
+   "source": "CCNA 100-105 · Ch. 2, Q72",
+   "topic": "2.4b Default VLAN",
+   "topic_n": 10
+  },
+  {
+   "question": "What is the normal range for VLANs before you must use extended VLAN IDs?",
+   "choices": [
+    "VLAN 1 through 1005",
+    "VLAN 1 through 1002",
+    "VLAN 1 through 1001",
+    "VLAN 2 through 1002"
+   ],
+   "answer": 2,
+   "explanation": "The normal VLAN range is 1 through 1001 before you must use the extended VLAN range.",
+   "source": "CCNA 100-105 · Ch. 2, Q73",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "Which is a benefit to converting a network from a flat layer 2 network to a routed layer 3 VLAN-enabled network?",
+   "choices": [
+    "Flexibility of user management and design",
+    "Decreased number of broadcast domains for increased bandwidth",
+    "Reduced complexity of design and operations",
+    "Increased collision domains for increased bandwidth"
+   ],
+   "answer": 0,
+   "explanation": "The flexibility of design for workgroups of people and the ongoing management of moving and adding people is a benefit of a routed VLAN- enabled network.",
+   "source": "CCNA 100-105 · Ch. 2, Q74",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You have created a VLAN for the Research department. Now you need to configure an interface on the switch for the newly created VLAN. Which command will configure the interface for the respective VLAN?",
+   "choices": [
+    "Switch(config-if)#switchport access vlan research",
+    "Switch(config-if)#switchport vlan 9",
+    "Switch(config-if)#switchport access vlan 9",
+    "Switch(config-if)#switchport vlan research"
+   ],
+   "answer": 2,
+   "explanation": "When you’re configuring an interface for a VLAN, only the VLAN number can be used. The correct command is switchport access vlan 9 .",
+   "source": "CCNA 100-105 · Ch. 2, Q75",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "You are installing a VoIP phone on the same interface as an existing computer. Which command will allow the VoIP phone to switch traffic onto its respective VLAN?",
+   "choices": [
+    "Switch(config-if)#switchport voice vlan 4",
+    "Switch(config-if)#switchport access vlan 4 voice",
+    "Switch(config-if)#switchport vlan voice 4",
+    "Switch(config-if)#switchport voip vlan 4"
+   ],
+   "answer": 0,
+   "explanation": "The switchport voice vlan 4 command will configure the interface to switch traffic with a COS value of 5 set by the phone to the voice VLAN of 4.",
+   "source": "CCNA 100-105 · Ch. 2, Q76",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "Which type of port removes the VLAN ID from the frame before it egresses the interface?",
+   "choices": [
+    "Access port",
+    "Trunk port",
+    "Native port",
+    "Voice port"
+   ],
+   "answer": 0,
+   "explanation": "All VLAN tagging is removed from the frame before it egresses an access port to the end device.",
+   "source": "CCNA 100-105 · Ch. 2, Q78",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "You want to delete VLAN 1 for security reasons. However, the switch will not let you. What is the reason you cannot delete VLAN 1?",
+   "choices": [
+    "The VLAN serves as the switch’s main management IP.",
+    "The VLAN is protected from deletion.",
+    "The VLAN is still configured on a port.",
+    "The VLAN is still configured as a native VLAN on a trunk."
+   ],
+   "answer": 1,
+   "explanation": "VLANs 1 and 1002 through 1005 are protected by the IOS and cannot be changed, renamed, or deleted.",
+   "source": "CCNA 100-105 · Ch. 2, Q79",
+   "topic": "2.4b Default VLAN",
+   "topic_n": 10
+  },
+  {
+   "question": "Which is a true statement about extended VLANs?",
+   "choices": [
+    "You cannot configure extended VLANs until the normal VLANs are all used.",
+    "Extended VLANs are saved in the VLAN database.",
+    "VTP versions 1 and 2 require the switch to be in transparent mode.",
+    "Extended VLANs can only be used for FDDI."
+   ],
+   "answer": 2,
+   "explanation": "By default, the VTP mode is server. VTP v1 and v2 do not support storage and propagation of extended VLANs. However, when the switch is put into transparent mode, it does not participate in VTP, so the VLANs can be configured.",
+   "source": "CCNA 100-105 · Ch. 2, Q80",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "What is the extended VLAN range?",
+   "choices": [
+    "VLAN 1006 to 4094",
+    "VLAN 1006 to 4092",
+    "VLAN 1006 to 4096",
+    "VLAN 1002 to 4096"
+   ],
+   "answer": 0,
+   "explanation": "The extended VLAN range is VLAN 1006 to 4094.",
+   "source": "CCNA 100-105 · Ch. 2, Q81",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "Why is it recommended that you do not use VLAN 1?",
+   "choices": [
+    "It cannot be routed via an SVI.",
+    "It is not a production VLAN.",
+    "It shouldn’t be used for security reasons.",
+    "It cannot participate in VTP transfers."
+   ],
+   "answer": 2,
+   "explanation": "For security concerns, it should not be used in production. It is the default VLAN configured on all switches. Potentially, a computer can be plugged into an interface defaulted to VLAN 1 and expose resources such as the switch management network.",
+   "source": "CCNA 100-105 · Ch. 2, Q83",
+   "topic": "2.4b Default VLAN",
+   "topic_n": 10
+  },
+  {
+   "question": "You need to create a VLAN to support jumbo frames. Which commands would configure jumbo frame support on a VLAN?",
+   "choices": [
+    "Switch(config)#vlan 10 Switch(config-vlan)#jumbo frames",
+    "Switch(config)#vlan 10 Switch(config-vlan)#mtu 9128",
+    "Switch#vlan 10 Switch(config-vlan)#mtu 9128",
+    "Switch(config)#vlan 10 Switch(config-vlan)#mtu 1548"
+   ],
+   "answer": 1,
+   "explanation": "Configuration of jumbo frames requires creation of the VLAN from a global configuration prompt and then setting the maximum transmission unit (MTU). The value of the MTU will differ from switch to switch but is usually 9,000 bytes or higher.",
+   "source": "CCNA 100-105 · Ch. 2, Q84",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "What is the command to verify a VLAN and the port(s) it is associated with?",
+   "choices": [
+    "Switch#show vlan database",
+    "Switch#show access vlan",
+    "Switch#show vlan",
+    "Switch#show vlans"
+   ],
+   "answer": 2,
+   "explanation": "The command to verify that a VLAN is created and the port(s) it is associated with is show vlan .",
+   "source": "CCNA 100-105 · Ch. 2, Q85",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "Which command(s) will delete a VLAN?",
+   "choices": [
+    "Switch(config)#no vlan 9",
+    "Switch(config)#vlan 9 delete",
+    "Switch(config)#vlan database Switch(config-vlan)#delete vlan 9",
+    "Switch(config)#vlan database Switch(config-vlan)#no vlan 9"
+   ],
+   "answer": 0,
+   "explanation": "The command to delete VLAN 9 is no vlan 9 performed from a global configuration prompt.",
+   "source": "CCNA 100-105 · Ch. 2, Q86",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "Which is a correct statement about frame and VLANs?",
+   "choices": [
+    "Unicast frames that are not in the MAC address table are flooded to all ports in all VLANs.",
+    "Frames with a destination MAC that are not in the MAC address table are flooded to only ports in the respective VLAN.",
+    "The ports that link switches together must be access links.",
+    "Broadcast frames are sent to ports that are configured in different VLANs."
+   ],
+   "answer": 1,
+   "explanation": "Frames with MAC addresses that are not in the MAC address table are flooded only to the ports in the respective VLAN.",
+   "source": "CCNA 100-105 · Ch. 2, Q87",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "A VLAN is not configured yet, but you mistakenly configure it on an interface via the command switch access vlan 12 . What will happen?",
+   "choices": [
+    "The command will complete, but before forwarding can happen, the VLAN must be manually created.",
+    "The command will error.",
+    "The command will need to be negated and performed after the VLAN is manually created.",
+    "The command will complete and update the VLAN database."
+   ],
+   "answer": 3,
+   "explanation": "When the command is invoked inside of the interface, it will create the VLAN automatically.",
+   "source": "CCNA 100-105 · Ch. 2, Q88",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "What is the normal range of VLANs that can be modified on a Cisco switch with default configuration?",
+   "choices": [
+    "VLAN 2 to 1002",
+    "VLAN 1 to 1001",
+    "VLAN 2 to 1001",
+    "VLAN 1 to 1002"
+   ],
+   "answer": 2,
+   "explanation": "The normal range of VLANs on a default Cisco switch is VLAN 1 to 1001. However, VLAN 1 cannot be modified.",
+   "source": "CCNA 100-105 · Ch. 2, Q89",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "Static VLANs are being used on a switch’s interface. Which of the following statements is correct?",
+   "choices": [
+    "Nodes are assigned VLANs based on their MAC address.",
+    "Nodes use a VLAN policy server.",
+    "Nodes are unaware of the VLAN in which they are configured.",
+    "All nodes are in the same VLAN."
+   ],
+   "answer": 2,
+   "explanation": "Static VLANs are VLANs that have been manually configured vs. dynamic VLANs that are configured via a VLAN Membership Policy Server (VMPS). A node will not know which VLAN it is assigned to when it is statically set via the command switchport access vlan 3 .",
+   "source": "CCNA 100-105 · Ch. 2, Q90",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "A switch is configured with a single VLAN of 12 for all interfaces. All nodes auto-negotiate at 100 Mb/s full-duplex. What is true if you add an additional VLAN to the switch.",
+   "choices": [
+    "The switch will increase its count of collision domains.",
+    "The switch will decrease its bandwidth due to overhead.",
+    "The switch will now require a router.",
+    "The switch will increase its bandwidth due to broadcast domains."
+   ],
+   "answer": 3,
+   "explanation": "The addition of another VLAN will increase the effective bandwidth by adding additional broadcast domains. A router is required to route between VLANs. However, it will not be required if you are logically partitioning the switch via VLANs.",
+   "source": "CCNA 100-105 · Ch. 2, Q91",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "What is a direct benefit of adding VLANs?",
+   "choices": [
+    "A decrease of broadcast domains while decreasing collision domains",
+    "An increase of broadcast domains while decreasing collision domains",
+    "A decrease of broadcast domains while increasing collisions domains",
+    "An increase of broadcast domains while increasing collision domains"
+   ],
+   "answer": 3,
+   "explanation": "When adding VLANs, you immediately increase the number of broadcast domains. At the same time you increase collision domains. If a switch had 12 ports and they all negotiated at 100 Mb/s half-duplex (one collision domain), when a VLAN is added you will automatically create two collision domains while adding an additional broadcast domain.",
+   "source": "CCNA 100-105 · Ch. 2, Q92",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "Which statement describes dynamic VLANs?",
+   "choices": [
+    "The access port is switched into the respective VLAN based upon the computer’s IP address.",
+    "The access port is switched into the respective VLAN based upon user credentials.",
+    "The access port is switched into the respective VLAN based upon the computer’s MAC address.",
+    "The access port is switched into the respective VLAN based upon security ACLs."
+   ],
+   "answer": 2,
+   "explanation": "Dynamic VLANs are deprecated, but you may still see them in operations. A switch configured with dynamic VLANs checks a VLAN Management Policy Server (VMPS) when clients plug in. The VMPS has a list of MAC addresses to their respective VLANs. It is now recommended that dynamic VLAN installations are converted to 802.1x.",
+   "source": "CCNA 100-105 · Ch. 2, Q93",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You have changed the name of VLAN 3, and you now want to check your change. Which command will you enter to verify the name change?",
+   "choices": [
+    "Switch#show vlan id 3",
+    "Switch#show vlans",
+    "Switch#show run",
+    "Switch#show interface vlan 3"
+   ],
+   "answer": 0,
+   "explanation": "To verify a VLAN name change, you would use the command show vlan id 3 . This would only show you the one VLAN configured in the database. show vlans is incorrect because the command is not plural; it is singular, show vlan . It will give you a complete listing of all VLANs.",
+   "source": "CCNA 100-105 · Ch. 2, Q94",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You have been asked to segment the network for an R&D workgroup. The requirement is to allow the R&D group access to the existing servers, but no other VLANs should be able to access R&D. How can this be achieved with maximum flexibility?",
+   "choices": [
+    "Create a new VLAN, and install a new R&D server in the new VLAN.",
+    "Create a new VLAN, configure a routed SVI interface, and apply ACLs to the R&D ports.",
+    "Create a new VLAN, and trunk the existing file server for both the production and R&D network.",
+    "Create a new VLAN, configure a routed SVI interface, and apply ACLs to the VLAN."
+   ],
+   "answer": 3,
+   "explanation": "Creating the new VLAN will logically segment this work group. Creating a Switched Virtual Interface (SVI) will allow routing on the layer 3 switch. The ACLs should only be applied to VLAN interfaces. Although the other solutions achieve a similar goal, they do not provide flexibility.",
+   "source": "CCNA 100-105 · Ch. 2, Q95",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You need to verify that an interface is in the proper VLAN. Which command will display the status of the interface, the VLAN configured, and the operational mode?",
+   "choices": [
+    "Switch#show vlan",
+    "Switch#show interfaces switchport",
+    "Switch#show running-config",
+    "Switch#show interfaces"
+   ],
+   "answer": 1,
+   "explanation": "The command show interfaces switchport will display a detail of all ports in respect to VLAN operational status. The command will show the operational mode of the interface, such as trunk or access mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q97",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "You configured VLAN on an interface, but it is not working. After looking at the VLAN database, you find it has been disabled. Which command will enable the VLAN?",
+   "choices": [
+    "Switch(config)#enable vlan 3",
+    "Switch#enable vlan 3",
+    "Switch(config)#vlan 3 Switch(config-vlan)#no shutdown",
+    "Switch#no shutdown vlan 3"
+   ],
+   "answer": 2,
+   "explanation": "The proper way to enable a VLAN to forward traffic is to first enter the VLAN database for ID 3 and then issue the no shutdown command. On some IOS versions, this can also be done via the command no shutdown vlan 3 from global config mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q98",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "Which command will show the operational mode of only Fa0/3?",
+   "choices": [
+    "Switch#show interfaces FastEthernet 0/3 switchport",
+    "Switch#show interfaces status | i 0/3",
+    "Switch#show interfaces",
+    "Switch#show interfaces switchport"
+   ],
+   "answer": 0,
+   "explanation": "The command show interfaces FastEthernet 0/3 switchport will show the switchport details for only Fa0/3, to include its operational mode. This command is similar to show interfaces switchport , which will show all ports.",
+   "source": "CCNA 100-105 · Ch. 2, Q99",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "Which of the following is a true statement about static access ports?",
+   "choices": [
+    "A client computer cannot see any VLAN tagging information.",
+    "A client computer can see the VLAN tagging information.",
+    "A client computer can request the VLAN to be placed in.",
+    "An access port can carry VLANs via tagging."
+   ],
+   "answer": 0,
+   "explanation": "The client computer connected to an access port cannot see any VLAN tagging information. It is removed before egress of the interface.",
+   "source": "CCNA 100-105 · Ch. 2, Q101",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "Which of the following is a true statement, if you have changed the MTU on a VLAN to support jumbo frames?",
+   "choices": [
+    "Once jumbo frames are configured, nothing more needs to be done. Clients will auto-detect the new MTU and use jumbo frames.",
+    "If a normal MTU of 1528 is used, the switch will not forward the traffic.",
+    "For jumbo frames to be effective, all devices on the VLAN, including switches, must support them.",
+    "Changing the MTU is an easy and effective method for raising speed."
+   ],
+   "answer": 2,
+   "explanation": "When the MTU is changed on the VLAN, it has little consequence to normal MTU communications. However, if you are going to utilize the new MTU for something like iSCSI, it must be supported end to end or it can actually decrease performance. All switching equipment between the two end devices must support jumbo frames.",
+   "source": "CCNA 100-105 · Ch. 2, Q102",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You have configured an access port for a remote office computer. The office has no IT persons on site. You want to stop workers from plugging in a WAP and exposing your company’s internal network. Which feature should you configure?",
+   "choices": [
+    "Dynamic VLANs",
+    "VLAN pruning",
+    "Port security",
+    "ACLs"
+   ],
+   "answer": 2,
+   "explanation": "Since the remote office has no onsite IT personnel, there is a risk of workers plugging in unauthorized equipment such as a WAP. If port security is implemented, the interface can be secured to allow only the MAC address of the computer to pass; all other traffic can be dropped.",
+   "source": "CCNA 100-105 · Ch. 2, Q103",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "Which is a benefit of implementing routed VLANs?",
+   "choices": [
+    "ACLs can be employed to secure VLANs.",
+    "VLANs can span multiple switches.",
+    "Implementing routed VLANs will decrease the broadcast domains.",
+    "All of the above"
+   ],
+   "answer": 0,
+   "explanation": "When layer 3 or routed VLANs are implemented, it allows for a more secure network with the use of ACLs applied to the VLAN interface.",
+   "source": "CCNA 100-105 · Ch. 2, Q104",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You are running a wireless LAN controller (WLC) for a WLAN. You want to allow for guests to be segmented to the guest VLAN. What will you need to implement on the WLC?",
+   "choices": [
+    "Dynamic VLANs for the SSID",
+    "Access control lists for two SSIDs",
+    "Access control lists for one SSID",
+    "Two SSIDs, one configured to the production VLAN and another configured to the guest VLAN"
+   ],
+   "answer": 3,
+   "explanation": "Wireless LAN controllers allow trunks to be used so that multiple VLANs can be used. Once the VLANs are accessible to the WLC, you need to create one SSID tied to the VLAN configured for production and another SSID tied to the VLAN configured for guests.",
+   "source": "CCNA 100-105 · Ch. 2, Q105",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "What is the difference between a default VLAN and a native VLAN?",
+   "choices": [
+    "A native VLAN is configured on all access ports of the switch from the factory.",
+    "A default VLAN is configured on all trunks for tagged frames.",
+    "A default VLAN is configured on all access ports of the switch from the factory.",
+    "A native VLAN is configured on all trunks for tagged frames."
+   ],
+   "answer": 2,
+   "explanation": "The default VLAN for all switches is VLAN 1. It is the default configuration for all access ports from the factory.",
+   "source": "CCNA 100-105 · Ch. 2, Q106",
+   "topic": "2.4b Default VLAN",
+   "topic_n": 10
+  },
+  {
+   "question": "Where is the extended VLAN configuration stored?",
+   "choices": [
+    "In the running-config",
+    "In the VLAN database",
+    "In the vlan.dat file",
+    "In the startup-config"
+   ],
+   "answer": 3,
+   "explanation": "The extended VLAN database will be stored in the startup-config. Only normal VLANs are stored in the VLAN database ( vlan.dat ). When configuring extended VLANs, you must have the switch in VTP transparent mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q107",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You need to create a new VLAN 5 called office and apply it to interface Fa0/4. Which commands will you need to enter?",
+   "choices": [
+    "Switch(config)#vlan 5 Switch(config-vlan)#name office Switch(config-vlan)#exit Switch(config)#interface fast 0/4 Switch(config-if)#switchport access vlan office",
+    "Switch(config)#vlan 5 name office Switch(config)#interface fast 0/4 Switch(config-if)#switchport access vlan 5",
+    "Switch(config)#vlan 5 Switch(config-vlan)#name office Switch(config-vlan)#exit Switch(config)#interface fast 0/4 Switch(config-if)#switchport access vlan 5",
+    "Switch(config)#vlan 5 office Switch(config)#interface fast 0/4 Switch(config-if)#switchport access vlan 5"
+   ],
+   "answer": 2,
+   "explanation": "You should first create the VLAN in the VLAN database and add its name. Then you need to enter the interface and configure the port for the VLAN.",
+   "source": "CCNA 100-105 · Ch. 2, Q108",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "A VLAN was created on another non-Cisco switch. You look at the current VLAN database, but the VLAN is not in the VLAN database. What must be done to correct the issue?",
+   "choices": [
+    "Configure VTP on both switches.",
+    "Set the correct trunking protocol between the switches.",
+    "Assign the VLAN to an interface on the other switch.",
+    "Create the VLAN manually."
+   ],
+   "answer": 3,
+   "explanation": "You must manually configure the VLAN on the Cisco switch(s). VTP is a protocol that allows for VLAN autoconfiguration in the VLAN database. However, only Cisco switches support it.",
+   "source": "CCNA 100-105 · Ch. 2, Q110",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "Which command(s) will rename an existing VLAN 4 from production to office without interruption to the network?",
+   "choices": [
+    "Switch(config)#no vlan 4 Switch(config)#vlan 4 Switch(config-vlan)#name office",
+    "Switch(config)#rename vlan 4 office",
+    "Switch(config)#vlan 4 office",
+    "Switch(config)#vlan 4 Switch(config-vlan)#name office"
+   ],
+   "answer": 3,
+   "explanation": "In global configuration, you first need to enter the entry of the VLAN in the VLAN database. Then you can issue a name command to overwrite the existing entry. Negating the VLAN 4 and re-creating it would also work but would create interruption when it was destroyed.",
+   "source": "CCNA 100-105 · Ch. 2, Q114",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You have been tasked to configure an interface with a VLAN ID of 8 and support a VoIP phone on VLAN 6. Which commands would achieve the goal?",
+   "choices": [
+    "Switch(config-if)#switchport mode access vlan 8 Switch(config-if)#switchport voice vlan 6",
+    "Switch(config-if)#switchport vlan 8 Switch(config-if)#switchport vlan 6 voip",
+    "Switch(config-if)#switchport access vlan 8 voice 6",
+    "Switch(config-if)#switchport access vlan 8 Switch(config-if)#switchport voice vlan 6"
+   ],
+   "answer": 3,
+   "explanation": "The command used to configure an access port for VLAN 8 is switchport access vlan 8 , and the command to configure the VOIP phone is switchport voice vlan 6 .",
+   "source": "CCNA 100-105 · Ch. 2, Q115",
+   "topic": "2.4a Access ports (data and voice)",
+   "topic_n": 9
+  },
+  {
+   "question": "You attempt to configure a VLAN on a switch of VLAN 2300. When you finish configuring the VLAN and exit the VLAN database, you receive the error “% Failed to create VLANS 2300.” What is wrong?",
+   "choices": [
+    "The VLAN database cannot be configured for VLAN 2300.",
+    "The VLAN database is too large and out of space.",
+    "The VTP mode must be transparent to configure VLAN 2300.",
+    "The VLAN must be configured on an interface first."
+   ],
+   "answer": 2,
+   "explanation": "One of the prerequisites for configuring extended VLANs is that the VTP mode must be transparent.",
+   "source": "CCNA 100-105 · Ch. 2, Q117",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You attempt to configure a VLAN with a new name. You receive the error “Default VLAN 1 may not have its name changed.” What is wrong?",
+   "choices": [
+    "You are not in the VLAN database when committing the change.",
+    "The VLAN is used on interfaces already.",
+    "The VLAN is being referenced by its name in interface configuration.",
+    "The VLAN is protected from any changes."
+   ],
+   "answer": 3,
+   "explanation": "VLAN 1 is the default VLAN and it is not permitted by the IOS to change the VLAN in any way. This includes name changes.",
+   "source": "CCNA 100-105 · Ch. 2, Q118",
+   "topic": "2.4b Default VLAN",
+   "topic_n": 10
+  },
+  {
+   "question": "You have configured a VLAN for an MTU of 9128. However, you have noticed a severe performance decrease from the change. What is the problem?",
+   "choices": [
+    "The device does not support jumbo frames.",
+    "One of the connected switches is still configured for a nominal MTU.",
+    "The VLAN configuration must still propagate to the other switches.",
+    "The VTP protocol is not configured correctly."
+   ],
+   "answer": 1,
+   "explanation": "Although the MTU is configured on the VLAN, all switches and devices connected end to end must be configured to support jumbo frames. If you fail to do this, you can expect to see a performance decrease. An MTU of 9128 is defined as a jumbo frame.",
+   "source": "CCNA 100-105 · Ch. 2, Q120",
+   "topic": "2.4 Configure, verify, and troubleshoot VLANs (normal/extended range) spanning multiple switches",
+   "topic_n": 8
+  },
+  {
+   "question": "You have connected a Dell switch to the Cisco switch you are configuring and you cannot get a trunk between the two. What must be changed?",
+   "choices": [
+    "VTP needs to be configured on each of the switches.",
+    "The Dell switch must be configured to use ISL.",
+    "The Cisco switch must be configured to use 802.1Q.",
+    "Both switches need to have duplicated VLAN configurations."
+   ],
+   "answer": 2,
+   "explanation": "Since the Dell switch cannot support the proprietary protocol of ISL, both switches need to be set up to use 802.1Q.",
+   "source": "CCNA 100-105 · Ch. 2, Q121",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "You need to configure a trunk interface to support the protocol of 802.1Q. Which command will achieve this?",
+   "choices": [
+    "Switch(config-if)#switchport 802.1q",
+    "Switch(config-if)#switchport encapsulation trunk 802.1q",
+    "Switch(config-if)#switchport mode trunk 802.1q",
+    "Switch(config-if)#switchport trunk encapsulation 802.1q"
+   ],
+   "answer": 3,
+   "explanation": "The command to specify 802.1Q encapsulation on a trunk interface is switchport trunk encapsulation 802.1q .",
+   "source": "CCNA 100-105 · Ch. 2, Q122",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "You are trying to configure a trunk port on an interface for 802.1Q encapsulation. However, after entering the proper command, you receive the error % Invalid input detected at '^' marker. What is wrong?",
+   "choices": [
+    "The switch only supports the ISL trunking protocol.",
+    "802.1Q is not supported on the switch you are configuring this on.",
+    "The interface will not allow configuration of 802.1Q.",
+    "The switch only supports the 802.1Q trunking protocol."
+   ],
+   "answer": 3,
+   "explanation": "This error is very common when configuring Cisco switches, since many switches only support 802.1Q and configuration is not necessary. The ISL trunking protocol is not supported on certain platforms, such as the 2900 series switches.",
+   "source": "CCNA 100-105 · Ch. 2, Q123",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "You need to view all of the trunks on a switch and verify that they have the proper trunking protocols configured. Which command will display the information?",
+   "choices": [
+    "Switch#show interfaces trunk",
+    "Switch#show interfaces brief",
+    "Switch#show switchport brief",
+    "Switch#show switchport trunk"
+   ],
+   "answer": 0,
+   "explanation": "The command show interfaces trunk will display all of the configured trunks on the switch.",
+   "source": "CCNA 100-105 · Ch. 2, Q124",
+   "topic": "2.5a Trunk ports",
+   "topic_n": 12
+  },
+  {
+   "question": "When a frame is not tagged with 802.1Q VLAN identifying information, what happens when it traverses a trunk port?",
+   "choices": [
+    "The frame is forwarded to the native VLAN.",
+    "The frame is sent to the first VLAN ID configured on the trunk.",
+    "The frame is forwarded to the default VLAN.",
+    "The frame is dropped to the bit bucket."
+   ],
+   "answer": 0,
+   "explanation": "When a frame traverses a trunk and does not have VLAN tagging information in the 802.1Q encapsulation format (untagged), it is sent to the native VLAN configured on the trunk.",
+   "source": "CCNA 100-105 · Ch. 2, Q125",
+   "topic": "2.5d Native VLAN",
+   "topic_n": 15
+  },
+  {
+   "question": "What is the default VTP mode all switches are configured as by default?",
+   "choices": [
+    "Transparent",
+    "Client",
+    "Master",
+    "Server"
+   ],
+   "answer": 3,
+   "explanation": "All switches are configured by default as a VTP server.",
+   "source": "CCNA 100-105 · Ch. 2, Q126",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "You need to verify the VTP mode on a switch. Which command will display the information?",
+   "choices": [
+    "Switch#show vtp counters",
+    "Switch#show vtp status",
+    "Switch#show vtp",
+    "Switch#show running-config"
+   ],
+   "answer": 1,
+   "explanation": "The command to display the mode settings for VTP is show vtp status .",
+   "source": "CCNA 100-105 · Ch. 2, Q127",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which commands would you enter on a new switch joining your existing network to configure VTP?",
+   "choices": [
+    "Switch(config)#vtp client Switch(config)#vtp corpname",
+    "Switch(config)#vtp mode client Switch(config)#vtp domain corpname",
+    "Switch(config)#vtp domain corpname",
+    "Switch(config)#vtp mode transparent Switch(config)#vtp domain corpname"
+   ],
+   "answer": 1,
+   "explanation": "When setting up VTP on a new switch connected to your existing VTP infrastructure, you need to change the mode of the switch. Then you must configure the VTP domain that is serving the VTP information.",
+   "source": "CCNA 100-105 · Ch. 2, Q128",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which protocol is an open standard trunking protocol?",
+   "choices": [
+    "802.1X",
+    "VTP",
+    "ISL",
+    "802.1Q"
+   ],
+   "answer": 3,
+   "explanation": "The 802.1Q protocol is supported by all switches’ vendors for trunking. It is an open standard that was developed by the IEEE.",
+   "source": "CCNA 100-105 · Ch. 2, Q129",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command will show you the native VLAN for only Fa0/15?",
+   "choices": [
+    "Switch#show switchport fastethernet 0/15",
+    "Switch#show interface fastethernet 0/15 Switchport",
+    "Switch#show interface fastethernet 0/15",
+    "Switch#show running-config"
+   ],
+   "answer": 1,
+   "explanation": "The command show interface fastethernet 0/15 switchport will show the operational mode, and if configured as a trunk, it will show the native VLAN.",
+   "source": "CCNA 100-105 · Ch. 2, Q130",
+   "topic": "2.5d Native VLAN",
+   "topic_n": 15
+  },
+  {
+   "question": "You need to change the native VLAN for interface Fa0/23 from VLAN 1 to VLAN 999. Which command would you use?",
+   "choices": [
+    "Switch(config-if)#no switchport native vlan 1 Switch(config-if)#switchport native vlan 999",
+    "Switch(config-if)#switchport trunk native vlan 999",
+    "Switch(config-if)#switchport native vlan 999",
+    "Switch(config-if)#native vlan 999"
+   ],
+   "answer": 1,
+   "explanation": "The command to change the native VLAN of a trunk to VLAN 999 is switchport trunk native vlan 999 .",
+   "source": "CCNA 100-105 · Ch. 2, Q131",
+   "topic": "2.5d Native VLAN",
+   "topic_n": 15
+  },
+  {
+   "question": "When you change the native VLAN of a trunk from VLAN 1 to VLAN 999 and you receive the error “%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered…,” what is the possible problem?",
+   "choices": [
+    "The version of CDP is wrong on the other switch.",
+    "The interface is the first to be changed.",
+    "The interface is running ISL.",
+    "CDP is not running on the other interface, causing a mismatch."
+   ],
+   "answer": 1,
+   "explanation": "This error is normal if it is the first interface to be changed over to the new native VLAN since the other interface has not been changed yet. However, if the other interface was changed already and you received this error, then CDP is letting you know that the other side is mismatched.",
+   "source": "CCNA 100-105 · Ch. 2, Q132",
+   "topic": "2.5d Native VLAN",
+   "topic_n": 15
+  },
+  {
+   "question": "Which command will turn off Dynamic Trunking Protocol (DTP) on an interface?",
+   "choices": [
+    "Switch(config-if)#switchport dtp disable",
+    "Switch(config-if)#no dtp",
+    "Switch(config-if)#no switchport dtp enable",
+    "Switch(config-if)#switchport nonegotiate"
+   ],
+   "answer": 3,
+   "explanation": "The Dynamic Trunking Protocol can be turned off with the command switchport nonegotiate , which when configured states not to negotiate trunks via DTP.",
+   "source": "CCNA 100-105 · Ch. 2, Q134",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "You need to remove VLANs 2 through 4 from the allowed list on a trunk interface. Which command will remove only these VLANs without interruption to the network?",
+   "choices": [
+    "Switch(config-if)#switchport trunk allowed remove vlan 2-4",
+    "Switch(config-if)#switchport remove vlan 2-4",
+    "Switch(config-if)#switchport trunk allowed vlan remove 2-4",
+    "Switch(config-if)#switchport trunk remove vlan 2-4"
+   ],
+   "answer": 2,
+   "explanation": "The command switchport trunk allowed vlan remove 2-4 will remove VLANs 2 through 4 from the trunk.",
+   "source": "CCNA 100-105 · Ch. 2, Q135",
+   "topic": "2.5b Add and remove VLANs on a trunk",
+   "topic_n": 13
+  },
+  {
+   "question": "You are trunking Switch A and Switch B together. On Switch A you have the default of switchport mode dynamic auto . On Switch B, which command will you need to configure to allow trunking?",
+   "choices": [
+    "SwitchB(config-if)#switchport mode trunk",
+    "SwitchB(config-if)#switchport nonegotiate",
+    "SwitchB(config-if)#switchport mode dynamic auto",
+    "SwitchB(config-if)#switchport mode dynamic trunk"
+   ],
+   "answer": 0,
+   "explanation": "Switch B will need to either have its interface set to switchport mode trunk or switchport mode dynamic desirable for Switch A to turn its interface into a trunk.",
+   "source": "CCNA 100-105 · Ch. 2, Q137",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "You need to add VLAN 4 to the allowed list on a trunk interface. Currently VLANs 5 through 8 are allowed. Which command will add only this VLAN without interruption to the network?",
+   "choices": [
+    "Switch(config-if)#add allowed vlan 4",
+    "Switch(config-if)#switchport trunk add vlan 4",
+    "Switch(config-if)#switchport trunk allowed add vlan 4",
+    "Switch(config-if)#switchport trunk allowed vlan add 4"
+   ],
+   "answer": 3,
+   "explanation": "The command switchport trunk allowed vlan add 4 will add VLAN 4 to the existing list of VLANs already allowed on the interface.",
+   "source": "CCNA 100-105 · Ch. 2, Q138",
+   "topic": "2.5b Add and remove VLANs on a trunk",
+   "topic_n": 13
+  },
+  {
+   "question": "You try to configure the command switchport mode trunk on an interface. However, you see the error message “Command rejected: An interface whose trunk encapsulation is Auto cannot be configured to trunk mode.” What command will fix the issue?",
+   "choices": [
+    "Switch(config-if)#switchport trunk encapsulation dot1q",
+    "Switch(config-if)#switchport mode trunk manual",
+    "Switch(config-if)#no switchport mode dynamic auto",
+    "Switch(config-if)#no switchport trunk encapsulation auto"
+   ],
+   "answer": 0,
+   "explanation": "The command will not complete because the interface is set to dynamic auto , which implies the trunk protocol will be negotiated. You cannot set it to switchport mode trunk until you statically set the encapsulation via the command switchport trunk encapsulation dot1q .",
+   "source": "CCNA 100-105 · Ch. 2, Q139",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "What is the function of the VLAN Trunking Protocol (VTP)?",
+   "choices": [
+    "VTP allows for propagation of the VLAN database.",
+    "VTP allows for propagation of the trunking database.",
+    "VTP detects trunks encapsulations and negotiates trunks.",
+    "VTP allows for dynamic trunking between links."
+   ],
+   "answer": 0,
+   "explanation": "VLAN Trunking Protocol, or VTP, propagates the VLAN database from an initial master copy on the “server” to all of the “clients.”",
+   "source": "CCNA 100-105 · Ch. 2, Q141",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which protocol is a Cisco proprietary protocol used for trunking switches?",
+   "choices": [
+    "ISL",
+    "CDP",
+    "802.1Q",
+    "VTP"
+   ],
+   "answer": 0,
+   "explanation": "Inter-Switch Link, or ISL, is a proprietary protocol used for trunking of switches. If you need to connect non-Cisco switches to a Cisco switch, you must use 802.1Q, the IEEE standard.",
+   "source": "CCNA 100-105 · Ch. 2, Q142",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "How does IEEE 802.1Q tag frames?",
+   "choices": [
+    "802.1Q adds a 32-bit header to the packet with the VLAN tagging information.",
+    "802.1Q inserts a 32-bit field between the destination MAC address and the type field.",
+    "802.1Q adds a 32-bit header to the frame with the VLAN tagging information.",
+    "802.1Q inserts a 32-bit field between the source MAC address and the type field."
+   ],
+   "answer": 3,
+   "explanation": "802.1Q inserts a field containing the 16-bit Tag Protocol ID of 0x8100, a 3-bit COS field, a 1-bit drop-eligible indicator (used with COS), and the 12=bit VLAN ID, which equals 32 bits, or 4 bytes.",
+   "source": "CCNA 100-105 · Ch. 2, Q143",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which VTP mode will not allow the switch to participate in VTP traffic but will forward VTP traffic?",
+   "choices": [
+    "Proxy mode",
+    "Transparent mode",
+    "Client mode",
+    "Server mode"
+   ],
+   "answer": 1,
+   "explanation": "A switch in VTP transparent mode will not participate in VTP. However, if the VTP is v2, the switch will forward and receive VTP advertisements.",
+   "source": "CCNA 100-105 · Ch. 2, Q144",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which commands will allow a trunk with another switch configured as mode desirable auto?",
+   "choices": [
+    "SwitchB(config-if)#switchport nonegotiate",
+    "SwitchB(config-if)#switchport mode dynamic auto SwitchB(config-if)#switchport mode encapsulation dot1q",
+    "SwitchB(config-if)#switchport trunk encapsulation dot1q SwitchB(config-if)#switchport mode trunk",
+    "SwitchB(config-if)#switchport encapsulation dot1q SwitchB(config-if)#switchport mode trunk"
+   ],
+   "answer": 2,
+   "explanation": "You must first set the encapsulation to 802.1Q, then you can statically set the mode to trunk. An alternative would be to set the port to dynamic desirable via the command switchport mode dynamic desirable . However, it is recommended to statically configure the link to trunk on one or both sides if possible.",
+   "source": "CCNA 100-105 · Ch. 2, Q146",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "What significance does VTP VLAN pruning provide?",
+   "choices": [
+    "All of the above",
+    "VLAN pruning removes VLAN traffic from other switches that are not configured for the respective VLAN.",
+    "VLAN pruning removes VLANs from the databases of other switches that they are not configured on.",
+    "VLAN pruning automatically changes the allowed VLANs on all interfaces."
+   ],
+   "answer": 1,
+   "explanation": "VTP VLAN pruning removes forwarding traffic for VLANs that are not configured on remote switches. This saves bandwidth on trunks because if the remote switch does not have the VLAN configured on it, the frame destined for the VLAN will not traverse the trunk.",
+   "source": "CCNA 100-105 · Ch. 2, Q147",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command enables VTP pruning?",
+   "choices": [
+    "Switch(config-vlan)#enable pruning",
+    "Switch(config)#vtp pruning",
+    "Switch(config)#vtp mode pruning",
+    "Switch(config)#vtp vlan pruning"
+   ],
+   "answer": 1,
+   "explanation": "The command “ vtp pruning in global configuration mode will enable VTP VLAN pruning.",
+   "source": "CCNA 100-105 · Ch. 2, Q148",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Switch A and Switch B have a trunk. On Switch A, the native VLAN is set to VLAN 10 on Switch B and the native VLAN is defaulted. What problems will occur?",
+   "choices": [
+    "VTP will not function.",
+    "Any traffic not tagged on Switch B when traversing the trunk will be switched onto VLAN 10.",
+    "All broadcasts will be forwarded to Switch B.",
+    "CDP will not function."
+   ],
+   "answer": 1,
+   "explanation": "The problems will not be apparent since the trunk will still function for tagged traffic. However, any traffic that is not tagged will be directed to the opposite side’s native VLAN. So traffic expected for VLAN 1 will be directed to VLAN 10, and VLAN 10 traffic will be directed to VLAN 1 when not tagged.",
+   "source": "CCNA 100-105 · Ch. 2, Q149",
+   "topic": "2.5d Native VLAN",
+   "topic_n": 15
+  },
+  {
+   "question": "When enabling VTP pruning, where does it need to be configured?",
+   "choices": [
+    "VTP needs to be configured only on the VTP server.",
+    "VTP needs to be configured on all VTP clients and the server.",
+    "VTP needs to be configured only on the VTP transparent.",
+    "VTP needs to be configured only on the VTP client."
+   ],
+   "answer": 0,
+   "explanation": "VTP pruning needs to be configured only on the VTP server. The clients will receive the update and turn on VTP pruning automatically.",
+   "source": "CCNA 100-105 · Ch. 2, Q150",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which proprietary protocol allows for conformity of VLANs across all Cisco switches?",
+   "choices": [
+    "CDP",
+    "VTP",
+    "802.1X",
+    "ISL"
+   ],
+   "answer": 1,
+   "explanation": "VLAN Trunking Protocol allows for conformity of VLANs across all Cisco switches. The protocol uses a master-slave database with a revision control of +1. If the server is 5 and the clients are 4, they will update the database to the latest revision.",
+   "source": "CCNA 100-105 · Ch. 2, Q151",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which statement is correct about native VLANs?",
+   "choices": [
+    "Any traffic tagged will be placed on the native VLAN.",
+    "Any traffic that is not allowed over the trunk will be placed on the native VLAN.",
+    "Any traffic that is tagged with ISL on an 802.1Q trunk will be placed on the native VLAN.",
+    "Any traffic not tagged will be placed on the native VLAN."
+   ],
+   "answer": 3,
+   "explanation": "Native VLANs are only used for traffic that is not tagged, which is placed on a trunk link. A common use for native VLANs is management traffic between switches, before both sides are configured as a trunk.",
+   "source": "CCNA 100-105 · Ch. 2, Q152",
+   "topic": "2.5d Native VLAN",
+   "topic_n": 15
+  },
+  {
+   "question": "You have configured switchport nonegotiate on an interface with a default configuration. What effect will it have on the neighboring interface when the other switch is plugged in with its interface in default configuration?",
+   "choices": [
+    "The switchport will transition to a trunk port.",
+    "The interface will remain shut down.",
+    "The switchport will remain an access port.",
+    "The interface will enter an err-disable state."
+   ],
+   "answer": 2,
+   "explanation": "If you issue the command switchport nonegotiate , the switch will not send Dynamic Trunking Protocol (DTP) frames for trunk negotiation. The default configuration for a port is the mode of access, so the port will remain in an access port.",
+   "source": "CCNA 100-105 · Ch. 2, Q156",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Switch A has the default configuration on its interface. You plug Switch B into its interface with a crossover cable. Which command will force Switch B to become a member of VLAN 5?",
+   "choices": [
+    "SwitchB(config-if)#switchport mode access SwitchB(config-if)#switchport access vlan 5",
+    "SwitchB(config-if)#switchport mode trunk SwitchB(config-if)#switchport native vlan 5",
+    "SwitchA(config-if)#switchport mode access SwitchA(config-if)#switchport access vlan 5",
+    "SwitchA(config-if)#switchport mode trunk SwitchA(config-if)#switchport native vlan 5"
+   ],
+   "answer": 2,
+   "explanation": "You want Switch B to become a member of VLAN 5. So Switch A must change its interface to an access port, which will force Switch B to remain an access port. Then you configure the access VLAN of 5 on Switch A. If you tried to configure this with a native VLAN, you would result in a native VLAN mismatch and improper configuration.",
+   "source": "CCNA 100-105 · Ch. 2, Q157",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Switch A is configured with the command of switchport mode dynamic desirable on its interface. Which command would you need to configure on Switch B to create a trunk between them?",
+   "choices": [
+    "SwitchB(config-if)#switchport mode dynamic auto",
+    "SwitchB(config-if)#switchport mode dynamic desirable",
+    "All of the above",
+    "SwitchB(config-if)#switchport mode trunk"
+   ],
+   "answer": 2,
+   "explanation": "The command switchport mode dynamic desirable is similar to switchport mode dynamic auto with the exception that it is desirable to become a trunk. So if the neighboring port is set to auto, desirable, or trunk, it becomes a trunk.",
+   "source": "CCNA 100-105 · Ch. 2, Q158",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which statement is correct about the command switchport mode dynamic auto ?",
+   "choices": [
+    "The interface will remain an access link if the neighboring port is configured as a trunk.",
+    "The interface will remain an access link if the native VLAN is changed.",
+    "The interface will become a trunk if the neighboring port is configured the same.",
+    "The interface will become a trunk if requested on the neighboring port."
+   ],
+   "answer": 3,
+   "explanation": "The command switchport mode dynamic auto will cause the port to remain an access port if the neighboring port is configured the same. However, if you configure the neighboring port as a trunk, it will become a trunk.",
+   "source": "CCNA 100-105 · Ch. 2, Q159",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "Which command is similar to show interfaces trunk but will show greater detail?",
+   "choices": [
+    "Switch#show running-config",
+    "Switch#show interfaces switchport",
+    "Switch#show switchport",
+    "Switch#show interfaces trunk detail"
+   ],
+   "answer": 1,
+   "explanation": "The command show interfaces switchport will show greater detail about the trunk than the command show interfaces trunk . Alternatively, you can specify a single port using the command show interfaces Fa 0/5 switchport , for example.",
+   "source": "CCNA 100-105 · Ch. 2, Q160",
+   "topic": "2.5a Trunk ports",
+   "topic_n": 12
+  },
+  {
+   "question": "You are connecting a VMware ESXi server to an interface on a 3560 switch. The ESXi server will need several VLANs for the VMs running on it. How would you configure the interface?",
+   "choices": [
+    "Switch(config-if)#switchport trunk encapsulation dot1q Switch(config-if)#switchport trunk Switch(config-if)#switchport nonegotiate",
+    "Switch(config-if)#switchport trunk encapsulation dot1q Switch(config-if)#switchport mode access",
+    "Switch(config-if)#switchport trunk encapsulation dot1q Switch(config-if)#switchport mode dynamic desirable",
+    "Switch(config-if)#switchport trunk encapsulation dot1q Switch(config-if)#switchport mode trunk Switch(config-if)#switchport nonegotiate"
+   ],
+   "answer": 3,
+   "explanation": "Configuring servers like VMware ESXi is no different than configuring other switches. The exception is that the VMware server will not participate in DTP. So we first configure the command to set the interface statically to a trunk. Then we turn off DTP with the command switchport nonegotiate since DTP is not needed.",
+   "source": "CCNA 100-105 · Ch. 2, Q161",
+   "topic": "2.5a Trunk ports",
+   "topic_n": 12
+  },
+  {
+   "question": "When you have a native VLAN mismatch on a configured trunk, which protocol will alert you to the issue?",
+   "choices": [
+    "ISL",
+    "VTP",
+    "802.1Q",
+    "CDP"
+   ],
+   "answer": 3,
+   "explanation": "Cisco Discovery Protocol (CDP) will alert you to a native VLAN mismatch. You will receive the error “%CDP-4- NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered….” When a trunk is configured, the native VLAN is always used for CDP exchanges.",
+   "source": "CCNA 100-105 · Ch. 2, Q162",
+   "topic": "2.5d Native VLAN",
+   "topic_n": 15
+  },
+  {
+   "question": "How does a VTP client know that the VTP database has been updated?",
+   "choices": [
+    "The CDP protocol checks for VTP updates.",
+    "The VTP protocol checks the MD5 checksum for changes.",
+    "The VTP protocol pulls a full copy of the database every 60 seconds.",
+    "The VTP protocol checks the database revision number."
+   ],
+   "answer": 3,
+   "explanation": "The VTP clients track changes via a 32-bit number inside of the VTP frame called the revision number. By default, every 5 minutes a summary advertisement is sent from the server. However, when an update occurs, a new VTP frame called a subset advert message is sent.",
+   "source": "CCNA 100-105 · Ch. 2, Q163",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "What can happen by changing the mode of a VTP client to a VTP server and changing one of the VLANs?",
+   "choices": [
+    "The VLAN database can be overwritten in the rest of the network.",
+    "Nothing; the switch functions fine in the rest of the network.",
+    "The VLAN database can be erased in the rest of the network.",
+    "The switch will need to be reloaded before it can function as a server."
+   ],
+   "answer": 0,
+   "explanation": "Since the VTP clients in the network check the revision number in VTP, if a client is changed to a server, the database remains intact. So when a change is made, the revision number will increment and propagate to the rest of the network. Even if an existing server exists, its revision number will be lower.",
+   "source": "CCNA 100-105 · Ch. 2, Q165",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "You need to check the allowed VLANs on a trunk interface. Which command will show you the allowed VLANs?",
+   "choices": [
+    "SwitchA#show interfaces gi 0/1 trunk",
+    "SwitchA#show interfaces gi 0/1",
+    "SwitchA#show interfaces gi 0/1 switchport",
+    "SwitchA#show interfaces trunk"
+   ],
+   "answer": 3,
+   "explanation": "The command show interfaces trunk will show the details of allowed VLANs. The show running-config command will also show you the allowed VLANs.",
+   "source": "CCNA 100-105 · Ch. 2, Q166",
+   "topic": "2.5b Add and remove VLANs on a trunk",
+   "topic_n": 13
+  },
+  {
+   "question": "You need to verify if VTP pruning is enabled. Which command will you use to view the information?",
+   "choices": [
+    "SwitchA#show vlan pruning",
+    "SwitchA#show vtp pruning",
+    "SwitchA#show vtp details",
+    "SwitchA#show vtp status"
+   ],
+   "answer": 3,
+   "explanation": "The command show vtp status will tell you if VTP pruning is enabled or disabled.",
+   "source": "CCNA 100-105 · Ch. 2, Q168",
+   "topic": "2.5c DTP, VTP (v1&v2), and 802.1Q",
+   "topic_n": 14
+  },
+  {
+   "question": "You are trying to change the native VLAN from VLAN 1 to VLAN 1002. You have configured both sides with switchport native vlan 1002 . However, the native VLAN traffic keeps failing. What is wrong?",
+   "choices": [
+    "VLAN 1002 is not allowed for Ethernet traffic.",
+    "The native VLAN must be VLAN 1.",
+    "The native VLAN cannot be an extended VLAN.",
+    "The problem is not the native VLAN; everything is configured properly."
+   ],
+   "answer": 0,
+   "explanation": "VLAN 1002 is reserved for use with an FDDI VLAN and not allowed for Ethernet traffic. All Ethernet traffic must be a VLAN between 1 to 1001. You cannot use 1002 to 1005 because they are used for legacy applications.",
+   "source": "CCNA 100-105 · Ch. 2, Q169",
+   "topic": "2.5d Native VLAN",
+   "topic_n": 15
+  },
+  {
+   "question": "What is the IEEE specification for Spanning Tree Protocol?",
+   "choices": [
+    "802.1s",
+    "802.1w",
+    "802.1d",
+    "802.1x"
+   ],
+   "answer": 2,
+   "explanation": "The original version of STP was created by Digital Equipment Corporation (DEC). The IEEE ratified the specification of STP as 802.1d in 1990.",
+   "source": "CCNA 100-105 · Ch. 2, Q171",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "Which statement is correct about Spanning Tree Protocol?",
+   "choices": [
+    "STP runs as a distributed process on each switch and creates a topology database.",
+    "STP uses routing protocols to check for network loops.",
+    "STP runs on a central switch by creating a topology database.",
+    "STP uses the MAC address table to check for switching loops."
+   ],
+   "answer": 0,
+   "explanation": "Spanning Tree Protocol runs as a distributed process on each switch. Each switch creates and maintains its own topology database referencing the root bridge.",
+   "source": "CCNA 100-105 · Ch. 2, Q172",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "How does Spanning Tree Protocol detect and monitor loops in networks?",
+   "choices": [
+    "STP detects and monitors CDP frames being received on multiple interfaces.",
+    "STP detects and monitors BPDUs being received on multiple interfaces.",
+    "STP detects and monitors access ports in the same VLAN.",
+    "STP detects and monitors normal traffic frames being received on multiple interfaces."
+   ],
+   "answer": 1,
+   "explanation": "STP monitors all interfaces for BPDUs, which carry switches’ identities. When it sees the same switch ID in BPDUs on multiple interfaces, a redundant link is detected.",
+   "source": "CCNA 100-105 · Ch. 2, Q173",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "How is the root bridge in STP elected?",
+   "choices": [
+    "The root bridge is the switch with the lowest MAC address and priority.",
+    "The root bridge is the switch with the lowest IP address and priority.",
+    "The root bridge is the switch with the highest MAC address and priority.",
+    "The root bridge is the switch with the highest IP address and priority."
+   ],
+   "answer": 0,
+   "explanation": "The root bridge is elected by all of the switches and has the lowest MAC address and priority of them all.",
+   "source": "CCNA 100-105 · Ch. 2, Q174",
+   "topic": "2.6b STP root bridge selection",
+   "topic_n": 18
+  },
+  {
+   "question": "What is the IEEE specification for Rapid Spanning Tree Protocol?",
+   "choices": [
+    "802.1d",
+    "802.1x",
+    "802.1s",
+    "802.1w"
+   ],
+   "answer": 3,
+   "explanation": "The original STP specification was revamped in 2004 with RSTP 802.1w. This revamping of STP was to fix problems with the original specification.",
+   "source": "CCNA 100-105 · Ch. 2, Q175",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "Why is a root bridge elected for STP to function properly?",
+   "choices": [
+    "The root bridge calculates the port cost for the rest of the network.",
+    "The root bridge calculates the fastest path for the rest of the network.",
+    "The root bridge is the logical center of the STP topology.",
+    "The root bridge allows all forwarding decisions of frames."
+   ],
+   "answer": 2,
+   "explanation": "The root bridge is a point of perspective for the rest of the STP network. It is important to have a point of perspective to calculate which ports are blocked and which remain in a forwarding mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q176",
+   "topic": "2.6b STP root bridge selection",
+   "topic_n": 18
+  },
+  {
+   "question": "How does a switch calculate the bridge ID?",
+   "choices": [
+    "The bridge ID is an 8-byte number containing a 4-byte bridge priority and 4-byte IP address.",
+    "The bridge ID is a 6-byte number containing a 2-byte bridge priority and 4-byte IP address.",
+    "The bridge ID is a 10-byte number containing a 4-byte bridge priority and 6-byte MAC address.",
+    "The bridge ID is an 8-byte number containing a 2-byte bridge priority and 6-byte MAC address."
+   ],
+   "answer": 3,
+   "explanation": "The bridge ID is made up of a 2-byte bridge priority and a 6-byte MAC address for a total of 8 bytes.",
+   "source": "CCNA 100-105 · Ch. 2, Q177",
+   "topic": "2.6b STP root bridge selection",
+   "topic_n": 18
+  },
+  {
+   "question": "What is the link cost in respect to STP?",
+   "choices": [
+    "Link cost is the calculation of all the ports in the path to the root bridge.",
+    "Link cost is the monetary cost to traverse a link.",
+    "Link cost is the latency of a frame traversing across the link.",
+    "Link cost is a numeric value associated with the speed of a link."
+   ],
+   "answer": 3,
+   "explanation": "The link cost is a numeric value that represents the cost in speed of a link. The higher the numbers, the lower the speed of the link, thus a higher cost.",
+   "source": "CCNA 100-105 · Ch. 2, Q178",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "What is the path cost in respect to RSTP?",
+   "choices": [
+    "Path cost is a numeric value associated with the speed of a link.",
+    "Path cost is the latency of a frame traversing across the link.",
+    "Path cost is the calculation of all the ports in the path to the root bridge.",
+    "Path cost is the monetary cost to traverse a link."
+   ],
+   "answer": 2,
+   "explanation": "The RSTP path cost is the calculation of all of the link costs that lead back to the root bridge. The link cost is a numeric value that signifies the speed. The lower the number “cost,” the higher the speed of the link.",
+   "source": "CCNA 100-105 · Ch. 2, Q179",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "What is the default wait time for STP convergence to complete?",
+   "choices": [
+    "Convergence takes 5 seconds to complete.",
+    "Convergence takes 60 seconds to complete.",
+    "Convergence takes 50 seconds to complete.",
+    "Convergence takes 30 seconds to complete."
+   ],
+   "answer": 2,
+   "explanation": "802.1d STP convergence takes 50 seconds to complete before the port is put into a state of forwarding or blocking. This is dependent on the STA, or spanning-tree algorithm.",
+   "source": "CCNA 100-105 · Ch. 2, Q180",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "When a computer is connected to an interface with STP enabled in default mode, which is the correct order of the port transitions?",
+   "choices": [
+    "Listening, learning, blocking, forwarding",
+    "Blocking, learning, listening, forwarding",
+    "Forwarding, listening, learning, blocking",
+    "Blocking, listening, learning, forwarding"
+   ],
+   "answer": 3,
+   "explanation": "When a computer is connected to an STP-enabled interface, the port will transition between blocking, listening, learning, and forwarding. The time between the states of blocking and forwarding is called the convergence and is 50 seconds.",
+   "source": "CCNA 100-105 · Ch. 2, Q181",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "What is the definition of a designated port?",
+   "choices": [
+    "A port that is determined to have a lowest path cost to the root bridge and placed in a forwarding state for a network segment",
+    "A port that is determined to have the highest cost and placed in a forwarding state for a network segment",
+    "A port that is determined to have the highest path cost to the root bridge and placed in a blocking state for a network segment",
+    "A port that is determined to have the lowest cost and placed in a forwarding state for a network segment"
+   ],
+   "answer": 3,
+   "explanation": "A designated port is a port that has the lowest cost compared to the higher cost of the redundant ports. It is placed into a forwarding state for a network segment.",
+   "source": "CCNA 100-105 · Ch. 2, Q182",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "Which is a correct statement about bridge port roles in STP?",
+   "choices": [
+    "Every switch, including the root bridge, must have at least one backup port.",
+    "Every switch, excluding the root bridge, must have at least one root port.",
+    "Every switch, excluding the root bridge, must have at least one alternate port.",
+    "Every switch, including the root bridge, must have at least one designated port."
+   ],
+   "answer": 1,
+   "explanation": "Every switch in the network segment must have at least one root port. This is the port that leads back to the root bridge. The root bridge will have a designated port on the adjacent link.",
+   "source": "CCNA 100-105 · Ch. 2, Q183",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "What is the definition of an STP root port?",
+   "choices": [
+    "A port that is determined to have the highest path cost to the root bridge and placed in a blocking state for a network segment",
+    "A port that is determined to have the highest cost to the network segment and placed in a forwarding state",
+    "A port that is determined to have the lowest path cost to the root bridge and placed in a forwarding state for a network segment",
+    "A port that is determined to have the lowest cost to the network segment and placed in a forwarding state"
+   ],
+   "answer": 2,
+   "explanation": "The root port is the port that leads back to the root bridge on the adjacent switch. It has the lowest cost of the redundant ports.",
+   "source": "CCNA 100-105 · Ch. 2, Q184",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "Which statement describes an STP port that is placed into a blocking state?",
+   "choices": [
+    "When a port is placed into a blocking state, it blocks redundant frames, including BPDUs.",
+    "When a port is placed into a blocking state, it blocks redundant frames, excluding BPDUs.",
+    "When a port is placed into a blocking state, it blocks all frames, including BPDUs.",
+    "When a port is placed into a blocking state, it blocks all frames, excluding BPDUs."
+   ],
+   "answer": 3,
+   "explanation": "An STP blocked port will block all frames from being forwarded. The blocking excludes BPDUs, which it will continue to listen for and calculate future topology decisions.",
+   "source": "CCNA 100-105 · Ch. 2, Q185",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "Which protocol is a Cisco proprietary enhancement for 802.1d that allows separate spanning-tree instances for each VLAN?",
+   "choices": [
+    "PVST+",
+    "IEEE 802.1w",
+    "RSTP",
+    "CST"
+   ],
+   "answer": 0,
+   "explanation": "Per-VLAN Spanning Tree+ elects a root bridge for each VLAN and creates a topology table for each VLAN. It is a Cisco proprietary protocol due to the bridge ID calculation it must perform for each VLAN.",
+   "source": "CCNA 100-105 · Ch. 2, Q186",
+   "topic": "2.6a STP mode (PVST+ and RPVST+)",
+   "topic_n": 17
+  },
+  {
+   "question": "What is the definition of an STP designated port?",
+   "choices": [
+    "A port that is determined to have the highest cost to the network segment and placed in a forwarding state",
+    "A port that is determined to have the lowest cost to the network segment and placed in a forwarding state",
+    "A port that is determined to have the lowest path cost to the root bridge and placed in a forwarding state for a network segment",
+    "A port that is determined to have the highest path cost to the root bridge and placed in a blocking state for a network segment"
+   ],
+   "answer": 1,
+   "explanation": "The designated port is the port with the lowest cost of the redundant links to the network segment. The adjacent port is normally the root port leading back to the root bridge.",
+   "source": "CCNA 100-105 · Ch. 2, Q187",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "When a computer is connected to an interface with RSTP enabled in default mode, which is the correct order of the port transitions?",
+   "choices": [
+    "Discarding, listening, forwarding",
+    "Discarding, learning, forwarding",
+    "Blocking, listening, learning, forwarding",
+    "Discarding, learning, blocking, forwarding"
+   ],
+   "answer": 1,
+   "explanation": "RSTP has three transitions when a computer is plugged in (no loops). The transitions are discarding, learning, and forwarding, which allow for rapid convergence times.",
+   "source": "CCNA 100-105 · Ch. 2, Q188",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "How is the bridge ID calculated for PVST+?",
+   "choices": [
+    "The bridge ID is a 4-bit bridge priority, 12-bit sys-id-ext, and an 8- byte IP address.",
+    "The bridge ID is a 4-byte bridge priority and sys-id-ext and 6-byte MAC address.",
+    "The bridge ID is a 4-byte bridge priority, a 12-byte sys-id-ext, and 6 byte MAC address.",
+    "The bridge ID is a 4-bit bridge priority, 12-bit sys-id-ext, and 6-byte MAC address."
+   ],
+   "answer": 3,
+   "explanation": "The PVST+ bridge ID comprises a 4-bit bridge priority calculated in blocks of 4096, a 12-bit sys-ext-id that is the VLAN ID for the segment, and a 6-byte MAC address for the switch.",
+   "source": "CCNA 100-105 · Ch. 2, Q189",
+   "topic": "2.6a STP mode (PVST+ and RPVST+)",
+   "topic_n": 17
+  },
+  {
+   "question": "What is the default bridge priority for all STP switches?",
+   "choices": [
+    "Bridge priority of 32,768",
+    "Bridge priority of 16,384",
+    "Bridge priority of 8,192",
+    "Bridge priority of 65,526"
+   ],
+   "answer": 0,
+   "explanation": "The default bridge priority for STP is 32,768.",
+   "source": "CCNA 100-105 · Ch. 2, Q190",
+   "topic": "2.6b STP root bridge selection",
+   "topic_n": 18
+  },
+  {
+   "question": "Which protocol is a Cisco proprietary enhancement for 802.1w that allows separate spanning-tree instances for each VLAN?",
+   "choices": [
+    "Rapid PVST+",
+    "PVST+",
+    "RSTP+",
+    "CST"
+   ],
+   "answer": 0,
+   "explanation": "Rapid Per-VLAN Spanning Tree+ elects a root bridge for each VLAN. It allows for fast convergence times and logical placement of the root bridge. However, it requires the most CPU and RAM of all implementations.",
+   "source": "CCNA 100-105 · Ch. 2, Q191",
+   "topic": "2.6a STP mode (PVST+ and RPVST+)",
+   "topic_n": 17
+  },
+  {
+   "question": "Which statement is correct about the Common Spanning Tree?",
+   "choices": [
+    "CST is best implemented for really large networks since it scales efficiently.",
+    "CST elects a single root bridge for the entire physical network.",
+    "CST has an immediate convergence because it elects a single root bridge.",
+    "CST elects a root bridge for each VLAN."
+   ],
+   "answer": 1,
+   "explanation": "Common Spanning Tree elects a single root bridge for the entire network and all of the VLANs. This creates a problem when the center of your network may vary upon VLAN placement.",
+   "source": "CCNA 100-105 · Ch. 2, Q192",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "Which statement is correct about Rapid Spanning Tree Protocol?",
+   "choices": [
+    "RSTP has a convergence time of around 50 seconds.",
+    "RSTP allows for multiple root bridges.",
+    "RSTP is backward compatible with STP.",
+    "RSTP has five port states to which the interfaces could possibly transition."
+   ],
+   "answer": 2,
+   "explanation": "RSTP has three transition modes and converges faster than STP, which is 50 seconds. It is, however, backward compatible with STP 802.1d.",
+   "source": "CCNA 100-105 · Ch. 2, Q193",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "How do switches participating in an STP network become aware of topology changes?",
+   "choices": [
+    "Each switch is responsible for sensing the change and sending Topology Change Notification BPDUs.",
+    "The root bridge polls each switch participating in STP for changes.",
+    "The root bridge is responsible for sensing the change and sending Topology Change Notification BPDUs.",
+    "The switches participating in STP poll the root bridge for changes."
+   ],
+   "answer": 0,
+   "explanation": "Each switch is responsible for sensing changes to the topology. Whenever the topology changes, a Topology Change Notification (TCN) is sent out all root ports and an acknowledgment is sent back. This happens until the root bridge sends back a notification.",
+   "source": "CCNA 100-105 · Ch. 2, Q194",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "Which of the following standards is an IEEE standard that is to replace Rapid PVST+?",
+   "choices": [
+    "802.1w",
+    "802.1x",
+    "802.1d",
+    "802.1s"
+   ],
+   "answer": 0,
+   "explanation": "802.1s, which is called Multiple Spanning Tree (MST), is a standard based upon PVST+. It is an open standard created by the IEEE that will allow Per-VLAN Spanning Tree in multi-vendor switched networks. However, it is not fully supported on all Cisco platforms as of yet.",
+   "source": "CCNA 100-105 · Ch. 2, Q195",
+   "topic": "2.6a STP mode (PVST+ and RPVST+)",
+   "topic_n": 17
+  },
+  {
+   "question": "Which is a correct statement about bridge port roles in STP?",
+   "choices": [
+    "All ports on the root bridge are in a designated port state.",
+    "Every switch, excluding the root bridge, must have at least one non- designated port.",
+    "Every switch, including the root bridge, must have at least one designated port.",
+    "A designated port is always in a blocking state."
+   ],
+   "answer": 0,
+   "explanation": "The root bridge always has all of its ports in a designated mode or forwarding mode. If there are redundant links, the adjacent switch to the designated port on the root bridge must be a non-designated or blocking state.",
+   "source": "CCNA 100-105 · Ch. 2, Q196",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "In Rapid Spanning Tree Protocol, which port mode replaces the blocking and listening port states?",
+   "choices": [
+    "Forwarding",
+    "Backup",
+    "Discarding",
+    "Learning"
+   ],
+   "answer": 2,
+   "explanation": "RSTP has three port states: discarding, learning, and forwarding. Blocking and listening are both mapped to discarding in RSTP. When a port is in a state of discarding, it means the interface is discarding all frames except for BPDUs.",
+   "source": "CCNA 100-105 · Ch. 2, Q197",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "You have a network consisting of four switches, all configured with the same bridge priority. Which switch will be elected the root bridge?",
+   "choices": [
+    "0081.023a.b433",
+    "0041.0611.1112",
+    "0021.02fa.bdfc",
+    "0011.03ae.d8aa"
+   ],
+   "answer": 3,
+   "explanation": "The switch with the MAC address of 0011.03ae.d8aa will become the root bridge. Its MAC address is the lowest out of the four switches.",
+   "source": "CCNA 100-105 · Ch. 2, Q198",
+   "topic": "2.6b STP root bridge selection",
+   "topic_n": 18
+  },
+  {
+   "question": "What is the default STP mode all Cisco switches run?",
+   "choices": [
+    "802.1d",
+    "PVST+",
+    "802.1w",
+    "Rapid-PVST+"
+   ],
+   "answer": 1,
+   "explanation": "All Cisco switches are defaulted to the Cisco proprietary STP protocol of PVST+.",
+   "source": "CCNA 100-105 · Ch. 2, Q199",
+   "topic": "2.6a STP mode (PVST+ and RPVST+)",
+   "topic_n": 17
+  },
+  {
+   "question": "Which option is a correct statement about alternate ports in RSTP?",
+   "choices": [
+    "An alternate port receives BDPUs from another port on the same switch and therefore can replace the designated port if it fails.",
+    "An alternate port receives BPDUs from another switch and therefore can replace the root port if it fails.",
+    "An alternate port is always placed in a forwarding state.",
+    "An alternate port receives BPDUs from another switch and therefore can replace the designated port if it fails."
+   ],
+   "answer": 1,
+   "explanation": "An alternate port is a port that is in a discarding state. If the root port fails on the switch with the alternate port, then the alternate port becomes the root port for that switch.",
+   "source": "CCNA 100-105 · Ch. 2, Q200",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "Which is a correct statement about backup ports in RSTP?",
+   "choices": [
+    "A backup port receives BPDUs from another switch and therefore can replace the root port if it fails.",
+    "A backup port is always placed in a forwarding state.",
+    "A backup port receives BDPUs from another port on the same switch and therefore can replace the designated port if it fails.",
+    "A backup port receives BPDUs from another switch and therefore can replace the designated port if it fails."
+   ],
+   "answer": 2,
+   "explanation": "A backup port is a port in a discarding state. It receives BPDUs from another port on the same switch. If the forwarding port fails, then the backup port will become designated so that connectivity to the segment can be restored.",
+   "source": "CCNA 100-105 · Ch. 2, Q201",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "You have a network consisting of four switches. Which switch will be elected the root bridge?",
+   "choices": [
+    "Priority 32,768 MAC 00ef.0897.8abc",
+    "Priority 16,384 MAC 00f8.034e.bede",
+    "Priority 32,768 MAC 00e8.1212.278e",
+    "Priority 32,768 MAC 0013.abea.b562"
+   ],
+   "answer": 1,
+   "explanation": "Although 00f8.034e.bede is the highest MAC address of the four switches, the priority is the lowest of the four. Since the priority and MAC address are added together, the priority allows the switch to win the election.",
+   "source": "CCNA 100-105 · Ch. 2, Q202",
+   "topic": "2.6b STP root bridge selection",
+   "topic_n": 18
+  },
+  {
+   "question": "Which command would configure the priority of 16,384 for VLAN 5?",
+   "choices": [
+    "SwitchB(config-vlan)#spanning-tree vlan priority 16384",
+    "SwitchB(config)#spanning-tree vlan 5 priority 16384",
+    "SwitchB(config)#spanning-tree priority 16384 vlan 5",
+    "SwitchB(config-vlan)#spanning-tree priority 16384"
+   ],
+   "answer": 1,
+   "explanation": "The command to set the STP priority for VLAN 5 is performed from a global config prompt. The full command is spanning-tree vlan 5 priority 16384 .",
+   "source": "CCNA 100-105 · Ch. 2, Q203",
+   "topic": "2.6b STP root bridge selection",
+   "topic_n": 18
+  },
+  {
+   "question": "Which command will display the VLANs for which the current switch is the root bridge?",
+   "choices": [
+    "SwitchA#show spanning-tree details",
+    "SwitchA#show spanning-tree root",
+    "SwitchA#show spanning-tree summary",
+    "SwitchA#show spanning-tree status"
+   ],
+   "answer": 2,
+   "explanation": "The command show spanning-tree summary will show all of the VLANs for which the current switch is a root bridge.",
+   "source": "CCNA 100-105 · Ch. 2, Q204",
+   "topic": "2.6b STP root bridge selection",
+   "topic_n": 18
+  },
+  {
+   "question": "Which command will enable Rapid Per-VLAN Spanning Tree on a switch?",
+   "choices": [
+    "SwitchB(config)#spanning-tree mode 802.1w",
+    "SwitchB(config)#spanning-tree rapid-pvst",
+    "SwitchB(config)#spanning-tree 802.1w",
+    "SwitchB(config)#spanning-tree mode rapid-pvst"
+   ],
+   "answer": 3,
+   "explanation": "Enabling Rapid PVST is super simple. From a global config prompt you use the command spanning-tree mode rapid-pvst .",
+   "source": "CCNA 100-105 · Ch. 2, Q205",
+   "topic": "2.6a STP mode (PVST+ and RPVST+)",
+   "topic_n": 17
+  },
+  {
+   "question": "You want to see the spanning tree for one VLAN. Which command would you use?",
+   "choices": [
+    "SwitchC#show vlan 6 spanning-tree",
+    "SwitchC#show spanning-tree summary vlan 6",
+    "SwitchC#show spanning-tree vlan 6",
+    "SwitchC#show vlan 6"
+   ],
+   "answer": 2,
+   "explanation": "The command show spanning-tree vlan 6 would only show the spanning-tree configuration for VLAN 6.",
+   "source": "CCNA 100-105 · Ch. 2, Q206",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "Which new port state does RTSP have compared to STP?",
+   "choices": [
+    "Blocking",
+    "Forwarding",
+    "Learning",
+    "Discarding"
+   ],
+   "answer": 3,
+   "explanation": "The new port state that RTSP has is discarding, which replaces the blocking state of STP.",
+   "source": "CCNA 100-105 · Ch. 2, Q207",
+   "topic": "2.6 Configure, verify, and troubleshoot STP protocols",
+   "topic_n": 16
+  },
+  {
+   "question": "You receive a call that when computers boot up, they display an error message stating that they cannot reach a domain controller. However, after a few tries, the problem goes away, and the domain controller can be reached. Which command would you enter into the interface if you suspect spanning-tree convergence problems?",
+   "choices": [
+    "SwitchA(config)#switchport spanning-tree portfast",
+    "SwitchA(config-if)#spanning-tree portfast",
+    "SwitchA(config)#spanning-tree portfast default",
+    "SwitchA(config-if)#no switchport spanning-tree"
+   ],
+   "answer": 1,
+   "explanation": "The command spanning-tree portfast” entered into the interface will turn on PortFast mode. This will allow the interface to forward first.",
+   "source": "CCNA 100-105 · Ch. 2, Q221",
+   "topic": "2.7a PortFast",
+   "topic_n": 20
+  },
+  {
+   "question": "On which types of ports should you turn on PortFast mode?",
+   "choices": [
+    "Access ports",
+    "Voice ports",
+    "Designated ports",
+    "Trunk ports"
+   ],
+   "answer": 0,
+   "explanation": "PortFast should only be configured on access links where end devices are plugged in because these devices will not typically create loops in the switch topology.",
+   "source": "CCNA 100-105 · Ch. 2, Q222",
+   "topic": "2.7a PortFast",
+   "topic_n": 20
+  },
+  {
+   "question": "What will the command of spanning-tree portfast default entered in global configuration mode do?",
+   "choices": [
+    "Turn off spanning tree on all access ports only.",
+    "Turn on PortFast mode for all access ports only.",
+    "Turn on PortFast mode for all ports.",
+    "Turn off spanning tree on all ports."
+   ],
+   "answer": 1,
+   "explanation": "This command turns on PortFast globally for only access ports on the switch. This command should be used on access switches because end devices are connected at this level in the hierarchy.",
+   "source": "CCNA 100-105 · Ch. 2, Q223",
+   "topic": "2.7a PortFast",
+   "topic_n": 20
+  },
+  {
+   "question": "What will happen if you plug a hub into two ports on the same switch configured with PortFast on all the interfaces?",
+   "choices": [
+    "One of the links will disable via spanning tree.",
+    "You will create a temporary switching loop.",
+    "Both ports will sense the switch and err-disable.",
+    "You will create a switching loop."
+   ],
+   "answer": 1,
+   "explanation": "You will create a temporary switching loop until the BPDUs are heard from each interface over the hub. However, during this period you will have a switching loop and degrade traffic over the entire switching topology until convergence happens.",
+   "source": "CCNA 100-105 · Ch. 2, Q224",
+   "topic": "2.7a PortFast",
+   "topic_n": 20
+  },
+  {
+   "question": "Which feature will protect a switch immediately if it sees another switch’s advertisement?",
+   "choices": [
+    "BPDU Guard",
+    "Loop Guard",
+    "BPDU Detection",
+    "UplinkFast"
+   ],
+   "answer": 0,
+   "explanation": "BPDU Guard will turn the interface to err-disable as soon as a BPDU is heard on the interface. This feature should be enabled on access switches when configuring PortFast.",
+   "source": "CCNA 100-105 · Ch. 2, Q225",
+   "topic": "2.7b BPDU guard",
+   "topic_n": 21
+  },
+  {
+   "question": "What is the transition of states when PortFast is configured?",
+   "choices": [
+    "Listening, learning, forwarding, blocking",
+    "Forwarding, listening, learning, blocking",
+    "Listening, forwarding, learning, blocking",
+    "Blocking, listening, learning, forwarding"
+   ],
+   "answer": 1,
+   "explanation": "PortFast mode allows an interface to bypass the blocking state and begin forwarding immediately. It then listens and learns of BPDUs on the interface and can make a decision to continue to forward frames or enter into a blocking state.",
+   "source": "CCNA 100-105 · Ch. 2, Q226",
+   "topic": "2.7a PortFast",
+   "topic_n": 20
+  },
+  {
+   "question": "Which command would you use to configure BPDU Guard on an interface?",
+   "choices": [
+    "SwitchA(config-if)#switchport bpduguard enable",
+    "SwitchA(config-if)#spanning-tree bpduguard",
+    "SwitchA(config-if)#switchport mode bpduguard",
+    "SwitchA(config-if)#spanning-tree bpduguard enable"
+   ],
+   "answer": 3,
+   "explanation": "The correct command to configure BPDU Guard on a single interface is spanning-tree bpduguard entered into the interface you want to turn it on for.",
+   "source": "CCNA 100-105 · Ch. 2, Q227",
+   "topic": "2.7b BPDU guard",
+   "topic_n": 21
+  },
+  {
+   "question": "After you configure an access switch on your network, you receive a call that the users have lost connectivity. You examine the trunk interface with the command show interfaces Gi 0/1 . What might be the problem?",
+   "choices": [
+    "The switch uplink cable is bad.",
+    "BPDU Guard was configured on a trunk.",
+    "A spanning-tree loop has been detected.",
+    "Flow control is turned off."
+   ],
+   "answer": 1,
+   "explanation": "BPDU Guard was turned on the trunk link. When the BPDU of the adjacent switch was seen, the switch turned the port into err-disabled mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q228",
+   "topic": "2.7b BPDU guard",
+   "topic_n": 21
+  },
+  {
+   "question": "Which option is a best practice when configuring links on an access switch?",
+   "choices": [
+    "Always configure BPDU Guard along with UplinkFast.",
+    "Never configure spanning-tree PortFast mode on an access link.",
+    "Always configure BPDU Guard on trunks.",
+    "Always configure BPDU Guard along with PortFast."
+   ],
+   "answer": 3,
+   "explanation": "Configuring BPDU Guard along with PortFast ensures that the end device will always be forwarding. BPDU Guard ensures that in the event a BPDU is heard on the interface, the interface will enter into an err-disable mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q229",
+   "topic": "2.7 Configure, verify, and troubleshoot STP related optional features",
+   "topic_n": 19
+  },
+  {
+   "question": "Which command will show you if a port has been configured for PortFast mode?",
+   "choices": [
+    "Switch#show spanning-tree interface fa 0/1",
+    "Switch#show portfast",
+    "Switch#show spanning-tree",
+    "Switch#show interface fa 0/1"
+   ],
+   "answer": 0,
+   "explanation": "Using the command show spanning-tree interface fa 0/1 will show the spanning tree configuration for an interface. If PortFast has been configured, the last line will read, “The port is in the PortFast mode.”",
+   "source": "CCNA 100-105 · Ch. 2, Q230",
+   "topic": "2.7a PortFast",
+   "topic_n": 20
+  },
+  {
+   "question": "Which command would you use to remove BPDU Guard from an interface?",
+   "choices": [
+    "Switch(config-if)#spanning-tree bpduguard disable",
+    "Switch(config-if)#spanning-tree bpduguard disable",
+    "Switch(config-if)#switchport bdpugaurd disable",
+    "Switch(config-if)#no switchport bpduguard"
+   ],
+   "answer": 0,
+   "explanation": "One way to disable BDPU Guard is to enter the command spanning-tree bpduguard disable . Another way is to negate the command with no spanning-tree bpduguard .",
+   "source": "CCNA 100-105 · Ch. 2, Q231",
+   "topic": "2.7b BPDU guard",
+   "topic_n": 21
+  },
+  {
+   "question": "You have BPDU Guard configured on an interface. What happens if a BPDU is advertised on the interface?",
+   "choices": [
+    "The interface will become err-disabled.",
+    "The interface will become disabled.",
+    "A small switching loop will happen until convergence.",
+    "The interface will become administratively disabled."
+   ],
+   "answer": 0,
+   "explanation": "The switch’s interface will become err-disabled immediately. Once it is in err-disable mode, an administrator is required to reset the interface.",
+   "source": "CCNA 100-105 · Ch. 2, Q232",
+   "topic": "2.7b BPDU guard",
+   "topic_n": 21
+  },
+  {
+   "question": "Which command will show you if BPDU Guard is enabled by default?",
+   "choices": [
+    "Switch#show spanning-tree",
+    "Switch#show spanning-tree summary",
+    "Switch#show interface gi 0/1",
+    "Switch#show spanning-tree vlan 2"
+   ],
+   "answer": 1,
+   "explanation": "The show spanning-tree summary command will show you which features are turned on globally or by default.",
+   "source": "CCNA 100-105 · Ch. 2, Q233",
+   "topic": "2.7b BPDU guard",
+   "topic_n": 21
+  },
+  {
+   "question": "You are configuring an edge switch and want to make sure that someone does not plug a switch in accidentally. Which feature will you configure?",
+   "choices": [
+    "UplinkFast",
+    "PortFast",
+    "BackboneFast",
+    "BPDU Guard"
+   ],
+   "answer": 3,
+   "explanation": "BPDU Guard will protect the edge switch from someone accidentally plugging in another switch to a port dedicated for end devices.",
+   "source": "CCNA 100-105 · Ch. 2, Q234",
+   "topic": "2.7b BPDU guard",
+   "topic_n": 21
+  },
+  {
+   "question": "You want to quickly configure an edge switch so all access ports are in PortFast mode. Which command will achieve this?",
+   "choices": [
+    "SwitchA(config)#switchport spanning-tree portfast",
+    "SwitchA(config)#spanning-tree portfast enable",
+    "SwitchA(config)#spanning-tree portfast",
+    "SwitchA(config)#spanning-tree portfast default"
+   ],
+   "answer": 3,
+   "explanation": "The command spanning-tree portfast default will configure all access ports on the switch as PortFast enabled.",
+   "source": "CCNA 100-105 · Ch. 2, Q235",
+   "topic": "2.7a PortFast",
+   "topic_n": 20
+  },
+  {
+   "question": "Which protocol is an IEEE standard that collects information from neighboring devices on their identity and capabilities?",
+   "choices": [
+    "LLDP",
+    "802.1b",
+    "CDP",
+    "802.1a"
+   ],
+   "answer": 0,
+   "explanation": "Link Layer Discovery Protocol is an IEEE standard of 802.1ab. Most Cisco devices can perform LLDP.",
+   "source": "CCNA 100-105 · Ch. 2, Q236",
+   "topic": "2.8b LLDP",
+   "topic_n": 24
+  },
+  {
+   "question": "You want to turn off CDP on a switch. Which command would you enter?",
+   "choices": [
+    "Switch(config)#no cdp",
+    "Switch(config-if)#no cdp run",
+    "Switch(config)#cdp disable",
+    "Switch(config-if)#no cdp enable"
+   ],
+   "answer": 1,
+   "explanation": "The command to turn off CDP globally on a switch is no cdp run .",
+   "source": "CCNA 100-105 · Ch. 2, Q237",
+   "topic": "2.8a Cisco Discovery Protocol",
+   "topic_n": 23
+  },
+  {
+   "question": "How often are CDP frames sent out of the device by default?",
+   "choices": [
+    "Every 90 seconds",
+    "Every 180 seconds",
+    "Every 60 seconds",
+    "Every 30 seconds"
+   ],
+   "answer": 2,
+   "explanation": "CDP frames are sent out all active interfaces every 60 seconds.",
+   "source": "CCNA 100-105 · Ch. 2, Q238",
+   "topic": "2.8a Cisco Discovery Protocol",
+   "topic_n": 23
+  },
+  {
+   "question": "Which Cisco proprietary protocol collects information from neighboring devices about their identity and capabilities?",
+   "choices": [
+    "802.1a",
+    "LLDP",
+    "802.1ab",
+    "CDP"
+   ],
+   "answer": 3,
+   "explanation": "Cisco Discovery Protocol, or CDP, is a Cisco proprietary protocol used for gathering information from neighboring switches and routers.",
+   "source": "CCNA 100-105 · Ch. 2, Q239",
+   "topic": "2.8a Cisco Discovery Protocol",
+   "topic_n": 23
+  },
+  {
+   "question": "What is the default value of the CDP holddown timer for CDP entries?",
+   "choices": [
+    "30 seconds",
+    "180 seconds",
+    "90 seconds",
+    "60 seconds"
+   ],
+   "answer": 1,
+   "explanation": "The default holddown timer for CDP entries is three times the advertisement timer of 60 seconds. So entries have a holddowntimer value of 180 seconds.",
+   "source": "CCNA 100-105 · Ch. 2, Q240",
+   "topic": "2.8a Cisco Discovery Protocol",
+   "topic_n": 23
+  },
+  {
+   "question": "You want to turn off CDP on a single interface. Which command would you enter?",
+   "choices": [
+    "Switch(config-if)#no cdp run",
+    "Switch(config)#no cdp",
+    "Switch(config-if)#no cdp enable",
+    "Switch(config)#cdp disable"
+   ],
+   "answer": 2,
+   "explanation": "To turn off or suppress CDP advertisements on a single interface, you would enter the interface and enter the command no cdp enable .",
+   "source": "CCNA 100-105 · Ch. 2, Q241",
+   "topic": "2.8a Cisco Discovery Protocol",
+   "topic_n": 23
+  },
+  {
+   "question": "Which command gives information that’s identical to the output of the show cdp neighbors detail command?",
+   "choices": [
+    "Switch#sh cdp neighbors all",
+    "Switch#sh cdp entries all",
+    "Switch#sh cdp neighbors *",
+    "Switch#sh cdp entry *"
+   ],
+   "answer": 3,
+   "explanation": "The sh cdp entry * command will give output that’s identical to that of the show cdp neighbors detail command.",
+   "source": "CCNA 100-105 · Ch. 2, Q242",
+   "topic": "2.8a Cisco Discovery Protocol",
+   "topic_n": 23
+  },
+  {
+   "question": "You have several non-Cisco IP phones and you want to allow automatic power adjustments on the Cisco Power over an Ethernet (PoE) switch. Which command will allow you to achieve this?",
+   "choices": [
+    "Switch#lldp run",
+    "Switch#lldp enable",
+    "Switch(config)#lldp run",
+    "Switch(config)#lldp enable"
+   ],
+   "answer": 2,
+   "explanation": "The command lldp run entered in global config mode will enable LLDP on all interfaces. When enabled, LLDP-MED, or LLDP for Media, will read capabilities on the phone such as name and power level.",
+   "source": "CCNA 100-105 · Ch. 2, Q243",
+   "topic": "2.8b LLDP",
+   "topic_n": 24
+  },
+  {
+   "question": "Which command will allow you to see LLDP devices connected to a switch?",
+   "choices": [
+    "Switch#show lldp",
+    "Switch#show lldp devices",
+    "Switch#show cdp neighbor detail",
+    "Switch#show lldp neighbor detail"
+   ],
+   "answer": 3,
+   "explanation": "The command show lldp neighbor detail will show output identical to the output of show cdp neighbor detail .",
+   "source": "CCNA 100-105 · Ch. 2, Q244",
+   "topic": "2.8b LLDP",
+   "topic_n": 24
+  },
+  {
+   "question": "What is the default LLDP advertisement interval?",
+   "choices": [
+    "30 seconds",
+    "90 seconds",
+    "60 seconds",
+    "120 seconds"
+   ],
+   "answer": 0,
+   "explanation": "The default LLDP advertisement interval is 30 seconds. When turned on, it will advertise out all active interfaces every 30 seconds.",
+   "source": "CCNA 100-105 · Ch. 2, Q245",
+   "topic": "2.8b LLDP",
+   "topic_n": 24
+  },
+  {
+   "question": "You want to disable LLDP from sending advertisements on a single interface. Which command will you use?",
+   "choices": [
+    "Switch(config-if)#no lldp enable",
+    "Switch(config-if)#no lldp",
+    "Switch(config-if)#no lldp transmit",
+    "Switch(config-if)#no lldp receive"
+   ],
+   "answer": 2,
+   "explanation": "When you use the command no lldp transmit , it will suppress LLDP messages from exiting the interface it is configured on.",
+   "source": "CCNA 100-105 · Ch. 2, Q246",
+   "topic": "2.8b LLDP",
+   "topic_n": 24
+  },
+  {
+   "question": "What is the default value of the LLDP holddown timer for entries?",
+   "choices": [
+    "90 seconds",
+    "30 seconds",
+    "120 seconds",
+    "60 seconds"
+   ],
+   "answer": 2,
+   "explanation": "The default value of the LLDP holddown timer for entries is 120 seconds. This holddown timer is set every time the switch hears an advertisement for a device. The holddown is four times the advertisement interval.",
+   "source": "CCNA 100-105 · Ch. 2, Q247",
+   "topic": "2.8b LLDP",
+   "topic_n": 24
+  },
+  {
+   "question": "You have a layer 2 connection to your ISP. You want to make sure that you do not send information on the capabilities of your switch, but you don’t want to affect the use of CDP. Which command will you configure?",
+   "choices": [
+    "Switch(config)#cdp disable",
+    "Switch(config-if)#no cdp disable",
+    "Switch(config-if)#no cdp enable",
+    "Switch(config-if)#no cdp"
+   ],
+   "answer": 2,
+   "explanation": "The command no cdp enable will turn off CDP advertisements on the interface that you configure it on.",
+   "source": "CCNA 100-105 · Ch. 2, Q249",
+   "topic": "2.8a Cisco Discovery Protocol",
+   "topic_n": 23
+  },
+  {
+   "question": "Which command will show the interfaces that CDP is advertising on?",
+   "choices": [
+    "Switch#show interface cdp",
+    "Switch#show interface",
+    "Switch#show cdp interface",
+    "Switch#show cdp"
+   ],
+   "answer": 2,
+   "explanation": "The command show cdp interface will display all of the interfaces CDP is enabled on along with their advertisement intervals.",
+   "source": "CCNA 100-105 · Ch. 2, Q250",
+   "topic": "2.8a Cisco Discovery Protocol",
+   "topic_n": 23
+  },
+  {
+   "question": "What is the maximum number of interfaces that can be aggregated with EtherChannel and PAgP?",
+   "choices": [
+    "16 interfaces",
+    "8 interfaces",
+    "2 interfaces",
+    "4 interfaces"
+   ],
+   "answer": 1,
+   "explanation": "EtherChannel can aggregate 2 interfaces to 8 interfaces together on a single switch when using PAgP.",
+   "source": "CCNA 100-105 · Ch. 2, Q251",
+   "topic": "2.9b PAGP",
+   "topic_n": 27
+  },
+  {
+   "question": "Which is a true statement about EtherChannel?",
+   "choices": [
+    "EtherChannel can aggregate multiple lines with varying speed.",
+    "When configured, EtherChannel acts as a single layer 2 connection.",
+    "EtherChannel works with 802.1Q to block the redundant lines.",
+    "EtherChannel can aggregate interfaces across multiple stand-alone switches."
+   ],
+   "answer": 1,
+   "explanation": "When EtherChannel bonds interfaces together, they act as a single Ethernet link. Therefore, layer 2 and layer 3 sees it as a single link.",
+   "source": "CCNA 100-105 · Ch. 2, Q252",
+   "topic": "2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3) EtherChannel",
+   "topic_n": 25
+  },
+  {
+   "question": "You have a switch with 2 Gigabit interface ports and 48 FastEthernet ports and are using PAgP. What is the highest bandwidth you can achieve?",
+   "choices": [
+    "2 Gb/s",
+    "400 Mb/s",
+    "2.6 Gb/s",
+    "2.2 Gb/s"
+   ],
+   "answer": 0,
+   "explanation": "The highest configurable bandwidth is going to be 2 Gb/s. This is because you cannot mix speeds and duplex.",
+   "source": "CCNA 100-105 · Ch. 2, Q253",
+   "topic": "2.9b PAGP",
+   "topic_n": 27
+  },
+  {
+   "question": "Which negotiation protocol is an IEEE standard?",
+   "choices": [
+    "PAgP",
+    "802.1ab",
+    "802.1Q",
+    "LACP"
+   ],
+   "answer": 3,
+   "explanation": "The Link Aggregation Control Protocol (LACP) is the IEEE standard 802.3ad.",
+   "source": "CCNA 100-105 · Ch. 2, Q254",
+   "topic": "2.9c LACP",
+   "topic_n": 28
+  },
+  {
+   "question": "You need to form an EtherChannel between a VMware ESXi host and the switch. Which negotiation protocol will you choose?",
+   "choices": [
+    "Channel Group",
+    "PAgP",
+    "LACP",
+    "EtherChannel"
+   ],
+   "answer": 2,
+   "explanation": "LACP is an IEEE standard that is supported by non-Cisco devices to create aggregation links and negotiate the configuration.",
+   "source": "CCNA 100-105 · Ch. 2, Q255",
+   "topic": "2.9c LACP",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the maximum number of interfaces that can be aggregated with EtherChannel and LACP?",
+   "choices": [
+    "8 interfaces",
+    "2 interfaces",
+    "16 interfaces",
+    "4 interfaces"
+   ],
+   "answer": 2,
+   "explanation": "EtherChannel can aggregate 2 interfaces to 16 interfaces together on a single switch when using LACP. Only eight ports can be used at any one time; the others are placed in standby mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q256",
+   "topic": "2.9c LACP",
+   "topic_n": 28
+  },
+  {
+   "question": "Which mode forces the aggregation of links without the use of a control protocol?",
+   "choices": [
+    "802.3ad mode",
+    "On mode",
+    "PAgP off mode",
+    "LACP off mode"
+   ],
+   "answer": 1,
+   "explanation": "If you configure the EtherChannel to on mode, it forces the aggregation of links together without the use of a control protocol.",
+   "source": "CCNA 100-105 · Ch. 2, Q257",
+   "topic": "2.9a Static",
+   "topic_n": 26
+  },
+  {
+   "question": "Which is a correct statement about aggregating ports together?",
+   "choices": [
+    "The term EtherChannel is a Cisco proprietary term for port channeling.",
+    "LACP can only be used with other Cisco switches.",
+    "PAgP can be used with non-Cisco products.",
+    "PAgP can bundle several different speeds and duplexes together."
+   ],
+   "answer": 0,
+   "explanation": "The term EtherChannel is a Cisco-centric term. Most vendors will not recognize the term.",
+   "source": "CCNA 100-105 · Ch. 2, Q258",
+   "topic": "2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3) EtherChannel",
+   "topic_n": 25
+  },
+  {
+   "question": "Which negotiation protocol is a Cisco proprietary standard?",
+   "choices": [
+    "LACP",
+    "PAgP",
+    "802.1ab",
+    "802.1Q"
+   ],
+   "answer": 1,
+   "explanation": "Port Aggregation Protocol (PAgP) is a Cisco proprietary control negotiation protocol.",
+   "source": "CCNA 100-105 · Ch. 2, Q259",
+   "topic": "2.9b PAGP",
+   "topic_n": 27
+  },
+  {
+   "question": "How often does PAgP send messages to control the status of the links in the bundle?",
+   "choices": [
+    "Every 60 seconds",
+    "Every 30 seconds",
+    "Every 120 seconds",
+    "Every 90 seconds"
+   ],
+   "answer": 1,
+   "explanation": "PAgP sends control notifications every 30 seconds to the adjacent switch.",
+   "source": "CCNA 100-105 · Ch. 2, Q260",
+   "topic": "2.9b PAGP",
+   "topic_n": 27
+  },
+  {
+   "question": "You want to configure two switches so that LACP is used between the switches. Which mode should you use on both sides to force LACP?",
+   "choices": [
+    "Active mode on both sides",
+    "Desirable mode on both sides",
+    "Auto mode on both sides",
+    "Passive mode on both sides"
+   ],
+   "answer": 0,
+   "explanation": "Using active mode on both sides assures us that the switches will start negotiation with only Link Aggregation Control Protocol (LACP).",
+   "source": "CCNA 100-105 · Ch. 2, Q261",
+   "topic": "2.9c LACP",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the effect of configuring a port channel with one side set to passive mode and the other side set to active mode?",
+   "choices": [
+    "The channel group will use LACP.",
+    "The channel group will use PAgP.",
+    "The channel group will not be formed.",
+    "The channel group will use EtherChannel."
+   ],
+   "answer": 0,
+   "explanation": "When you use passive on one side and active on the other side of a port channel, the result is that Link Aggregation Control Protocol (LACP) will be used.",
+   "source": "CCNA 100-105 · Ch. 2, Q262",
+   "topic": "2.9c LACP",
+   "topic_n": 28
+  },
+  {
+   "question": "Which command is used to verify the negotiation protocol for a port channel?",
+   "choices": [
+    "Switch#show etherchannel",
+    "Switch#show run",
+    "Switch#show port-channel",
+    "Switch#show interface"
+   ],
+   "answer": 0,
+   "explanation": "The command show etherchannel will display all EtherChannels on the switch along with their negotiated protocols.",
+   "source": "CCNA 100-105 · Ch. 2, Q263",
+   "topic": "2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3) EtherChannel",
+   "topic_n": 25
+  },
+  {
+   "question": "What is the effect of configuring a port channel with one side set to passive mode and the other side set to passive mode?",
+   "choices": [
+    "An unconditional port channel will be formed.",
+    "The channel group will use PAgP.",
+    "The channel group will use LACP.",
+    "The channel group will not be formed."
+   ],
+   "answer": 3,
+   "explanation": "Since both interfaces are set to passive mode, neither side will initiate the LACP control notifications. Although the port channel is configured on the switch, it is not communicated between the switches.",
+   "source": "CCNA 100-105 · Ch. 2, Q264",
+   "topic": "2.9c LACP",
+   "topic_n": 28
+  },
+  {
+   "question": "What is the effect of configuring a port channel with one side set to on mode and the other side set to on mode?",
+   "choices": [
+    "The channel group will use LACP.",
+    "The channel group will use PAgP.",
+    "An unconditional port-channel will be formed.",
+    "The channel group will not be formed."
+   ],
+   "answer": 2,
+   "explanation": "When both sides of the port channel are configured with the On mode, an unconditional port channel is created. This means there is no control protocol assisting the port channel.",
+   "source": "CCNA 100-105 · Ch. 2, Q265",
+   "topic": "2.9a Static",
+   "topic_n": 26
+  },
+  {
+   "question": "When a port channel is configured, where do you configure the native VLAN?",
+   "choices": [
+    "On the first port in the channel group",
+    "In the port channel created for the channel group",
+    "All of the above",
+    "On all of the ports in the channel group"
+   ],
+   "answer": 1,
+   "explanation": "When you configure the channel group command interfaces, it automatically creates a port channel interface. This pseudo interface should be used for all configurations of the collective ports.",
+   "source": "CCNA 100-105 · Ch. 2, Q266",
+   "topic": "2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3) EtherChannel",
+   "topic_n": 25
+  },
+  {
+   "question": "What is the effect of configuring a port channel with one side set to auto mode and the other side set to desirable mode?",
+   "choices": [
+    "The channel group will use PAgP.",
+    "The channel group will not be formed.",
+    "An unconditional port channel will be formed.",
+    "The channel group will use LACP."
+   ],
+   "answer": 0,
+   "explanation": "When one side of the port channel is configured with the auto mode and the other is configured with desirable mode, the EtherChannel is formed with PAgP.",
+   "source": "CCNA 100-105 · Ch. 2, Q267",
+   "topic": "2.9b PAGP",
+   "topic_n": 27
+  },
+  {
+   "question": "Which command will configure one side of an EtherChannel, when the other side is configured with on mode?",
+   "choices": [
+    "SwitchA(config-if)#switchport channel-group 1 mode on SwitchB(config-if)#switchport channel-group 1 mode on",
+    "SwitchA(config-if)#switchport channel-group 1 mode desirable SwitchB(config-if)#switchport channel-group 1 mode desirable",
+    "SwitchA(config-if)#channel-group 1 mode on SwitchB(config-if)#channel-group 1 mode on",
+    "SwitchA(config-if)#channel-group 1 mode desirable SwitchB(config-if)#channel-group 1 mode desirable"
+   ],
+   "answer": 2,
+   "explanation": "When the on mode is used, it means that no aggregation protocol will be used. On the adjacent switch, you must use the on mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q268",
+   "topic": "2.9a Static",
+   "topic_n": 26
+  },
+  {
+   "question": "What is the default load balancing configuration for EtherChannel?",
+   "choices": [
+    "Destination MAC address",
+    "Destination IP address",
+    "Source IP address",
+    "Source MAC address"
+   ],
+   "answer": 3,
+   "explanation": "By default, load balancing is performed on frames by the source MAC address.",
+   "source": "CCNA 100-105 · Ch. 2, Q269",
+   "topic": "2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3) EtherChannel",
+   "topic_n": 25
+  },
+  {
+   "question": "You want to configure two switches to form a PAgP EtherChannel. Which commands would you enter?",
+   "choices": [
+    "SwitchA(config-if)#channel-group 1 mode desirable SwitchB(config-if)#channel-group 1 mode desirable",
+    "SwitchA(config-if)#channel-group 1 mode pagp SwitchB(config-if)#channel-group 1 mode pagp",
+    "SwitchA(config-if)#channel-group 1 mode pagp SwitchB(config-if)#channel-group 1 mode pagp",
+    "SwitchA(config-if)#channel-group 1 mode desirable SwitchB(config-if)#channel-group 1 mode desirable"
+   ],
+   "answer": 0,
+   "explanation": "When configuring PAgP, you will use either the auto and desirable mode or the desirable mode on both sides. When you use desirable mode on both sides, desirable mode will unconditionally configure the EtherChannel with PAgP.",
+   "source": "CCNA 100-105 · Ch. 2, Q270",
+   "topic": "2.9b PAGP",
+   "topic_n": 27
+  },
+  {
+   "question": "Which command will change the load-balancing criteria of the EtherChannel for the destination IP?",
+   "choices": [
+    "SwitchA(config-if)#port-channel load-balance dst-ip",
+    "SwitchA(config-if)#channel-group load-balance dst-ip",
+    "SwitchA(config)#channel-group load-balance dst-ip",
+    "SwitchA(config)#port-channel load-balance dst-ip"
+   ],
+   "answer": 3,
+   "explanation": "When changing the EtherChannel load-balancing criteria, you must change it in global configuration mode via the port-channel load-balance dst-ip command.",
+   "source": "CCNA 100-105 · Ch. 2, Q271",
+   "topic": "2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3) EtherChannel",
+   "topic_n": 25
+  },
+  {
+   "question": "Which command is used to verify the load-balancing method the switch is using?",
+   "choices": [
+    "Switch#show channel-group load-balance",
+    "Switch#show port-channel load-balance",
+    "Switch#show etherchannel load-balance",
+    "Switch#show load-balance"
+   ],
+   "answer": 2,
+   "explanation": "Since the load-balancing method is globally configured, you use the show etherchannel load-balance command to verify the criteria load balancing is performed with.",
+   "source": "CCNA 100-105 · Ch. 2, Q272",
+   "topic": "2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3) EtherChannel",
+   "topic_n": 25
+  },
+  {
+   "question": "You have a router connected to the switch via an EtherChannel. Which type of load- balancing criteria will you use to make sure you have the most optimal load balancing?",
+   "choices": [
+    "Destination MAC address",
+    "Source MAC address",
+    "Source and destination MAC address",
+    "Source and destination IP address"
+   ],
+   "answer": 3,
+   "explanation": "When you want optimal load balancing, you would configure the source and destination IP address. On some versions of Cisco IOS, you can configure the source and destination IP address as well as the source and destination ports. Although this creates the most optimal load balancing, it creates a high amount of latency since layer 4 information must be calculated.",
+   "source": "CCNA 100-105 · Ch. 2, Q273",
+   "topic": "2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3) EtherChannel",
+   "topic_n": 25
+  },
+  {
+   "question": "What does the non-silent option along with the mode of auto or desirable do?",
+   "choices": [
+    "Configures the interface to send negotiation notifications",
+    "Configures the interface to forward all CDP notifications",
+    "Configures the interface not to send negotiation notifications",
+    "Configures the interface to send negotiation notifications only if detected"
+   ],
+   "answer": 0,
+   "explanation": "This option forces an interface, if configured with desirable or auto, to forcibly send notifications. When a port is configured in auto mode, it requires another adjacent switch to send PAgP notifications. This option forces the notifications with the desirable mode.",
+   "source": "CCNA 100-105 · Ch. 2, Q274",
+   "topic": "2.9b PAGP",
+   "topic_n": 27
+  },
+  {
+   "question": "When a port-channel is configured, where do you configure the access VLAN for connection to a server?",
+   "choices": [
+    "All of the ports in the channel group",
+    "The first port in the channel group",
+    "In the port-channel created for the channel group",
+    "All of the above"
+   ],
+   "answer": 0,
+   "explanation": "When configuring an access port for use with an EtherChannel, it is recommended to configure the switchport access vlan # command in each interface where the channel-group command has been configured.",
+   "source": "CCNA 100-105 · Ch. 2, Q275",
+   "topic": "2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3) EtherChannel",
+   "topic_n": 25
+  },
+  {
+   "question": "You have configured the command channel-group 1 mode active on a range of interfaces that will participate in an EtherChannel. Which pseudo interface is created for overall management of the EtherChannel?",
+   "choices": [
+    "ether-channel 1",
+    "port-group 1",
+    "channel-group 1",
+    "port-channel 1"
+   ],
+   "answer": 3,
+   "explanation": "When you configure the channel-group 1 mode active command on the first interface, a pseudo interface is created called port-channel 1. All statistics and configuration should be referenced by this interface.",
+   "source": "CCNA 100-105 · Ch. 2, Q280",
+   "topic": "2.9c LACP",
+   "topic_n": 28
+  },
+  {
+   "question": "You have several 3750 switches located in the same switch closet. You need to add another switch but are out of Gigabit uplink ports. Which technology could you employ with these switches for optimal bandwidth?",
+   "choices": [
+    "Switch clustering",
+    "Daisy chaining the Gigabit ports",
+    "EtherChannel",
+    "Switch stacking"
+   ],
+   "answer": 3,
+   "explanation": "Switch stacking allows for all of the switches to be tied together so the uplink port can be shared at a nominal bandwidth of 32 Gb/s for the backplane loop.",
+   "source": "CCNA 100-105 · Ch. 2, Q281",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "You have several switches configured in a switch stack configuration. You want to make the EtherChannel resilient to failure. Which feature should you use?",
+   "choices": [
+    "OSPF",
+    "PAgP",
+    "Cross-stack EtherChannel",
+    "EtherChannel load-balancing"
+   ],
+   "answer": 2,
+   "explanation": "Cross-stack EtherChannel allows you to configure EtherChannels between physical switches to act as one EtherChannel. If one switch or SPF transceiver goes bad, the rest of the switching will be supported by the other physical switches.",
+   "source": "CCNA 100-105 · Ch. 2, Q282",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "What is the supported maximum number of 3750 switches that can stacked?",
+   "choices": [
+    "10 switches",
+    "9 switches",
+    "16 switches",
+    "4 switches"
+   ],
+   "answer": 1,
+   "explanation": "Cisco will support a maximum of 9 switches in a switch stack configuration.",
+   "source": "CCNA 100-105 · Ch. 2, Q283",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "You have three switches with LAN Base and two switches with IP Base features sets. You want to stack the switches together. What needs to be done?",
+   "choices": [
+    "The switch stack will upgrade or downgrade the IOS according to the master switch.",
+    "Downgrade the two switches from IP Base to LAN base.",
+    "All of the above",
+    "Upgrade the three switches from LAN Base to IP Base."
+   ],
+   "answer": 2,
+   "explanation": "When you create a switch stack, the subordinate switches will upgrade or downgrade the IOS software according to the master switch’s IOS. Legally, you must purchase the highest IOS the master switch contains or downgrade the license the master contains.",
+   "source": "CCNA 100-105 · Ch. 2, Q284",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "How does traffic flow on the StackWise 3750 platform?",
+   "choices": [
+    "Counter rotation paths at 32 Gb/s each",
+    "Directionally at 32 Gb/s",
+    "Bidirectionally at 32 Gb/s",
+    "Counter rotation paths at 16 Gb/s each"
+   ],
+   "answer": 3,
+   "explanation": "The StackWise 3750 has a backend loop of two counter-rotating rings. Each ring supplies 16 Gb/s in each direction. This allows for up to 32 Gb/s total traffic flow and also allows for redundancy.",
+   "source": "CCNA 100-105 · Ch. 2, Q285",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "When you stack Cisco switches together, how do you manage the switch stack?",
+   "choices": [
+    "All switches in a stack need to have contiguous IP addressing.",
+    "The entire stack is managed by one IP, and a port number is incremented from 22 for each switch’s logical identity.",
+    "The entire stack is managed by the master switch IP.",
+    "Each switch has its own logical IP address."
+   ],
+   "answer": 2,
+   "explanation": "When you create a switch stack, you assign the IP address to the master switch. This IP address is used for the entire switch stack. If a master fails, a new master is elected and the original master IP is used.",
+   "source": "CCNA 100-105 · Ch. 2, Q286",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "You have a switch in a switch stack that has gone bad. You have received a replacement switch and want to swap it out. How can you swap out the bad switch?",
+   "choices": [
+    "You can swap the defective switch while the stack is on and then the stack requires a reload.",
+    "You must power the entire stack down to replace the defective switch.",
+    "You must add the new switch to the last stack member number in the stack and then remove the defective switch.",
+    "You can remove the defective switch while the stack is on and replace it with the replacement switch."
+   ],
+   "answer": 3,
+   "explanation": "Switches participating in stacking can be added, deleted, or replaced without powering the stack off. The provisioned switch that is being replaced must match the replacement’s stack member number via the switch {stack-member-number} provision command.",
+   "source": "CCNA 100-105 · Ch. 2, Q287",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "Which switch in a stack is responsible for forwarding tables and the central ACL?",
+   "choices": [
+    "Topology switch",
+    "Master switch",
+    "Subordinate switch",
+    "Slave switch"
+   ],
+   "answer": 1,
+   "explanation": "The master switch is responsible for forwarding tables, ACL distribution, QOS, and multicast routing. The master switch is elected by the criteria of configured priority, hardware and software priority, configuration, uptime, and MAC address.",
+   "source": "CCNA 100-105 · Ch. 2, Q288",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "You have a switch in a stack that needs to be replaced. You are concerned that the configuration will be lost for the switch. What will happen when it is replaced?",
+   "choices": [
+    "The replacement switch will need to have the configuration TFTP transferred after replacement manually by the network admin.",
+    "The replacement switch will need to have its configuration transferred from the existing switch to be replaced.",
+    "The replacement switch will need manual configuration since the interfaces will be renumbered.",
+    "The replacement switch will automatically download the configuration for the switch member number it’s configured for from the master."
+   ],
+   "answer": 3,
+   "explanation": "Configuration is downloaded to the replacement switch automatically when it is replaced. The switch responsible for hosting the configuration is the master switch.",
+   "source": "CCNA 100-105 · Ch. 2, Q289",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "You want to upgrade the stack’s IOS. Assuming you have all the same model of switches in the stack, what needs to be done?",
+   "choices": [
+    "Each switch needs to be upgraded independently.",
+    "Each switch in the stack needs to be configured with a TFTP location to boot from, and then they all must be reloaded.",
+    "The IOS image cannot be changed once a stack is configured.",
+    "Only the master switch needs to be upgraded."
+   ],
+   "answer": 3,
+   "explanation": "Only the master switch needs to be upgraded. Once the master switch is upgraded, it will download the IOS to all other members of the switch stack.",
+   "source": "CCNA 100-105 · Ch. 2, Q290",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "Which switch type in a switch stack downloads it configuration, forwarding table, and ACLs?",
+   "choices": [
+    "Subordinate switch",
+    "Provisioned switch",
+    "Master switch",
+    "Topology switch"
+   ],
+   "answer": 0,
+   "explanation": "The subordinate switch, often referred to as the slave switch, downloads all of its IOS, configuration, and forwarding tables from the master switch.",
+   "source": "CCNA 100-105 · Ch. 2, Q291",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "What is the maximum length of a stacking cable for switch stacks?",
+   "choices": [
+    "3 meters",
+    "10 meters",
+    "5 meters",
+    "1 meter"
+   ],
+   "answer": 0,
+   "explanation": "Switch stacking cables come in lengths of 50 centimeters, 1 meter, and 3 meters. The maximum length of the switch stack cable is 3 meters, or about 10 feet.",
+   "source": "CCNA 100-105 · Ch. 2, Q292",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "You are connected to a switch stack and want to verify how the stack is cabled. Which command would you use?",
+   "choices": [
+    "Sw-Stk#show switch cabling",
+    "Sw-Stk#show stack",
+    "Sw-Stk#show stack-ports",
+    "Sw-Stk#show switch stack-ports"
+   ],
+   "answer": 3,
+   "explanation": "The command used to verify cabling of the switch stack is show switch stack-ports . This command will display a table of how the switches are connected.",
+   "source": "CCNA 100-105 · Ch. 2, Q293",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "You want to verify the master switch in the switch stack, which command will display this information?",
+   "choices": [
+    "Sw-Stk#show stack",
+    "Sw-Stk#show stack-master",
+    "Sw-Stk#show switch",
+    "Sw-Stk#show stack ids"
+   ],
+   "answer": 2,
+   "explanation": "The command show switch will display all switches in the stack along with their role. Within this information will be a switch labeled master .",
+   "source": "CCNA 100-105 · Ch. 2, Q294",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  },
+  {
+   "question": "You want to make sure that the top switch in the stack always becomes the master. How can you guarantee it always wins the election?",
+   "choices": [
+    "Set the priority to 15.",
+    "Set the priority to 0.",
+    "Set the priority to 1.",
+    "Set the priority to 16."
+   ],
+   "answer": 0,
+   "explanation": "Priority values can be configured from 1 to 15. The higher the priority, the better the chances of winning an election. If the switch is set to a priority of 15, it will always win the election and become the master.",
+   "source": "CCNA 100-105 · Ch. 2, Q295",
+   "topic": "2.10 Describe the benefits of switch stacking and chassis aggregation",
+   "topic_n": 29
+  }
+ ]
+}
