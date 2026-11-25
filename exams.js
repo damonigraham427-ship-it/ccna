@@ -155,13 +155,16 @@ function renderCategories() {
       }));
     }
   });
-  // Meta Retention Exam (Damoni, Nov 23, 2026): sits different — its own
-  // spot under the subject cards. Random test from sets finished at 80%+.
-  const retN = retQualifyingCount();
-  wrap.appendChild(navCard('Meta Retention Exam',
-    retN ? 'random test from sets you finished \u00B7 ' + retN + (retN === 1 ? ' set' : ' sets') + ' in the mix'
-         : 'random test from sets you finished \u00B7 none yet',
-    '#9333ea', () => { location.href = 'retention.html'; }));
+  // Retention card hidden on this spawned site (number subjects only).
+  if (!window.NO_RETENTION) {
+    // Meta Retention Exam (Damoni, Nov 23, 2026): sits different — its own
+    // spot under the subject cards. Random test from sets finished at 80%+.
+    const retN = retQualifyingCount();
+    wrap.appendChild(navCard('Meta Retention Exam',
+      retN ? 'random test from sets you finished \u00B7 ' + retN + (retN === 1 ? ' set' : ' sets') + ' in the mix'
+           : 'random test from sets you finished \u00B7 none yet',
+      '#9333ea', () => { location.href = 'retention.html'; }));
+  }
   // Deep link (Nov 23, 2026): exams.html?cat=<category>&ch=<chapter> opens
   // that subject's exam list directly — the exam runner's back button
   // points here for subjects without their own page.
